@@ -1,0 +1,70 @@
+[gd_scene load_steps=2 format=3 uid="uid://cu5imoce702h2"]
+
+[ext_resource type="Script" uid="uid://biawn1bss10oj" path="res://src/UI/CharacterSelect.gd" id="1_0dtwr"]
+
+[node name="CharacterSelect" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0dtwr")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.25
+anchor_top = 0.15
+anchor_right = 0.75
+anchor_bottom = 0.85
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CharacterSelect_VBoxContainer#Title" type="Label" parent="."]
+layout_mode = 0
+text = "SELECT YOUR CLEANER"
+horizontal_alignment = 1
+
+[node name="CharacterSelect_VBoxContainer#CharacterViewport" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 0
+
+[node name="CharacterSelect_VBoxContainer_CharacterViewport#SubViewport" type="SubViewport" parent="."]
+size = Vector2i(480, 320)
+render_target_update_mode = 0
+
+[node name="CharacterSelect_VBoxContainer_CharacterViewport_SubViewport#Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.9976736, 0.06817201, 0, -0.06817201, 0.9976736, 0, 2.0523682, 3.074137)
+current = true
+fov = 70.0
+
+[node name="CharacterSelect_VBoxContainer_CharacterViewport_SubViewport#DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.8660254, 0.5, 0, -0.5, 0.8660254, 0, 3, 4)
+
+[node name="CharacterSelect_VBoxContainer#CharacterName" type="Label" parent="."]
+layout_mode = 0
+text = "Character Name"
+horizontal_alignment = 1
+
+[node name="CharacterSelect_VBoxContainer#HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CharacterSelect_VBoxContainer_HBoxContainer#PrevButton" type="Button" parent="."]
+layout_mode = 0
+text = "<"
+
+[node name="CharacterSelect_VBoxContainer_HBoxContainer#NextButton" type="Button" parent="."]
+layout_mode = 0
+text = ">"
+
+[node name="CharacterSelect_VBoxContainer#PlayButton" type="Button" parent="."]
+layout_mode = 0
+text = "START GAME"
