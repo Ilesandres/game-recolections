@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://dxpikf2bxwplt"]
+
+[ext_resource type="PackedScene" uid="uid://cd6muprr5tgnh" path="res://src/Enemies/barril.tscn" id="1_2rjb2"]
+[ext_resource type="Script" uid="uid://cgpiwemqm64yp" path="res://scenes/world/Enemy.gd" id="1_mrlqf"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2hhhk"]
+size = Vector3(1, 0.7524414, 1)
+
+[node name="Enemy" type="Area3D"]
+collision_layer = 8
+collision_mask = 0
+script = ExtResource("1_mrlqf")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0, 0.9717158, 0)
+shape = SubResource("BoxShape3D_2hhhk")
+
+[node name="barrel2" parent="." instance=ExtResource("1_2rjb2")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, -0.03824365, 0)

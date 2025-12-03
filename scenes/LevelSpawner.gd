@@ -1,13 +1,13 @@
-
 extends Node3D
 
 const CHUNK_SCENE = preload("res://scenes/world/chunk_template.tscn")
 const OBSTACLE_SCENE = preload("res://scenes/world/Obstacle.tscn") 
+const ENEMY_SCENE = preload("res://scenes/world/Enemy.tscn")
 const CHUNK_LENGTH = 30.0 
 
 @onready var player: CharacterBody3D = get_parent().find_child("PlayerContainer", true).get_node("Player") 
 
-var last_chunk: Node3D = null       
+var last_chunk: Node3D = null     
 var active_chunks: Array[Node3D] = [] 
 var next_spawn_position: Vector3 = Vector3.ZERO
 
@@ -33,8 +33,7 @@ func _process(_delta: float):
 			if player.global_position.z < despawn_point_z:
 				_despawn_chunk(oldest_chunk)
 				
-
-
+				
 func _spawn_chunk(target_position: Vector3): 
 	var new_chunk = CHUNK_SCENE.instantiate()
 	add_child(new_chunk)
@@ -45,12 +44,18 @@ func _spawn_chunk(target_position: Vector3):
 	var obstacle_points = new_chunk.get_node("ObstaclePoints").get_children()
 	
 	for point in obstacle_points:
-		if randf() < 0.33: 
-			var new_obstacle = OBSTACLE_SCENE.instantiate()
+		if randf() < 0.33: # Probabilidad de spawnar ALGO en el carril
+			var item_roll = randf()
+			var item_instance = null
 			
-			new_obstacle.global_position = point.global_position
+			if item_roll < 0.5:
+				item_instance = OBSTACLE_SCENE.instantiate()
+			else:
+				item_instance = ENEMY_SCENE.instantiate()
 			
-			new_chunk.add_child(new_obstacle)
+			if item_instance:
+				item_instance.global_position = point.global_position
+				new_chunk.add_child(item_instance)
 			
 	last_chunk = new_chunk
 	active_chunks.append(new_chunk)
