@@ -3,3 +3,6 @@
 [ext_resource type="PackedScene" uid="uid://5bjybg1ikh35" path="res://assets/-mobs-obstacles/crate.glb" id="1_hp5j5"]
 
 [node name="crate2" instance=ExtResource("1_hp5j5")]
+
+[node name="crate" parent="." index="0"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)

@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://56lpctep3l7v"]
+[gd_scene load_steps=4 format=3 uid="uid://56lpctep3l7v"]
 
 [ext_resource type="PackedScene" uid="uid://dafs75w0piw2p" path="res://scenes/Player.tscn" id="1_onqr8"]
+[ext_resource type="Script" uid="uid://b5sq6tiw316pq" path="res://scenes/Game.gd" id="1_ycayy"]
 [ext_resource type="Script" uid="uid://2pniuraunbsy" path="res://scenes/LevelSpawner.gd" id="2_ycayy"]
 
 [node name="Game" type="Node3D"]
+script = ExtResource("1_ycayy")
 
 [node name="PlayerContainer" type="Node3D" parent="."]
 
@@ -20,3 +22,5 @@ script = ExtResource("2_ycayy")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.49236777, 0.5183789, -0.69918334, -0.13591659, 0.8392383, 0.52650344, 0.8597097, -0.16420272, 0.48367015, -20.806108, 11.102917, 8.517822)
+
+[connection signal="player_died" from="PlayerContainer/Player" to="." method="_on_player_player_died"]
