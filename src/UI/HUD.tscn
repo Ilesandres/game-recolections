@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://de1403bgftvag"]
 
-[ext_resource type="Script" uid="uid://d4edfenemw75e" path="res://ScoreDisplay.gd" id="1_k5de2"]
+[ext_resource type="Script" uid="uid://d4edfenemw75e" path="res://src/UI/ScoreDisplay.gd" id="1_5hfrm"]
 
 [node name="HUD" type="Control"]
 layout_mode = 3
@@ -15,4 +15,4 @@ layout_mode = 1
 offset_right = 72.0
 offset_bottom = 23.0
 text = "Basura: 0"
-script = ExtResource("1_k5de2")
+script = ExtResource("1_5hfrm")
