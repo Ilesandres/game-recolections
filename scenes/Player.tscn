@@ -2,15 +2,15 @@
 
 [ext_resource type="Script" uid="uid://clps1b5l3qw8h" path="res://Player.gd" id="1_p0vlq"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_b2tar"]
-size = Vector3(1, 1, 0.69525146)
+[sub_resource type="BoxShape3D" id="BoxShape3D_p0vlq"]
 
 [node name="Player" type="CharacterBody3D"]
-collision_mask = 6
+collision_mask = 2
 script = ExtResource("1_p0vlq")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4746616, -9.1552734e-05)
-shape = SubResource("BoxShape3D_b2tar")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.08, 0)
+shape = SubResource("BoxShape3D_p0vlq")
 
 [node name="Visuals" type="Node3D" parent="."]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
