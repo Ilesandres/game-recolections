@@ -23,6 +23,8 @@ var is_taking_damage: bool = false
 @onready var visuals_node: Node3D = $Visuals
 @onready var animation_timer: Timer = $AnimationTimer
 
+signal health_changed(current_health, max_health)
+
 var animation_player: AnimationPlayer = null
 
 var standing_collision_shape: BoxShape3D
@@ -36,6 +38,8 @@ func _ready():
 	_load_visual_character(load(GlobalData.selected_character_scene_path))
 	
 	animation_timer.timeout.connect(_on_animation_timer_timeout)
+
+	emit_signal("health_changed", current_health, max_health)
 
 	play_animation("sprint")
 
@@ -75,10 +79,11 @@ func take_damage():
 		
 		is_taking_damage = true 
 		play_animation("emote-no")
-		
+		emit_signal("health_changed", current_health, max_health)
 		animation_timer.start(DAMAGE_ANIMATION_TIME)
 		
 		if current_health <= 0:
+			emit_signal("health_changed", current_health, max_health)
 			die()
 
 func die():

@@ -15,9 +15,6 @@ func _ready():
 	GlobalData.load_game()
 
 
-
-
-
 func _unhandled_input(event):
 	if event.is_action_pressed("ui_cancel"):
 		get_viewport().set_input_as_handled()
@@ -31,5 +28,8 @@ func _unhandled_input(event):
 
 func _on_player_player_died():
 	get_tree().paused = true
+	var menu_control= pause_menu.get_node("PauseMenu")
+	if is_instance_valid(menu_control):
+		menu_control.pause_game()
 	
-	print("JUEGO DETENIDO: Game Over.")
+	print("JUEGO DETENIDO: Game Over. desde Game")
