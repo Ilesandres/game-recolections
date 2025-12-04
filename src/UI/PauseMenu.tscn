@@ -1,6 +1,11 @@
-[gd_scene format=3 uid="uid://0m4adu0ptjt7"]
+[gd_scene load_steps=2 format=3 uid="uid://0m4adu0ptjt7"]
 
-[node name="PauseMenu" type="Control"]
+[ext_resource type="Script" uid="uid://gm5yk7b5ija0" path="res://src/UI/PauseMenu.gd" id="1_dt3c7"]
+
+[node name="PauseMenuLayer" type="CanvasLayer"]
+process_mode = 1
+
+[node name="PauseMenu" type="Control" parent="."]
 process_mode = 1
 layout_mode = 3
 anchors_preset = 15
@@ -8,27 +13,36 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_dt3c7")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="PauseButtonContainer" type="VBoxContainer" parent="PauseMenu"]
 layout_mode = 1
-anchors_preset = 13
-anchor_left = 0.5
-anchor_right = 0.5
+anchors_preset = -1
+anchor_left = 0.46500003
+anchor_top = 0.628
+anchor_right = 0.54300004
 anchor_bottom = 1.0
-offset_left = -62.0
-offset_top = 440.0
-offset_right = 168.0
+offset_left = -101.68005
+offset_top = 0.055999756
+offset_right = 91.46393
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ResumeButton" type="Button" parent="VBoxContainer"]
+[node name="ResumeButton" type="Button" parent="PauseMenu/PauseButtonContainer"]
+process_mode = 2
 layout_mode = 2
 text = "Continuar"
 
-[node name="RestartButton" type="Button" parent="VBoxContainer"]
+[node name="RestartButton" type="Button" parent="PauseMenu/PauseButtonContainer"]
+process_mode = 2
 layout_mode = 2
 text = "Reiniciar Nivel"
 
-[node name="MainMenuButton" type="Button" parent="VBoxContainer"]
+[node name="MainMenuButton" type="Button" parent="PauseMenu/PauseButtonContainer"]
+process_mode = 2
 layout_mode = 2
 text = "Menú Principal"
+
+[connection signal="pressed" from="PauseMenu/PauseButtonContainer/ResumeButton" to="PauseMenu" method="_on_resume_button_pressed"]
+[connection signal="pressed" from="PauseMenu/PauseButtonContainer/RestartButton" to="PauseMenu" method="_on_restart_button_pressed"]
+[connection signal="pressed" from="PauseMenu/PauseButtonContainer/MainMenuButton" to="PauseMenu" method="_on_main_menu_button_pressed"]
