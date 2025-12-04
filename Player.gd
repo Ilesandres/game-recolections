@@ -33,7 +33,7 @@ func _ready():
 	else:
 		push_error("¡ERROR! Player.tscn debe tener un CollisionShape3D con un BoxShape3D.")
 	
-	_load_visual_character(preload("res://scenes/characters/character_k_2.tscn"))
+	_load_visual_character(load(GlobalData.selected_character_scene_path))
 	
 	animation_timer.timeout.connect(_on_animation_timer_timeout)
 

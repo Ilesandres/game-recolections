@@ -8,34 +8,14 @@ var pause_menu: CanvasLayer = null
 
 
 func _ready():
-	var player_node: Node3D = _instantiate_selected_player() 
-	
 	pause_menu = PAUSE_MENU_SCENE.instantiate()
 	add_child(pause_menu)
 	pause_menu.set_process_priority(100)
-	
+
 	GlobalData.load_game()
-	
-	if is_instance_valid(player_node):
-		if player_node.has_method("_on_player_player_died"):
-			player_node.player_died.connect(_on_player_player_died)
 
 
-func _instantiate_selected_player() -> Node3D: 
-	var player_path = GlobalData.selected_character_scene_path
-	
-	if player_path.is_empty():
-		print("ADVERTENCIA: Ruta de personaje vacía. Usando default.")
-		player_path = "res://scenes/characters/character_k_2.tscn"
-		
-	var PlayerScene = load(player_path)
-	var new_player = PlayerScene.instantiate()
-	
-	player_container.add_child(new_player)
-	
-	new_player.name = "Player"
-	
-	return new_player
+
 
 
 func _unhandled_input(event):
