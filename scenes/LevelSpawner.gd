@@ -25,19 +25,19 @@ func configure_for_level(level: int):
 			object_spawn_chance = 0.2
 			spawn_attempts= 1
 		2:
-			spawn_speed = 20
+			spawn_speed = 15
 			object_spawn_chance = 0.3
 			spawn_attempts= 2
 		3:
-			spawn_speed = 30
+			spawn_speed = 20
 			object_spawn_chance = 0.4
 			spawn_attempts= 3
 		4:
-			spawn_speed = 40
+			spawn_speed = 25
 			object_spawn_chance = 0.5
 			spawn_attempts= 4
 		5:
-			spawn_speed = 50
+			spawn_speed = 30
 			object_spawn_chance = 0.6
 			spawn_attempts= 5
 
@@ -79,7 +79,7 @@ func _spawn_chunk(target_position: Vector3):
 			if randf() < object_spawn_chance:
 				var item_roll = randf()
 				var item_instance = null
-				if item_roll < 0.5:
+				if item_roll < 0.8:
 					item_instance = OBSTACLE_SCENE.instantiate()
 				else:
 					item_instance = ENEMY_SCENE.instantiate()

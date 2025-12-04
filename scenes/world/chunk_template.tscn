@@ -13,6 +13,7 @@ collision_layer = 2
 collision_mask = 0
 
 [node name="FloorMesh" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.070487976, 0, 0)
 layers = 2
 mesh = SubResource("BoxMesh_ivbto")
 skeleton = NodePath("../..")
@@ -36,3 +37,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -20)
 
 [node name="Point3" type="Marker3D" parent="ObstaclePoints"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 1, -20)
+
+[node name="Point5" type="Marker3D" parent="ObstaclePoints"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 1, 4.501999)
+
+[node name="Point9" type="Marker3D" parent="ObstaclePoints"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.7843595, 1, 4.502)
+
+[node name="Point10" type="Marker3D" parent="ObstaclePoints"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.39559507, 1, 4.502)

@@ -6,17 +6,18 @@
 size = Vector3(2, 2, 2)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_e6qd4"]
-size = Vector3(1, 1.732666, 1.7849121)
+size = Vector3(0.6430664, 1.732666, 0.70526123)
 
 [node name="Obstacle" type="Area3D"]
 collision_layer = 4
 script = ExtResource("1_mgdem")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 visible = false
 mesh = SubResource("BoxMesh_e6qd4")
 skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0.032592773, 0.032592773)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.014160156, 0.032592773, 0.047424316)
 shape = SubResource("BoxShape3D_e6qd4")
