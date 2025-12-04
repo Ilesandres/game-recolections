@@ -13,34 +13,33 @@ var active_chunks: Array[Node3D] = []
 var next_spawn_position: Vector3 = Vector3.ZERO
 var current_level: int = 1
 
-# Configuración de dificultad por nivel
 var spawn_speed = 1.0
 var object_spawn_chance = 0.33
 var spawn_attempts = 1
-var min_distance=1.0
+var min_distance = 2.5 
 
 func configure_for_level(level: int):
 	match level:
 		1:
-			spawn_speed = 10
+			spawn_speed = 10.0
 			object_spawn_chance = 0.2
-			spawn_attempts= 1
+			spawn_attempts = 1
 		2:
-			spawn_speed = 15
+			spawn_speed = 15.0
 			object_spawn_chance = 0.3
-			spawn_attempts= 2
+			spawn_attempts = 1
 		3:
-			spawn_speed = 20
+			spawn_speed = 20.0
 			object_spawn_chance = 0.4
-			spawn_attempts= 3
+			spawn_attempts = 2
 		4:
-			spawn_speed = 25
+			spawn_speed = 25.0
 			object_spawn_chance = 0.5
-			spawn_attempts= 4
+			spawn_attempts = 2
 		5:
-			spawn_speed = 30
+			spawn_speed = 30.0
 			object_spawn_chance = 0.6
-			spawn_attempts= 5
+			spawn_attempts = 3
 
 
 func _ready():
@@ -74,26 +73,38 @@ func _spawn_chunk(target_position: Vector3):
 	new_chunk.global_position = target_position 
 	
 	var obstacle_points = new_chunk.get_node("ObstaclePoints").get_children()
-	
+	var newly_spawned_objects: Array[Node3D] = [] 
+
 	for point in obstacle_points:
+		var successful_spawns = 0
+		
 		for i in range(spawn_attempts):
 			if randf() < object_spawn_chance:
 				var item_roll = randf()
 				var item_instance = null
+				
 				if item_roll < 0.8:
 					item_instance = OBSTACLE_SCENE.instantiate()
 				else:
 					item_instance = ENEMY_SCENE.instantiate()
+				
 				if item_instance:
-					var offset= Vector3(randf_range(-0.5,0.5),0, randf_range(-0.5,0.5))
-					item_instance.global_position = point.global_position+offset
-					if is_position_free(item_instance.global_position, new_chunk):
+					item_instance.global_position = point.global_position
+					
+					if is_position_free(item_instance.global_position, new_chunk, newly_spawned_objects): 
 						new_chunk.add_child(item_instance)
+						newly_spawned_objects.append(item_instance) 
+						successful_spawns += 1
+					else:
+						item_instance.queue_free()
+						
+					if successful_spawns > 0:
+						break
+
 	last_chunk = new_chunk
 	active_chunks.append(new_chunk)
 	
 	next_spawn_position.z -= CHUNK_LENGTH
-
 
 
 func add_xp(amount: int):
@@ -104,15 +115,27 @@ func add_xp(amount: int):
 	GlobalData.save_game()
 			
 
-
 func _despawn_chunk(chunk: Node3D):
 	active_chunks.erase(chunk) 
-	
 	chunk.queue_free()
 
-func is_position_free(new_pos, chunk):
+func is_position_free(new_pos: Vector3, chunk: Node3D, temporary_objects: Array[Node3D] = []) -> bool:
+	var count_x = 0
+	
 	for child in chunk.get_children():
 		if child.has_method("global_position"):
-			if child.global_position.distance_to(new_pos)<min_distance:
+			if abs(child.global_position.x - new_pos.x) < 0.1:
+				count_x += 1
+			if child.global_position.distance_to(new_pos) < min_distance:
 				return false
+		
+	for temp_obj in temporary_objects:
+		if abs(temp_obj.global_position.x - new_pos.x) < 0.1:
+			count_x += 1
+		if temp_obj.global_position.distance_to(new_pos) < min_distance:
+			return false
+	
+	if count_x >= 3:
+		return false
+		
 	return true
