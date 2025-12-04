@@ -11,8 +11,11 @@ func _ready():
 	pause_menu = PAUSE_MENU_SCENE.instantiate()
 	add_child(pause_menu)
 	pause_menu.set_process_priority(100)
-
 	GlobalData.load_game()
+	var player= $PlayerContainer.get_node("Player")
+	var health_node= $HUD.get_node("health")
+	if player and health_node:
+		player.health_changed.connect(health_node.update_health)
 
 
 func _unhandled_input(event):
