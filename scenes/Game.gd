@@ -2,15 +2,20 @@
 extends Node3D
 
 const PAUSE_MENU_SCENE = preload("res://src/UI/PauseMenu.tscn")
+const GAME_OVER_SCREEN_SCENE=preload("res://src/UI/GameOverMenu.tscn")
 var pause_menu: CanvasLayer = null
+var game_over_screen=null
 
 @onready var player_container: Node3D = $PlayerContainer 
 
 
 func _ready():
 	pause_menu = PAUSE_MENU_SCENE.instantiate()
+	game_over_screen= GAME_OVER_SCREEN_SCENE.instantiate()
 	add_child(pause_menu)
+	add_child(game_over_screen)
 	pause_menu.set_process_priority(100)
+	game_over_screen.set_process_priority(100)
 	GlobalData.load_game()
 	var level_spawner= $LevelSpawner
 	level_spawner.current_level= GlobalData.current_level
@@ -35,9 +40,16 @@ func _unhandled_input(event):
 			menu_control.pause_game()
 
 func _on_player_player_died():
-	get_tree().paused = true
-	var menu_control= pause_menu.get_node("PauseMenu")
-	if is_instance_valid(menu_control):
-		menu_control.pause_game()
+	var game_over_control= game_over_screen
+	GlobalData.save_game()
+	if is_instance_valid(game_over_control):
+		var hud=$HUD
+		if hud:
+			hud.hide()
+		game_over_control.setup_game_over_screen(GlobalData.current_score, GlobalData.high_score)
+	else:
+		print("instancia no valida")
+
+		print("hola 2.0")
 	
-	print("JUEGO DETENIDO: Game Over. desde Game")
+	print("JUEGO DETENIDO: Game POver. desde Game")
