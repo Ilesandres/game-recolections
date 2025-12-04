@@ -6,6 +6,7 @@ var total_global_trash: int = 0
 var high_score: int = 0
 
 const SAVE_PATH = "user://game_save.dat"
+var selected_character_scene_path: String="res://scenes/characters/character_k_2.tscn"
 
 func add_score(amount: int):
 	current_score += amount
