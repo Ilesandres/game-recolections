@@ -12,6 +12,11 @@ func _ready():
 	add_child(pause_menu)
 	pause_menu.set_process_priority(100)
 	GlobalData.load_game()
+	var level_spawner= $LevelSpawner
+	level_spawner.current_level= GlobalData.current_level
+	if level_spawner.has_method("setup_level"):
+		level_spawner.setup_level(GlobalData.current_level)
+	
 	var player= $PlayerContainer.get_node("Player")
 	var health_node= $HUD.get_node("health")
 	if player and health_node:

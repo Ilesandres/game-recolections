@@ -11,6 +11,7 @@ const CHUNK_LENGTH = 30.0
 var last_chunk: Node3D = null     
 var active_chunks: Array[Node3D] = [] 
 var next_spawn_position: Vector3 = Vector3.ZERO
+var current_level: int = 1
 
 # Configuración de dificultad por nivel
 var spawn_speed = 1.0
