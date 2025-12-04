@@ -24,6 +24,10 @@ grow_horizontal = 2
 grow_vertical = 2
 metadata/_edit_use_anchors_ = true
 
+[node name="LevelButton" type="Button" parent="ButtonContainer"]
+layout_mode = 2
+text = "selecciona un nivel"
+
 [node name="PlayButton" type="Button" parent="ButtonContainer"]
 layout_mode = 2
 text = "Jugar"
@@ -36,6 +40,7 @@ text = "Seleccionar Personaje"
 layout_mode = 2
 text = "Salir"
 
+[connection signal="pressed" from="ButtonContainer/LevelButton" to="." method="_on_level_button_pressed"]
 [connection signal="pressed" from="ButtonContainer/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="ButtonContainer/SelectCharacterButton" to="." method="_on_select_character_button_pressed"]
 [connection signal="pressed" from="ButtonContainer/ExitButton" to="." method="_on_exit_button_pressed"]

@@ -14,3 +14,7 @@ func _on_select_character_button_pressed():
 
 func _on_exit_button_pressed():
 	get_tree().quit()
+
+
+func _on_level_button_pressed() :
+	get_tree().change_scene_to_file("res://src/UI/LevelMenu.tscn")
