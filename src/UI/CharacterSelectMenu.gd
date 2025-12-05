@@ -2,6 +2,7 @@
 extends Control
 
 const GAME_SCENE_PATH = "res://scenes/game_scene.tscn" 
+const MAIN_SCENE_PATH= "res://src/UI/MainMenu.tscn"
 
 const CHARACTER_PATHS = {
 	"K": "res://scenes/characters/character_k_2.tscn",
@@ -35,6 +36,7 @@ func _on_select_character_r_pressed() :
 
 
 func _on_select_character_k_pressed() :
+	print("seleccionando k"+GlobalData.selected_character_scene_path)
 	select_character("K")
 
 
@@ -44,3 +46,10 @@ func _on_select_character_o_pressed() :
 
 func _on_select_character_p_pressed() :
 	select_character("P")
+
+
+func _on_back_button_pressed():
+	if not GlobalData.selected_character_scene_path:
+		select_character("K") 
+	print("Regresando al menú principal con: " + GlobalData.selected_character_scene_path)
+	get_tree().change_scene_to_file(MAIN_SCENE_PATH	)

@@ -15,6 +15,41 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_1g0rx")
 
+[node name="PlayButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.49600002
+anchor_top = 0.74700004
+anchor_right = 0.565
+anchor_bottom = 0.93100005
+offset_left = -10.392029
+offset_top = 27.94397
+offset_right = 34.119995
+offset_bottom = -19.288025
+text = "play"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.09
+anchor_right = 0.5
+anchor_bottom = 0.125
+offset_left = -117.0
+offset_top = -0.3200035
+offset_right = 102.0
+grow_horizontal = 2
+text = "SELECCT YOUR RECOLECTOR"
+
+[node name="BackButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 27.0
+offset_right = 172.0
+offset_bottom = 92.0
+text = "SAVE AND
+BACK"
+
 [node name="SelectCharacterK" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = -1
@@ -41,16 +76,20 @@ offset_right = 3.5599823
 offset_bottom = 3.711975
 icon = ExtResource("3_1g0rx")
 
-[node name="GridContainer" type="GridContainer" parent="."]
-visible = false
+[node name="SelectCharacterR" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_top = 0.17600001
-anchor_right = 1.0
-anchor_bottom = 0.5
-offset_top = -0.04801178
-grow_horizontal = 2
+anchor_left = 0.66800004
+anchor_top = 0.43100002
+anchor_right = 0.74500006
+anchor_bottom = 0.57100004
+offset_left = 4.463928
+offset_top = -0.2880249
+offset_right = -0.24005127
+offset_bottom = -0.008026123
+grow_horizontal = 0
 grow_vertical = 2
+icon = ExtResource("1_jhi54")
 
 [node name="SelectCharacterP" type="Button" parent="."]
 layout_mode = 1
@@ -67,49 +106,9 @@ grow_horizontal = 2
 grow_vertical = 2
 icon = ExtResource("4_46evt")
 
-[node name="SelectCharacterR" type="Button" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.66800004
-anchor_top = 0.43100002
-anchor_right = 0.74500006
-anchor_bottom = 0.57100004
-offset_left = 4.463928
-offset_top = -0.2880249
-offset_right = -0.24005127
-offset_bottom = -0.008026123
-grow_horizontal = 0
-grow_vertical = 2
-icon = ExtResource("1_jhi54")
-
-[node name="PlayButton" type="Button" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.49600002
-anchor_top = 0.74700004
-anchor_right = 0.49600002
-anchor_bottom = 0.88900006
-offset_left = -40.39203
-offset_top = -0.056030273
-offset_right = 40.60797
-offset_bottom = -0.072021484
-text = "play"
-
-[node name="Label" type="Label" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.5
-anchor_top = 0.09
-anchor_right = 0.5
-anchor_bottom = 0.125
-offset_left = -117.0
-offset_top = -0.3200035
-offset_right = 102.0
-grow_horizontal = 2
-text = "SELECCT YOUR RECOLECTOR"
-
+[connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
 [connection signal="pressed" from="SelectCharacterK" to="." method="_on_select_character_k_pressed"]
 [connection signal="pressed" from="SelectCharacterO" to="." method="_on_select_character_o_pressed"]
-[connection signal="pressed" from="SelectCharacterP" to="." method="_on_select_character_p_pressed"]
 [connection signal="pressed" from="SelectCharacterR" to="." method="_on_select_character_r_pressed"]
-[connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="SelectCharacterP" to="." method="_on_select_character_p_pressed"]
