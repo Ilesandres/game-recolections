@@ -76,7 +76,7 @@ offset_left = 0.41599846
 offset_top = 0.22399998
 offset_right = 0.08798218
 offset_bottom = -0.09600067
-text = "BACK AND SAVE"
+text = "salir y guardar"
 
 [node name="PlayButton" type="Button" parent="."]
 layout_mode = 1
