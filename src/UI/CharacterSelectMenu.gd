@@ -52,4 +52,4 @@ func _on_back_button_pressed():
 	if not GlobalData.selected_character_scene_path:
 		select_character("K") 
 	print("Regresando al menú principal con: " + GlobalData.selected_character_scene_path)
-	get_tree().change_scene_to_file(MAIN_SCENE_PATH	)
+	get_tree().change_scene_to_file(MAIN_SCENE_PATH)
