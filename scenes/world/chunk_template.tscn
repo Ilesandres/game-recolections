@@ -1,10 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://bpdqgn40dhdh2"]
+[gd_scene load_steps=5 format=3 uid="uid://bpdqgn40dhdh2"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_ivbto"]
 size = Vector3(30, 0.1, 60)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ivbto"]
 size = Vector3(30, 0.005, 60)
+
+[sub_resource type="BoxMesh" id="BoxMesh_g7200"]
+size = Vector3(0.2, 5, 60)
+
+[sub_resource type="BoxMesh" id="BoxMesh_gm5vj"]
+size = Vector3(0.2, 5, 60)
 
 [node name="Chunk" type="Node3D"]
 
@@ -26,6 +32,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -29)
 
 [node name="DespawnPoint" type="Marker3D" parent="Floor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 30)
+
+[node name="BorderRight" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 2.5, 0)
+mesh = SubResource("BoxMesh_g7200")
+
+[node name="BorderLeft" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 2.5, 0)
+mesh = SubResource("BoxMesh_gm5vj")
 
 [node name="ObstaclePoints" type="Node3D" parent="."]
 
