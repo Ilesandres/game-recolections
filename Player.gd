@@ -51,6 +51,10 @@ func _load_visual_character(character_scene: Resource):
 	visuals_node.add_child(character_instance)
 	
 	animation_player = character_instance.get_node("AnimationPlayer")
+	if animation_player:
+		animation_player.animation_finished.connect(_on_animation_finished)
+	else:
+		print("Advertencia: El personaje cargado no tiene un AnimationPlayer.")
 
 
 func _physics_process(delta: float):
@@ -92,11 +96,12 @@ func die():
 	play_animation("die")
 	
 	animation_timer.stop() 
-	
-	set_process(false)
-	set_physics_process(false)
-	
-	player_died.emit()
+
+func _on_animation_finished(anim_name):
+	if(anim_name == "die"):
+		set_process(false)
+		set_physics_process(false)
+		player_died.emit()
 	
 
 func handle_input():

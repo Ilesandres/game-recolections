@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://sr1out43bhp8" path="res://src/UI/display/CharacterDisplay3D.gd" id="1_vvnxj"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_6l6ja"]
+size = Vector3(2, 0.2, 2)
 
 [node name="CharacterDisplay3D" type="Node3D"]
 script = ExtResource("1_vvnxj")
@@ -11,7 +12,7 @@ script = ExtResource("1_vvnxj")
 transform = Transform3D(1, 0, 0, 0, 0.9063077, 0.42261824, 0, -0.42261824, 0.9063077, 0, 2, 5)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-visible = false
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.2, 0)
 mesh = SubResource("BoxMesh_6l6ja")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]

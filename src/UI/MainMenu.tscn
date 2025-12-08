@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://tc7uyrsmno8h"]
+[gd_scene load_steps=7 format=3 uid="uid://tc7uyrsmno8h"]
 
 [ext_resource type="Script" uid="uid://ik7cbo1n6un0" path="res://src/UI/MainMenu.gd" id="1_en4mt"]
 [ext_resource type="Texture2D" uid="uid://c23avgdttpy2g" path="res://assets/art/2d/found_main.png" id="2_w38c1"]
 [ext_resource type="FontFile" uid="uid://cx566jpavurob" path="res://assets/fonts/pixel-game/Pixel Game.otf" id="2_yq4l5"]
 [ext_resource type="FontFile" uid="uid://rn8mmsjielmk" path="res://assets/fonts/game-paused-demo/Game Paused DEMO.otf" id="3_pe8e0"]
 [ext_resource type="Texture2D" uid="uid://d0vclpqpi06rc" path="res://assets/art/2d/title_main.png" id="4_fapdh"]
+[ext_resource type="PackedScene" uid="uid://bop3l8sb2iecn" path="res://src/UI/display/CharacterDisplay3D.tscn" id="6_1xg02"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -104,6 +105,22 @@ offset_right = 596.5
 offset_bottom = 282.0
 grow_horizontal = 2
 texture = ExtResource("4_fapdh")
+
+[node name="DisplayContainer" type="SubViewportContainer" parent="."]
+layout_mode = 0
+offset_left = 859.0
+offset_top = 352.0
+offset_right = 1159.0
+offset_bottom = 652.0
+
+[node name="CharacterViewport" type="SubViewport" parent="DisplayContainer"]
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(250, 300)
+render_target_update_mode = 4
+
+[node name="CharacterDisplay3D" parent="DisplayContainer/CharacterViewport" instance=ExtResource("6_1xg02")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 
 [connection signal="pressed" from="ButtonContainer/LevelButton" to="." method="_on_level_button_pressed"]
 [connection signal="pressed" from="ButtonContainer/PlayButton" to="." method="_on_play_button_pressed"]
