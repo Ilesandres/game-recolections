@@ -10,6 +10,7 @@ const CHARACTER_PATHS = {
 	"P": "res://scenes/characters/character_p_2.tscn",
 	"R": "res://scenes/characters/character_r_2.tscn",
 }
+@onready var character_disply_3d=$DisplayContainer/CharacterViewport/CharacterDisplay3D
 
 var current_selection_key: String = "K" 
 
@@ -19,6 +20,10 @@ func select_character(key: String):
 	print("Seleccionado personaje: " + key)
 	
 	GlobalData.selected_character_scene_path = CHARACTER_PATHS[key]
+	if is_instance_valid(character_disply_3d):
+		character_disply_3d.load_selected_character()
+	else:
+		print(" error al cargar el personaje seleccionado")
 	
 
 
@@ -53,3 +58,4 @@ func _on_back_button_pressed():
 		select_character("K") 
 	print("Regresando al menú principal con: " + GlobalData.selected_character_scene_path)
 	get_tree().change_scene_to_file(MAIN_SCENE_PATH)
+	

@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://bop3l8sb2iecn"]
+
+[ext_resource type="Script" uid="uid://sr1out43bhp8" path="res://src/UI/display/CharacterDisplay3D.gd" id="1_vvnxj"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_6l6ja"]
+
+[node name="CharacterDisplay3D" type="Node3D"]
+script = ExtResource("1_vvnxj")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.9063077, 0.42261824, 0, -0.42261824, 0.9063077, 0, 2, 5)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("BoxMesh_6l6ja")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.8434571, 0.5371966, 0, -0.5371966, 0.8434571, 0, 4.372, 5)
