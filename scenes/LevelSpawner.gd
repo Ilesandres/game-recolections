@@ -42,7 +42,9 @@ func configure_for_level(level: int):
 
 
 func _get_snapped_position(position: Vector3) -> Vector3:
-	return position.snapped(Vector3(CHUNK_LENGTH, 0, CHUNK_LENGTH))
+	var snapped = position.snapped(Vector3(CHUNK_LENGTH, 0, CHUNK_LENGTH))
+	snapped.y = 0.0
+	return snapped
 
 
 func _ready():
