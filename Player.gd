@@ -62,9 +62,9 @@ func _physics_process(delta: float):
 	if Input.is_action_pressed("ui_left"):
 		input_dir.x -= 1
 	if Input.is_action_pressed("ui_front"):
-		input_dir.z += 1
-	if Input.is_action_pressed("ui_back"):
 		input_dir.z -= 1
+	if Input.is_action_pressed("ui_back"):
+		input_dir.z += 1
 
 	input_dir = input_dir.normalized()
 	print("input_dir: ", input_dir)
@@ -76,7 +76,7 @@ func _physics_process(delta: float):
 
 		# Solo rota el nodo visual, no el cuerpo
 		if input_dir != Vector3.ZERO:
-			var look_at_pos = visuals_node.global_position + input_dir
+			var look_at_pos = visuals_node.global_position - input_dir
 			visuals_node.look_at(look_at_pos, Vector3.UP)
 			if not is_sliding:
 				play_animation("walk")

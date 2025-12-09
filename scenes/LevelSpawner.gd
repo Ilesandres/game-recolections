@@ -19,25 +19,25 @@ var current_level: int = 1
 var spawn_speed = 1.0
 var object_spawn_chance = 0.33
 var spawn_attempts = 1
-var min_distance = 2.5 
+var min_distance = 3.5 
 
 
 func configure_for_level(level: int):
 	match level:
 		1:
-			object_spawn_chance = 0.2
+			object_spawn_chance = 0.05
 			spawn_attempts = 1
 		2:
-			object_spawn_chance = 0.3
+			object_spawn_chance = 0.1
 			spawn_attempts = 1
 		3:
-			object_spawn_chance = 0.4
+			object_spawn_chance = 0.15
 			spawn_attempts = 2
 		4:
-			object_spawn_chance = 0.5
+			object_spawn_chance = 0.2
 			spawn_attempts = 2
 		5:
-			object_spawn_chance = 0.6
+			object_spawn_chance = 0.25
 			spawn_attempts = 3
 
 
@@ -68,6 +68,11 @@ func _process(_delta: float):
 	_cleanup_old_chunks(player_pos)
 
 
+func _get_chunk_key(position: Vector3) -> String:
+	var snapped = _get_snapped_position(position)
+	return "%d,%d" % [int(round(snapped.x)), int(round(snapped.z))]
+
+
 func _check_and_spawn_neighbors(center_pos: Vector3):
 	var directions = [
 		Vector3(CHUNK_LENGTH, 0, 0), Vector3(-CHUNK_LENGTH, 0, 0), Vector3(0, 0, CHUNK_LENGTH), Vector3(0, 0, -CHUNK_LENGTH),
@@ -77,8 +82,9 @@ func _check_and_spawn_neighbors(center_pos: Vector3):
 	
 	for dir in directions:
 		var neighbor_pos = center_pos + dir
+		var key = _get_chunk_key(neighbor_pos)
 		
-		if not chunk_map.has(neighbor_pos):
+		if not chunk_map.has(key):
 			_spawn_chunk(neighbor_pos)
 
 
@@ -96,45 +102,37 @@ func _cleanup_old_chunks(player_pos: Vector3):
 
 
 func _spawn_chunk(target_position: Vector3): 
+	var key = _get_chunk_key(target_position)
+	if chunk_map.has(key):
+		return
+
 	var new_chunk = CHUNK_SCENE.instantiate()
 	
 	add_child(new_chunk)
-	new_chunk.global_position = target_position 
-	
-	chunk_map[target_position] = new_chunk
+	new_chunk.global_position = target_position
+
+	chunk_map[key] = new_chunk
 	active_chunks.append(new_chunk)
-	
+
 	var obstacle_points = new_chunk.get_node("ObstaclePoints").get_children()
-	var newly_spawned_objects: Array[Node3D] = [] 
+	var newly_spawned_objects: Array[Node3D] = []
 
 	for point in obstacle_points:
-		var successful_spawns = 0
-		for i in range(spawn_attempts):
-			if randf() < object_spawn_chance:
-				var item_roll = randf()
-				var item_instance = null
-				if item_roll < 0.8:
-					item_instance = OBSTACLE_SCENE.instantiate()
+		if randf() < object_spawn_chance:
+			var item_roll = randf()
+			var item_instance = null
+			if item_roll < 0.8:
+				item_instance = OBSTACLE_SCENE.instantiate()
+			else:
+				item_instance = ENEMY_SCENE.instantiate()
+			if item_instance:
+				# Asignar posición local ANTES de agregar al árbol
+				item_instance.position = point.position
+				if is_position_free(new_chunk.global_position + point.position, new_chunk, newly_spawned_objects):
+					new_chunk.add_child(item_instance)
+					newly_spawned_objects.append(item_instance)
 				else:
-					item_instance = ENEMY_SCENE.instantiate()
-				if item_instance:
-					var spawn_pos = point.global_position
-					if item_instance.has_node("CollisionShape3D"):
-						var shape = item_instance.get_node("CollisionShape3D").shape
-						if shape is BoxShape3D:
-							spawn_pos.y += shape.size.y / 2.0
-						elif shape is CapsuleShape3D:
-							spawn_pos.y += shape.height / 2.0 + shape.radius
-						# Puedes agregar más casos según tus colliders
-					item_instance.global_position = spawn_pos
-					if is_position_free(item_instance.global_position, new_chunk, newly_spawned_objects):
-						new_chunk.add_child(item_instance)
-						newly_spawned_objects.append(item_instance)
-						successful_spawns += 1
-					else:
-						item_instance.queue_free()
-					if successful_spawns > 0:
-						break
+					item_instance.queue_free()
 
 	last_chunk = new_chunk
 	
@@ -149,7 +147,7 @@ func add_xp(amount: int):
 
 func _despawn_chunk(chunk: Node3D):
 	active_chunks.erase(chunk) 
-	var chunk_key = chunk.global_position.snapped(Vector3(CHUNK_LENGTH, 0, CHUNK_LENGTH))
+	var chunk_key = _get_chunk_key(chunk.global_position)
 	if chunk_map.has(chunk_key):
 		chunk_map.erase(chunk_key)
 
@@ -166,6 +164,7 @@ func is_position_free(new_pos: Vector3, chunk: Node3D, temporary_objects: Array[
 				return false
 		
 	for temp_obj in temporary_objects:
+		# Nota: La posición de temp_obj ya fue establecida como global
 		if abs(temp_obj.global_position.x - new_pos.x) < 0.1:
 			count_x += 1
 		if temp_obj.global_position.distance_to(new_pos) < min_distance:
