@@ -2,17 +2,12 @@ extends CharacterBody3D
 
 const SPEED = 8.0
 const JUMP_VELOCITY = 15.0
-const LANE_CHANGE_SPEED = 10.0
 const GRAVITY = 30.0
-const LANE_WIDTH = 5.0
+const DAMAGE_ANIMATION_TIME = 0.5 
 
-const LANES = [-LANE_WIDTH, 0.0, LANE_WIDTH]
-var current_lane_index = 1
-var target_x = LANES[1]
 var is_sliding = false
 var slide_timer = 0.0
 const SLIDE_DURATION = 0.8
-const DAMAGE_ANIMATION_TIME = 0.5 
 
 var max_health: int = 3
 var current_health: int = max_health
@@ -41,7 +36,7 @@ func _ready():
 
 	emit_signal("health_changed", current_health, max_health)
 
-	play_animation("sprint")
+	# No reproducir animación por defecto al iniciar
 
 func _load_visual_character(character_scene: Resource):
 	for child in visuals_node.get_children():
@@ -60,19 +55,40 @@ func _load_visual_character(character_scene: Resource):
 func _physics_process(delta: float):
 	if not is_on_floor():
 		velocity.y -= GRAVITY * delta
-		
-	var direction = Vector3(0, 0, -1)
-	
+
+	var input_dir = Vector3.ZERO
+	if Input.is_action_pressed("ui_right"):
+		input_dir.x += 1
+	if Input.is_action_pressed("ui_left"):
+		input_dir.x -= 1
+	if Input.is_action_pressed("ui_front"):
+		input_dir.z += 1
+	if Input.is_action_pressed("ui_back"):
+		input_dir.z -= 1
+
+	input_dir = input_dir.normalized()
+	print("input_dir: ", input_dir)
+
 	if not is_taking_damage:
-		velocity.z = direction.z * SPEED
+		# Movimiento omnidireccional global
+		velocity.x = input_dir.x * SPEED
+		velocity.z = input_dir.z * SPEED
+
+		# Solo rota el nodo visual, no el cuerpo
+		if input_dir != Vector3.ZERO:
+			var look_at_pos = visuals_node.global_position + input_dir
+			visuals_node.look_at(look_at_pos, Vector3.UP)
+			if not is_sliding:
+				play_animation("walk")
+		elif is_on_floor() and not is_sliding:
+			if animation_player and animation_player.has_animation("idle"):
+				play_animation("idle")
 	else:
+		velocity.x = 0.0
 		velocity.z = 0.0
-	
-	position.x = lerp(position.x, target_x, LANE_CHANGE_SPEED * delta)
-	
-	handle_input()
+
+	handle_jump_and_slide()
 	handle_slide(delta)
-	
 	move_and_slide()
 
 
@@ -104,24 +120,18 @@ func _on_animation_finished(anim_name):
 		player_died.emit()
 	
 
-func handle_input():
+func handle_jump_and_slide(): # Función actualizada/renombrada
 	if is_taking_damage or is_sliding:
 		return
-		
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+
+	# Salto
+	if Input.is_action_just_pressed("ui_up") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
-		
-	if Input.is_action_just_pressed("ui_right"):
-		change_lane(1)
-	elif Input.is_action_just_pressed("ui_left"):
-		change_lane(-1)
-		
-	if Input.is_action_just_pressed("ui_down") and is_on_floor():
+	
+	# Deslizamiento
+	if Input.is_action_just_pressed("ui_down") and is_on_floor() and not is_sliding:
 		start_slide()
 
-func change_lane(direction: int):
-	current_lane_index = clamp(current_lane_index + direction, 0, 2)
-	target_x = LANES[current_lane_index]
 
 func start_slide():
 	is_sliding = true
