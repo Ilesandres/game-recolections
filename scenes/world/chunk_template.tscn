@@ -1,4 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://bpdqgn40dhdh2"]
+[gd_scene load_steps=6 format=3 uid="uid://bpdqgn40dhdh2"]
+
+[ext_resource type="PackedScene" uid="uid://ddpnbjiiyufqc" path="res://scenes/world/map/casa-tipo-a.tscn" id="1_g7200"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_ivbto"]
 size = Vector3(30, 0.5, 60)
@@ -62,3 +64,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.784, 0, 4.502)
 
 [node name="Point10" type="Marker3D" parent="ObstaclePoints"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.396, 0, 4.502)
+
+[node name="building-type-a2" parent="." instance=ExtResource("1_g7200")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 8.882805, 0, 0)
