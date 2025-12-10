@@ -39,6 +39,7 @@ func _ready():
 	animation_timer.timeout.connect(_on_animation_timer_timeout)
 
 	emit_signal("health_changed", current_health, max_health)
+	global_position.y=0.5
 
 
 func _load_visual_character(character_scene: Resource):

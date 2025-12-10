@@ -1,0 +1,56 @@
+[gd_scene load_steps=6 format=4 uid="uid://cbn6lsi7thpln"]
+
+[ext_resource type="Texture2D" uid="uid://drt17ksjdjk8e" path="res://assets/kenney_city-kit-suburban_20/Models/GLB format/Textures/colormap.png" id="1_3sn2s"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wr34a"]
+resource_name = "colormap"
+cull_mode = 2
+albedo_texture = ExtResource("1_3sn2s")
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_8k68n"]
+_surfaces = [{
+"aabb": AABB(-0.17999999, 0, -0.2, 0.35999998, 0.01, 0.4),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAwACAAEAAgAEAAAAAQAFAAMABQABAAAAAgADAAYABgADAAUABgAEAAIAAAAHAAUABQAHAAYABwAAAAQABAAGAAcA"),
+"name": "colormap",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAAAAP//AAD//wAA//8AAP//AAAAAAAAcNz//wAAAAAAAAAAAAAAAHDc/////wAAjiP//wAAAACOI/////8AAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_uamtu"]
+resource_name = "driveway-long_driveway-long"
+_surfaces = [{
+"aabb": AABB(-0.17999999, 0, -0.2, 0.35999998, 0.01, 0.4),
+"attribute_data": PackedByteArray("/zfMrP83zKz/N8ys/zfMrP83MpP/NzKT/zcyk/83MpP/NzKT/zfMrP83zKz/NzKT/zcyk/83zKz/N8ys/zcyk/8XzKz/FzKT/xcyk/8XzKz/FzKT/xfMrP8XzKz/FzKT"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAgADAAAABAAFAAYABgAHAAQACAAJAAoACgALAAgADAANAA4ADgAPAAwAEAARABIAEgATABAAFAAVABYAFgAXABQA"),
+"material": SubResource("StandardMaterial3D_wr34a"),
+"name": "colormap",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AAAAAP///7///wAA////v///AAAAAP+/AAAAAAAA/7+OI///AAD//3Dc//8AAP//cNz///////+OI////////3Dc/////wCA//8AAP//AIAAAAAA//8AgI4j/////wCAjiP//wAA//8AAAAAAAD/////AAAAAP//cNz//wAA//8AAAAAAADZ0I4j//8AANnQjiP/////2dAAAAAA///Z0HDc//8AANnQ//8AAAAA2dD//wAA///Z0HDc/////9nQAAD/fwAA/38AAP9/AAD/f/9//7//f/+//3//v/9//7//f////3////9/////f////3////9/////f////3///8CnfbDAp32wwKd9sMCnfbCBz8Angc/AJ4HPwCeBz8An")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_8k68n")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3sn2s"]
+size = Vector3(0.3334961, 0.01171875, 0.41088867)
+
+[node name="driveway-long2" type="StaticBody3D"]
+collision_layer = 16
+collision_mask = 13
+
+[node name="driveway-long" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_uamtu")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0021972656, 0.0048828125, 0.00036621094)
+shape = SubResource("BoxShape3D_3sn2s")

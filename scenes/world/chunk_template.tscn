@@ -1,6 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://bpdqgn40dhdh2"]
+[gd_scene load_steps=10 format=3 uid="uid://bpdqgn40dhdh2"]
 
 [ext_resource type="PackedScene" uid="uid://ddpnbjiiyufqc" path="res://scenes/world/map/casa-tipo-a.tscn" id="1_g7200"]
+[ext_resource type="PackedScene" uid="uid://b804nj5wnqfvg" path="res://scenes/world/map/arbol_grande.tscn" id="2_gm5vj"]
+[ext_resource type="PackedScene" uid="uid://d25113esg11rc" path="res://scenes/world/map/casa-tipoq2.tscn" id="2_s0myc"]
+[ext_resource type="PackedScene" uid="uid://cbn6lsi7thpln" path="res://scenes/world/map/carreter_larga.tscn" id="3_ju0s8"]
+[ext_resource type="PackedScene" uid="uid://c6mt6oukcc44e" path="res://scenes/world/map/plantas-1.tscn" id="5_ibloh"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_ivbto"]
 size = Vector3(30, 0.5, 60)
@@ -45,6 +49,132 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 2.5, 0)
 visible = false
 mesh = SubResource("BoxMesh_gm5vj")
 
+[node name="Drivers-container" type="Node3D" parent="Floor"]
+
+[node name="center" type="Node3D" parent="Floor/Drivers-container"]
+
+[node name="driveway-long2" parent="Floor/Drivers-container/center" instance=ExtResource("3_ju0s8")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0.045524903, 0.3, -4.556432)
+
+[node name="driveway-long3" parent="Floor/Drivers-container/center" instance=ExtResource("3_ju0s8")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0.045524903, 0.3, -8.530171)
+
+[node name="driveway-long4" parent="Floor/Drivers-container/center" instance=ExtResource("3_ju0s8")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0.045524903, 0.3, -12.504575)
+
+[node name="driveway-long5" parent="Floor/Drivers-container/center" instance=ExtResource("3_ju0s8")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0.045524903, 0.3, -0.9079485)
+
+[node name="driveway-long6" parent="Floor/Drivers-container/center" instance=ExtResource("3_ju0s8")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0.045524903, 0.3, 2.8449812)
+
+[node name="driveway-long7" parent="Floor/Drivers-container/center" instance=ExtResource("3_ju0s8")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0.045524903, 0.3, 5.5936384)
+
+[node name="driveway-long8" parent="Floor/Drivers-container/center" instance=ExtResource("3_ju0s8")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0.045524903, 0.3, 9.164683)
+
+[node name="driveway-long9" parent="Floor/Drivers-container/center" instance=ExtResource("3_ju0s8")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0.045524903, 0.3, 12.594981)
+
+[node name="driveway-long10" parent="Floor/Drivers-container/center" instance=ExtResource("3_ju0s8")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0.045524903, 0.3, 15.671153)
+
+[node name="driveway-long11" parent="Floor/Drivers-container/center" instance=ExtResource("3_ju0s8")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0.045524903, 0.3, 18.835705)
+
+[node name="driveway-long12" parent="Floor/Drivers-container/center" instance=ExtResource("3_ju0s8")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0.045524903, 0.3, 21.745373)
+
+[node name="driveway-long13" parent="Floor/Drivers-container/center" instance=ExtResource("3_ju0s8")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0.045524903, 0.3, 24.78004)
+
+[node name="driveway-long14" parent="Floor/Drivers-container/center" instance=ExtResource("3_ju0s8")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0.045524903, 0.3, 28.746716)
+
+[node name="driveway-long15" parent="Floor/Drivers-container/center" instance=ExtResource("3_ju0s8")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0.045524903, 0.3, -16.091053)
+
+[node name="driveway-long16" parent="Floor/Drivers-container/center" instance=ExtResource("3_ju0s8")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0.045524903, 0.3, -20.026234)
+
+[node name="driveway-long17" parent="Floor/Drivers-container/center" instance=ExtResource("3_ju0s8")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0.045524903, 0.3, -23.331654)
+
+[node name="driveway-long18" parent="Floor/Drivers-container/center" instance=ExtResource("3_ju0s8")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0.045524903, 0.3, -26.850208)
+
+[node name="driveway-long19" parent="Floor/Drivers-container/center" instance=ExtResource("3_ju0s8")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0.045524903, 0.3, -29.624866)
+
+[node name="back_house" type="Node3D" parent="Floor/Drivers-container"]
+
+[node name="driveway-long2" parent="Floor/Drivers-container/back_house" instance=ExtResource("3_ju0s8")]
+transform = Transform3D(-4.371139e-07, 0, 10, 0, 10, 0, -10, 0, -4.371139e-07, 3.8560717, 0.3, 6.9439516)
+
+[node name="driveway-long3" parent="Floor/Drivers-container/back_house" instance=ExtResource("3_ju0s8")]
+transform = Transform3D(-4.371139e-07, 0, 10, 0, 10, 0, -10, 0, -4.371139e-07, 7.834099, 0.3, 6.9439516)
+
+[node name="driveway-long4" parent="Floor/Drivers-container/back_house" instance=ExtResource("3_ju0s8")]
+transform = Transform3D(-4.371139e-07, 0, 10, 0, 10, 0, -10, 0, -4.371139e-07, 11.479851, 0.3, 6.9439516)
+
+[node name="driveway-long5" parent="Floor/Drivers-container/back_house" instance=ExtResource("3_ju0s8")]
+transform = Transform3D(-4.371139e-07, 0, 10, 0, 10, 0, -10, 0, -4.371139e-07, 13.440544, 0.3, 6.9439516)
+
+[node name="front_house" type="Node3D" parent="Floor/Drivers-container"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -17.15319)
+
+[node name="driveway-long2" parent="Floor/Drivers-container/front_house" instance=ExtResource("3_ju0s8")]
+transform = Transform3D(-4.371139e-07, 0, 10, 0, 10, 0, -10, 0, -4.371139e-07, 3.8560717, 0.3, 6.9439516)
+
+[node name="driveway-long3" parent="Floor/Drivers-container/front_house" instance=ExtResource("3_ju0s8")]
+transform = Transform3D(-4.371139e-07, 0, 10, 0, 10, 0, -10, 0, -4.371139e-07, 7.834099, 0.3, 6.9439516)
+
+[node name="driveway-long4" parent="Floor/Drivers-container/front_house" instance=ExtResource("3_ju0s8")]
+transform = Transform3D(-4.371139e-07, 0, 10, 0, 10, 0, -10, 0, -4.371139e-07, 11.479851, 0.3, 6.9439516)
+
+[node name="driveway-long5" parent="Floor/Drivers-container/front_house" instance=ExtResource("3_ju0s8")]
+transform = Transform3D(-4.371139e-07, 0, 10, 0, 10, 0, -10, 0, -4.371139e-07, 13.440544, 0.3, 6.9439516)
+
+[node name="driveway-long6" parent="Floor/Drivers-container/front_house" instance=ExtResource("3_ju0s8")]
+transform = Transform3D(-4.371139e-07, 0, 10, 0, 10, 0, -10, 0, -4.371139e-07, 13.440544, 0.3, 4.4177895)
+
+[node name="driveway-long7" parent="Floor/Drivers-container/front_house" instance=ExtResource("3_ju0s8")]
+transform = Transform3D(-9.999159, 0, 0.12967375, 0, 10, 0, -0.12967375, 0, -9.999159, 12.623756, 0.3, 4.663619)
+
+[node name="driveway-long8" parent="Floor/Drivers-container/front_house" instance=ExtResource("3_ju0s8")]
+transform = Transform3D(-4.371139e-07, 0, 10, 0, 10, 0, -10, 0, -4.371139e-07, 13.440544, 0.3, 1.8797159)
+
+[node name="back_house2" type="Node3D" parent="Floor/Drivers-container"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.872498, 0, -0.017730713)
+
+[node name="driveway-long2" parent="Floor/Drivers-container/back_house2" instance=ExtResource("3_ju0s8")]
+transform = Transform3D(-4.371139e-07, 0, 10, 0, 10, 0, -10, 0, -4.371139e-07, 3.8560717, 0.3, 6.9439516)
+
+[node name="driveway-long3" parent="Floor/Drivers-container/back_house2" instance=ExtResource("3_ju0s8")]
+transform = Transform3D(-4.371139e-07, 0, 10, 0, 10, 0, -10, 0, -4.371139e-07, 7.834099, 0.3, 6.9439516)
+
+[node name="driveway-long4" parent="Floor/Drivers-container/back_house2" instance=ExtResource("3_ju0s8")]
+transform = Transform3D(-4.371139e-07, 0, 10, 0, 10, 0, -10, 0, -4.371139e-07, 11.479851, 0.3, 6.9439516)
+
+[node name="driveway-long5" parent="Floor/Drivers-container/back_house2" instance=ExtResource("3_ju0s8")]
+transform = Transform3D(-4.371139e-07, 0, 10, 0, 10, 0, -10, 0, -4.371139e-07, 13.440544, 0.3, 6.9439516)
+
+[node name="front_house2" type="Node3D" parent="Floor/Drivers-container"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.808655, 0, -22.391441)
+
+[node name="driveway-long2" parent="Floor/Drivers-container/front_house2" instance=ExtResource("3_ju0s8")]
+transform = Transform3D(-4.371139e-07, 0, 10, 0, 10, 0, -10, 0, -4.371139e-07, 3.8560717, 0.3, 6.9439516)
+
+[node name="driveway-long3" parent="Floor/Drivers-container/front_house2" instance=ExtResource("3_ju0s8")]
+transform = Transform3D(-4.371139e-07, 0, 10, 0, 10, 0, -10, 0, -4.371139e-07, 7.834099, 0.3, 6.9439516)
+
+[node name="driveway-long4" parent="Floor/Drivers-container/front_house2" instance=ExtResource("3_ju0s8")]
+transform = Transform3D(-4.371139e-07, 0, 10, 0, 10, 0, -10, 0, -4.371139e-07, 11.479851, 0.3, 6.9439516)
+
+[node name="driveway-long5" parent="Floor/Drivers-container/front_house2" instance=ExtResource("3_ju0s8")]
+transform = Transform3D(-4.371139e-07, 0, 10, 0, 10, 0, -10, 0, -4.371139e-07, 13.440544, 0.3, 6.9439516)
+
 [node name="ObstaclePoints" type="Node3D" parent="."]
 
 [node name="Point1" type="Marker3D" parent="ObstaclePoints"]
@@ -66,4 +196,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.784, 0, 4.502)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.396, 0, 4.502)
 
 [node name="building-type-a2" parent="." instance=ExtResource("1_g7200")]
-transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 8.882805, 0, 0)
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 8.882805, 0, -1.847168)
+
+[node name="tree-large2" parent="." instance=ExtResource("2_gm5vj")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 14.219017, 0, -7.740074)
+
+[node name="building-type-q2" parent="." instance=ExtResource("2_s0myc")]
+transform = Transform3D(0.39190108, 0, -9.992317, 0, 10, 0, 9.992317, 0, 0.39190108, -7.6316643, 0, -2.3987427)
+
+[node name="planter2" parent="." instance=ExtResource("5_ibloh")]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, -4.922241, 0, -11.163574)
