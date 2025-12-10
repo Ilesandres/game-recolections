@@ -5,6 +5,8 @@ const JUMP_VELOCITY = 15.0
 const GRAVITY = 30.0
 const DAMAGE_ANIMATION_TIME = 0.5 
 
+const CAMERA_SMOOTH_SPEED = 5.0 
+
 var is_sliding = false
 var slide_timer = 0.0
 const SLIDE_DURATION = 0.8
@@ -87,15 +89,17 @@ func _physics_process(delta: float):
 	var visual_back_direction = -visuals_node.global_transform.basis.z.normalized()
 	
 	var camera_offset = Vector3(0, 2, 6) 
-	var final_camera_position = global_position
+	var target_camera_position = global_position
 	
-	final_camera_position += visual_back_direction * camera_offset.z 
+	target_camera_position += visual_back_direction * camera_offset.z 
+	target_camera_position.y += camera_offset.y
 	
-	final_camera_position.y += camera_offset.y
+	camera_boom.global_position = camera_boom.global_position.lerp(
+		target_camera_position, 
+		delta * CAMERA_SMOOTH_SPEED
+	)
 	
-	camera_boom.global_position = final_camera_position
 	camera_boom.look_at(global_position, Vector3.UP)
-	
 	# -----------------------------------------------------
 
 	handle_jump_and_slide()
