@@ -8,6 +8,18 @@ const DAMAGE_ANIMATION_TIME = 0.5
 const CAMERA_SMOOTH_SPEED = 5.0
 const ROTATION_SMOOTH_SPEED = 10.0 
 
+
+var mouse_rotation_delta_x := 0.0
+var mouse_sensitivity := 0.015
+func _input(event):
+	if event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
+		mouse_rotation_delta_x += -event.relative.x * mouse_sensitivity
+	elif event is InputEventMouseButton:
+		if event.button_index == MOUSE_BUTTON_RIGHT and event.pressed:
+			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+		elif event.button_index == MOUSE_BUTTON_RIGHT and not event.pressed:
+			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+
 var is_sliding = false
 var slide_timer = 0.0
 const SLIDE_DURATION = 0.8
@@ -57,6 +69,10 @@ func _load_visual_character(character_scene: Resource):
 
 
 func _physics_process(delta: float):
+	if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
+		rotate_y(mouse_rotation_delta_x)
+		mouse_rotation_delta_x = 0.0
+
 	if not is_on_floor():
 		velocity.y -= GRAVITY * delta
 
@@ -73,34 +89,26 @@ func _physics_process(delta: float):
 	input_dir = input_dir.normalized()
 
 	if not is_taking_damage:
-		
 		var movement_vector = Vector3.ZERO
-		
 		if input_dir != Vector3.ZERO:
-			var basis = visuals_node.global_transform.basis
-			
+			var basis = global_transform.basis
 			movement_vector = basis * input_dir
-			
-			movement_vector.y = 0 
+			movement_vector.y = 0
 			movement_vector = movement_vector.normalized()
-			
 			velocity.x = movement_vector.x * SPEED
 			velocity.z = movement_vector.z * SPEED
-			
-			var target_transform = visuals_node.global_transform.looking_at(
-				global_position + movement_vector, 
-				Vector3.UP, 
-				true
-			)
-			
-			visuals_node.global_transform.basis = visuals_node.global_transform.basis.slerp(
-				target_transform.basis, 
-				delta * ROTATION_SMOOTH_SPEED
-			)
-			
+			if Input.get_mouse_mode() != Input.MOUSE_MODE_CAPTURED:
+				var target_transform = visuals_node.global_transform.looking_at(
+					global_position + movement_vector,
+					Vector3.UP,
+					true
+				)
+				visuals_node.global_transform.basis = visuals_node.global_transform.basis.slerp(
+					target_transform.basis,
+					delta * ROTATION_SMOOTH_SPEED
+				)
 			if not is_sliding:
 				play_animation("walk")
-		
 		elif is_on_floor():
 			velocity.x = 0.0
 			velocity.z = 0.0
@@ -112,18 +120,14 @@ func _physics_process(delta: float):
 		velocity.z = 0.0
 
 	var visual_back_direction = -visuals_node.global_transform.basis.z.normalized()
-	
-	var camera_offset = Vector3(0, 2, 6) 
+	var camera_offset = Vector3(0, 2, 6)
 	var target_camera_position = global_position
-	
-	target_camera_position += visual_back_direction * camera_offset.z 
+	target_camera_position += visual_back_direction * camera_offset.z
 	target_camera_position.y += camera_offset.y
-	
 	camera_boom.global_position = camera_boom.global_position.lerp(
-		target_camera_position, 
+		target_camera_position,
 		delta * CAMERA_SMOOTH_SPEED
 	)
-	
 	camera_boom.look_at(global_position, Vector3.UP)
 
 	handle_jump_and_slide()
