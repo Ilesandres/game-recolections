@@ -5,7 +5,8 @@ const JUMP_VELOCITY = 15.0
 const GRAVITY = 30.0
 const DAMAGE_ANIMATION_TIME = 0.5 
 
-const CAMERA_SMOOTH_SPEED = 5.0 
+const CAMERA_SMOOTH_SPEED = 5.0
+const ROTATION_SMOOTH_SPEED = 10.0 
 
 var is_sliding = false
 var slide_timer = 0.0
@@ -60,28 +61,51 @@ func _physics_process(delta: float):
 
 	var input_dir = Vector3.ZERO
 	if Input.is_action_pressed("ui_right"):
-		input_dir.x += 1
-	if Input.is_action_pressed("ui_left"):
 		input_dir.x -= 1
+	if Input.is_action_pressed("ui_left"):
+		input_dir.x += 1
 	if Input.is_action_pressed("ui_front"):
-		input_dir.z -= 1
-	if Input.is_action_pressed("ui_back"):
 		input_dir.z += 1
+	if Input.is_action_pressed("ui_back"):
+		input_dir.z -= 1
 
 	input_dir = input_dir.normalized()
-	print("input_dir: ", input_dir)
 
 	if not is_taking_damage:
-		velocity.x = input_dir.x * SPEED
-		velocity.z = input_dir.z * SPEED
+		
+		var movement_vector = Vector3.ZERO
+		
 		if input_dir != Vector3.ZERO:
-			var look_at_pos = visuals_node.global_position - input_dir
-			visuals_node.look_at(look_at_pos, Vector3.UP)
+			var basis = visuals_node.global_transform.basis
+			
+			movement_vector = basis * input_dir
+			
+			movement_vector.y = 0 
+			movement_vector = movement_vector.normalized()
+			
+			velocity.x = movement_vector.x * SPEED
+			velocity.z = movement_vector.z * SPEED
+			
+			var target_transform = visuals_node.global_transform.looking_at(
+				global_position + movement_vector, 
+				Vector3.UP, 
+				true
+			)
+			
+			visuals_node.global_transform.basis = visuals_node.global_transform.basis.slerp(
+				target_transform.basis, 
+				delta * ROTATION_SMOOTH_SPEED
+			)
+			
 			if not is_sliding:
 				play_animation("walk")
-		elif is_on_floor() and not is_sliding:
-			if animation_player and animation_player.has_animation("idle"):
-				play_animation("idle")
+		
+		elif is_on_floor():
+			velocity.x = 0.0
+			velocity.z = 0.0
+			if not is_sliding:
+				if animation_player and animation_player.has_animation("idle"):
+					play_animation("idle")
 	else:
 		velocity.x = 0.0
 		velocity.z = 0.0
@@ -100,7 +124,6 @@ func _physics_process(delta: float):
 	)
 	
 	camera_boom.look_at(global_position, Vector3.UP)
-	# -----------------------------------------------------
 
 	handle_jump_and_slide()
 	handle_slide(delta)
@@ -167,7 +190,7 @@ func play_animation(anim_name: String):
 	if animation_player and animation_player.has_animation(anim_name):
 		animation_player.play(anim_name)
 	else:
-		print("Advertencia no se encontro la animacion a cargar para el personaje o el AnimationPlayer es nulo.")
+		print("Advertencia no se encontro la animacion '", anim_name, "' para el personaje o el AnimationPlayer es nulo.")
 
 
 func handle_slide(delta: float):
