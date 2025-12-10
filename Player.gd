@@ -78,13 +78,13 @@ func _physics_process(delta: float):
 
 	var input_dir = Vector3.ZERO
 	if Input.is_action_pressed("ui_right"):
-		input_dir.x -= 1
-	if Input.is_action_pressed("ui_left"):
 		input_dir.x += 1
+	if Input.is_action_pressed("ui_left"):
+		input_dir.x -= 1
 	if Input.is_action_pressed("ui_front"):
-		input_dir.z += 1
-	if Input.is_action_pressed("ui_back"):
 		input_dir.z -= 1
+	if Input.is_action_pressed("ui_back"):
+		input_dir.z += 1
 
 	input_dir = input_dir.normalized()
 
@@ -97,16 +97,13 @@ func _physics_process(delta: float):
 			movement_vector = movement_vector.normalized()
 			velocity.x = movement_vector.x * SPEED
 			velocity.z = movement_vector.z * SPEED
+
 			if Input.get_mouse_mode() != Input.MOUSE_MODE_CAPTURED:
-				var target_transform = visuals_node.global_transform.looking_at(
-					global_position + movement_vector,
-					Vector3.UP,
-					true
-				)
-				visuals_node.global_transform.basis = visuals_node.global_transform.basis.slerp(
-					target_transform.basis,
-					delta * ROTATION_SMOOTH_SPEED
-				)
+				var target_dir = movement_vector.normalized()
+				if target_dir.length() > 0.01:
+					var target_rot = atan2(-target_dir.x, -target_dir.z)
+					rotation.y = lerp_angle(rotation.y, target_rot, delta * ROTATION_SMOOTH_SPEED)
+
 			if not is_sliding:
 				play_animation("walk")
 		elif is_on_floor():
@@ -119,6 +116,7 @@ func _physics_process(delta: float):
 		velocity.x = 0.0
 		velocity.z = 0.0
 
+	# Cámara detrás del jugador
 	var visual_back_direction = -visuals_node.global_transform.basis.z.normalized()
 	var camera_offset = Vector3(0, 2, 6)
 	var target_camera_position = global_position
