@@ -17,6 +17,7 @@ var is_taking_damage: bool = false
 @onready var collision_shape: CollisionShape3D = $CollisionShape3D
 @onready var visuals_node: Node3D = $Visuals
 @onready var animation_timer: Timer = $AnimationTimer
+@onready var camera_boom: Node3D = $CameraBoom 
 
 signal health_changed(current_health, max_health)
 
@@ -36,7 +37,6 @@ func _ready():
 
 	emit_signal("health_changed", current_health, max_health)
 
-	# No reproducir animación por defecto al iniciar
 
 func _load_visual_character(character_scene: Resource):
 	for child in visuals_node.get_children():
@@ -70,11 +70,8 @@ func _physics_process(delta: float):
 	print("input_dir: ", input_dir)
 
 	if not is_taking_damage:
-		# Movimiento omnidireccional global
 		velocity.x = input_dir.x * SPEED
 		velocity.z = input_dir.z * SPEED
-
-		# Solo rota el nodo visual, no el cuerpo
 		if input_dir != Vector3.ZERO:
 			var look_at_pos = visuals_node.global_position - input_dir
 			visuals_node.look_at(look_at_pos, Vector3.UP)
@@ -86,6 +83,20 @@ func _physics_process(delta: float):
 	else:
 		velocity.x = 0.0
 		velocity.z = 0.0
+
+	var visual_back_direction = -visuals_node.global_transform.basis.z.normalized()
+	
+	var camera_offset = Vector3(0, 2, 6) 
+	var final_camera_position = global_position
+	
+	final_camera_position += visual_back_direction * camera_offset.z 
+	
+	final_camera_position.y += camera_offset.y
+	
+	camera_boom.global_position = final_camera_position
+	camera_boom.look_at(global_position, Vector3.UP)
+	
+	# -----------------------------------------------------
 
 	handle_jump_and_slide()
 	handle_slide(delta)
@@ -120,15 +131,13 @@ func _on_animation_finished(anim_name):
 		player_died.emit()
 	
 
-func handle_jump_and_slide(): # Función actualizada/renombrada
+func handle_jump_and_slide():
 	if is_taking_damage or is_sliding:
 		return
 
-	# Salto
 	if Input.is_action_just_pressed("ui_up") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 	
-	# Deslizamiento
 	if Input.is_action_just_pressed("ui_down") and is_on_floor() and not is_sliding:
 		start_slide()
 
