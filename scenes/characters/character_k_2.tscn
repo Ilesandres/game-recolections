@@ -1,6 +1,7 @@
-[gd_scene load_steps=43 format=4 uid="uid://bp3dqtpp50uys"]
+[gd_scene load_steps=44 format=4 uid="uid://bp3dqtpp50uys"]
 
 [ext_resource type="Texture2D" uid="uid://bmjot73sqhlbl" path="res://assets/keney_blocky-character_20/Textures/texture-k.png" id="1_d28j8"]
+[ext_resource type="PackedScene" uid="uid://ck7oxi6sigm1" path="res://src/weapons/blaster_a.tscn" id="2_lm4be"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hm51c"]
 resource_name = "texture-k"
@@ -979,6 +980,39 @@ tracks/7/path = NodePath("character-k/root/torso/head")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/8/type = "bezier"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("character-k/root/torso/arm-right/Hand_R:position:x")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-0.14128423, -0.083333336, 0, 0.083333336, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/9/type = "bezier"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("character-k/root/torso/arm-right/Hand_R:position:y")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-0.90261126, -0.083333336, 0, 0.083333336, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/10/type = "bezier"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("character-k/root/torso/arm-right/Hand_R:position:z")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0.34092402, -0.083333336, 0, 0.083333336, 0),
+"times": PackedFloat32Array(0)
+}
 
 [sub_resource type="Animation" id="Animation_f8b71"]
 resource_name = "holding-right-shoot"
@@ -1883,6 +1917,13 @@ skeleton = NodePath("")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.39999998, 1.1, -0.099999905)
 mesh = SubResource("ArrayMesh_yb2gw")
 skeleton = NodePath("")
+
+[node name="Hand_R" type="Node3D" parent="character-k/root/torso/arm-right"]
+transform = Transform3D(1, 0, 0, 0, 0.4350425, -0.90040994, 0, 0.90040994, 0.4350425, -0.14128423, -0.90261126, 0.34092402)
+
+[node name="blaster-a" parent="character-k/root/torso/arm-right/Hand_R" instance=ExtResource("2_lm4be")]
+transform = Transform3D(1, 0, 0, 0, 0.8714025, -0.49056932, 0, 0.49056932, 0.8714025, 0, -0.07895911, 0.14828777)
+visible = false
 
 [node name="head" type="MeshInstance3D" parent="character-k/root/torso"]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 1.2, 0)

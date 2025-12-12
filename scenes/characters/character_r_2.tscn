@@ -1,6 +1,7 @@
-[gd_scene load_steps=43 format=4 uid="uid://b3v6wtsmtgjax"]
+[gd_scene load_steps=44 format=4 uid="uid://b3v6wtsmtgjax"]
 
 [ext_resource type="Texture2D" uid="uid://b3k1g5stl4ilp" path="res://assets/keney_blocky-character_20/Textures/texture-r.png" id="1_3cykx"]
+[ext_resource type="PackedScene" uid="uid://ck7oxi6sigm1" path="res://src/weapons/blaster_a.tscn" id="2_aejlm"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5w6hg"]
 resource_name = "texture-r"
@@ -1039,6 +1040,39 @@ tracks/7/path = NodePath("character-r/root/torso/arm-left")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/8/type = "bezier"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("character-r/root/torso/arm-right/Hand_R:position:x")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-0.14128423, -0.1, 0, 0.1, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/9/type = "bezier"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("character-r/root/torso/arm-right/Hand_R:position:y")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-1.0152063, -0.1, 0, 0.1, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/10/type = "bezier"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("character-r/root/torso/arm-right/Hand_R:position:z")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0.34092402, -0.1, 0, 0.1, 0),
+"times": PackedFloat32Array(0)
+}
 
 [sub_resource type="Animation" id="Animation_jt41s"]
 resource_name = "idle"
@@ -1857,35 +1891,40 @@ _data = {
 [node name="character-r" type="Node3D" parent="."]
 
 [node name="root" type="Node3D" parent="character-r"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15506388, 0)
 
 [node name="leg-left" type="MeshInstance3D" parent="character-r/root"]
-transform = Transform3D(1, 0, 0, 0, 0.25034142, 0.96815765, 0, -0.96815765, 0.25034142, 0.2, 1, 2.0348877e-14)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 1, 2.0348877e-14)
 mesh = SubResource("ArrayMesh_twqbh")
 skeleton = NodePath("")
 
 [node name="leg-right" type="MeshInstance3D" parent="character-r/root"]
-transform = Transform3D(1, 0, 0, 0, 0.25034142, -0.96815765, 0, 0.96815765, 0.25034142, -0.2, 1, 2.183782e-14)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, 1, 2.183782e-14)
 mesh = SubResource("ArrayMesh_lq7c6")
 skeleton = NodePath("")
 
 [node name="torso" type="MeshInstance3D" parent="character-r/root"]
-transform = Transform3D(1, 0, 0, 0, 0.9187252, -0.3948975, 0, 0.3948975, 0.9187252, 0, 0.7, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7, 0)
 mesh = SubResource("ArrayMesh_g3l21")
 skeleton = NodePath("")
 
 [node name="arm-left" type="MeshInstance3D" parent="character-r/root/torso"]
-transform = Transform3D(1, 0, 0, 0, 0.12199675, -0.9925305, 0, 0.9925305, 0.12199675, 0.39999986, 1.1, -0.099999905)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.39999986, 1.1, -0.099999905)
 mesh = SubResource("ArrayMesh_oex2h")
 skeleton = NodePath("")
 
 [node name="arm-right" type="MeshInstance3D" parent="character-r/root/torso"]
-transform = Transform3D(1, 0, 0, 0, 0.12199675, 0.9925305, 0, -0.9925305, 0.12199675, -0.4000001, 1.1, -0.099999905)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4000001, 1.1, -0.099999905)
 mesh = SubResource("ArrayMesh_scdvy")
 skeleton = NodePath("")
 
+[node name="Hand_R" type="Node3D" parent="character-r/root/torso/arm-right"]
+transform = Transform3D(1, 0, 0, 0, 0.016370425, -0.999866, 0, 0.999866, 0.016370425, -0.14128423, -1.0152063, 0.34092402)
+
+[node name="blaster-a" parent="character-r/root/torso/arm-right/Hand_R" instance=ExtResource("2_aejlm")]
+visible = false
+
 [node name="head" type="MeshInstance3D" parent="character-r/root/torso"]
-transform = Transform3D(0.1, 0, 0, 0, 0.09187252, 0.03948975, 0, -0.03948975, 0.09187252, 0, 1.2, 0)
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 1.2, 0)
 mesh = SubResource("ArrayMesh_b3pxp")
 skeleton = NodePath("")
 

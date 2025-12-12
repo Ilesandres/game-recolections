@@ -42,6 +42,7 @@ var is_taking_damage: bool = false
 signal health_changed(current_health, max_health)
 
 var animation_player: AnimationPlayer = null
+var current_weapon: Node3D = null
 
 var standing_collision_shape: BoxShape3D
 
@@ -52,6 +53,8 @@ func _ready():
 		push_error("¡ERROR! Player.tscn debe tener un CollisionShape3D con un BoxShape3D.")
 	
 	_load_visual_character(load(GlobalData.selected_character_scene_path))
+	
+	_load_weapon()
 	
 	animation_timer.timeout.connect(_on_animation_timer_timeout)
 
@@ -76,6 +79,41 @@ func _load_visual_character(character_scene: Resource):
 		animation_player.animation_finished.connect(_on_animation_finished)
 	else:
 		print("Advertencia: El personaje cargado no tiene un AnimationPlayer.")
+
+
+func _load_weapon():
+	var weapon_path = GlobalData.selected_weapon_scene_path
+	if not FileAccess.file_exists(weapon_path):
+		print("Advertencia: La ruta del arma no existe: ", weapon_path)
+		return
+
+	var weapon_scene = load(weapon_path)
+	if not weapon_scene:
+		print("Advertencia: No se pudo cargar el recurso del arma.")
+		return
+		
+	if current_weapon and is_instance_valid(current_weapon):
+		current_weapon.queue_free()
+		current_weapon = null
+		
+	current_weapon = weapon_scene.instantiate()
+	
+	var character_instance: Node = visuals_node.get_children().front()
+	
+	if not is_instance_valid(character_instance):
+		print("Advertencia: No se encontró la instancia del personaje para adjuntar el arma.")
+		current_weapon.queue_free()
+		return
+		
+	var hand_node: Node3D = character_instance.find_child("Hand_R", true, false)
+
+	if hand_node:
+		hand_node.add_child(current_weapon)
+		print("Arma '", current_weapon.name, "' cargada y adjuntada a Hand_R.")
+		
+	else:
+		character_instance.add_child(current_weapon)
+		print("Advertencia: Nodo de agarre 'Hand_R' NO encontrado. Arma adjuntada a la raíz del personaje.")
 
 
 func _physics_process(delta: float):

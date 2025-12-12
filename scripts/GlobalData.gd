@@ -10,6 +10,7 @@ var high_score: int = 0
 
 const SAVE_PATH = "user://game_save.dat"
 var selected_character_scene_path: String="res://scenes/characters/character_k_2.tscn"
+var selected_weapon_scene_path: String = "res://src/weapons/blaster_a.tscn"
 
 func add_score(amount: int):
 	current_score += amount
@@ -23,7 +24,9 @@ func save_game():
 		"high_score": high_score,
 		"current_level": current_level,
 		"current_xp": current_xp,
-		"xp_to_next_level": xp_to_next_level
+		"xp_to_next_level": xp_to_next_level,
+		"selected_character_scene_path": selected_character_scene_path,
+		"selected_weapon_scene_path": selected_weapon_scene_path
 	}
 	
 	var file = FileAccess.open(SAVE_PATH, FileAccess.WRITE)
@@ -43,6 +46,10 @@ func load_game():
 				current_level = data.get("current_level", 1)
 				current_xp = data.get("current_xp", 0)
 				xp_to_next_level = data.get("xp_to_next_level", 100)
+				selected_character_scene_path = data.get("selected_character_scene_path", "res://scenes/characters/character_k_2.tscn")
+				selected_weapon_scene_path = data.get("selected_weapon_scene_path", "res://assets/weapons/bullets/blaster_a.tscn")
+			else:
+				print("Error al analizar el archivo de guardado.")
 			file.close()
 
 	current_score = 0 

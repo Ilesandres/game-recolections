@@ -1,6 +1,7 @@
-[gd_scene load_steps=43 format=4 uid="uid://v66wek4dra6r"]
+[gd_scene load_steps=44 format=4 uid="uid://v66wek4dra6r"]
 
 [ext_resource type="Texture2D" uid="uid://m4at6qbjakr0" path="res://assets/keney_blocky-character_20/Textures/texture-p.png" id="1_curn8"]
+[ext_resource type="PackedScene" uid="uid://ck7oxi6sigm1" path="res://src/weapons/blaster_a.tscn" id="2_w3nkb"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8n3o8"]
 resource_name = "texture-p"
@@ -979,6 +980,39 @@ tracks/7/path = NodePath("character-p/root/torso/head")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/8/type = "bezier"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("character-p/root/torso/arm-right/Hand_R/blaster-a:position:x")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.083333336, 0, 0.083333336, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/9/type = "bezier"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("character-p/root/torso/arm-right/Hand_R/blaster-a:position:y")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.083333336, 0, 0.083333336, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/10/type = "bezier"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("character-p/root/torso/arm-right/Hand_R/blaster-a:position:z")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.083333336, 0, 0.083333336, 0),
+"times": PackedFloat32Array(0)
+}
 
 [sub_resource type="Animation" id="Animation_eyv3d"]
 resource_name = "holding-right-shoot"
@@ -1879,9 +1913,15 @@ mesh = SubResource("ArrayMesh_s0gm4")
 skeleton = NodePath("")
 
 [node name="arm-right" type="MeshInstance3D" parent="character-p/root/torso"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 1.1, -0.099999905)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -0.4, 1.1, -0.099999905)
 mesh = SubResource("ArrayMesh_kosoh")
 skeleton = NodePath("")
+
+[node name="Hand_R" type="Node3D" parent="character-p/root/torso/arm-right"]
+transform = Transform3D(1, 0, 0, 0, 0.048361614, -0.9988299, 0, 0.9988299, 0.048361614, -0.1412842, -0.90261143, 0.35479188)
+
+[node name="blaster-a" parent="character-p/root/torso/arm-right/Hand_R" instance=ExtResource("2_w3nkb")]
+visible = false
 
 [node name="head" type="MeshInstance3D" parent="character-p/root/torso"]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 1.2, 0)
