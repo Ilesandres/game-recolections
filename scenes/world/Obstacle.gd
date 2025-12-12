@@ -27,8 +27,7 @@ func _add_visuals_random():
 		visual_instance.collision_layer = 0
 		visual_instance.collision_mask = 0
 	
-	# Comentario original para ajustar la posición vertical:
-	visual_instance.position.y = 0.5 # Ajusta este valor si el pivote del modelo no está en el suelo
+	visual_instance.position.y = 0.5 
 
 func _on_body_entered(body: Node3D):
 	if body is CharacterBody3D and body.name == "Player":

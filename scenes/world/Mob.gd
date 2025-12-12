@@ -68,6 +68,7 @@ func die():
 	is_dying = true
 	print("Mob destruido. Puntos: +10")
 	GlobalData.add_score(10) 
+	print("Puntaje actual: ", GlobalData.current_score)
 	
 	if animation_player and animation_player.has_animation("die"):
 		animation_player.play("die")

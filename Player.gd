@@ -149,6 +149,7 @@ func _load_weapon():
 		play_animation(IDLE_ARMED_ANIMATION)
 		
 		shoot_timer = SHOOT_COOLDOWN
+		
 
 
 func _process(delta: float):
@@ -297,6 +298,8 @@ func die():
 
 func _on_animation_finished(anim_name):
 	if(anim_name == "die"):
+		if Input.get_mouse_mode()== Input.MOUSE_MODE_CAPTURED:
+			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		set_process(false)
 		set_physics_process(false)
 		player_died.emit()
