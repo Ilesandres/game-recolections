@@ -48,7 +48,7 @@ size = Vector3(0.03024292, 0.048324585, 0.029296875)
 
 [node name="bullet-foam-tip-thick" type="CharacterBody3D"]
 collision_layer = 32
-collision_mask = 30
+collision_mask = 22
 script = ExtResource("1_d1rsb")
 
 [node name="bullet-foam-tip-thick" type="MeshInstance3D" parent="."]

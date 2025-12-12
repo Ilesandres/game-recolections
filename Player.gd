@@ -11,7 +11,7 @@ const ROTATION_SMOOTH_SPEED = 10.0
 const MAX_STEP_HEIGHT = 0.41
 const OBSTACLE_PREFIX = "driveway-long"
 
-# 🚨 VARIABLES DE DISPARO 🚨
+# Variables de Disparo
 const SHOOT_COOLDOWN = 0.2
 var shoot_timer: float = 0.0
 var bullet_scene = null 
@@ -44,6 +44,7 @@ var max_health: int = 3
 var current_health: int = max_health
 signal player_died
 var is_taking_damage: bool = false 
+var is_shooting: bool = false # ✅ NUEVA VARIABLE DE ESTADO
 
 @onready var collision_shape: CollisionShape3D = $CollisionShape3D
 @onready var visuals_node: Node3D = $Visuals
@@ -144,21 +145,16 @@ func _process(delta: float):
 	if shoot_timer > 0.0:
 		shoot_timer -= delta
 
-
 func shoot():
-	if is_taking_damage or is_sliding or shoot_timer > 0.0:
-		print("No se puede disparar en este momento.")
+	if is_taking_damage or is_sliding or shoot_timer > 0.0 or is_shooting: 
 		return
 	
 	if bullet_scene and muzzle_node:
-		print("Disparando bala desde: ", muzzle_node.global_position)
 		
 		var new_bullet = bullet_scene.instantiate()
-		
 		new_bullet.global_position = muzzle_node.global_position
 		
 		var shoot_direction = -global_transform.basis.z.normalized() 
-		print("Dirección de disparo: ", shoot_direction)
 		
 		if new_bullet.has_method("set_velocity_and_direction"):
 			new_bullet.set_velocity_and_direction(shoot_direction)
@@ -171,13 +167,15 @@ func shoot():
 		else:
 			get_tree().get_root().add_child(new_bullet) 
 		
+		play_animation("holding-right-shoot") 
+		is_shooting = true 
+		
 		shoot_timer = SHOOT_COOLDOWN
 	
 	elif bullet_scene == null:
 		print("Advertencia: No se pudo disparar, la escena de la bala no está cargada.")
 	elif muzzle_node == null:
 		print("Advertencia: No se pudo disparar, el punto de salida (Muzzle) no fue encontrado.")
-
 
 func _physics_process(delta: float):
 	if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
@@ -217,13 +215,15 @@ func _physics_process(delta: float):
 					rotation.y = lerp_angle(rotation.y, target_rot, delta * ROTATION_SMOOTH_SPEED)
 
 			if not is_sliding:
-				play_animation("walk")
+				if not is_shooting:
+					play_animation("walk")
 		elif is_on_floor():
 			velocity.x = 0.0
 			velocity.z = 0.0
 			if not is_sliding:
-				if animation_player and animation_player.has_animation("idle"):
-					play_animation("idle")
+				if not is_shooting:
+					if animation_player and animation_player.has_animation("idle"):
+						play_animation("idle")
 	else:
 		velocity.x = 0.0
 		velocity.z = 0.0
@@ -274,6 +274,14 @@ func _on_animation_finished(anim_name):
 		set_process(false)
 		set_physics_process(false)
 		player_died.emit()
+	
+	if(anim_name == "holding-right-shoot"):
+		is_shooting = false
+		
+		if velocity.length_squared() > 0.01 and is_on_floor():
+			play_animation("walk")
+		elif is_on_floor():
+			play_animation("idle")
 	
 
 func handle_jump_and_slide():
