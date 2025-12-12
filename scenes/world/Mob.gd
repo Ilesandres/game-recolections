@@ -9,10 +9,15 @@ const OBSTACLE_PREFIX = "driveway-long"
 @onready var player: CharacterBody3D = get_tree().get_first_node_in_group("player")
 @onready var ground_ray: RayCast3D = $GroundRay 
 @onready var step_ray: RayCast3D = $StepRay
-@onready var animation_player: AnimationPlayer = $"character-n2"/AnimationPlayer
+@onready var animation_player: AnimationPlayer = $"character-n2"/AnimationPlayer 
+var is_dying: bool = false
 
 const MOB_GRAVITY = 20.0 
 const ROTATION_SPEED = 10.0
+
+var max_health: int = 1
+var current_health: int = max_health
+
 
 func _ready():
 	if player == null:
@@ -25,9 +30,18 @@ func _ready():
 	
 	if animation_player == null:
 		print("Mob: Advertencia: AnimationPlayer no encontrado en 'character-n2'.")
+	else:
+		animation_player.animation_finished.connect(_on_animation_finished)
+	
+	max_health = 5 + (GlobalData.current_level * 2) 
+	current_health = max_health
+	print("Mob creado. Nivel: ", GlobalData.current_level, " | Vida: ", current_health)
 
 
 func play_mob_animation(anim_name: String):
+	if is_dying:
+		return
+		
 	if animation_player and animation_player.has_animation(anim_name) and animation_player.current_animation != anim_name:
 		animation_player.play(anim_name)
 	elif animation_player == null:
@@ -35,8 +49,47 @@ func play_mob_animation(anim_name: String):
 	elif not animation_player.has_animation(anim_name):
 		print("Mob: Advertencia: No se encontró la animación '", anim_name, "'.")
 
+func take_damage_from_bullet(amount: int):
+	if current_health <= 0 or is_dying:
+		return
+		
+	current_health -= amount
+	print("Mob golpeado, vida restante: ", current_health)
+	
+	play_mob_animation("hit")
+	
+	if current_health <= 0:
+		die()
+		
+func die():
+	if is_dying:
+		return
+		
+	is_dying = true
+	print("Mob destruido. Puntos: +10")
+	GlobalData.add_score(10) 
+	
+	if animation_player and animation_player.has_animation("die"):
+		animation_player.play("die")
+	else:
+		queue_free()
+
+
+func _on_animation_finished(anim_name: String):
+	if anim_name == "die":
+		queue_free()
+	
+	elif anim_name == "hit":
+		if current_health > 0:
+			pass 
 
 func _physics_process(delta: float):
+	# Si está muriendo, no debe moverse
+	if is_dying:
+		velocity = Vector3.ZERO
+		move_and_slide()
+		return
+		
 	if not is_on_floor():
 		velocity.y -= MOB_GRAVITY * delta
 	else:
@@ -84,7 +137,6 @@ func _physics_process(delta: float):
 		
 		if collider.has_method("take_damage"):
 			collider.take_damage()
-			queue_free()
 			return
 
 func _handle_step_climb():

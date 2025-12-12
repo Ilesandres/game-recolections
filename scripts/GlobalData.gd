@@ -11,6 +11,7 @@ var high_score: int = 0
 const SAVE_PATH = "user://game_save.dat"
 var selected_character_scene_path: String="res://scenes/characters/character_k_2.tscn"
 var selected_weapon_scene_path: String = "res://src/weapons/blaster_a.tscn"
+var selected_bullet_scene_path: String = "res://src/weapons/bullets/bullet-foam-tip-thick.tscn"
 
 func add_score(amount: int):
 	current_score += amount
