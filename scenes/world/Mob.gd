@@ -3,9 +3,7 @@ extends CharacterBody3D
 const SPEED = 5.0
 const DAMAGE = 1 
 const MIN_DISTANCE_TO_PLAYER = 0.5 
-# Altura máxima que el Mob puede subir automáticamente (0.4m para subir 0.3m)
 const MAX_STEP_HEIGHT = 0.41 
-# Para evitar bugs con nombres, definimos un prefijo
 const OBSTACLE_PREFIX = "driveway-long"
 
 @onready var player: CharacterBody3D = get_tree().get_first_node_in_group("player")
@@ -26,7 +24,6 @@ func _ready():
 
 
 func _physics_process(delta: float):
-	# 1. Aplicar Gravedad
 	if not is_on_floor():
 		velocity.y -= MOB_GRAVITY * delta
 	else:
@@ -73,7 +70,7 @@ func _physics_process(delta: float):
 
 func _handle_step_climb():
 	if not is_instance_valid(ground_ray) or not is_instance_valid(step_ray):
-		print("Advertencia: Los RayCasts no están correctamente configurados.")
+		print("Mob: Advertencia: Los RayCasts no están correctamente configurados.")
 		return
 
 	
@@ -81,19 +78,19 @@ func _handle_step_climb():
 	
 	if step_ray.is_colliding():
 		var collider = step_ray.get_collider()
-		print("Colisión detectada con: ", collider.name)
+		print("Mob: Colisión detectada con: ", collider.name)
 		
 		if not collider.name.to_lower().begins_with(OBSTACLE_PREFIX): 
-			print("El collider no es un obstáculo válido: ", collider.name)
+			print("Mob: El collider no es un obstáculo válido: ", collider.name)
 			if not (is_instance_valid(collider.get_parent()) and collider.get_parent().name.to_lower().begins_with(OBSTACLE_PREFIX)):
-				print("El padre del collider tampoco es un obstáculo válido: ", collider.get_parent().name)
+				print("Mob: El padre del collider tampoco es un obstáculo válido: ", collider.get_parent().name)
 				return
 			 
 		var hit_point = step_ray.get_collision_point()
 		var step_height = hit_point.y - global_position.y
 		
 		if step_height >= MAX_STEP_HEIGHT:
-			print("Obstáculo demasiado alto para escalar: ", step_height)
+			print("Mob: Obstáculo demasiado alto para escalar: ", step_height)
 			return
 		ground_ray.global_position = hit_point
 		ground_ray.global_position.y += MAX_STEP_HEIGHT + 0.05 
@@ -104,7 +101,7 @@ func _handle_step_climb():
 		
 		if ground_ray.is_colliding():
 			var ground_point = ground_ray.get_collision_point()
-			print("Punto de suelo detectado en: ", ground_point)
+			print("Mob: Punto de suelo detectado en: ", ground_point)
 			
 			global_position.y = ground_point.y + (global_transform.basis.y.y * 0.01)
 			

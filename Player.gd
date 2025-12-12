@@ -8,6 +8,9 @@ const DAMAGE_ANIMATION_TIME = 0.5
 const CAMERA_SMOOTH_SPEED = 5.0
 const ROTATION_SMOOTH_SPEED = 10.0 
 
+const MAX_STEP_HEIGHT = 0.41
+const OBSTACLE_PREFIX = "driveway-long"
+
 
 var mouse_rotation_delta_x := 0.0
 var mouse_sensitivity := 0.015
@@ -29,12 +32,12 @@ var current_health: int = max_health
 signal player_died
 var is_taking_damage: bool = false 
 
-
 @onready var collision_shape: CollisionShape3D = $CollisionShape3D
 @onready var visuals_node: Node3D = $Visuals
 @onready var animation_timer: Timer = $AnimationTimer
 @onready var camera_boom: Node3D = $CameraBoom
 @onready var auto_jump_ray: RayCast3D = $AutoJumpRay
+@onready var ground_ray: RayCast3D = $GroundRay 
 
 signal health_changed(current_health, max_health)
 
@@ -54,6 +57,11 @@ func _ready():
 
 	emit_signal("health_changed", current_health, max_health)
 	global_position.y=0.5
+	
+	if is_instance_valid(ground_ray):
+		ground_ray.add_exception(self)
+	if is_instance_valid(auto_jump_ray):
+		auto_jump_ray.add_exception(self)
 
 
 func _load_visual_character(character_scene: Resource):
@@ -90,8 +98,9 @@ func _physics_process(delta: float):
 
 	input_dir = input_dir.normalized()
 
+	var movement_vector = Vector3.ZERO
+	
 	if not is_taking_damage:
-		var movement_vector = Vector3.ZERO
 		if input_dir != Vector3.ZERO:
 			var basis = global_transform.basis
 			movement_vector = basis * input_dir
@@ -118,7 +127,6 @@ func _physics_process(delta: float):
 		velocity.x = 0.0
 		velocity.z = 0.0
 
-	# Cámara detrás del jugador
 	var visual_back_direction = -visuals_node.global_transform.basis.z.normalized()
 	var camera_offset = Vector3(0, 2, 6)
 	var target_camera_position = global_position
@@ -132,6 +140,10 @@ func _physics_process(delta: float):
 
 	handle_jump_and_slide()
 	handle_slide(delta)
+	
+	if not is_taking_damage and not is_sliding:
+		_handle_auto_step_climb(movement_vector)
+		
 	move_and_slide()
 
 
@@ -216,3 +228,49 @@ func _on_animation_timer_timeout():
 	if not is_sliding and current_health > 0:
 		is_taking_damage = false
 		play_animation("sprint")
+
+
+func _handle_auto_step_climb(direction: Vector3):
+	if not is_on_floor() or direction.length_squared() < 0.01:
+		return
+	
+	if not is_instance_valid(ground_ray) or not is_instance_valid(auto_jump_ray):
+		return
+
+	auto_jump_ray.force_raycast_update()
+	
+	if auto_jump_ray.is_colliding():
+		print("Player: AutoJumpRay colisionó con: ", auto_jump_ray.get_collider().name)
+		var collider = auto_jump_ray.get_collider()
+		
+		var is_correct_obstacle = false
+		if is_instance_valid(collider):
+			print("Player: Verificando si el collider es un obstáculo válido: ", collider.name)
+			if collider.name.to_lower().begins_with(OBSTACLE_PREFIX): 
+				is_correct_obstacle = true
+			elif is_instance_valid(collider.get_parent()) and collider.get_parent().name.to_lower().begins_with(OBSTACLE_PREFIX):
+				is_correct_obstacle = true
+		
+		if not is_correct_obstacle:
+			print("Player: El collider no es un obstáculo válido para escalar: ", collider.name)
+			return
+			
+		var hit_point = auto_jump_ray.get_collision_point()
+		var step_height = hit_point.y - global_position.y
+		
+		if step_height >= MAX_STEP_HEIGHT:
+			return
+		
+		ground_ray.global_position = hit_point
+		ground_ray.global_position.y += MAX_STEP_HEIGHT + 0.05 
+		
+		ground_ray.target_position = Vector3(0, -(MAX_STEP_HEIGHT + 0.2), 0)
+		
+		ground_ray.force_raycast_update()
+		
+		if ground_ray.is_colliding():
+			
+			velocity.y = JUMP_VELOCITY * 0.5 
+			
+			velocity.x = direction.x * SPEED
+			velocity.z = direction.z * SPEED
