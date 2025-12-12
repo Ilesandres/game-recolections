@@ -1,36 +1,36 @@
 extends CharacterBody3D
 
-const SPEED = 25.0 
-const DAMAGE = 1    
-const LIFETIME = 3.0
-const GRAVITY = 0.0  
+const BULLET_SPEED = 30.0
+const DAMAGE_AMOUNT = 1 
 
-var direction: Vector3 = Vector3.FORWARD
+var direction: Vector3 = Vector3.ZERO
+var lifetime: float = 3.0 
 var timer: float = 0.0
 
-func _ready():
-	set_process(true)
-	pass
-
 func set_velocity_and_direction(dir: Vector3):
-	direction = dir.normalized()
-	velocity = direction * SPEED
+	direction = dir
+	velocity = direction * BULLET_SPEED
 
-func _physics_process(delta):
+
+func _physics_process(delta: float):
 	timer += delta
-	if timer >= LIFETIME:
+	if timer >= lifetime:
 		queue_free()
 		return
-		
-	var collision = move_and_collide(velocity * delta)
-	
-	if collision:
+
+	move_and_slide()
+
+	for i in get_slide_collision_count():
+		var collision = get_slide_collision(i)
 		var collider = collision.get_collider()
 		
-		if collider and collider.has_method("take_damage_from_bullet"):
-			collider.take_damage_from_bullet(DAMAGE)
-			queue_free() 
+		if collider.has_method("take_damage_from_bullet"):
+			
+			collider.take_damage_from_bullet(DAMAGE_AMOUNT)
+			queue_free()
+			return 
+		
+		var collider_layer = collider.get_collision_layer()
+		if collider_layer & 2 or collider_layer & 5:
+			queue_free()
 			return
-		w
-		queue_free()
-		return

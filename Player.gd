@@ -11,9 +11,15 @@ const ROTATION_SMOOTH_SPEED = 10.0
 const MAX_STEP_HEIGHT = 0.41
 const OBSTACLE_PREFIX = "driveway-long"
 
+# 🚨 VARIABLES DE DISPARO 🚨
+const SHOOT_COOLDOWN = 0.2
+var shoot_timer: float = 0.0
+var bullet_scene = null 
+var muzzle_node: Node3D = null 
 
 var mouse_rotation_delta_x := 0.0
 var mouse_sensitivity := 0.015
+
 func _input(event):
 	if event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
 		mouse_rotation_delta_x += -event.relative.x * mouse_sensitivity
@@ -22,6 +28,13 @@ func _input(event):
 			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 		elif event.button_index == MOUSE_BUTTON_RIGHT and not event.pressed:
 			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+		elif event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+			if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
+				shoot()
+	
+	if Input.is_action_just_pressed("shoot"): 
+		shoot()
+
 
 var is_sliding = false
 var slide_timer = 0.0
@@ -65,6 +78,11 @@ func _ready():
 		ground_ray.add_exception(self)
 	if is_instance_valid(auto_jump_ray):
 		auto_jump_ray.add_exception(self)
+		
+	if not GlobalData.selected_bullet_scene_path.is_empty():
+		bullet_scene = load(GlobalData.selected_bullet_scene_path)
+		if bullet_scene == null:
+			push_error("Error al cargar la escena de la bala: " + GlobalData.selected_bullet_scene_path)
 
 
 func _load_visual_character(character_scene: Resource):
@@ -111,9 +129,54 @@ func _load_weapon():
 		hand_node.add_child(current_weapon)
 		print("Arma '", current_weapon.name, "' cargada y adjuntada a Hand_R.")
 		
+		muzzle_node = current_weapon.find_child("Muzzle", true, false)
+		if muzzle_node == null:
+			print("Advertencia: No se encontró el nodo 'Muzzle' en el arma. Usando la posición del arma como origen.")
+			muzzle_node = current_weapon
+			
 	else:
 		character_instance.add_child(current_weapon)
 		print("Advertencia: Nodo de agarre 'Hand_R' NO encontrado. Arma adjuntada a la raíz del personaje.")
+		muzzle_node = current_weapon
+
+
+func _process(delta: float):
+	if shoot_timer > 0.0:
+		shoot_timer -= delta
+
+
+func shoot():
+	if is_taking_damage or is_sliding or shoot_timer > 0.0:
+		print("No se puede disparar en este momento.")
+		return
+	
+	if bullet_scene and muzzle_node:
+		print("Disparando bala desde: ", muzzle_node.global_position)
+		
+		var new_bullet = bullet_scene.instantiate()
+		
+		new_bullet.global_position = muzzle_node.global_position
+		
+		var shoot_direction = -global_transform.basis.z.normalized() 
+		print("Dirección de disparo: ", shoot_direction)
+		
+		if new_bullet.has_method("set_velocity_and_direction"):
+			new_bullet.set_velocity_and_direction(shoot_direction)
+		else:
+			push_error("Bullet scene does not have 'set_velocity_and_direction' method.")
+
+		var game_root = get_tree().get_root().find_child("Game", true, false)
+		if game_root:
+			game_root.add_child(new_bullet)
+		else:
+			get_tree().get_root().add_child(new_bullet) 
+		
+		shoot_timer = SHOOT_COOLDOWN
+	
+	elif bullet_scene == null:
+		print("Advertencia: No se pudo disparar, la escena de la bala no está cargada.")
+	elif muzzle_node == null:
+		print("Advertencia: No se pudo disparar, el punto de salida (Muzzle) no fue encontrado.")
 
 
 func _physics_process(delta: float):

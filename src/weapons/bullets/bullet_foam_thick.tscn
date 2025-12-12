@@ -1,5 +1,6 @@
-[gd_scene load_steps=5 format=4 uid="uid://bl2lcwyrlso24"]
+[gd_scene load_steps=7 format=4 uid="uid://bl2lcwyrlso24"]
 
+[ext_resource type="Script" uid="uid://bd6aiqjhw3md" path="res://src/weapons/bullets/bullet_foam_thick.gd" id="1_307o5"]
 [ext_resource type="Texture2D" uid="uid://e1wsau3mhgi2" path="res://assets/weapons/kenney_blaster-kit_2.1/Models/FBX format/Textures/colormap.png" id="1_uho3l"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mrnv8"]
@@ -42,8 +43,18 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_1ile1")
 
-[node name="bullet-foam-thick" type="Node3D"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_307o5"]
+size = Vector3(0.03137207, 0.05090332, 0.02923584)
+
+[node name="bullet-foam-thick" type="CharacterBody3D"]
+collision_layer = 32
+collision_mask = 30
+script = ExtResource("1_307o5")
 
 [node name="bullet-foam-thick" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_uvwlf")
 skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.1035156e-05, 0.02520752, 0.00033569336)
+shape = SubResource("BoxShape3D_307o5")

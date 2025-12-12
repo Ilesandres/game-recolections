@@ -84,7 +84,6 @@ func _on_animation_finished(anim_name: String):
 			pass 
 
 func _physics_process(delta: float):
-	# Si está muriendo, no debe moverse
 	if is_dying:
 		velocity = Vector3.ZERO
 		move_and_slide()

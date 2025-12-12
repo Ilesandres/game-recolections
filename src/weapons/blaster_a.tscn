@@ -86,3 +86,5 @@ skeleton = NodePath("")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.15295085, -0.145)
 mesh = SubResource("ArrayMesh_bkthr")
 skeleton = NodePath("")
+
+[node name="Muzzle" type="Marker3D" parent="."]
