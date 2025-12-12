@@ -29,10 +29,12 @@ var current_health: int = max_health
 signal player_died
 var is_taking_damage: bool = false 
 
+
 @onready var collision_shape: CollisionShape3D = $CollisionShape3D
 @onready var visuals_node: Node3D = $Visuals
 @onready var animation_timer: Timer = $AnimationTimer
-@onready var camera_boom: Node3D = $CameraBoom 
+@onready var camera_boom: Node3D = $CameraBoom
+@onready var auto_jump_ray: RayCast3D = $AutoJumpRay
 
 signal health_changed(current_health, max_health)
 

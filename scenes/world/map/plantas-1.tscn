@@ -46,9 +46,11 @@ shadow_mesh = SubResource("ArrayMesh_apjt3")
 size = Vector3(0.3965454, 0.047851563, 0.29638672)
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_ik3it"]
-radius = 0.07
+radius = 0.08606651
 
 [node name="planter2" type="StaticBody3D"]
+collision_layer = 16
+collision_mask = 13
 
 [node name="planter" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_n6c77")
@@ -63,7 +65,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.08432007, 0.082816854, 0.05
 shape = SubResource("SphereShape3D_ik3it")
 
 [node name="CollisionShape3D3" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.07254028, 0.082816854, -0.061764203)
+transform = Transform3D(0.99961156, 0, 0.027869299, 0, 1, 0, -0.027869299, 0, 0.99961156, 0.07254028, 0.082816854, -0.061764203)
 shape = SubResource("SphereShape3D_ik3it")
 
 [node name="CollisionShape3D4" type="CollisionShape3D" parent="."]
