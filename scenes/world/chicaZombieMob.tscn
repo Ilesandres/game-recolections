@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://donh822axj5k" path="res://src/Enemies/mobs/mob-zombie-chica.tscn" id="2_8hkty"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_qfpwl"]
-size = Vector3(0.81469727, 2.6989899, 0.57714844)
+size = Vector3(0.81469727, 2.8504715, 0.8922119)
 
 [node name="Mob" type="CharacterBody3D"]
 collision_layer = 4
@@ -15,7 +15,7 @@ script = ExtResource("1_deye2")
 [node name="character-n2" parent="." instance=ExtResource("2_8hkty")]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.004272461, 1.3741837, -0.0034179688)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.004272461, 1.4499245, -0.02557373)
 shape = SubResource("BoxShape3D_qfpwl")
 
 [node name="GroundRay" type="RayCast3D" parent="."]
