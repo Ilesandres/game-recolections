@@ -4,6 +4,7 @@ const CHUNK_SCENE = preload("res://scenes/world/chunk_template.tscn")
 const OBSTACLE_SCENE = preload("res://scenes/world/Obstacle.tscn") 
 const ENEMY_SCENE = preload("res://scenes/world/Enemy.tscn")
 const CHUNK_LENGTH = 30.0 
+const MOB_SCENE =preload("res://scenes/world/chicaZombieMob.tscn")
 
 const DESPAWN_DISTANCE = 4.0 * CHUNK_LENGTH 
 
@@ -21,24 +22,31 @@ var object_spawn_chance = 0.33
 var spawn_attempts = 1
 var min_distance = 3.5 
 
+var static_vs_mob_ratio = 0.8
+
 
 func configure_for_level(level: int):
 	match level:
 		1:
 			object_spawn_chance = 0.05
 			spawn_attempts = 1
+			static_vs_mob_ratio = 1.0
 		2:
 			object_spawn_chance = 0.1
 			spawn_attempts = 1
+			static_vs_mob_ratio = 0.95 
 		3:
 			object_spawn_chance = 0.15
 			spawn_attempts = 2
+			static_vs_mob_ratio = 0.85 
 		4:
 			object_spawn_chance = 0.2
 			spawn_attempts = 2
+			static_vs_mob_ratio = 0.75 
 		5:
 			object_spawn_chance = 0.25
 			spawn_attempts = 3
+			static_vs_mob_ratio = 0.6 
 
 
 func _get_snapped_position(position: Vector3) -> Vector3:
@@ -121,14 +129,21 @@ func _spawn_chunk(target_position: Vector3):
 
 	for point in obstacle_points:
 		if randf() < object_spawn_chance:
-			var item_roll = randf()
+			
 			var item_instance = null
-			if item_roll < 0.8:
-				item_instance = OBSTACLE_SCENE.instantiate()
+			
+			var type_roll = randf()
+			
+			if type_roll < static_vs_mob_ratio:
+				var static_roll = randf()
+				if static_roll < 0.8:
+					item_instance = OBSTACLE_SCENE.instantiate()
+				else:
+					item_instance = ENEMY_SCENE.instantiate()
 			else:
-				item_instance = ENEMY_SCENE.instantiate()
+				item_instance = MOB_SCENE.instantiate()
+			
 			if item_instance:
-				# Asignar posición local ANTES de agregar al árbol
 				item_instance.position = point.position
 				if is_position_free(new_chunk.global_position + point.position, new_chunk, newly_spawned_objects):
 					new_chunk.add_child(item_instance)
@@ -166,7 +181,6 @@ func is_position_free(new_pos: Vector3, chunk: Node3D, temporary_objects: Array[
 				return false
 		
 	for temp_obj in temporary_objects:
-		# Nota: La posición de temp_obj ya fue establecida como global
 		if abs(temp_obj.global_position.x - new_pos.x) < 0.1:
 			count_x += 1
 		if temp_obj.global_position.distance_to(new_pos) < min_distance:

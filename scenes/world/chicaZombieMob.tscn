@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://cyreyd7ys87s1"]
+
+[ext_resource type="Script" uid="uid://byp8p812dl3ex" path="res://scenes/world/Mob.gd" id="1_deye2"]
+[ext_resource type="PackedScene" uid="uid://donh822axj5k" path="res://src/Enemies/mobs/mob-zombie-chica.tscn" id="2_8hkty"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qfpwl"]
+size = Vector3(0.81469727, 2.6989899, 0.57714844)
+
+[node name="Mob" type="CharacterBody3D"]
+script = ExtResource("1_deye2")
+
+[node name="character-n2" parent="." instance=ExtResource("2_8hkty")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.004272461, 1.3741837, -0.0034179688)
+shape = SubResource("BoxShape3D_qfpwl")
