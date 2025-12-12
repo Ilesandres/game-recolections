@@ -11,7 +11,9 @@ const ROTATION_SMOOTH_SPEED = 10.0
 const MAX_STEP_HEIGHT = 0.41
 const OBSTACLE_PREFIX = "driveway-long"
 
-# Variables de Disparo
+const IDLE_ARMED_ANIMATION = "static_weapon" 
+const IDLE_UNARMED_ANIMATION = "static-weapon" 	
+
 const SHOOT_COOLDOWN = 0.2
 var shoot_timer: float = 0.0
 var bullet_scene = null 
@@ -44,7 +46,7 @@ var max_health: int = 3
 var current_health: int = max_health
 signal player_died
 var is_taking_damage: bool = false 
-var is_shooting: bool = false # ✅ NUEVA VARIABLE DE ESTADO
+var is_shooting: bool = false 
 
 @onready var collision_shape: CollisionShape3D = $CollisionShape3D
 @onready var visuals_node: Node3D = $Visuals
@@ -96,6 +98,8 @@ func _load_visual_character(character_scene: Resource):
 	animation_player = character_instance.get_node("AnimationPlayer")
 	if animation_player:
 		animation_player.animation_finished.connect(_on_animation_finished)
+		if current_weapon == null:
+			play_animation(IDLE_UNARMED_ANIMATION)
 	else:
 		print("Advertencia: El personaje cargado no tiene un AnimationPlayer.")
 
@@ -122,6 +126,7 @@ func _load_weapon():
 	if not is_instance_valid(character_instance):
 		print("Advertencia: No se encontró la instancia del personaje para adjuntar el arma.")
 		current_weapon.queue_free()
+		current_weapon = null 
 		return
 		
 	var hand_node: Node3D = character_instance.find_child("Hand_R", true, false)
@@ -140,6 +145,11 @@ func _load_weapon():
 		print("Advertencia: Nodo de agarre 'Hand_R' NO encontrado. Arma adjuntada a la raíz del personaje.")
 		muzzle_node = current_weapon
 
+	if current_weapon != null and animation_player:
+		play_animation(IDLE_ARMED_ANIMATION)
+		
+		shoot_timer = SHOOT_COOLDOWN
+
 
 func _process(delta: float):
 	if shoot_timer > 0.0:
@@ -147,25 +157,37 @@ func _process(delta: float):
 
 func shoot():
 	if is_taking_damage or is_sliding or shoot_timer > 0.0 or is_shooting: 
+		print("No se puede disparar ahora.")
 		return
 	
 	if bullet_scene and muzzle_node:
 		
-		var new_bullet = bullet_scene.instantiate()
-		new_bullet.global_position = muzzle_node.global_position
+		if not is_instance_valid(muzzle_node) or not muzzle_node.is_inside_tree():
+			print("Advertencia: No se pudo disparar. El punto de salida (Muzzle) no es válido o no está en el árbol.")
+			return
+
+		print("Disparando bala desde: ", muzzle_node.global_position)
 		
+		var new_bullet = bullet_scene.instantiate()
 		var shoot_direction = -global_transform.basis.z.normalized() 
+		
+		var game_root = get_tree().get_root().find_child("Game", true, false)
+		if game_root:
+			print("Añadiendo bala al nodo Game.")
+			game_root.add_child(new_bullet)
+		else:
+			print("Advertencia: Nodo 'Game' no encontrado. Añadiendo bala al root del árbol.")
+			get_tree().get_root().add_child(new_bullet) 
+			
+		new_bullet.global_position = muzzle_node.global_position
+
 		
 		if new_bullet.has_method("set_velocity_and_direction"):
 			new_bullet.set_velocity_and_direction(shoot_direction)
+			print("Bala disparada en dirección: ", shoot_direction)
 		else:
 			push_error("Bullet scene does not have 'set_velocity_and_direction' method.")
 
-		var game_root = get_tree().get_root().find_child("Game", true, false)
-		if game_root:
-			game_root.add_child(new_bullet)
-		else:
-			get_tree().get_root().add_child(new_bullet) 
 		
 		play_animation("holding-right-shoot") 
 		is_shooting = true 
@@ -199,6 +221,10 @@ func _physics_process(delta: float):
 
 	var movement_vector = Vector3.ZERO
 	
+	var idle_anim = IDLE_UNARMED_ANIMATION
+	if is_instance_valid(current_weapon):
+		idle_anim = IDLE_ARMED_ANIMATION
+	
 	if not is_taking_damage:
 		if input_dir != Vector3.ZERO:
 			var basis = global_transform.basis
@@ -222,8 +248,8 @@ func _physics_process(delta: float):
 			velocity.z = 0.0
 			if not is_sliding:
 				if not is_shooting:
-					if animation_player and animation_player.has_animation("idle"):
-						play_animation("idle")
+					if animation_player and animation_player.has_animation(idle_anim):
+						play_animation(idle_anim)
 	else:
 		velocity.x = 0.0
 		velocity.z = 0.0
@@ -278,10 +304,14 @@ func _on_animation_finished(anim_name):
 	if(anim_name == "holding-right-shoot"):
 		is_shooting = false
 		
+		var next_idle_anim = IDLE_UNARMED_ANIMATION
+		if is_instance_valid(current_weapon):
+			next_idle_anim = IDLE_ARMED_ANIMATION
+			
 		if velocity.length_squared() > 0.01 and is_on_floor():
 			play_animation("walk")
 		elif is_on_floor():
-			play_animation("idle")
+			play_animation(next_idle_anim) 
 	
 
 func handle_jump_and_slide():
@@ -336,7 +366,11 @@ func end_slide():
 func _on_animation_timer_timeout():
 	if not is_sliding and current_health > 0:
 		is_taking_damage = false
-		play_animation("sprint")
+		var idle_anim = IDLE_UNARMED_ANIMATION
+		if is_instance_valid(current_weapon):
+			idle_anim = IDLE_ARMED_ANIMATION
+			
+		play_animation(idle_anim)
 
 
 func _handle_auto_step_climb(direction: Vector3):

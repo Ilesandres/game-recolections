@@ -1970,12 +1970,12 @@ mesh = SubResource("ArrayMesh_thnl3")
 skeleton = NodePath("")
 
 [node name="arm-left" type="MeshInstance3D" parent="character-k/root/torso"]
-transform = Transform3D(0.67839044, 0.7341702, 0.02793445, 0, -0.0380215, 0.99927694, 0.7347014, -0.6778999, -0.025793424, 0.35912704, 1.0999999, -0.08189309)
+transform = Transform3D(0.9999999, 0, 0, 0, 0.9999999, 0, 0, 0, 1, 0.35912704, 1.0999999, -0.08189309)
 mesh = SubResource("ArrayMesh_ggag8")
 skeleton = NodePath("")
 
 [node name="arm-right" type="MeshInstance3D" parent="character-k/root/torso"]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -0.39999998, 1.0999999, -0.099999905)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.39999998, 1.0999999, -0.099999905)
 mesh = SubResource("ArrayMesh_yb2gw")
 skeleton = NodePath("")
 
