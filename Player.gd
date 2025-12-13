@@ -14,39 +14,47 @@ const OBSTACLE_PREFIX = "driveway-long"
 const IDLE_ARMED_ANIMATION = "static_weapon" 
 const IDLE_UNARMED_ANIMATION = "static-weapon" 
 
-const SPRINT_SPEED = 14.0      
+const SPRINT_SPEED = 14.0 
 const SPRINT_JUMP_VELOCITY = 20.0
 
 const SHOOT_COOLDOWN = 0.2
+const AUTO_FIRE_COOLDOWN = 0.01 
+
 var shoot_timer: float = 0.0
-var bullet_scene = null 
-var muzzle_node: Node3D = null 
+var bullet_scene = null
+var muzzle_node: Node3D = null
+
+var use_cooldown := true
+
+var is_fire_button_held: bool = false 
 
 var mouse_rotation_delta_x := 0.0
 var mouse_sensitivity := 0.015
 
 func _ready():
-	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED) 
-	
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+
+	use_cooldown = GlobalData.weapon_cooldown
+
 	if collision_shape and collision_shape.shape is BoxShape3D:
 		standing_collision_shape = collision_shape.shape.duplicate()
 	else:
 		push_error("¡ERROR! Player.tscn debe tener un CollisionShape3D con un BoxShape3D.")
-	
+
 	_load_visual_character(load(GlobalData.selected_character_scene_path))
-	
+
 	_load_weapon()
-	
+
 	animation_timer.timeout.connect(_on_animation_timer_timeout)
 
 	emit_signal("health_changed", current_health, max_health)
 	global_position.y=0.5
-	
+
 	if is_instance_valid(ground_ray):
 		ground_ray.add_exception(self)
 	if is_instance_valid(auto_jump_ray):
 		auto_jump_ray.add_exception(self)
-		
+
 	if not GlobalData.selected_bullet_scene_path.is_empty():
 		bullet_scene = load(GlobalData.selected_bullet_scene_path)
 		if bullet_scene == null:
@@ -55,15 +63,25 @@ func _ready():
 func _input(event):
 	if event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
 		mouse_rotation_delta_x += -event.relative.x * mouse_sensitivity
-		
+
 	elif event is InputEventMouseButton:
-		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+		if event.button_index == MOUSE_BUTTON_LEFT:
 			if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
-				shoot()
-	
-	if Input.is_action_just_pressed("shoot"): 
+				
+				if not use_cooldown:
+					if event.pressed:
+						is_fire_button_held = true
+						shoot() 
+					else:
+						is_fire_button_held = false
+				
+				else:
+					if event.pressed:
+						shoot()
+						
+	if Input.is_action_just_pressed("shoot"):
 		shoot()
-		
+
 	if Input.is_action_just_pressed("ui_cancel"):
 		if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
 			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
@@ -159,51 +177,60 @@ func _load_weapon():
 		
 		shoot_timer = SHOOT_COOLDOWN
 		
-
-
 func _process(delta: float):
 	if shoot_timer > 0.0:
 		shoot_timer -= delta
+		
+	if not use_cooldown:
+		if is_fire_button_held and shoot_timer <= 0.0:
+			shoot()
+			shoot_timer = AUTO_FIRE_COOLDOWN
 
 func shoot():
-	if is_taking_damage or is_sliding or shoot_timer > 0.0 or is_shooting: 
+	print("Intentando disparar. Cooldown activado:", use_cooldown)
+
+	if is_taking_damage or is_sliding or is_shooting:
 		print("No se puede disparar ahora.")
 		return
 	
+	if use_cooldown and shoot_timer > 0.0:
+		print("No se puede disparar ahora (Cooldown activo).")
+		return
+
 	if bullet_scene and muzzle_node:
-		
 		if not is_instance_valid(muzzle_node) or not muzzle_node.is_inside_tree():
 			print("Advertencia: No se pudo disparar. El punto de salida (Muzzle) no es válido o no está en el árbol.")
 			return
 
 		print("Disparando bala desde: ", muzzle_node.global_position)
-		
+
 		var new_bullet = bullet_scene.instantiate()
-		var shoot_direction = -global_transform.basis.z.normalized() 
-		
+		var shoot_direction = -global_transform.basis.z.normalized()
+
 		var game_root = get_tree().get_root().find_child("Game", true, false)
 		if game_root:
 			print("Añadiendo bala al nodo Game.")
 			game_root.add_child(new_bullet)
 		else:
 			print("Advertencia: Nodo 'Game' no encontrado. Añadiendo bala al root del árbol.")
-			get_tree().get_root().add_child(new_bullet) 
-			
+			get_tree().get_root().add_child(new_bullet)
+
 		new_bullet.global_position = muzzle_node.global_position
 
-		
 		if new_bullet.has_method("set_velocity_and_direction"):
 			new_bullet.set_velocity_and_direction(shoot_direction)
 			print("Bala disparada en dirección: ", shoot_direction)
 		else:
 			push_error("Bullet scene does not have 'set_velocity_and_direction' method.")
 
-		
-		play_animation("holding-right-shoot") 
-		is_shooting = true 
-		
-		shoot_timer = SHOOT_COOLDOWN
-	
+		play_animation("holding-right-shoot")
+		is_shooting = true
+
+		if use_cooldown:
+			shoot_timer = SHOOT_COOLDOWN
+		else:
+			shoot_timer = AUTO_FIRE_COOLDOWN 
+
 	elif bullet_scene == null:
 		print("Advertencia: No se pudo disparar, la escena de la bala no está cargada.")
 	elif muzzle_node == null:
@@ -285,6 +312,7 @@ func _physics_process(delta: float):
 		_handle_auto_step_climb(movement_vector)
 		
 	move_and_slide()
+	
 func handle_jump_and_slide():
 	if is_taking_damage or is_sliding:
 		return
@@ -407,7 +435,7 @@ func _handle_auto_step_climb(direction: Vector3):
 		print("Player: AutoJumpRay colisionó con: ", auto_jump_ray.get_collider().name)
 		var collider = auto_jump_ray.get_collider()
 		
-		var is_correct_obstacle = false	
+		var is_correct_obstacle = false 
 		if is_instance_valid(collider):
 			print("Player: Verificando si el collider es un obstáculo válido: ", collider.name)
 			if collider.name.to_lower().begins_with(OBSTACLE_PREFIX): 

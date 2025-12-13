@@ -24,6 +24,7 @@ func _on_blaster_a_pressed() :
 	print("Seleccionada arma: blaster_a")
 	GlobalData.selected_weapon_scene_path=WEAPON_PATHS["blaster_a"]
 	GlobalData.damage_weapon_multiplier=1.8
+	GlobalData.weapon_cooldown=true
 	print("Ruta de arma seleccionada: "+GlobalData.selected_weapon_scene_path," Multiplicador de daño: "+str(GlobalData.damage_weapon_multiplier))
 	GlobalData.save_game()
 
@@ -32,6 +33,7 @@ func _on_blaster_i_pressed():
 	print("Seleccionada arma: blaster_i")
 	GlobalData.selected_weapon_scene_path=WEAPON_PATHS["blaster_i"]
 	GlobalData.damage_weapon_multiplier=2.8
+	GlobalData.weapon_cooldown=true
 	print("Ruta de arma seleccionada: "+GlobalData.selected_weapon_scene_path," Multiplicador de daño: "+str(GlobalData.damage_weapon_multiplier))
 	GlobalData.save_game()
 
@@ -40,6 +42,7 @@ func _on_blaster_b_pressed() :
 	print("Seleccionada arma: blaster_b")
 	GlobalData.selected_weapon_scene_path=WEAPON_PATHS["blaster_b"]
 	GlobalData.damage_weapon_multiplier=3.8
+	GlobalData.weapon_cooldown=false
 	print("Ruta de arma seleccionada: "+GlobalData.selected_weapon_scene_path," Multiplicador de daño: "+str(GlobalData.damage_weapon_multiplier))
 	GlobalData.save_game()
 
@@ -48,6 +51,7 @@ func _on_blaster_a_2_pressed() :
 	print("Seleccionada arma: blaster_a_2")
 	GlobalData.selected_weapon_scene_path=WEAPON_PATHS["blaster_a_2"]
 	GlobalData.damage_weapon_multiplier=5
+	GlobalData.weapon_cooldown=false
 	print("Ruta de arma seleccionada: "+GlobalData.selected_weapon_scene_path," Multiplicador de daño: "+str(GlobalData.damage_weapon_multiplier))
 	GlobalData.save_game()
 
