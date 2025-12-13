@@ -47,3 +47,6 @@ shadow_mesh = SubResource("ArrayMesh_om6ro")
 [node name="blaster-i" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_8ii0r")
 skeleton = NodePath("")
+
+[node name="Muzzle" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.053038903, 0.07714749)

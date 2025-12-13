@@ -6,7 +6,7 @@ const WEAPON_PATHS={
 	"blaster_a":"res://src/weapons/blaster_a.tscn",
 	"blaster_i":"res://src/weapons/blaster_i.tscn",
 	"blaster_b":"res://src/weapons/blaster_b.tscn",
-	"blaster_a_2":"res://src/weapons/blaster_a.tscn"
+	"blaster_a_2":"res://src/weapons/blaster_d_2.tscn"
 }
 
 

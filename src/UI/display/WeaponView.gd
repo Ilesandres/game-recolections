@@ -9,7 +9,7 @@ const WEAPON_ROTATION_SPEED = 1.0
 
 
 const WEAPON_SCENES = [
-	"res://src/weapons/blaster_a.tscn",
+	"res://src/weapons/blaster_d_2.tscn",
 	"res://src/weapons/blaster_b.tscn",
 	"res://src/weapons/blaster_i.tscn",
     "res://src/weapons/blaster_a.tscn" 
