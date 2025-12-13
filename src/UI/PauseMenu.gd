@@ -11,6 +11,7 @@ func _ready():
 
 
 func _on_resume_button_pressed():
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	print("continuando partida")
 	unpause_game()
 

@@ -31,6 +31,30 @@ var is_fire_button_held: bool = false
 var mouse_rotation_delta_x := 0.0
 var mouse_sensitivity := 0.015
 
+var is_sliding = false
+var slide_timer = 0.0
+const SLIDE_DURATION = 0.8
+
+var max_health: int = 5
+var current_health: int = max_health
+signal player_died
+var is_taking_damage: bool = false 
+var is_shooting: bool = false 
+
+@onready var collision_shape: CollisionShape3D = $CollisionShape3D
+@onready var visuals_node: Node3D = $Visuals
+@onready var animation_timer: Timer = $AnimationTimer
+@onready var camera_boom: Node3D = $CameraBoom
+@onready var auto_jump_ray: RayCast3D = $AutoJumpRay
+@onready var ground_ray: RayCast3D = $GroundRay 
+
+signal health_changed(current_health, max_health)
+
+var animation_player: AnimationPlayer = null
+var current_weapon: Node3D = null
+
+var standing_collision_shape: BoxShape3D
+
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
@@ -91,29 +115,6 @@ func _input(event):
 			print("Mouse capturado (Modo Juego).")
 
 
-var is_sliding = false
-var slide_timer = 0.0
-const SLIDE_DURATION = 0.8
-
-var max_health: int = 3
-var current_health: int = max_health
-signal player_died
-var is_taking_damage: bool = false 
-var is_shooting: bool = false 
-
-@onready var collision_shape: CollisionShape3D = $CollisionShape3D
-@onready var visuals_node: Node3D = $Visuals
-@onready var animation_timer: Timer = $AnimationTimer
-@onready var camera_boom: Node3D = $CameraBoom
-@onready var auto_jump_ray: RayCast3D = $AutoJumpRay
-@onready var ground_ray: RayCast3D = $GroundRay 
-
-signal health_changed(current_health, max_health)
-
-var animation_player: AnimationPlayer = null
-var current_weapon: Node3D = null
-
-var standing_collision_shape: BoxShape3D
 
 func _load_visual_character(character_scene: Resource):
 	for child in visuals_node.get_children():
