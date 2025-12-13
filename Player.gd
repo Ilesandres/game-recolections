@@ -407,7 +407,7 @@ func _handle_auto_step_climb(direction: Vector3):
 		print("Player: AutoJumpRay colisionó con: ", auto_jump_ray.get_collider().name)
 		var collider = auto_jump_ray.get_collider()
 		
-		var is_correct_obstacle = false
+		var is_correct_obstacle = false	
 		if is_instance_valid(collider):
 			print("Player: Verificando si el collider es un obstáculo válido: ", collider.name)
 			if collider.name.to_lower().begins_with(OBSTACLE_PREFIX): 

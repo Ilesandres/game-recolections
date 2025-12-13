@@ -12,12 +12,10 @@ const WEAPON_PATHS={
 
 
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	pass 
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
 
@@ -25,25 +23,33 @@ func _process(delta: float) -> void:
 func _on_blaster_a_pressed() :
 	print("Seleccionada arma: blaster_a")
 	GlobalData.selected_weapon_scene_path=WEAPON_PATHS["blaster_a"]
-	print("Ruta de arma seleccionada: "+GlobalData.selected_weapon_scene_path)
+	GlobalData.damage_weapon_multiplier=1.8
+	print("Ruta de arma seleccionada: "+GlobalData.selected_weapon_scene_path," Multiplicador de daño: "+str(GlobalData.damage_weapon_multiplier))
+	GlobalData.save_game()
 
 
 func _on_blaster_i_pressed():
 	print("Seleccionada arma: blaster_i")
 	GlobalData.selected_weapon_scene_path=WEAPON_PATHS["blaster_i"]
-	print("Ruta de arma seleccionada: "+GlobalData.selected_weapon_scene_path)
+	GlobalData.damage_weapon_multiplier=2.8
+	print("Ruta de arma seleccionada: "+GlobalData.selected_weapon_scene_path," Multiplicador de daño: "+str(GlobalData.damage_weapon_multiplier))
+	GlobalData.save_game()
 
 
 func _on_blaster_b_pressed() :
 	print("Seleccionada arma: blaster_b")
 	GlobalData.selected_weapon_scene_path=WEAPON_PATHS["blaster_b"]
-	print("Ruta de arma seleccionada: "+GlobalData.selected_weapon_scene_path)
+	GlobalData.damage_weapon_multiplier=3.8
+	print("Ruta de arma seleccionada: "+GlobalData.selected_weapon_scene_path," Multiplicador de daño: "+str(GlobalData.damage_weapon_multiplier))
+	GlobalData.save_game()
 
 
 func _on_blaster_a_2_pressed() :
 	print("Seleccionada arma: blaster_a_2")
 	GlobalData.selected_weapon_scene_path=WEAPON_PATHS["blaster_a_2"]
-	print("Ruta de arma seleccionada: "+GlobalData.selected_weapon_scene_path)
+	GlobalData.damage_weapon_multiplier=5
+	print("Ruta de arma seleccionada: "+GlobalData.selected_weapon_scene_path," Multiplicador de daño: "+str(GlobalData.damage_weapon_multiplier))
+	GlobalData.save_game()
 
 
 func _on_back_button_pressed():

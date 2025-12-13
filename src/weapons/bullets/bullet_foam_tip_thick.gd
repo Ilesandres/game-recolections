@@ -1,11 +1,15 @@
 extends CharacterBody3D
 
 const BULLET_SPEED = 30.0
-const DAMAGE_AMOUNT = 1 
+var DAMAGE_AMOUNT = 3
 
 var direction: Vector3 = Vector3.ZERO
 var lifetime: float = 3.0 
 var timer: float = 0.0
+
+func _ready():
+	print("Bala creada con multiplicador de daño: "+str(GlobalData.damage_weapon_multiplier))
+	DAMAGE_AMOUNT *= GlobalData.damage_weapon_multiplier
 
 func set_velocity_and_direction(dir: Vector3):
 	direction = dir

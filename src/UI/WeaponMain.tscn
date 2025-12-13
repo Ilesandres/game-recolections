@@ -56,7 +56,7 @@ offset_left = 358.0
 offset_top = 264.0
 offset_right = 499.0
 offset_bottom = 295.0
-text = "seleccionar arma"
+text = "seleccionar arma a"
 
 [node name="blaster_i" type="Button" parent="."]
 layout_mode = 0
@@ -64,7 +64,7 @@ offset_left = 660.0
 offset_top = 263.0
 offset_right = 801.0
 offset_bottom = 294.0
-text = "seleccionar arma"
+text = "seleccionar arma i"
 
 [node name="blaster_b" type="Button" parent="."]
 layout_mode = 0
@@ -72,7 +72,7 @@ offset_left = 364.0
 offset_top = 436.0
 offset_right = 505.0
 offset_bottom = 467.0
-text = "seleccionar arma"
+text = "seleccionar arma b"
 
 [node name="blaster_a_2" type="Button" parent="."]
 layout_mode = 0
@@ -80,7 +80,7 @@ offset_left = 658.0
 offset_top = 436.0
 offset_right = 799.0
 offset_bottom = 467.0
-text = "seleccionar arma"
+text = "seleccionar arma a-2"
 
 [node name="BackButton" type="Button" parent="."]
 layout_mode = 0

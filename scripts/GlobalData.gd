@@ -12,6 +12,7 @@ const SAVE_PATH = "user://game_save.dat"
 var selected_character_scene_path: String="res://scenes/characters/character_k_2.tscn"
 var selected_weapon_scene_path: String = "res://src/weapons/blaster_a.tscn"
 var selected_bullet_scene_path: String = "res://src/weapons/bullets/bullet_foam_tip_thick.tscn"
+var damage_weapon_multiplier: float = 1.0
 
 func add_score(amount: int):
 	current_score += amount
@@ -28,7 +29,8 @@ func save_game():
 		"xp_to_next_level": xp_to_next_level,
 		"selected_character_scene_path": selected_character_scene_path,
 		"selected_weapon_scene_path": selected_weapon_scene_path,
-		"selected_bullet_scene_path": selected_bullet_scene_path
+		"selected_bullet_scene_path": selected_bullet_scene_path,
+		"damage_weapon_multiplier": damage_weapon_multiplier
 	}
 	
 	var file = FileAccess.open(SAVE_PATH, FileAccess.WRITE)
@@ -51,6 +53,7 @@ func load_game():
 				selected_character_scene_path = data.get("selected_character_scene_path", "res://scenes/characters/character_k_2.tscn")
 				selected_weapon_scene_path = data.get("selected_weapon_scene_path", "res://src/weapons/blaster_a.tscn")
 				selected_bullet_scene_path = data.get("selected_bullet_scene_path", "res://src/weapons/bullets/bullet_foam_tip_thick.tscn")
+				damage_weapon_multiplier = data.get("damage_weapon_multiplier", 1.0)
 			else:
 				print("Error al analizar el archivo de guardado.")
 			file.close()
