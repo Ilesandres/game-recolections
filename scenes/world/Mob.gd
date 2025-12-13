@@ -9,8 +9,12 @@ const OBSTACLE_PREFIX = "driveway-long"
 @onready var player: CharacterBody3D = get_tree().get_first_node_in_group("player")
 @onready var ground_ray: RayCast3D = $GroundRay 
 @onready var step_ray: RayCast3D = $StepRay
-@onready var animation_player: AnimationPlayer = $"character-n2"/AnimationPlayer 
+
+@onready var animation_player: AnimationPlayer = $"character-n2"/AnimationPlayer
 var is_dying: bool = false
+# Cooldown de ataque
+const ATTACK_COOLDOWN := 1.0 # segundos
+var attack_timer: float = 0.0
 
 const MOB_GRAVITY = 20.0 
 const ROTATION_SPEED = 10.0
@@ -89,7 +93,11 @@ func _physics_process(delta: float):
 		velocity = Vector3.ZERO
 		move_and_slide()
 		return
-		
+
+	# Actualizar cooldown de ataque
+	if attack_timer > 0.0:
+		attack_timer -= delta
+
 	if not is_on_floor():
 		velocity.y -= MOB_GRAVITY * delta
 	else:
@@ -98,47 +106,48 @@ func _physics_process(delta: float):
 	if not is_instance_valid(player):
 		velocity = Vector3.ZERO
 		move_and_slide()
-		play_mob_animation("idle") 
+		play_mob_animation("idle")
 		return
 
 	var to_player = player.global_position - global_position
-	
+
 	var flat_to_player = to_player
 	flat_to_player.y = 0
 	var dist = flat_to_player.length()
-	
+
 	var direction = Vector3.ZERO
 	if dist > MIN_DISTANCE_TO_PLAYER:
 		direction = flat_to_player.normalized()
-		
+
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
-		
+
 		var target_angle = atan2(direction.x, direction.z)
-		
+
 		rotation.y = lerp_angle(rotation.y, target_angle, delta * ROTATION_SPEED)
-		
-		
+
 		play_mob_animation("walk")
 	else:
 		velocity.x = 0.0
 		velocity.z = 0.0
-		
+
 		play_mob_animation("idle")
-		
+
 	if direction.length_squared() > 0.01:
 		_handle_step_climb()
 
 	move_and_slide()
-	
+
 	for i in get_slide_collision_count():
 		var collision = get_slide_collision(i)
 		var collider = collision.get_collider()
-		
+
 		if collider.has_method("take_damage"):
-			play_mob_animation("attack-melee-right")
-			print("Mob ataca al jugador, infligiendo ", DAMAGE, " de daño.")
-			collider.take_damage()
+			if attack_timer <= 0.0:
+				play_mob_animation("attack-melee-right")
+				print("Mob ataca al jugador, infligiendo ", DAMAGE, " de daño.")
+				collider.take_damage()
+				attack_timer = ATTACK_COOLDOWN
 			return
 
 func _handle_step_climb():

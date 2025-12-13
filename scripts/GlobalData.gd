@@ -27,7 +27,8 @@ func save_game():
 		"current_xp": current_xp,
 		"xp_to_next_level": xp_to_next_level,
 		"selected_character_scene_path": selected_character_scene_path,
-		"selected_weapon_scene_path": selected_weapon_scene_path
+		"selected_weapon_scene_path": selected_weapon_scene_path,
+		"selected_bullet_scene_path": selected_bullet_scene_path
 	}
 	
 	var file = FileAccess.open(SAVE_PATH, FileAccess.WRITE)
@@ -48,7 +49,8 @@ func load_game():
 				current_xp = data.get("current_xp", 0)
 				xp_to_next_level = data.get("xp_to_next_level", 100)
 				selected_character_scene_path = data.get("selected_character_scene_path", "res://scenes/characters/character_k_2.tscn")
-				selected_weapon_scene_path = data.get("selected_weapon_scene_path", "res://assets/weapons/bullets/blaster_a.tscn")
+				selected_weapon_scene_path = data.get("selected_weapon_scene_path", "res://src/weapons/blaster_a.tscn")
+				selected_bullet_scene_path = data.get("selected_bullet_scene_path", "res://src/weapons/bullets/bullet_foam_tip_thick.tscn")
 			else:
 				print("Error al analizar el archivo de guardado.")
 			file.close()

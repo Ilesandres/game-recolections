@@ -4,6 +4,7 @@ extends Control
 
 const GAME_SCENE_PATH = "res://scenes/game_scene.tscn"
 const CHARACTER_SELECT_SCENE_PATH="res://src/UI/CharacterSelectMenu.tscn"
+const WEAPON_SELECT_SCENE_PATH="res://src/UI/WeaponMain.tscn"
 
 func _on_play_button_pressed():
 	get_tree().change_scene_to_file(GAME_SCENE_PATH)
@@ -18,3 +19,7 @@ func _on_exit_button_pressed():
 
 func _on_level_button_pressed() :
 	get_tree().change_scene_to_file("res://src/UI/LevelMenu.tscn")
+
+
+func _on_select_weapon_pressed() :
+	get_tree().change_scene_to_file(WEAPON_SELECT_SCENE_PATH)

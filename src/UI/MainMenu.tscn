@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://tc7uyrsmno8h"]
+[gd_scene load_steps=10 format=3 uid="uid://tc7uyrsmno8h"]
 
 [ext_resource type="Script" uid="uid://ik7cbo1n6un0" path="res://src/UI/MainMenu.gd" id="1_en4mt"]
 [ext_resource type="Texture2D" uid="uid://c23avgdttpy2g" path="res://assets/art/2d/found_main.png" id="2_w38c1"]
@@ -6,6 +6,12 @@
 [ext_resource type="FontFile" uid="uid://rn8mmsjielmk" path="res://assets/fonts/game-paused-demo/Game Paused DEMO.otf" id="3_pe8e0"]
 [ext_resource type="Texture2D" uid="uid://d0vclpqpi06rc" path="res://assets/art/2d/title_main.png" id="4_fapdh"]
 [ext_resource type="PackedScene" uid="uid://bop3l8sb2iecn" path="res://src/UI/display/CharacterDisplay3D.tscn" id="6_1xg02"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1xg02"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ms2jq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_condu"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -38,23 +44,23 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 7
 
-[node name="LevelButton" type="Button" parent="ButtonContainer"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("2_yq4l5")
-theme_override_font_sizes/font_size = 25
-text = "selecciona un nivel"
-
 [node name="PlayButton" type="Button" parent="ButtonContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_yq4l5")
 theme_override_font_sizes/font_size = 25
 text = "Jugar"
 
-[node name="SelectCharacterButton" type="Button" parent="ButtonContainer"]
+[node name="SelectWeapon" type="Button" parent="ButtonContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_yq4l5")
 theme_override_font_sizes/font_size = 25
-text = "Seleccionar Personaje"
+text = "SELECCIONA ARMA"
+
+[node name="LevelButton" type="Button" parent="ButtonContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_yq4l5")
+theme_override_font_sizes/font_size = 25
+text = "selecciona un nivel"
 
 [node name="ExitButton" type="Button" parent="ButtonContainer"]
 layout_mode = 2
@@ -122,7 +128,32 @@ render_target_update_mode = 4
 [node name="CharacterDisplay3D" parent="DisplayContainer/CharacterViewport" instance=ExtResource("6_1xg02")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 
-[connection signal="pressed" from="ButtonContainer/LevelButton" to="." method="_on_level_button_pressed"]
+[node name="SelectCharacterButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 883.0
+offset_top = 296.0
+offset_right = 1085.0
+offset_bottom = 524.0
+theme_override_fonts/font = ExtResource("2_yq4l5")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxEmpty_1xg02")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ms2jq")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_condu")
+
+[node name="SelectCharacterButton2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 893.0
+offset_top = 540.0
+offset_right = 1088.0
+offset_bottom = 592.0
+theme_override_fonts/font = ExtResource("2_yq4l5")
+theme_override_font_sizes/font_size = 25
+text = "ASeleccionar 
+Personaje"
+
 [connection signal="pressed" from="ButtonContainer/PlayButton" to="." method="_on_play_button_pressed"]
-[connection signal="pressed" from="ButtonContainer/SelectCharacterButton" to="." method="_on_select_character_button_pressed"]
+[connection signal="pressed" from="ButtonContainer/SelectWeapon" to="." method="_on_select_weapon_pressed"]
+[connection signal="pressed" from="ButtonContainer/LevelButton" to="." method="_on_level_button_pressed"]
 [connection signal="pressed" from="ButtonContainer/ExitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="SelectCharacterButton" to="." method="_on_select_character_button_pressed"]
+[connection signal="pressed" from="SelectCharacterButton2" to="." method="_on_select_character_button_pressed"]
