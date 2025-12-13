@@ -6,7 +6,6 @@ const HUD_SCENE=preload(HUD_SCENE_PATH)
 
 var hud_screen=null
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	hide()
 	hud_screen= HUD_SCENE.instantiate()
@@ -15,7 +14,6 @@ func _ready() -> void:
 
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
 
@@ -26,14 +24,14 @@ func _on_try_again_pressed():
 	print(" intentnado de nuevo scene GameOver")
 	get_tree().reload_current_scene()
 	GlobalData.current_score=0
-	pass # Replace with function body.
+	pass 
 
 
 func _on_main_menu_pressed() -> void:
 	print("dirigiendo a menu scene GameOver")
 	get_tree().paused=false
 	get_tree().change_scene_to_file("res://src/UI/MainMenu.tscn")
-	pass # Replace with function body.
+	pass 
 
 func setup_game_over_screen(final_score: int, high_score: int):
 	var hud_control = hud_screen

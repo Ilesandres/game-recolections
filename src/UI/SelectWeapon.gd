@@ -50,4 +50,5 @@ func _on_back_button_pressed():
 	if not GlobalData.selected_weapon_scene_path:
 		GlobalData.selected_weapon_scene_path=WEAPON_PATHS["blaster_a"] 
 	print("Regresando al menú principal con: "+GlobalData.selected_weapon_scene_path)
+	GlobalData.save_game()
 	get_tree().change_scene_to_file(MAIN_SCENE_PATH)

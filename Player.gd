@@ -14,6 +14,9 @@ const OBSTACLE_PREFIX = "driveway-long"
 const IDLE_ARMED_ANIMATION = "static_weapon" 
 const IDLE_UNARMED_ANIMATION = "static-weapon" 
 
+const SPRINT_SPEED = 14.0      
+const SPRINT_JUMP_VELOCITY = 20.0
+
 const SHOOT_COOLDOWN = 0.2
 var shoot_timer: float = 0.0
 var bullet_scene = null 
@@ -23,7 +26,6 @@ var mouse_rotation_delta_x := 0.0
 var mouse_sensitivity := 0.015
 
 func _ready():
-
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED) 
 	
 	if collision_shape and collision_shape.shape is BoxShape3D:
@@ -207,6 +209,7 @@ func shoot():
 	elif muzzle_node == null:
 		print("Advertencia: No se pudo disparar, el punto de salida (Muzzle) no fue encontrado.")
 
+
 func _physics_process(delta: float):
 	rotate_y(mouse_rotation_delta_x)
 	mouse_rotation_delta_x = 0.0
@@ -231,20 +234,28 @@ func _physics_process(delta: float):
 	var idle_anim = IDLE_UNARMED_ANIMATION
 	if is_instance_valid(current_weapon):
 		idle_anim = IDLE_ARMED_ANIMATION
-	
+		
+	var current_speed = SPEED
+	if Input.is_action_pressed("sprint") and input_dir.length_squared() > 0.01:
+		current_speed = SPRINT_SPEED
+
 	if not is_taking_damage:
 		if input_dir != Vector3.ZERO:
 			var basis = global_transform.basis
 			movement_vector = basis * input_dir
 			movement_vector.y = 0
 			movement_vector = movement_vector.normalized()
-			velocity.x = movement_vector.x * SPEED
-			velocity.z = movement_vector.z * SPEED
-
+			
+			velocity.x = movement_vector.x * current_speed
+			velocity.z = movement_vector.z * current_speed
 			
 			if not is_sliding:
 				if not is_shooting:
-					play_animation("walk")
+					if current_speed > SPEED:
+						play_animation("sprint") 
+					else:
+						play_animation("walk")
+						
 		elif is_on_floor():
 			velocity.x = 0.0
 			velocity.z = 0.0
@@ -274,6 +285,20 @@ func _physics_process(delta: float):
 		_handle_auto_step_climb(movement_vector)
 		
 	move_and_slide()
+func handle_jump_and_slide():
+	if is_taking_damage or is_sliding:
+		return
+	
+	var is_sprinting = Input.is_action_pressed("sprint")
+
+	if Input.is_action_just_pressed("ui_up") and is_on_floor():
+		if is_sprinting:
+			velocity.y = SPRINT_JUMP_VELOCITY
+		else:
+			velocity.y = JUMP_VELOCITY
+	
+	if Input.is_action_just_pressed("ui_down") and is_on_floor() and not is_sliding:
+		start_slide()
 
 
 func take_damage(amount: int = 1):
@@ -313,21 +338,13 @@ func _on_animation_finished(anim_name):
 			next_idle_anim = IDLE_ARMED_ANIMATION
 			
 		if velocity.length_squared() > 0.01 and is_on_floor():
-			play_animation("walk")
+			if Input.is_action_pressed("sprint"):
+				play_animation("sprint")
+			else:
+				play_animation("walk")
 		elif is_on_floor():
 			play_animation(next_idle_anim) 
 	
-
-func handle_jump_and_slide():
-	if is_taking_damage or is_sliding:
-		return
-
-	if Input.is_action_just_pressed("ui_up") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
-	
-	if Input.is_action_just_pressed("ui_down") and is_on_floor() and not is_sliding:
-		start_slide()
-
 
 func start_slide():
 	is_sliding = true
@@ -417,7 +434,15 @@ func _handle_auto_step_climb(direction: Vector3):
 		
 		if ground_ray.is_colliding():
 			
-			velocity.y = JUMP_VELOCITY * 0.5 
+			var jump_val = JUMP_VELOCITY * 0.5
+			if Input.is_action_pressed("sprint"):
+				jump_val = SPRINT_JUMP_VELOCITY * 0.5
+				
+			velocity.y = jump_val
 			
-			velocity.x = direction.x * SPEED
-			velocity.z = direction.z * SPEED
+			var move_speed = SPEED
+			if Input.is_action_pressed("sprint"):
+				move_speed = SPRINT_SPEED
+				
+			velocity.x = direction.x * move_speed
+			velocity.z = direction.z * move_speed

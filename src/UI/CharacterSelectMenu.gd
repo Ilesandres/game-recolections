@@ -32,7 +32,7 @@ func _on_play_button_pressed():
 		select_character("K") 
 		
 	print("Iniciando juego con: " + GlobalData.selected_character_scene_path)
-	
+	GlobalData.save_game()
 	get_tree().change_scene_to_file(GAME_SCENE_PATH)
 
 
@@ -56,6 +56,7 @@ func _on_select_character_p_pressed() :
 func _on_back_button_pressed():
 	if not GlobalData.selected_character_scene_path:
 		select_character("K") 
+	GlobalData.save_game()
 	print("Regresando al menú principal con: " + GlobalData.selected_character_scene_path)
 	get_tree().change_scene_to_file(MAIN_SCENE_PATH)
 	
