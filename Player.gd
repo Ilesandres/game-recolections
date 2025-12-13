@@ -12,7 +12,7 @@ const MAX_STEP_HEIGHT = 0.41
 const OBSTACLE_PREFIX = "driveway-long"
 
 const IDLE_ARMED_ANIMATION = "static_weapon" 
-const IDLE_UNARMED_ANIMATION = "static-weapon" 	
+const IDLE_UNARMED_ANIMATION = "static-weapon" 
 
 const SHOOT_COOLDOWN = 0.2
 var shoot_timer: float = 0.0
@@ -275,13 +275,13 @@ func _physics_process(delta: float):
 	move_and_slide()
 
 
-func take_damage():
+func take_damage(amount: int = 1):
 	if current_health > 0:
-		current_health -= 1
+		current_health -= amount
 		print("¡Daño! Vida restante: ", current_health)
 		
 		is_taking_damage = true 
-		play_animation("emote-no")
+		play_animation("emote-no")	
 		emit_signal("health_changed", current_health, max_health)
 		animation_timer.start(DAMAGE_ANIMATION_TIME)
 		

@@ -30,8 +30,7 @@ func _add_visuals_random():
 	visual_instance.position.y = 0.5 
 
 func _on_body_entered(body: Node3D):
-	if body is CharacterBody3D and body.name == "Player":
-		
+	if body is CharacterBody3D and body.name == "Player":		
 		if body.has_method("take_damage"):
 			body.take_damage()
 			

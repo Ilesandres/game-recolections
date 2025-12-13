@@ -136,6 +136,8 @@ func _physics_process(delta: float):
 		var collider = collision.get_collider()
 		
 		if collider.has_method("take_damage"):
+			play_mob_animation("attack-melee-right")
+			print("Mob ataca al jugador, infligiendo ", DAMAGE, " de daño.")
 			collider.take_damage()
 			return
 
