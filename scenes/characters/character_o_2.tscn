@@ -1913,7 +1913,7 @@ mesh = SubResource("ArrayMesh_npain")
 skeleton = NodePath("")
 
 [node name="arm-right" type="MeshInstance3D" parent="character-o/root/torso"]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -0.4000001, 1.1, -0.099999905)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4000001, 1.1, -0.099999905)
 mesh = SubResource("ArrayMesh_ajtna")
 skeleton = NodePath("")
 

@@ -90,6 +90,56 @@ offset_right = 195.0
 offset_bottom = 108.0
 text = "BACK AND SAVE"
 
+[node name="MessageError" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.10700001
+anchor_bottom = 0.117000006
+offset_left = 566.0
+offset_top = 346.0
+offset_right = 482.736
+offset_bottom = 293.184
+
+[node name="required-score-a" type="Label" parent="."]
+layout_mode = 0
+offset_left = 402.0
+offset_top = 134.0
+offset_right = 457.0
+offset_bottom = 157.0
+text = "score 0"
+
+[node name="required-score-i" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.017
+offset_left = 704.0
+offset_top = 131.0
+offset_right = 749.416
+offset_bottom = 180.0
+text = "score 10
+"
+
+[node name="required-score-b" type="Label" parent="."]
+layout_mode = 0
+offset_left = 400.0
+offset_top = 597.0
+offset_right = 465.0
+offset_bottom = 620.0
+text = "score 50"
+
+[node name="required-score-a-2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 691.0
+offset_top = 592.0
+offset_right = 765.0
+offset_bottom = 615.0
+text = "score 100"
+
+[node name="GlobalScore" type="Label" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
 [connection signal="pressed" from="blaster_a" to="." method="_on_blaster_a_pressed"]
 [connection signal="pressed" from="blaster_i" to="." method="_on_blaster_i_pressed"]
 [connection signal="pressed" from="blaster_b" to="." method="_on_blaster_b_pressed"]
