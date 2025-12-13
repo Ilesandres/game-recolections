@@ -22,20 +22,53 @@ var muzzle_node: Node3D = null
 var mouse_rotation_delta_x := 0.0
 var mouse_sensitivity := 0.015
 
+func _ready():
+
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED) 
+	
+	if collision_shape and collision_shape.shape is BoxShape3D:
+		standing_collision_shape = collision_shape.shape.duplicate()
+	else:
+		push_error("¡ERROR! Player.tscn debe tener un CollisionShape3D con un BoxShape3D.")
+	
+	_load_visual_character(load(GlobalData.selected_character_scene_path))
+	
+	_load_weapon()
+	
+	animation_timer.timeout.connect(_on_animation_timer_timeout)
+
+	emit_signal("health_changed", current_health, max_health)
+	global_position.y=0.5
+	
+	if is_instance_valid(ground_ray):
+		ground_ray.add_exception(self)
+	if is_instance_valid(auto_jump_ray):
+		auto_jump_ray.add_exception(self)
+		
+	if not GlobalData.selected_bullet_scene_path.is_empty():
+		bullet_scene = load(GlobalData.selected_bullet_scene_path)
+		if bullet_scene == null:
+			push_error("Error al cargar la escena de la bala: " + GlobalData.selected_bullet_scene_path)
+
 func _input(event):
 	if event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
 		mouse_rotation_delta_x += -event.relative.x * mouse_sensitivity
+		
 	elif event is InputEventMouseButton:
-		if event.button_index == MOUSE_BUTTON_RIGHT and event.pressed:
-			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-		elif event.button_index == MOUSE_BUTTON_RIGHT and not event.pressed:
-			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-		elif event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 			if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
 				shoot()
 	
 	if Input.is_action_just_pressed("shoot"): 
 		shoot()
+		
+	if Input.is_action_just_pressed("ui_cancel"):
+		if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
+			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+			print("Mouse liberado (Modo Pausa/Menú).")
+		else:
+			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+			print("Mouse capturado (Modo Juego).")
 
 
 var is_sliding = false
@@ -61,32 +94,6 @@ var animation_player: AnimationPlayer = null
 var current_weapon: Node3D = null
 
 var standing_collision_shape: BoxShape3D
-
-func _ready():
-	if collision_shape and collision_shape.shape is BoxShape3D:
-		standing_collision_shape = collision_shape.shape.duplicate()
-	else:
-		push_error("¡ERROR! Player.tscn debe tener un CollisionShape3D con un BoxShape3D.")
-	
-	_load_visual_character(load(GlobalData.selected_character_scene_path))
-	
-	_load_weapon()
-	
-	animation_timer.timeout.connect(_on_animation_timer_timeout)
-
-	emit_signal("health_changed", current_health, max_health)
-	global_position.y=0.5
-	
-	if is_instance_valid(ground_ray):
-		ground_ray.add_exception(self)
-	if is_instance_valid(auto_jump_ray):
-		auto_jump_ray.add_exception(self)
-		
-	if not GlobalData.selected_bullet_scene_path.is_empty():
-		bullet_scene = load(GlobalData.selected_bullet_scene_path)
-		if bullet_scene == null:
-			push_error("Error al cargar la escena de la bala: " + GlobalData.selected_bullet_scene_path)
-
 
 func _load_visual_character(character_scene: Resource):
 	for child in visuals_node.get_children():
@@ -201,9 +208,8 @@ func shoot():
 		print("Advertencia: No se pudo disparar, el punto de salida (Muzzle) no fue encontrado.")
 
 func _physics_process(delta: float):
-	if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
-		rotate_y(mouse_rotation_delta_x)
-		mouse_rotation_delta_x = 0.0
+	rotate_y(mouse_rotation_delta_x)
+	mouse_rotation_delta_x = 0.0
 
 	if not is_on_floor():
 		velocity.y -= GRAVITY * delta
@@ -235,12 +241,7 @@ func _physics_process(delta: float):
 			velocity.x = movement_vector.x * SPEED
 			velocity.z = movement_vector.z * SPEED
 
-			if Input.get_mouse_mode() != Input.MOUSE_MODE_CAPTURED:
-				var target_dir = movement_vector.normalized()
-				if target_dir.length() > 0.01:
-					var target_rot = atan2(-target_dir.x, -target_dir.z)
-					rotation.y = lerp_angle(rotation.y, target_rot, delta * ROTATION_SMOOTH_SPEED)
-
+			
 			if not is_sliding:
 				if not is_shooting:
 					play_animation("walk")
@@ -281,7 +282,7 @@ func take_damage(amount: int = 1):
 		print("¡Daño! Vida restante: ", current_health)
 		
 		is_taking_damage = true 
-		play_animation("emote-no")	
+		play_animation("emote-no")  
 		emit_signal("health_changed", current_health, max_health)
 		animation_timer.start(DAMAGE_ANIMATION_TIME)
 		
