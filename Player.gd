@@ -20,6 +20,9 @@ const SPRINT_JUMP_VELOCITY = 20.0
 const SHOOT_COOLDOWN = 0.2
 const AUTO_FIRE_COOLDOWN = 0.01 
 
+var SHOOT_SOUND_PATH = "res://assets/audio/weapons/shoots/shoot-arma-blaster-a.mp3"
+var DEATH_SOUND_PATH = "res://assets/audio/dead-player.mp3"
+
 var shoot_timer: float = 0.0
 var bullet_scene = null
 var muzzle_node: Node3D = null
@@ -48,6 +51,9 @@ var is_shooting: bool = false
 @onready var auto_jump_ray: RayCast3D = $AutoJumpRay
 @onready var ground_ray: RayCast3D = $GroundRay 
 
+@onready var shoot_sound_player: AudioStreamPlayer3D = $ShootSoundPlayer
+@onready var death_sound_player: AudioStreamPlayer3D = $DeathSoundPlayer
+
 signal health_changed(current_health, max_health)
 
 var animation_player: AnimationPlayer = null
@@ -59,6 +65,7 @@ func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	current_health= GlobalData.character_health
 	max_health= GlobalData.character_health
+	SHOOT_SOUND_PATH=GlobalData.weapon_sound_shoot_path
 
 	use_cooldown = GlobalData.weapon_cooldown
 
@@ -85,6 +92,15 @@ func _ready():
 		bullet_scene = load(GlobalData.selected_bullet_scene_path)
 		if bullet_scene == null:
 			push_error("Error al cargar la escena de la bala: " + GlobalData.selected_bullet_scene_path)
+			
+	_load_audio_stream(shoot_sound_player, SHOOT_SOUND_PATH)
+	_load_audio_stream(death_sound_player, DEATH_SOUND_PATH)
+
+func _load_audio_stream(player: AudioStreamPlayer3D, path: String):
+	if FileAccess.file_exists(path):
+		player.stream = load(path)
+	else:
+		push_error("ERROR: No se encontró el archivo de sonido para " + player.name + " en: " + path)
 
 func _input(event):
 	if event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
@@ -115,7 +131,6 @@ func _input(event):
 		else:
 			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 			print("Mouse capturado (Modo Juego).")
-
 
 
 func _load_visual_character(character_scene: Resource):
@@ -204,6 +219,9 @@ func shoot():
 		if not is_instance_valid(muzzle_node) or not muzzle_node.is_inside_tree():
 			print("Advertencia: No se pudo disparar. El punto de salida (Muzzle) no es válido o no está en el árbol.")
 			return
+			
+		if shoot_sound_player.stream:
+			shoot_sound_player.play()
 
 		print("Disparando bala desde: ", muzzle_node.global_position)
 
@@ -348,6 +366,9 @@ func take_damage(amount: int = 1):
 
 func die():
 	print("¡Game Over!")
+	
+	if death_sound_player.stream:
+		death_sound_player.play()
 	
 	play_animation("die")
 	

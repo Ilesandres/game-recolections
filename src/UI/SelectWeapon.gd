@@ -59,6 +59,7 @@ func _on_blaster_a_pressed() :
 	GlobalData.selected_weapon_scene_path = WEAPON_PATHS["blaster_a"]
 	GlobalData.damage_weapon_multiplier = 1.8
 	GlobalData.weapon_cooldown = true
+	GlobalData.weapon_sound_shoot_path= "res://assets/audio/weapons/shoots/shoot-arma-blaster-a.mp3"
 	print("Ruta de arma seleccionada: " + GlobalData.selected_weapon_scene_path, " Multiplicador de daño: " + str(GlobalData.damage_weapon_multiplier))
 	GlobalData.save_game()
 
@@ -72,6 +73,7 @@ func _on_blaster_i_pressed():
 	GlobalData.selected_weapon_scene_path = WEAPON_PATHS["blaster_i"]
 	GlobalData.damage_weapon_multiplier = 2.8
 	GlobalData.weapon_cooldown = true
+	GlobalData.weapon_sound_shoot_path="res://assets/audio/weapons/shoots/shoot-blaster-i.mp3"
 	print("Ruta de arma seleccionada: " + GlobalData.selected_weapon_scene_path, " Multiplicador de daño: " + str(GlobalData.damage_weapon_multiplier))
 	GlobalData.save_game()
 
@@ -85,6 +87,7 @@ func _on_blaster_b_pressed() :
 	GlobalData.selected_weapon_scene_path = WEAPON_PATHS["blaster_b"]
 	GlobalData.damage_weapon_multiplier = 3.8
 	GlobalData.weapon_cooldown = true
+	GlobalData.weapon_sound_shoot_path="res://assets/audio/weapons/shoots/shoot-blaster-b.mp3"
 	print("Ruta de arma seleccionada: " + GlobalData.selected_weapon_scene_path, " Multiplicador de daño: " + str(GlobalData.damage_weapon_multiplier))
 	GlobalData.save_game()
 
@@ -98,6 +101,7 @@ func _on_blaster_a_2_pressed() :
 	GlobalData.selected_weapon_scene_path = WEAPON_PATHS["blaster_a_2"]
 	GlobalData.damage_weapon_multiplier = 5
 	GlobalData.weapon_cooldown = false 
+	GlobalData.weapon_sound_shoot_path="res://assets/audio/weapons/shoots/shoot-blaster-d.mp3"
 	print("Ruta de arma seleccionada: " + GlobalData.selected_weapon_scene_path, " Multiplicador de daño: " + str(GlobalData.damage_weapon_multiplier))
 	GlobalData.save_game()
 

@@ -14,7 +14,8 @@ var selected_weapon_scene_path: String = "res://src/weapons/blaster_a.tscn"
 var selected_bullet_scene_path: String = "res://src/weapons/bullets/bullet_foam_tip_thick.tscn"
 var damage_weapon_multiplier: float = 1.0
 var weapon_cooldown:bool = true
-var character_health:int=5
+var character_health:int=3
+var weapon_sound_shoot_path:String="res://assets/audio/weapons/shoots/shoot-arma-blaster-a.mp3";
 
 func add_score(amount: int):
 	current_score += amount
@@ -34,7 +35,8 @@ func save_game():
 		"selected_bullet_scene_path": selected_bullet_scene_path,
 		"damage_weapon_multiplier": damage_weapon_multiplier,
 		"weapon_cooldown": weapon_cooldown,
-		"character_health": character_health
+		"character_health": character_health,
+		"weapon_sound_shoot_path": weapon_sound_shoot_path
 	}
 	
 	var file = FileAccess.open(SAVE_PATH, FileAccess.WRITE)
@@ -59,7 +61,8 @@ func load_game():
 				selected_bullet_scene_path = data.get("selected_bullet_scene_path", "res://src/weapons/bullets/bullet_foam_tip_thick.tscn")
 				damage_weapon_multiplier = data.get("damage_weapon_multiplier", 1.0)
 				weapon_cooldown = data.get("weapon_cooldown", true)
-				character_health = data.get("character_health", 5)
+				character_health = data.get("character_health", 3)
+				weapon_sound_shoot_path = data.get("weapon_sound_shoot_path", "res://assets/audio/weapons/shoots/shoot-arma-blaster-a.mp3")
 			else:
 				print("Error al analizar el archivo de guardado.")
 			file.close()
