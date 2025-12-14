@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://1y64t41w734a"]
+[gd_scene load_steps=5 format=3 uid="uid://1y64t41w734a"]
 
 [ext_resource type="Script" uid="uid://c7ydeqfiiruhy" path="res://src/UI/SelectWeapon.gd" id="1_33ghn"]
 [ext_resource type="FontFile" uid="uid://cx566jpavurob" path="res://assets/fonts/pixel-game/Pixel Game.otf" id="1_ogjf6"]
+[ext_resource type="Texture2D" uid="uid://c5o1byh1w6v17" path="res://assets/art/2d/background_cold.png" id="2_tjd0n"]
 [ext_resource type="PackedScene" uid="uid://bh151ipem2jh" path="res://src/UI/display/WeaponView.tscn" id="2_v5pcj"]
 
 [node name="SelectWeapon" type="Control"]
@@ -12,6 +13,14 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_33ghn")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -382.0
+offset_top = -47.0
+offset_right = 1154.0
+offset_bottom = 977.0
+texture = ExtResource("2_tjd0n")
 
 [node name="title" type="Label" parent="."]
 layout_mode = 1

@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://dmplt45ihhac7"]
+[gd_scene load_steps=4 format=3 uid="uid://dmplt45ihhac7"]
 
 [ext_resource type="Script" uid="uid://bxe6t0jpxtml5" path="res://src/UI/LevelMenu.gd" id="1_xcdv4"]
+[ext_resource type="Texture2D" uid="uid://dw1bp0u2ertvx" path="res://assets/art/2d/background_color_beige.png" id="2_t4o5m"]
+[ext_resource type="FontFile" uid="uid://cx566jpavurob" path="res://assets/fonts/pixel-game/Pixel Game.otf" id="3_f6ayg"]
 
 [node name="LevelMenu" type="Control"]
 layout_mode = 3
@@ -10,6 +12,12 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_xcdv4")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_t4o5m")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
@@ -24,7 +32,8 @@ offset_right = -94.948
 offset_bottom = 16.571991
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 38
+theme_override_fonts/font = ExtResource("3_f6ayg")
+theme_override_font_sizes/font_size = 45
 text = "SELECT YOUR LEVEL"
 
 [node name="LevelButtons" type="VBoxContainer" parent="."]
@@ -44,25 +53,35 @@ theme_override_constants/separation = 8
 
 [node name="Level1" type="Button" parent="LevelButtons"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_f6ayg")
+theme_override_font_sizes/font_size = 20
 text = "level1"
 
 [node name="Level2" type="Button" parent="LevelButtons"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_f6ayg")
+theme_override_font_sizes/font_size = 20
 text = "level2
 "
 
 [node name="Level3" type="Button" parent="LevelButtons"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_f6ayg")
+theme_override_font_sizes/font_size = 20
 text = "level3
 "
 
 [node name="Level4" type="Button" parent="LevelButtons"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_f6ayg")
+theme_override_font_sizes/font_size = 20
 text = "level4
 "
 
 [node name="Level5" type="Button" parent="LevelButtons"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_f6ayg")
+theme_override_font_sizes/font_size = 20
 text = "level5"
 
 [node name="Button" type="Button" parent="."]
@@ -76,6 +95,8 @@ offset_left = 0.41599846
 offset_top = 0.22399998
 offset_right = 0.08798218
 offset_bottom = -0.09600067
+theme_override_fonts/font = ExtResource("3_f6ayg")
+theme_override_font_sizes/font_size = 20
 text = "salir y guardar"
 
 [node name="PlayButton" type="Button" parent="."]
@@ -89,6 +110,8 @@ offset_left = -0.4880371
 offset_top = -4.208008
 offset_right = -4.552063
 offset_bottom = -0.1920166
+theme_override_fonts/font = ExtResource("3_f6ayg")
+theme_override_font_sizes/font_size = 20
 text = "PLAY"
 
 [connection signal="pressed" from="LevelButtons/Level1" to="." method="_on_level_1_pressed"]
