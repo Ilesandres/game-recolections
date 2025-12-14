@@ -1,24 +1,27 @@
 extends CharacterBody3D
 
-const SPEED = 8.0
+const SPEED_NORMAL = 8.0
+const SPEED_MEDIUM = 10.0
+const SPEED_FAST = 12.0
+const SPEED_MAX = 30
 const JUMP_VELOCITY = 15.0
 const GRAVITY = 30.0
-const DAMAGE_ANIMATION_TIME = 0.5 
+const DAMAGE_ANIMATION_TIME = 0.5
 
 const CAMERA_SMOOTH_SPEED = 5.0
-const ROTATION_SMOOTH_SPEED = 10.0 
+const ROTATION_SMOOTH_SPEED = 10.0
 
 const MAX_STEP_HEIGHT = 0.41
 const OBSTACLE_PREFIX = "driveway-long"
 
-const IDLE_ARMED_ANIMATION = "static_weapon" 
-const IDLE_UNARMED_ANIMATION = "static-weapon" 
+const IDLE_ARMED_ANIMATION = "static_weapon"
+const IDLE_UNARMED_ANIMATION = "static-weapon"
 
-const SPRINT_SPEED = 14.0 
+const SPRINT_SPEED = 14.0
 const SPRINT_JUMP_VELOCITY = 20.0
 
 const SHOOT_COOLDOWN = 0.2
-const AUTO_FIRE_COOLDOWN = 0.01 
+const AUTO_FIRE_COOLDOWN = 0.01
 
 var SHOOT_SOUND_PATH = "res://assets/audio/weapons/shoots/shoot-arma-blaster-a.mp3"
 var DEATH_SOUND_PATH = "res://assets/audio/dead-player.mp3"
@@ -29,7 +32,7 @@ var muzzle_node: Node3D = null
 
 var use_cooldown := true
 
-var is_fire_button_held: bool = false 
+var is_fire_button_held: bool = false
 
 var mouse_rotation_delta_x := 0.0
 var mouse_sensitivity := 0.015
@@ -41,15 +44,22 @@ const SLIDE_DURATION = 0.8
 var max_health: int = 5
 var current_health: int = max_health
 signal player_died
-var is_taking_damage: bool = false 
-var is_shooting: bool = false 
+var is_taking_damage: bool = false
+var is_shooting: bool = false
+
+const POWER_3_COOLDOWN = 5.0
+var character_power_1: String = ""
+var character_power_2: String = ""
+var character_power_3: String = ""
+var power_3_timer: float = 0.0
+var current_base_speed: float = SPEED_NORMAL
 
 @onready var collision_shape: CollisionShape3D = $CollisionShape3D
 @onready var visuals_node: Node3D = $Visuals
 @onready var animation_timer: Timer = $AnimationTimer
 @onready var camera_boom: Node3D = $CameraBoom
 @onready var auto_jump_ray: RayCast3D = $AutoJumpRay
-@onready var ground_ray: RayCast3D = $GroundRay 
+@onready var ground_ray: RayCast3D = $GroundRay
 
 @onready var shoot_sound_player: AudioStreamPlayer3D = $ShootSoundPlayer
 @onready var death_sound_player: AudioStreamPlayer3D = $DeathSoundPlayer
@@ -66,6 +76,21 @@ func _ready():
 	current_health= GlobalData.character_health
 	max_health= GlobalData.character_health
 	SHOOT_SOUND_PATH=GlobalData.weapon_sound_shoot_path
+	
+	character_power_1=GlobalData.character_power_1
+	character_power_2=GlobalData.character_power_2
+	character_power_3=GlobalData.character_power_3
+	power_3_timer=0.0
+	
+	match character_power_2:
+		"nomalSpeed":
+			current_base_speed = SPRINT_SPEED
+		"MediunSpeed":
+			current_base_speed = SPEED_MEDIUM
+		"FastSpeed":
+			current_base_speed = SPEED_FAST
+		"MaxSpeed":
+			current_base_speed = SPEED_MAX
 
 	use_cooldown = GlobalData.weapon_cooldown
 
@@ -113,7 +138,7 @@ func _input(event):
 				if not use_cooldown:
 					if event.pressed:
 						is_fire_button_held = true
-						shoot() 
+						shoot()
 					else:
 						is_fire_button_held = false
 				
@@ -123,6 +148,9 @@ func _input(event):
 						
 	if Input.is_action_just_pressed("shoot"):
 		shoot()
+		
+	if Input.is_action_just_pressed("power1"):
+		activate_power_3()
 
 	if Input.is_action_just_pressed("ui_cancel"):
 		if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
@@ -145,6 +173,8 @@ func _load_visual_character(character_scene: Resource):
 		animation_player.animation_finished.connect(_on_animation_finished)
 		if current_weapon == null:
 			play_animation(IDLE_UNARMED_ANIMATION)
+		else:
+			pass
 	else:
 		print("Advertencia: El personaje cargado no tiene un AnimationPlayer.")
 
@@ -171,7 +201,7 @@ func _load_weapon():
 	if not is_instance_valid(character_instance):
 		print("Advertencia: No se encontró la instancia del personaje para adjuntar el arma.")
 		current_weapon.queue_free()
-		current_weapon = null 
+		current_weapon = null
 		return
 		
 	var hand_node: Node3D = character_instance.find_child("Hand_R", true, false)
@@ -199,6 +229,9 @@ func _process(delta: float):
 	if shoot_timer > 0.0:
 		shoot_timer -= delta
 		
+	if power_3_timer > 0.0:
+		power_3_timer -= delta
+		
 	if not use_cooldown:
 		if is_fire_button_held and shoot_timer <= 0.0:
 			shoot()
@@ -225,24 +258,41 @@ func shoot():
 
 		print("Disparando bala desde: ", muzzle_node.global_position)
 
-		var new_bullet = bullet_scene.instantiate()
-		var shoot_direction = -global_transform.basis.z.normalized()
-
+		var num_bullets = 1
+		var spread_angle = 0.0
+		
+		match character_power_1:
+			"ShootTwo":
+				num_bullets = 2
+				spread_angle = 0.15
+			"ShootThree":
+				num_bullets = 3
+				spread_angle = 0.25
+			"ShootFour":
+				num_bullets = 4
+				spread_angle = 0.40
+		
+		var base_transform = global_transform.basis
 		var game_root = get_tree().get_root().find_child("Game", true, false)
-		if game_root:
-			print("Añadiendo bala al nodo Game.")
-			game_root.add_child(new_bullet)
-		else:
-			print("Advertencia: Nodo 'Game' no encontrado. Añadiendo bala al root del árbol.")
-			get_tree().get_root().add_child(new_bullet)
+		var instance_root = game_root if game_root else get_tree().get_root()
+		
+		for i in range(num_bullets):
+			var new_bullet = bullet_scene.instantiate()
+			instance_root.add_child(new_bullet)
+			
+			new_bullet.global_position = muzzle_node.global_position
+			
+			var current_spread = 0.0
+			if num_bullets > 1:
+				current_spread = remap(float(i), 0.0, float(num_bullets - 1), -spread_angle, spread_angle)
 
-		new_bullet.global_position = muzzle_node.global_position
+			var rotated_direction = base_transform.rotated(Vector3.UP, current_spread).z.normalized() * -1.0
+			
+			if new_bullet.has_method("set_velocity_and_direction"):
+				new_bullet.set_velocity_and_direction(rotated_direction)
+			else:
+				push_error("Bullet scene does not have 'set_velocity_and_direction' method.")
 
-		if new_bullet.has_method("set_velocity_and_direction"):
-			new_bullet.set_velocity_and_direction(shoot_direction)
-			print("Bala disparada en dirección: ", shoot_direction)
-		else:
-			push_error("Bullet scene does not have 'set_velocity_and_direction' method.")
 
 		play_animation("holding-right-shoot")
 		is_shooting = true
@@ -250,12 +300,13 @@ func shoot():
 		if use_cooldown:
 			shoot_timer = SHOOT_COOLDOWN
 		else:
-			shoot_timer = AUTO_FIRE_COOLDOWN 
+			shoot_timer = AUTO_FIRE_COOLDOWN
 
 	elif bullet_scene == null:
 		print("Advertencia: No se pudo disparar, la escena de la bala no está cargada.")
 	elif muzzle_node == null:
 		print("Advertencia: No se pudo disparar, el punto de salida (Muzzle) no fue encontrado.")
+
 
 
 func _physics_process(delta: float):
@@ -278,14 +329,13 @@ func _physics_process(delta: float):
 	input_dir = input_dir.normalized()
 
 	var movement_vector = Vector3.ZERO
-	
+
 	var idle_anim = IDLE_UNARMED_ANIMATION
 	if is_instance_valid(current_weapon):
 		idle_anim = IDLE_ARMED_ANIMATION
-		
-	var current_speed = SPEED
-	if Input.is_action_pressed("sprint") and input_dir.length_squared() > 0.01:
-		current_speed = SPRINT_SPEED
+
+	var is_sprinting = Input.is_action_pressed("sprint") and input_dir.length_squared() > 0.01
+	var current_speed = current_base_speed if is_sprinting else SPEED_NORMAL
 
 	if not is_taking_damage:
 		if input_dir != Vector3.ZERO:
@@ -293,17 +343,17 @@ func _physics_process(delta: float):
 			movement_vector = basis * input_dir
 			movement_vector.y = 0
 			movement_vector = movement_vector.normalized()
-			
+
 			velocity.x = movement_vector.x * current_speed
 			velocity.z = movement_vector.z * current_speed
-			
+
 			if not is_sliding:
 				if not is_shooting:
-					if current_speed > SPEED:
-						play_animation("sprint") 
+					if is_sprinting:
+						play_animation("sprint")
 					else:
 						play_animation("walk")
-						
+
 		elif is_on_floor():
 			velocity.x = 0.0
 			velocity.z = 0.0
@@ -328,10 +378,10 @@ func _physics_process(delta: float):
 
 	handle_jump_and_slide()
 	handle_slide(delta)
-	
+
 	if not is_taking_damage and not is_sliding:
 		_handle_auto_step_climb(movement_vector)
-		
+
 	move_and_slide()
 	
 func handle_jump_and_slide():
@@ -355,8 +405,8 @@ func take_damage(amount: int = 1):
 		current_health -= amount
 		print("¡Daño! Vida restante: ", current_health)
 		
-		is_taking_damage = true 
-		play_animation("emote-no")  
+		is_taking_damage = true
+		play_animation("emote-no")
 		emit_signal("health_changed", current_health, max_health)
 		animation_timer.start(DAMAGE_ANIMATION_TIME)
 		
@@ -372,7 +422,7 @@ func die():
 	
 	play_animation("die")
 	
-	animation_timer.stop() 
+	animation_timer.stop()
 
 func _on_animation_finished(anim_name):
 	if(anim_name == "die"):
@@ -389,13 +439,14 @@ func _on_animation_finished(anim_name):
 		if is_instance_valid(current_weapon):
 			next_idle_anim = IDLE_ARMED_ANIMATION
 			
-		if velocity.length_squared() > 0.01 and is_on_floor():
+		
+		if velocity.length_squared() > 0.1 and is_on_floor():
 			if Input.is_action_pressed("sprint"):
 				play_animation("sprint")
 			else:
 				play_animation("walk")
 		elif is_on_floor():
-			play_animation(next_idle_anim) 
+			play_animation(next_idle_anim)
 	
 
 func start_slide():
@@ -443,7 +494,8 @@ func _on_animation_timer_timeout():
 		if is_instance_valid(current_weapon):
 			idle_anim = IDLE_ARMED_ANIMATION
 			
-		play_animation(idle_anim)
+		if velocity.length_squared() < 0.1:
+			play_animation(idle_anim)
 
 
 func _handle_auto_step_climb(direction: Vector3):
@@ -459,10 +511,10 @@ func _handle_auto_step_climb(direction: Vector3):
 		print("Player: AutoJumpRay colisionó con: ", auto_jump_ray.get_collider().name)
 		var collider = auto_jump_ray.get_collider()
 		
-		var is_correct_obstacle = false 
+		var is_correct_obstacle = false
 		if is_instance_valid(collider):
 			print("Player: Verificando si el collider es un obstáculo válido: ", collider.name)
-			if collider.name.to_lower().begins_with(OBSTACLE_PREFIX): 
+			if collider.name.to_lower().begins_with(OBSTACLE_PREFIX):
 				is_correct_obstacle = true
 			elif is_instance_valid(collider.get_parent()) and collider.get_parent().name.to_lower().begins_with(OBSTACLE_PREFIX):
 				is_correct_obstacle = true
@@ -478,7 +530,7 @@ func _handle_auto_step_climb(direction: Vector3):
 			return
 		
 		ground_ray.global_position = hit_point
-		ground_ray.global_position.y += MAX_STEP_HEIGHT + 0.05 
+		ground_ray.global_position.y += MAX_STEP_HEIGHT + 0.05
 		
 		ground_ray.target_position = Vector3(0, -(MAX_STEP_HEIGHT + 0.2), 0)
 		
@@ -492,9 +544,56 @@ func _handle_auto_step_climb(direction: Vector3):
 				
 			velocity.y = jump_val
 			
-			var move_speed = SPEED
+			var move_speed = current_base_speed
 			if Input.is_action_pressed("sprint"):
 				move_speed = SPRINT_SPEED
 				
 			velocity.x = direction.x * move_speed
 			velocity.z = direction.z * move_speed
+
+
+func activate_power_3():
+	if character_power_3 != "Shunpo":
+		return
+		
+	if power_3_timer > 0.0:
+		print("Power 3 (Shunpo) en cooldown: ", power_3_timer, "s restantes.")
+		return
+	
+	if is_taking_damage or is_sliding:
+		return
+
+	var move_direction = -global_transform.basis.z.normalized()
+	var dash_distance = 8.0
+	
+	var ray_check = RayCast3D.new()
+	add_child(ray_check)
+	ray_check.target_position = move_direction * dash_distance
+	ray_check.force_raycast_update()
+	
+	var target_position = global_position
+	
+	if ray_check.is_colliding():
+		var hit_point = ray_check.get_collision_point()
+		target_position = hit_point + move_direction * 0.5
+	else:
+		target_position = global_position + move_direction * dash_distance
+
+	ray_check.queue_free()
+	
+	global_position = target_position
+	
+	print("¡Shunpo Activado! Teletransportado a: ", global_position)
+	
+	power_3_timer = POWER_3_COOLDOWN
+	
+func try_life_steal():
+	if character_power_3 != "saqueo":
+		return
+	
+	if current_health < max_health:
+		var chance = 0.25
+		if randf() < chance:
+			current_health = min(current_health + 1, max_health)
+			emit_signal("health_changed", current_health, max_health)
+			print("¡Saqueo exitoso! Vida recuperada. Vida actual: ", current_health)

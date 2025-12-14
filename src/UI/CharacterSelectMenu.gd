@@ -25,7 +25,7 @@ const CHARACTER_COSTS={
 }
 const CHARACTER_POWERS_1={
 	"K":"ShootOne",
-	"O":"HootTwo",
+	"O":"ShootTwo",
 	"P":"ShootThree",
 	"R":"ShootFour",
 }
@@ -52,7 +52,7 @@ const CHARACTER_POWERS_3={
 	"R":"Shunpo"
 }
 const CHARACTER_POWERS_3_DESCRIPTION={
-	"P":"Recolecta basura automaticamente",
+	"P":"al destruir un mob hay una posibilidad de recuperar una vida si no estas a vida completa",
 	"R":"Teletransportacion corta distancia"
 }
 @onready var character_disply_3d=$DisplayContainer/CharacterViewport/CharacterDisplay3D
