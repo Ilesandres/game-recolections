@@ -4,6 +4,7 @@ const BULLET_SPEED = 30.0
 var DAMAGE_AMOUNT = 3
 
 var direction: Vector3 = Vector3.ZERO
+var attacker = null
 var lifetime: float = 3.0 
 var timer: float = 0.0
 
@@ -29,8 +30,11 @@ func _physics_process(delta: float):
 		var collider = collision.get_collider()
 		
 		if collider.has_method("take_damage_from_bullet"):
-			
-			collider.take_damage_from_bullet(DAMAGE_AMOUNT)
+			if attacker != null:
+				collider.take_damage_from_bullet(DAMAGE_AMOUNT, attacker)
+			else:
+				print("Atacante no válido, infligiendo daño sin referencia al atacante.")
+				collider.take_damage_from_bullet(DAMAGE_AMOUNT)
 			queue_free()
 			return 
 		

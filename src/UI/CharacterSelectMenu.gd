@@ -52,7 +52,7 @@ const CHARACTER_POWERS_3={
 	"R":"Shunpo"
 }
 const CHARACTER_POWERS_3_DESCRIPTION={
-	"P":"al destruir un mob hay una posibilidad de recuperar una vida si no estas a vida completa",
+	"P":"al destruir un mob hay una posibilidad \n de recuperar una vida si no estas\na vida completa",
 	"R":"Teletransportacion corta distancia"
 }
 @onready var character_disply_3d=$DisplayContainer/CharacterViewport/CharacterDisplay3D

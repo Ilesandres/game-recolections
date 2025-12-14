@@ -279,15 +279,18 @@ func shoot():
 		for i in range(num_bullets):
 			var new_bullet = bullet_scene.instantiate()
 			instance_root.add_child(new_bullet)
-			
+
 			new_bullet.global_position = muzzle_node.global_position
-			
+
+			if "attacker" in new_bullet:
+				new_bullet.attacker = self
+
 			var current_spread = 0.0
 			if num_bullets > 1:
 				current_spread = remap(float(i), 0.0, float(num_bullets - 1), -spread_angle, spread_angle)
 
 			var rotated_direction = base_transform.rotated(Vector3.UP, current_spread).z.normalized() * -1.0
-			
+
 			if new_bullet.has_method("set_velocity_and_direction"):
 				new_bullet.set_velocity_and_direction(rotated_direction)
 			else:
@@ -587,13 +590,20 @@ func activate_power_3():
 	
 	power_3_timer = POWER_3_COOLDOWN
 	
-func try_life_steal():
+
+func on_mob_killed():
+	print("Jugador notificó que un mob fue eliminado.")
 	if character_power_3 != "saqueo":
+		print("El jugador no tiene el poder de saqueo.")
 		return
-	
+	print("El jugador tiene el poder de saqueo, intentando activar efecto.")
+
 	if current_health < max_health:
 		var chance = 0.25
 		if randf() < chance:
 			current_health = min(current_health + 1, max_health)
 			emit_signal("health_changed", current_health, max_health)
 			print("¡Saqueo exitoso! Vida recuperada. Vida actual: ", current_health)
+
+func try_life_steal():
+	on_mob_killed()

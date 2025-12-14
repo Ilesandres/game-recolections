@@ -10,6 +10,7 @@ const OBSTACLE_PREFIX = "driveway-long"
 @onready var ground_ray: RayCast3D = $GroundRay 
 @onready var step_ray: RayCast3D = $StepRay
 
+
 @onready var animation_player: AnimationPlayer = $"character-n2"/AnimationPlayer
 var is_dying: bool = false
 # Cooldown de ataque
@@ -21,6 +22,9 @@ const ROTATION_SPEED = 10.0
 
 var max_health: int = 1
 var current_health: int = max_health
+
+# Para sistema de saqueo
+var last_hit_by = null
 
 
 func _ready():
@@ -53,27 +57,39 @@ func play_mob_animation(anim_name: String):
 	elif not animation_player.has_animation(anim_name):
 		print("Mob: Advertencia: No se encontró la animación '", anim_name, "'.")
 
-func take_damage_from_bullet(amount: int):
+
+# Modificado para aceptar el atacante
+func take_damage_from_bullet(amount: int, attacker = null):
 	if current_health <= 0 or is_dying:
 		return
-		
+
+	if attacker != null:
+		last_hit_by = attacker
+
 	current_health -= amount
 	print("Mob golpeado, vida restante: ", current_health)
-	
+
 	play_mob_animation("hit")
-	
+
 	if current_health <= 0:
 		die()
 		
+
 func die():
 	if is_dying:
 		return
-		
+
 	is_dying = true
 	print("Mob destruido. Puntos: +10")
 	GlobalData.add_score(10) 
 	print("Puntaje actual: ", GlobalData.current_score)
-	
+
+	if is_instance_valid(last_hit_by) and last_hit_by.has_method("on_mob_killed"):
+		print("Notificando al jugador que mató al mob.")
+		last_hit_by.on_mob_killed()
+	else:
+		print("El atacante que mató al mob no es válido o no tiene el método 'on_mob_killed'.")
+		print("last_hit_by: ", last_hit_by)
 	if animation_player and animation_player.has_animation("die"):
 		animation_player.play("die")
 	else:
