@@ -6,7 +6,7 @@ var character_root: Node3D = Node3D.new()
 const ROTATION_SPEED = 0.015 
 
 func _ready():
-
+	GlobalData.load_game()
 	add_child(character_root)
 	
 	load_selected_character()

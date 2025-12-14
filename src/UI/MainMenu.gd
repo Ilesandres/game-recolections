@@ -8,6 +8,9 @@ const WEAPON_SELECT_SCENE_PATH="res://src/UI/WeaponMain.tscn"
 var global_music_player=GlobalMusicPlayer.get_node("MusicPlayer")
 
 func _ready():
+	GlobalData.load_game()
+	print("Cargando datos guardados en el menú principal...")
+	print("personaje seleccionado: "+GlobalData.selected_character_scene_path)
 	_unpause_music_global()
 
 func _on_play_button_pressed():
