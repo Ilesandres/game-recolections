@@ -16,6 +16,12 @@ var damage_weapon_multiplier: float = 1.0
 var weapon_cooldown:bool = true
 var character_health:int=3
 var weapon_sound_shoot_path:String="res://assets/audio/weapons/shoots/shoot-arma-blaster-a.mp3";
+var character_power_1:String="ShootOne";
+var character_power_1_description:String="Disparo unico";
+var character_power_2:String="nomalSpeed";
+var character_power_2_description:String="Velocidad normal";
+var character_power_3:String="";
+var character_power_3_description:String="";
 
 func add_score(amount: int):
 	current_score += amount
@@ -36,7 +42,13 @@ func save_game():
 		"damage_weapon_multiplier": damage_weapon_multiplier,
 		"weapon_cooldown": weapon_cooldown,
 		"character_health": character_health,
-		"weapon_sound_shoot_path": weapon_sound_shoot_path
+		"weapon_sound_shoot_path": weapon_sound_shoot_path,
+		"character_power_1": character_power_1,
+		"character_power_1_description": character_power_1_description,
+		"character_power_2": character_power_2,
+		"character_power_2_description": character_power_2_description,
+		"character_power_3": character_power_3,
+		"character_power_3_description": character_power_3_description
 	}
 	
 	var file = FileAccess.open(SAVE_PATH, FileAccess.WRITE)
@@ -63,6 +75,12 @@ func load_game():
 				weapon_cooldown = data.get("weapon_cooldown", true)
 				character_health = data.get("character_health", 3)
 				weapon_sound_shoot_path = data.get("weapon_sound_shoot_path", "res://assets/audio/weapons/shoots/shoot-arma-blaster-a.mp3")
+				character_power_1 = data.get("character_power_1", "ShootOne")
+				character_power_1_description = data.get("character_power_1_description", "Disparo unico")
+				character_power_2 = data.get("character_power_2", "nomalSpeed")
+				character_power_2_description = data.get("character_power_2_description", "Velocidad normal")
+				character_power_3 = data.get("character_power_3", "")
+				character_power_3_description = data.get("character_power_3_description", "")
 			else:
 				print("Error al analizar el archivo de guardado.")
 			file.close()

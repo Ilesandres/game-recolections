@@ -31,8 +31,10 @@ func _ready() -> void:
 	check_and_lock_weapons()
 
 func update_global_score_display():
-	global_score_label.text = "Basura Global Acumulada: " + str(GlobalData.total_global_trash)
-	
+	global_score_label.text = "score Global Acumulada: " + str(GlobalData.total_global_trash) + "\namplificador de daño : " + str(GlobalData.damage_weapon_multiplier)
+
+func update_details_character():
+	print("hola")
 func check_and_lock_weapons():
 	var player_score = GlobalData.total_global_trash
 	
@@ -61,6 +63,7 @@ func _on_blaster_a_pressed() :
 	GlobalData.weapon_cooldown = true
 	GlobalData.weapon_sound_shoot_path= "res://assets/audio/weapons/shoots/shoot-arma-blaster-a.mp3"
 	print("Ruta de arma seleccionada: " + GlobalData.selected_weapon_scene_path, " Multiplicador de daño: " + str(GlobalData.damage_weapon_multiplier))
+	update_global_score_display()
 	GlobalData.save_game()
 
 
@@ -75,6 +78,7 @@ func _on_blaster_i_pressed():
 	GlobalData.weapon_cooldown = true
 	GlobalData.weapon_sound_shoot_path="res://assets/audio/weapons/shoots/shoot-blaster-i.mp3"
 	print("Ruta de arma seleccionada: " + GlobalData.selected_weapon_scene_path, " Multiplicador de daño: " + str(GlobalData.damage_weapon_multiplier))
+	update_global_score_display()
 	GlobalData.save_game()
 
 
@@ -89,6 +93,7 @@ func _on_blaster_b_pressed() :
 	GlobalData.weapon_cooldown = true
 	GlobalData.weapon_sound_shoot_path="res://assets/audio/weapons/shoots/shoot-blaster-b.mp3"
 	print("Ruta de arma seleccionada: " + GlobalData.selected_weapon_scene_path, " Multiplicador de daño: " + str(GlobalData.damage_weapon_multiplier))
+	update_global_score_display()
 	GlobalData.save_game()
 
 
@@ -103,6 +108,7 @@ func _on_blaster_a_2_pressed() :
 	GlobalData.weapon_cooldown = false 
 	GlobalData.weapon_sound_shoot_path="res://assets/audio/weapons/shoots/shoot-blaster-d.mp3"
 	print("Ruta de arma seleccionada: " + GlobalData.selected_weapon_scene_path, " Multiplicador de daño: " + str(GlobalData.damage_weapon_multiplier))
+	update_global_score_display()
 	GlobalData.save_game()
 
 

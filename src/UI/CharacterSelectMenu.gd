@@ -10,9 +10,75 @@ const CHARACTER_PATHS = {
 	"P": "res://scenes/characters/character_p_2.tscn",
 	"R": "res://scenes/characters/character_r_2.tscn",
 }
+const CHARACTER_HEALTH = {
+	"K": 3,
+	"O": 5,
+	"P": 8,
+	"R": 12,
+}
+
+const CHARACTER_COSTS={
+	"K":0,
+	"O":20,
+	"P":70,
+	"R":170,
+}
+const CHARACTER_POWERS_1={
+	"K":"ShootOne",
+	"O":"HootTwo",
+	"P":"ShootThree",
+	"R":"ShootFour",
+}
+const CHARACTER_POWERS_1_DESCRIPTION={
+	"K":"Disparo unico",
+	"O":"Disparo doble",
+	"P":"Disparo triple",
+	"R":"Disparo cuadruple",
+}
+const CHARACTER_POWERS_2={
+	"K":"nomalSpeed",
+	"O":"MediunSpeed",
+	"P":"FastSpeed",
+	"R":"MaxSpeed",
+}
+const CHARACTER_POWERS_2_DESCRIPTION={
+	"K":"Velocidad normal",
+	"O":"Velocidad media",
+	"P":"Velocidad rapida",
+	"R":"Velocidad maxima",
+}
+const CHARACTER_POWERS_3={
+	"P":"saqueo",
+	"R":"Shunpo"
+}
+const CHARACTER_POWERS_3_DESCRIPTION={
+	"P":"Recolecta basura automaticamente",
+	"R":"Teletransportacion corta distancia"
+}
 @onready var character_disply_3d=$DisplayContainer/CharacterViewport/CharacterDisplay3D
+@onready var global_score = $ScoreGlobal
+@onready var character_details =$DetailsCharacter
+@onready var health_character_display=$GridContainer/HealthCharacterContainer/HealtCharacter
+@onready var name_character_display=$GridContainer/NameContainer/NameCharacter
+
+@onready var character_k_button=$SelectCharacterK
+@onready var character_o_button=$SelectCharacterO
+@onready var character_p_button=$SelectCharacterP
+@onready var character_r_button=$SelectCharacterR
+
+@onready var power_3=$GridContainer/Power1/PowersDescriptions/Power3
+@onready var power_1=$GridContainer/Power1/PowersDescriptions/Power1
+@onready var power_2=$GridContainer/Power1/PowersDescriptions/Power2
+@onready var descripcion_power_display=$GridContainer/Power1/DescritpionDysplay
+@onready var description_label=$GridContainer/Power1/DesccriptionLabel
 
 var current_selection_key: String = "K" 
+func _ready():
+	GlobalData.load_game()
+	update_global_score_display()
+	description_label.hide()
+	update_details_character()
+	check_and_lock_characters()
 
 
 func select_character(key: String):
@@ -20,12 +86,42 @@ func select_character(key: String):
 	print("Seleccionado personaje: " + key)
 	
 	GlobalData.selected_character_scene_path = CHARACTER_PATHS[key]
+	GlobalData.character_health= CHARACTER_HEALTH[key]
+	GlobalData.character_power_1=CHARACTER_POWERS_1[key]
+	GlobalData.character_power_1_description=CHARACTER_POWERS_1_DESCRIPTION[key]
+	GlobalData.character_power_2=CHARACTER_POWERS_2[key]
+	GlobalData.character_power_2_description=CHARACTER_POWERS_2_DESCRIPTION[key]
+	if CHARACTER_POWERS_3.has(key):
+		GlobalData.character_power_3=CHARACTER_POWERS_3[key]
+		GlobalData.character_power_3_description=CHARACTER_POWERS_3_DESCRIPTION[key]
+	else:
+		GlobalData.character_power_3=""
+		GlobalData.character_power_3_description=""
+	
+	update_details_character()
+	description_label.hide()
+	descripcion_power_display.text=""
 	if is_instance_valid(character_disply_3d):
 		character_disply_3d.load_selected_character()
 	else:
 		print(" error al cargar el personaje seleccionado")
 	
+func update_global_score_display():
+	global_score.text = "score : "+ str(GlobalData.total_global_trash)
 
+func update_details_character():
+	health_character_display.text="Vida: "+str(CHARACTER_HEALTH[current_selection_key])
+	name_character_display.text=current_selection_key
+	character_details.text="Personaje: "+current_selection_key
+	power_3.text="hola"
+	power_1.text=GlobalData.character_power_1
+	power_2.text=GlobalData.character_power_2
+	if GlobalData.character_power_3!="":
+		power_3.visible=true
+		power_3.text=GlobalData.character_power_3
+	else:
+		power_3.visible=false
+	
 
 func _on_play_button_pressed():
 	if not GlobalData.selected_character_scene_path:
@@ -60,3 +156,36 @@ func _on_back_button_pressed():
 	print("Regresando al menú principal con: " + GlobalData.selected_character_scene_path)
 	get_tree().change_scene_to_file(MAIN_SCENE_PATH)
 	
+
+func check_and_lock_characters():
+	var player_score= GlobalData.total_global_trash
+	character_k_button.disabled=false
+	if player_score<CHARACTER_COSTS["O"]:
+		character_o_button=true
+	else:
+		character_o_button=false
+	
+	if player_score<CHARACTER_COSTS["P"]:
+		character_p_button.disabled=true
+	else:
+		character_p_button.disabled=false
+	
+	if player_score<CHARACTER_COSTS["R"]:
+		character_r_button.disabled=true
+	else:
+		character_r_button.disabled=false
+
+
+func _on_power_1_pressed() :
+	description_label.show()
+	descripcion_power_display.text=GlobalData.character_power_1_description
+
+
+func _on_power_2_pressed() :
+	description_label.show()
+	descripcion_power_display.text=GlobalData.character_power_2_description
+
+
+func _on_power_3_pressed() :
+	description_label.show()
+	descripcion_power_display.text=GlobalData.character_power_3_description

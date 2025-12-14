@@ -23,8 +23,6 @@ offset_left = 468.0
 offset_top = 163.0
 offset_right = 737.0
 offset_bottom = 436.0
-theme_override_constants/h_separation = 10
-theme_override_constants/v_separation = 5
 
 [node name="HealthCharacterContainer" type="HBoxContainer" parent="GridContainer"]
 layout_mode = 2
@@ -50,27 +48,24 @@ text = "a"
 
 [node name="Power1" type="HBoxContainer" parent="GridContainer"]
 layout_mode = 2
-theme_override_constants/separation = 10
 
-[node name="PowersLabel" type="Label" parent="GridContainer/Power1"]
+[node name="text" type="Label" parent="GridContainer/Power1"]
 layout_mode = 2
-text = "powers : "
+text = "power : "
 
 [node name="PowersDescriptions" type="VBoxContainer" parent="GridContainer/Power1"]
 layout_mode = 2
-theme_override_constants/separation = 10
 
 [node name="Power1" type="Button" parent="GridContainer/Power1/PowersDescriptions"]
 layout_mode = 2
-text = "power1"
+text = "assd"
 
 [node name="Power2" type="Button" parent="GridContainer/Power1/PowersDescriptions"]
 layout_mode = 2
-text = "power2"
+text = "asd"
 
 [node name="Power3" type="Button" parent="GridContainer/Power1/PowersDescriptions"]
 layout_mode = 2
-text = "power3"
 
 [node name="DesccriptionLabel" type="Label" parent="GridContainer/Power1"]
 layout_mode = 2
@@ -200,9 +195,6 @@ offset_top = 93.0
 offset_right = 901.0
 offset_bottom = 116.0
 
-[connection signal="pressed" from="GridContainer/Power1/PowersDescriptions/Power1" to="." method="_on_power_1_pressed"]
-[connection signal="pressed" from="GridContainer/Power1/PowersDescriptions/Power2" to="." method="_on_power_2_pressed"]
-[connection signal="pressed" from="GridContainer/Power1/PowersDescriptions/Power3" to="." method="_on_power_3_pressed"]
 [connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
 [connection signal="pressed" from="SelectCharacterK" to="." method="_on_select_character_k_pressed"]

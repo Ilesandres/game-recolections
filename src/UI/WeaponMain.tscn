@@ -56,6 +56,8 @@ offset_left = 358.0
 offset_top = 264.0
 offset_right = 499.0
 offset_bottom = 295.0
+theme_override_fonts/font = ExtResource("1_ogjf6")
+theme_override_font_sizes/font_size = 20
 text = "seleccionar arma a"
 
 [node name="blaster_i" type="Button" parent="."]
@@ -64,6 +66,8 @@ offset_left = 660.0
 offset_top = 263.0
 offset_right = 801.0
 offset_bottom = 294.0
+theme_override_fonts/font = ExtResource("1_ogjf6")
+theme_override_font_sizes/font_size = 20
 text = "seleccionar arma i"
 
 [node name="blaster_b" type="Button" parent="."]
@@ -72,6 +76,8 @@ offset_left = 364.0
 offset_top = 436.0
 offset_right = 505.0
 offset_bottom = 467.0
+theme_override_fonts/font = ExtResource("1_ogjf6")
+theme_override_font_sizes/font_size = 20
 text = "seleccionar arma b"
 
 [node name="blaster_a_2" type="Button" parent="."]
@@ -80,6 +86,8 @@ offset_left = 658.0
 offset_top = 436.0
 offset_right = 799.0
 offset_bottom = 467.0
+theme_override_fonts/font = ExtResource("1_ogjf6")
+theme_override_font_sizes/font_size = 20
 text = "seleccionar arma a-2"
 
 [node name="BackButton" type="Button" parent="."]
@@ -88,6 +96,8 @@ offset_left = 60.0
 offset_top = 58.0
 offset_right = 195.0
 offset_bottom = 108.0
+theme_override_fonts/font = ExtResource("1_ogjf6")
+theme_override_font_sizes/font_size = 20
 text = "BACK AND SAVE"
 
 [node name="MessageError" type="Label" parent="."]
@@ -106,6 +116,8 @@ offset_left = 402.0
 offset_top = 134.0
 offset_right = 457.0
 offset_bottom = 157.0
+theme_override_fonts/font = ExtResource("1_ogjf6")
+theme_override_font_sizes/font_size = 20
 text = "score 0"
 
 [node name="required-score-i" type="Label" parent="."]
@@ -116,6 +128,8 @@ offset_left = 704.0
 offset_top = 131.0
 offset_right = 749.416
 offset_bottom = 180.0
+theme_override_fonts/font = ExtResource("1_ogjf6")
+theme_override_font_sizes/font_size = 20
 text = "score 10
 "
 
@@ -125,6 +139,8 @@ offset_left = 400.0
 offset_top = 597.0
 offset_right = 465.0
 offset_bottom = 620.0
+theme_override_fonts/font = ExtResource("1_ogjf6")
+theme_override_font_sizes/font_size = 20
 text = "score 50"
 
 [node name="required-score-a-2" type="Label" parent="."]
@@ -133,12 +149,19 @@ offset_left = 691.0
 offset_top = 592.0
 offset_right = 765.0
 offset_bottom = 615.0
+theme_override_fonts/font = ExtResource("1_ogjf6")
+theme_override_font_sizes/font_size = 20
 text = "score 100"
 
 [node name="GlobalScore" type="Label" parent="."]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 865.0
+offset_top = 114.0
+offset_right = 905.0
+offset_bottom = 142.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_ogjf6")
+theme_override_font_sizes/font_size = 20
 
 [connection signal="pressed" from="blaster_a" to="." method="_on_blaster_a_pressed"]
 [connection signal="pressed" from="blaster_i" to="." method="_on_blaster_i_pressed"]
