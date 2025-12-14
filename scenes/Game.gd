@@ -5,6 +5,7 @@ const PAUSE_MENU_SCENE = preload("res://src/UI/PauseMenu.tscn")
 const GAME_OVER_SCREEN_SCENE=preload("res://src/UI/GameOverMenu.tscn")
 var pause_menu: CanvasLayer = null
 var game_over_screen=null
+var global_music_player=GlobalMusicPlayer.get_node("MusicPlayer")
 
 @onready var player_container: Node3D = $PlayerContainer 
 
@@ -22,6 +23,7 @@ func _ready():
 	level_spawner.current_level= GlobalData.current_level
 	if level_spawner.has_method("setup_level"):
 		level_spawner.setup_level(GlobalData.current_level)
+	_pause_music_global()
 	
 	var player= $PlayerContainer.get_node("Player")
 	var health_node= $HUD.get_node("health")
@@ -39,6 +41,7 @@ func _unhandled_input(event):
 			print("continuando")
 		else:
 			menu_control.pause_game()
+			
 
 func _on_player_player_died():
 	var game_over_control= game_over_screen
@@ -52,5 +55,17 @@ func _on_player_player_died():
 		print("instancia no valida")
 
 		print("hola 2.0")
-	
+	_pause_music_global()
 	print("JUEGO DETENIDO: Game POver. desde Game")
+	
+func _pause_music_global():
+	print("pausando musicca global")
+	if is_instance_valid(global_music_player):
+		global_music_player.set_stream_paused(true)
+	else:
+		print("error al detener musica global")
+
+func _unpause_music_global():
+	print("reproduciendo musica global, nuevamente")
+	if is_instance_valid(global_music_player):
+		global_music_player.set_stream_paused(false)
