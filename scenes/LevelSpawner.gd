@@ -56,11 +56,11 @@ func _get_snapped_position(position: Vector3) -> Vector3:
 
 
 func _ready():
-	configure_for_level(GlobalData.current_level)
-	print("Configuración de nivel:", GlobalData.current_level, " Probabilidad de objetos:", object_spawn_chance, " Intentos de spawn:", spawn_attempts)
-
-	_spawn_chunk(Vector3.ZERO)
-	_check_and_spawn_neighbors(Vector3.ZERO)
+	##configure_for_level(GlobalData.current_level)
+	##print("Configuración de nivel:", GlobalData.current_level, " Probabilidad de objetos:", object_spawn_chance, " Intentos de spawn:", spawn_attempts)
+	print("LevelSpawner listo.")
+	##_spawn_chunk(Vector3.ZERO)
+	##_check_and_spawn_neighbors(Vector3.ZERO)
 
 
 func _process(_delta: float):

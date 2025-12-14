@@ -17,6 +17,7 @@ func _ready():
 	pause_menu.set_process_priority(100)
 	game_over_screen.set_process_priority(100)
 	GlobalData.load_game()
+	print("jugando con nivel:", GlobalData.current_level)
 	var level_spawner= $LevelSpawner
 	level_spawner.current_level= GlobalData.current_level
 	if level_spawner.has_method("setup_level"):

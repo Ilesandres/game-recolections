@@ -7,6 +7,8 @@ var heart_texture: Texture2D
 
 func _ready():
 	heart_texture= load("res://assets/art/pixel/pixil-frame-0.png")
+	current_health= GlobalData.character_health
+	max_health= GlobalData.character_health
 	update_hearts()
 
 func set_health(value:int):

@@ -57,6 +57,8 @@ var standing_collision_shape: BoxShape3D
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	current_health= GlobalData.character_health
+	max_health= GlobalData.character_health
 
 	use_cooldown = GlobalData.weapon_cooldown
 
