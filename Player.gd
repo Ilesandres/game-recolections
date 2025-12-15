@@ -65,6 +65,7 @@ var current_base_speed: float = SPEED_NORMAL
 @onready var death_sound_player: AudioStreamPlayer3D = $DeathSoundPlayer
 
 signal health_changed(current_health, max_health)
+signal  reload_cooldown()
 
 var animation_player: AnimationPlayer = null
 var current_weapon: Node3D = null
@@ -587,6 +588,7 @@ func activate_power_3():
 	global_position = target_position
 	
 	print("¡Shunpo Activado! Teletransportado a: ", global_position)
+	emit_signal("reload_cooldown")
 	
 	power_3_timer = POWER_3_COOLDOWN
 	

@@ -89,13 +89,21 @@ theme_override_font_sizes/font_size = 30
 text = "activate power"
 
 [node name="cooldown-power" type="VBoxContainer" parent="."]
-layout_mode = 0
-offset_left = 860.0
-offset_top = 193.0
-offset_right = 989.0
-offset_bottom = 233.0
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -68.5
+offset_top = -133.0
+offset_right = 68.5
+offset_bottom = -83.0
+grow_horizontal = 2
+grow_vertical = 0
 
-[node name="cooldownTexture" type="TextureRect" parent="cooldown-power"]
+[node name="CooldownLabel" type="Label" parent="cooldown-power"]
 layout_mode = 2
 
 [node name="CooldownPowerLabel" type="Label" parent="cooldown-power"]
