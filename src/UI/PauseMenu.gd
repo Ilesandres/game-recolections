@@ -4,10 +4,13 @@ const GAME_SCENE_PATH = "res://scenes/game_scene.tscn"
 const MAIN_MENU_SCENE_PATH = "res://src/UI/MainMenu.tscn" 
 var global_music_player=GlobalMusicPlayer.get_node("MusicPlayer")
 
+signal pause_game_signal()
+signal unpause_game_signal()
 var game_root: Node
 
 func _ready():
 	hide()
+	print("PauseMenu listo desde PauseMenu.gd")
 	get_tree().paused = false
 	#_unpause_music_global()
 
@@ -31,7 +34,10 @@ func _on_main_menu_button_pressed():
 
 
 func pause_game():
+	print("PAUSEMENU - Pausando juego- function")
 	_unpause_music_global()
+	emit_signal("pause_game_signal")
+	print("PAUSEMENU - Señal pause_game_signal emitida")
 	get_tree().paused = true
 	show() 
 	$PauseButtonContainer/ResumeButton.grab_focus()

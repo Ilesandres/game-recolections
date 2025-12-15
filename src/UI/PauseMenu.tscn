@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://0m4adu0ptjt7"]
+[gd_scene load_steps=3 format=3 uid="uid://0m4adu0ptjt7"]
 
 [ext_resource type="Script" uid="uid://gm5yk7b5ija0" path="res://src/UI/PauseMenu.gd" id="1_dt3c7"]
+[ext_resource type="Texture2D" uid="uid://x8govpnk04xs" path="res://assets/art/2d/Background-red-white.png" id="2_vr7o6"]
 
 [node name="PauseMenuLayer" type="CanvasLayer"]
 process_mode = 1
@@ -14,6 +15,12 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_dt3c7")
+
+[node name="Background" type="TextureRect" parent="PauseMenu"]
+layout_mode = 0
+offset_right = 1248.0
+offset_bottom = 832.0
+texture = ExtResource("2_vr7o6")
 
 [node name="PauseButtonContainer" type="VBoxContainer" parent="PauseMenu"]
 layout_mode = 1
