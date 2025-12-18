@@ -19,7 +19,6 @@ config/icon="res://icon.svg"
 
 GlobalData="*res://scripts/GlobalData.gd"
 GlobalMusicPlayer="*res://src/UI/GlobalMusic.tscn"
-FileWalke="*res://scripts/FileWalker.gd"
 
 [input]
 

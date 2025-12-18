@@ -17,9 +17,13 @@ const WEAPON_COSTS = {
 }
 
 @onready var blaster_a_button: Button = $blaster_a
+@onready var score_blaster_a: Label=$"required-score-a"
 @onready var blaster_i_button: Button = $blaster_i
+@onready var score_blaster_i:Label=$"required-score-i"
 @onready var blaster_b_button: Button = $blaster_b
+@onready var score_blaster_b: Label =$"required-score-b"
 @onready var blaster_a_2_button: Button = $blaster_a_2
+@onready var score_blaster_a_2: Label =$"required-score-a-2"
 @onready var global_score_label: Label = $GlobalScore 
 
 
@@ -29,6 +33,13 @@ func _ready() -> void:
 	update_global_score_display()
 	
 	check_and_lock_weapons()
+	load_scores()
+
+func load_scores():
+	score_blaster_a.text="score : " + str(WEAPON_COSTS["blaster_a"])
+	score_blaster_i.text="score : " + str(WEAPON_COSTS["blaster_i"])
+	score_blaster_b.text="score : " + str(WEAPON_COSTS["blaster_b"])
+	score_blaster_a_2.text="score : " + str(WEAPON_COSTS["blaster_a_2"])
 
 func update_global_score_display():
 	global_score_label.text = "score Global Acumulada: " + str(GlobalData.total_global_trash) + "\namplificador de daño : " + str(GlobalData.damage_weapon_multiplier)
