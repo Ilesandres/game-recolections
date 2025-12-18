@@ -123,7 +123,7 @@ func _ready():
 	_load_audio_stream(death_sound_player, DEATH_SOUND_PATH)
 
 func _load_audio_stream(player: AudioStreamPlayer3D, path: String):
-	if FileAccess.file_exists(path):
+	if ResourceLoader.exists(path):
 		player.stream = load(path)
 	else:
 		push_error("ERROR: No se encontró el archivo de sonido para " + player.name + " en: " + path)
@@ -182,7 +182,7 @@ func _load_visual_character(character_scene: Resource):
 
 func _load_weapon():
 	var weapon_path = GlobalData.selected_weapon_scene_path
-	if not FileAccess.file_exists(weapon_path):
+	if not ResourceLoader.exists(weapon_path):
 		print("Advertencia: La ruta del arma no existe: ", weapon_path)
 		return
 

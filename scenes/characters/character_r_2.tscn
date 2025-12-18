@@ -1,7 +1,6 @@
-[gd_scene load_steps=44 format=4 uid="uid://b3v6wtsmtgjax"]
+[gd_scene load_steps=43 format=4 uid="uid://b3v6wtsmtgjax"]
 
 [ext_resource type="Texture2D" uid="uid://b3k1g5stl4ilp" path="res://assets/keney_blocky-character_20/Textures/texture-r.png" id="1_3cykx"]
-[ext_resource type="PackedScene" uid="uid://ck7oxi6sigm1" path="res://src/weapons/blaster_a.tscn" id="2_aejlm"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5w6hg"]
 resource_name = "texture-r"
@@ -1919,9 +1918,6 @@ skeleton = NodePath("")
 
 [node name="Hand_R" type="Node3D" parent="character-r/root/torso/arm-right"]
 transform = Transform3D(1, 0, 0, 0, 0.016370425, -0.999866, 0, 0.999866, 0.016370425, -0.14128423, -1.0152063, 0.34092402)
-
-[node name="blaster-a" parent="character-r/root/torso/arm-right/Hand_R" instance=ExtResource("2_aejlm")]
-visible = false
 
 [node name="head" type="MeshInstance3D" parent="character-r/root/torso"]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 1.2, 0)

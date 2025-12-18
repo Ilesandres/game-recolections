@@ -1,0 +1,1742 @@
+Godot Engine v4.5.1.stable.official.f62fdbde1 - https://godotengine.org
+Vulkan 1.4.323 - Forward+ - Using Device #0: Intel - Intel(R) UHD Graphics
+
+res://.godot/exported/133200997/export-037b0b2a44815854725adbc5db8f7303-Obstacle.scn
+res://.godot/exported/133200997/export-091073f793ba72b0f17f2b53122af5dd-comtaminado-doctor.scn
+res://.godot/exported/133200997/export-0d32841af8b511f05a0dc6e4e93399f6-character_k_2.scn
+res://.godot/exported/133200997/export-203690a4b8f1e05745ea45db59804b60-bullet_foam_tip_thick.scn
+res://.godot/exported/133200997/export-2f94c3fd61a9baa651cdbc659b224940-Enemy.scn
+res://.godot/exported/133200997/export-3879df0f772037bb91cb9897808a5da2-MainMenu.scn
+res://.godot/exported/133200997/export-39c9a6acd407c03ce77cdc2540810f32-casa-tipoq2.scn
+res://.godot/exported/133200997/export-3b40e97651ea269e06e968e62641d87a-blaster_d_2.scn
+res://.godot/exported/133200997/export-46642e0ffeb7038efe6d273cb30c8de1-chicaZombieMob.scn
+res://.godot/exported/133200997/export-49e80b7f83d9a32ae5e165c3c243c4ef-LevelMenu.scn
+res://.godot/exported/133200997/export-4fb90d7fb1afc885d5a09ffdfe4c0e60-CarRed.scn
+res://.godot/exported/133200997/export-5491a29be52eca77afa2539d4db3ce52-GlobalMusic.scn
+res://.godot/exported/133200997/export-58bd4710197acab88a8bfaf695a01ad9-blaster_b.scn
+res://.godot/exported/133200997/export-594269eb1f0f532a3bfadd1513928fd1-AttackArea.scn
+res://.godot/exported/133200997/export-63dce349aaea90eb2b7b05ef2e39f250-CharacterDisplay3D.scn
+res://.godot/exported/133200997/export-678cbbccf6917654c13f6c5db4b416a2-blaster_i.scn
+res://.godot/exported/133200997/export-6cc5ab93c4fe16cb117fa4bfb9044b6d-mob-zombie-chica.scn
+res://.godot/exported/133200997/export-719509e807ec7a4647b9f2d8c782297a-casa-tipo-a.scn
+res://.godot/exported/133200997/export-72b764fa2ec821f026f877f603f93feb-WeaponView.scn
+res://.godot/exported/133200997/export-73c36e1bbdaf77079443f701c2588f8c-character_r_2.scn
+res://.godot/exported/133200997/export-82bbff51800c370c6d178acd603ebef7-Cube.scn
+res://.godot/exported/133200997/export-8a4e89b3abddef2b39d508379cc8e502-WeaponMain.scn
+res://.godot/exported/133200997/export-8cf5de09e2fb5f79ac407f670150a795-PauseMenu.scn
+res://.godot/exported/133200997/export-90d9a10ec95554f5be68a55c12f11fa2-mobs.scn
+res://.godot/exported/133200997/export-9318ae06d33bc8fa945ec62a6cdf2515-blaster_a.scn
+res://.godot/exported/133200997/export-93c495bf24e9371bc62277989dc5b643-coin.scn
+res://.godot/exported/133200997/export-9568de43741ba7ca971a98052fa55c96-character_o_2.scn
+res://.godot/exported/133200997/export-982657028c0d275e26d0fc56c0f432c1-arbol_grande.scn
+res://.godot/exported/133200997/export-98ccce94376e2447daea0b2a244330e4-CharacterSelectMenu.scn
+res://.godot/exported/133200997/export-9fbf97a3e40e49abfe2964e0a36c0bb6-character_p_2.scn
+res://.godot/exported/133200997/export-a7f113570fed9880756a08c88fdb870e-plantas-1.scn
+res://.godot/exported/133200997/export-b6dd39ce8d9b207675931eccb24c68eb-carreter_larga.scn
+res://.godot/exported/133200997/export-b8376d4c64796eaf1cdd68626c972096-barril.scn
+res://.godot/exported/133200997/export-bbd3042418ee7b10e460a1ae6b12df49-clip_small.scn
+res://.godot/exported/133200997/export-c3a19db105d44be12abadc519222c3a7-chunk_template.scn
+res://.godot/exported/133200997/export-c959080bbd5e20519c449e1181f906a4-game_scene.scn
+res://.godot/exported/133200997/export-c9a2aa909448e92d4d51ad49d32831ed-GameOverMenu.scn
+res://.godot/exported/133200997/export-d6aea3b2d69061c58f7de59ae8726f7c-test_escene.scn
+res://.godot/exported/133200997/export-df2ae8be082431c5e4f5a373d5d12a26-bullet_foam_thick.scn
+res://.godot/exported/133200997/export-e8220e74d1354b9e6b168b513689419c-Player.scn
+res://.godot/exported/133200997/export-f1d7f44b96e497a7504456cb76a3f700-HUD.scn
+res://.godot/imported/Background-red-white.png-cd8bf9b577cd01063a4ac5d0f7d71480.ctex
+res://.godot/imported/BackgroundCharacterMenu.png-48dc52a09edd7dee1cfd04010b45f69a.ctex
+res://.godot/imported/Game Paused DEMO.otf-833026ab2c506156971b7336b515238f.fontdata
+res://.godot/imported/Halo3.ttf-3d1b6969e4e0e5e8f27749164c862b36.fontdata
+res://.godot/imported/Pixel Game Extrude.otf-a9adb0b9da89d9cf006d4e7b303cbfb0.fontdata
+res://.godot/imported/Pixel Game.otf-d3e99e5350746db8444eba9304dd8ca9.fontdata
+res://.godot/imported/Preview (Variation A).png-13885dca1802f2c4757fa53b062eb766.ctex
+res://.godot/imported/Preview (Variation A).png-2202eb6f140f064ae5794e8cf1cd3d6e.ctex
+res://.godot/imported/Preview (Variation B).png-1edbcb92d1db24566df46462d3a6c054.ctex
+res://.godot/imported/Preview (Variation C).png-6a71007b54e9042a36b32c8fe988db96.ctex
+res://.godot/imported/Preview-characters.png-3dfb004ab812b57693930ca3ef0a8060.ctex
+res://.godot/imported/Preview.png-1ad19d0f67db6ac76e6ef629914d60fb.ctex
+res://.godot/imported/Preview.png-359702c8d103b97f42de4c6f5044de76.ctex
+res://.godot/imported/Preview.png-ae20ede9ce7f146a8914d9f24bd4d8ec.ctex
+res://.godot/imported/Preview.png-b29d3f12826ffa0b8a04721be8e9daf8.ctex
+res://.godot/imported/Sample.png-3ee16778be3802a7662e3271fad1b697.ctex
+res://.godot/imported/advocado-half.glb-eda5d7b3b057024b12c2a10d16f44fcf.scn
+res://.godot/imported/animal-bison.glb-7acdb97fe4762c188e6c0dbe68226f69.scn
+res://.godot/imported/animal-dog.glb-ef9459ccee6e82c323ba726e5a220cb7.scn
+res://.godot/imported/animal-horse.glb-7145f46f4a466b525078a965ab6391cd.scn
+res://.godot/imported/apple-half.glb-14ac3536dfd6c709adf6b04bf8b8de6f.scn
+res://.godot/imported/apple.glb-0bebce6a415604ab47d48003e5abbcac.scn
+res://.godot/imported/avocado.glb-e94d3b3390935eaccd4bba69bb2fac0f.scn
+res://.godot/imported/background_any2.png-e149e873456cc3f4be111bceccdcf774.ctex
+res://.godot/imported/background_cold.png-342871967c7c2abaeaed7186ecf4c372.ctex
+res://.godot/imported/background_color_beige.png-ff5da6b0ae4029f7bda4078edf32de29.ctex
+res://.godot/imported/bacon-raw.glb-6d90071dd4bc20441980a9c7d0ae526c.scn
+res://.godot/imported/bacon.glb-7d2dd8d0d24cacc7c48ee20cb820e58d.scn
+res://.godot/imported/bag-flat.glb-40ec8b4c9d338b03fe98555d16e13b69.scn
+res://.godot/imported/bag.glb-aaedada1d54ed1765bf98ab2f233803d.scn
+res://.godot/imported/banana.glb-7c014c83e5ee79d8cd47c416de0d17d6.scn
+res://.godot/imported/barrel.glb-19ba2de22cedd6c138c6c54251e2e19c.scn
+res://.godot/imported/beet.glb-88304adf1a1e9fafd5e7ffc191fe5e33.scn
+res://.godot/imported/blaster-a.fbx-195776e98f68c8442e7061966fd48dbe.scn
+res://.godot/imported/blaster-a.glb-315f82d23bfad2c2f512c38e258abb5e.scn
+res://.godot/imported/blaster-a.obj-ae7c4cfcca8465d17114f00e422f1702.mesh
+res://.godot/imported/blaster-a.png-88e73073da6a860716bc8822c2524dfd.ctex
+res://.godot/imported/blaster-b.fbx-80ffa1d1228e08b0b0668534b2b32730.scn
+res://.godot/imported/blaster-b.glb-f39fabe937b82a25acfa170dc85cb1ff.scn
+res://.godot/imported/blaster-b.obj-8dd9c8e61474aebed59ff94fa880c2fc.mesh
+res://.godot/imported/blaster-b.png-af2ae25d2e343b7c1cb9e3fabc4aa7a3.ctex
+res://.godot/imported/blaster-c.fbx-f74931808e50e61d0c5579b02e4b9bbf.scn
+res://.godot/imported/blaster-c.glb-71621e11f919f7c2dc508036d29f30bb.scn
+res://.godot/imported/blaster-c.obj-94cc13c40528d73e762c0a34c24dbb24.mesh
+res://.godot/imported/blaster-c.png-e380b28b2a5aa41ecfef963538957939.ctex
+res://.godot/imported/blaster-d.fbx-ca5745fccb714b45f84565a0133a2afa.scn
+res://.godot/imported/blaster-d.glb-d063369d013221dd8833a81e86c758b8.scn
+res://.godot/imported/blaster-d.obj-2a86f4cf57d6557e5d6d6873729187f7.mesh
+res://.godot/imported/blaster-d.png-6e83bad402da870b6f04ab2d9ca6d617.ctex
+res://.godot/imported/blaster-e.fbx-6123125ad71de20f95b251a77b9a443b.scn
+res://.godot/imported/blaster-e.glb-2ba6abbe39bbddab9274b0e723e088ca.scn
+res://.godot/imported/blaster-e.obj-dfb86ef2091cdb8827603df017d7385d.mesh
+res://.godot/imported/blaster-e.png-22b1c169d27587dbfd44cb90fac05f30.ctex
+res://.godot/imported/blaster-f.fbx-c4a6f5b8163eb4ad7ef9c173c3cddddf.scn
+res://.godot/imported/blaster-f.glb-eec7a2605cc9fa2677a522e136f7a55e.scn
+res://.godot/imported/blaster-f.obj-1a8ba7db913cd2b4a6d860dd569e313c.mesh
+res://.godot/imported/blaster-f.png-6b002bee94ae5e7758ad68f59811c4a5.ctex
+res://.godot/imported/blaster-g.fbx-f00de3410cb32c95a02c2d0a14cc243f.scn
+res://.godot/imported/blaster-g.glb-32c0f243c2754fc031932b2bab034acb.scn
+res://.godot/imported/blaster-g.obj-2fc58c7d7ea303b64d8ba7748765b9e3.mesh
+res://.godot/imported/blaster-g.png-c814b2290f54bda757f89365ccec69cc.ctex
+res://.godot/imported/blaster-h.fbx-3cb43ec259bbc2d3f1c3cc48230ae3a0.scn
+res://.godot/imported/blaster-h.glb-d15ca2ac7484b9630be33c6f546d3306.scn
+res://.godot/imported/blaster-h.obj-5ca41a767291b9485c2b98d36f6c2485.mesh
+res://.godot/imported/blaster-h.png-b44ca19dfea50c8c1d212c455e9cef5c.ctex
+res://.godot/imported/blaster-i.fbx-a1092406b7e474c671caca16d0349767.scn
+res://.godot/imported/blaster-i.glb-3bad3c449d00ee65d3aa877c9dbd7c05.scn
+res://.godot/imported/blaster-i.obj-dc7848b0ee42f188d3bdaf12c16bd38e.mesh
+res://.godot/imported/blaster-i.png-6d7b145375559c5b98bcd79764bb5e7c.ctex
+res://.godot/imported/blaster-j.fbx-06d9b35377844b6350a8acc7020e8402.scn
+res://.godot/imported/blaster-j.glb-91181c0afe984412cf9b53e5c47f3e34.scn
+res://.godot/imported/blaster-j.obj-bc2652dc2440ec0bb88afda42f912bcb.mesh
+res://.godot/imported/blaster-j.png-fbda3fe840f8d3823f617387562c701d.ctex
+res://.godot/imported/blaster-k.fbx-1540bf520e6441d161532167c9eceb0f.scn
+res://.godot/imported/blaster-k.glb-60916db51d2807881695291481c5afff.scn
+res://.godot/imported/blaster-k.obj-322c812b0ff7dc850b0a03003b2c14ca.mesh
+res://.godot/imported/blaster-k.png-8924b58fd4a9bcdbdb42a8e21046e8cb.ctex
+res://.godot/imported/blaster-l.fbx-4fef1d72b74507fd0536e94a9b491f05.scn
+res://.godot/imported/blaster-l.glb-263e3aceac4fa191602acb4f2563b7bd.scn
+res://.godot/imported/blaster-l.obj-59e40ab312c1b93bcfc7dca392d7abec.mesh
+res://.godot/imported/blaster-l.png-3cdc1c001b0a92d4c6a34ea229e42ef4.ctex
+res://.godot/imported/blaster-m.fbx-d41ea43458d63cd42f864bded81d3e9c.scn
+res://.godot/imported/blaster-m.glb-f57611cf3c29ebae6a2845d671f15926.scn
+res://.godot/imported/blaster-m.obj-75f1e913c4cc8a1310d4824ec3447dc8.mesh
+res://.godot/imported/blaster-m.png-4ec6b0afd1353383d98047a6d8cb1f7f.ctex
+res://.godot/imported/blaster-n.fbx-1d503d54493377ab57c0354c7ccb6e87.scn
+res://.godot/imported/blaster-n.glb-bcf578e3aecdccc9606796eabdc946eb.scn
+res://.godot/imported/blaster-n.obj-8415ca1d1cade29c8b36435c183062dd.mesh
+res://.godot/imported/blaster-n.png-701a0dc3724e28260d5036a6429e36b0.ctex
+res://.godot/imported/blaster-o.fbx-6b41ffb1d3fb6e8eba9987da12c33bba.scn
+res://.godot/imported/blaster-o.glb-6bf6cb12f00b0a07971291e4dfe05ef1.scn
+res://.godot/imported/blaster-o.obj-1a0fa090a1c762edebf7863c7c598ded.mesh
+res://.godot/imported/blaster-o.png-559800f584db94f7204dc81bc8282895.ctex
+res://.godot/imported/blaster-p.fbx-06109c5c6c0e53e2df50aff7d3ddb47e.scn
+res://.godot/imported/blaster-p.glb-1591e18c746955f13fc951cc5a114385.scn
+res://.godot/imported/blaster-p.obj-02cadda13f9ed85000da5e2ce8ebdc45.mesh
+res://.godot/imported/blaster-p.png-e11ed8d8b549d7576fe285c42bb217ef.ctex
+res://.godot/imported/blaster-q.fbx-292b8f2484fdf1051f8dc44365e825ac.scn
+res://.godot/imported/blaster-q.glb-4c1868dc595868a51803e76470ddd3f0.scn
+res://.godot/imported/blaster-q.obj-88cd213ad5aee1a99bdd26bded4fe6ab.mesh
+res://.godot/imported/blaster-q.png-0de0a228fe7506296848799f53772684.ctex
+res://.godot/imported/blaster-r.fbx-4e02c7a3c8e26626c3966b279abc80e1.scn
+res://.godot/imported/blaster-r.glb-5b11a80a370336c46d41ba66971b85ed.scn
+res://.godot/imported/blaster-r.obj-b3436f70181996e2d22eac6c9453a5c6.mesh
+res://.godot/imported/blaster-r.png-c9779a1b5238d09423615efb12a3862e.ctex
+res://.godot/imported/bottle-ketchup.glb-61c154820a8c2a690360bbdf72490d8b.scn
+res://.godot/imported/bottle-musterd.glb-854d87d57a734d9d574a435f783eaa82.scn
+res://.godot/imported/bottle-oil.glb-bfbf712cff24f3f3c7da757fbd3b2505.scn
+res://.godot/imported/bowl-broth.glb-c1c7e7d199cf43c11b7407cb4e9a5fbf.scn
+res://.godot/imported/bowl-cereal.glb-b29f4a7a2ee731bddb56c06035802e20.scn
+res://.godot/imported/bowl-soup.glb-1478cad73508e0e8df8861cf8a11da79.scn
+res://.godot/imported/bowl.glb-b1c062c697232fc4d06bffec5f62166c.scn
+res://.godot/imported/bread.glb-d87710980abf0b1aab28efb3fb73fe7a.scn
+res://.godot/imported/broccoli.glb-155d1f40405c6af07ef5d6082d578b3a.scn
+res://.godot/imported/building-type-a.fbx-44a1266679bfc30f06ccfc8413fde4b5.scn
+res://.godot/imported/building-type-a.glb-a5e3215f45da19233a06a3fc28cbe4b3.scn
+res://.godot/imported/building-type-a.obj-445187b35e04d0fff8a7bc1a2054be42.mesh
+res://.godot/imported/building-type-a.png-76a446cf81a2aea7cf3106ed20e05e31.ctex
+res://.godot/imported/building-type-b.fbx-697bb1e88fd9da89a6d4b16907d3aea5.scn
+res://.godot/imported/building-type-b.glb-4ef0700c32b5065356310e6a345d03c4.scn
+res://.godot/imported/building-type-b.obj-09bb16991a7e8a168dbbaf67a2930726.mesh
+res://.godot/imported/building-type-b.png-f6bb38f44e4a03b75d7cf7f28dab50ef.ctex
+res://.godot/imported/building-type-c.fbx-ee3cdafff9d17bd473076b346eb6f94a.scn
+res://.godot/imported/building-type-c.glb-2727cc0b70c55ff31e5fe743e96698be.scn
+res://.godot/imported/building-type-c.obj-c24e8179d661b4808b4939b5af9b57db.mesh
+res://.godot/imported/building-type-c.png-2febbe71f55d3e9c1ee1b2bd1fd33cbd.ctex
+res://.godot/imported/building-type-d.fbx-0a1c6cab348f1eea84ae0088eea8864e.scn
+res://.godot/imported/building-type-d.glb-84f5e1ed4a9f533163e82a9388bedb14.scn
+res://.godot/imported/building-type-d.obj-87355332ba43613977a2fe564871c672.mesh
+res://.godot/imported/building-type-d.png-99a1b403152bc2892960a2a8fbd7f7e6.ctex
+res://.godot/imported/building-type-e.fbx-2587d1a24084c40ea9a5f4ea0d348485.scn
+res://.godot/imported/building-type-e.glb-13129a41ef66e3ffd91b71d6f27f1ebc.scn
+res://.godot/imported/building-type-e.obj-45bd1a654c083a8f78f302ed91b90954.mesh
+res://.godot/imported/building-type-e.png-15eba71d8ffef7ec163fa4e9d459e66d.ctex
+res://.godot/imported/building-type-f.fbx-1c653e2862a59ba6c1f523b72b3cc483.scn
+res://.godot/imported/building-type-f.glb-79f0e8edc07e9238f29e8de15d22a335.scn
+res://.godot/imported/building-type-f.obj-78c478450858e5c420e09cb1342b167a.mesh
+res://.godot/imported/building-type-f.png-386d2993570d40816af03a4cead6fa0b.ctex
+res://.godot/imported/building-type-g.fbx-70d6272f037522670305f5999832cbb0.scn
+res://.godot/imported/building-type-g.glb-c1e81de0059ced9d70f7de0a247d0f49.scn
+res://.godot/imported/building-type-g.obj-026d12834e9ff63f95c409ab160e9d23.mesh
+res://.godot/imported/building-type-g.png-e63ed5c6293b632b9521f6060d7febfe.ctex
+res://.godot/imported/building-type-h.fbx-d650f6dc722ea6f7585ff809c8d57844.scn
+res://.godot/imported/building-type-h.glb-5c84f3eea14a4ff255d2a0f4263a024a.scn
+res://.godot/imported/building-type-h.obj-888f51baab2f810a2acb34de7f6cc2a3.mesh
+res://.godot/imported/building-type-h.png-2ac47ca432c9282c15c89f13a285ce30.ctex
+res://.godot/imported/building-type-i.fbx-5d8695bc3b2432ad563a49a14974fcfb.scn
+res://.godot/imported/building-type-i.glb-b96cac7fae33ff68d91085baa908b294.scn
+res://.godot/imported/building-type-i.obj-a69830fe09df6919ee8c1d44617196a9.mesh
+res://.godot/imported/building-type-i.png-1a5057fbec82b0c50108a46c31392dbf.ctex
+res://.godot/imported/building-type-j.fbx-e01829fa84fb57ca59d4f6dffe09b4c7.scn
+res://.godot/imported/building-type-j.glb-9e68d40da757d8e740cd57cb218fb4cf.scn
+res://.godot/imported/building-type-j.obj-6ebb7a7903f752abf9b009125b7cd341.mesh
+res://.godot/imported/building-type-j.png-71ef1de1d4ed750c000bfcf9dd00587f.ctex
+res://.godot/imported/building-type-k.fbx-7937bb68e67201fa63277731816cbc97.scn
+res://.godot/imported/building-type-k.glb-5daaa632e180fe45d3ce48a40e4c6dcb.scn
+res://.godot/imported/building-type-k.obj-846d1ef033107a8f71b2a725a86bcd7a.mesh
+res://.godot/imported/building-type-k.png-fc63d3b3aee9721cc259d3a955eaf7b3.ctex
+res://.godot/imported/building-type-l.fbx-5eb1e38d37bd030d9d11e1eca044aa9d.scn
+res://.godot/imported/building-type-l.glb-0d14c23a0dc339e8eddade546888dbf0.scn
+res://.godot/imported/building-type-l.obj-14c2ee972dd3e726b38d833f037334da.mesh
+res://.godot/imported/building-type-l.png-5b0e3985d8cf4c35fcfbf1f552d968dc.ctex
+res://.godot/imported/building-type-m.fbx-948765ebd9ca7b65569f74ade9507298.scn
+res://.godot/imported/building-type-m.glb-268c96501300208783075147d91fc9cd.scn
+res://.godot/imported/building-type-m.obj-972059704c815d5480c3c3aa2e446aa6.mesh
+res://.godot/imported/building-type-m.png-d77671f1ade01201a0078c06ed7dabdf.ctex
+res://.godot/imported/building-type-n.fbx-2b6ef9350bf323f12f414ed78463a1a2.scn
+res://.godot/imported/building-type-n.glb-a134ef75adb8e3e5c92a6ca20341c10a.scn
+res://.godot/imported/building-type-n.obj-8b68fd45e38b827510d942a27d37d24d.mesh
+res://.godot/imported/building-type-n.png-56028425106254579e4fae0595514bdc.ctex
+res://.godot/imported/building-type-o.fbx-7245c46b6adeb2e0be70e3bf994b5674.scn
+res://.godot/imported/building-type-o.glb-09b5e4ec4a6c34a8c26e38b9e08c94a8.scn
+res://.godot/imported/building-type-o.obj-398a3472acaf19ad0ed4b4ac2b7ea365.mesh
+res://.godot/imported/building-type-o.png-7fbcee0317e4f66e882a81770adc054f.ctex
+res://.godot/imported/building-type-p.fbx-5fb0e4ceb03c846d46d4134ac61dd3b4.scn
+res://.godot/imported/building-type-p.glb-ff42d8dc0c2d2336354202414e264c6d.scn
+res://.godot/imported/building-type-p.obj-7c73cb3cedf4a4687b3f2ad462ecb9e2.mesh
+res://.godot/imported/building-type-p.png-ea77a7a57c345b418c4e2e4b8df7d43d.ctex
+res://.godot/imported/building-type-q.fbx-9cfb0d6e01f001e2279e20901b24a1f1.scn
+res://.godot/imported/building-type-q.glb-a6a71394751c3fe76a856d2ee8ecd520.scn
+res://.godot/imported/building-type-q.obj-c03ff9079e785da5845e7cd42f2df946.mesh
+res://.godot/imported/building-type-q.png-5d5d855228d26c3fd059e352d5ab8596.ctex
+res://.godot/imported/building-type-r.fbx-2347d77390bd3bb9b2503face512f56b.scn
+res://.godot/imported/building-type-r.glb-7f5c5c7952dd5b7834a67e208e577a94.scn
+res://.godot/imported/building-type-r.obj-9f2e7ad38eb8594a1505bfa9dbb54686.mesh
+res://.godot/imported/building-type-r.png-1942d51ee0644f314e956e826b4881da.ctex
+res://.godot/imported/building-type-s.fbx-28f50e8a596201b81958ead517f5322d.scn
+res://.godot/imported/building-type-s.glb-e1f1db4ebc940ed4298e0c615dcaa7e6.scn
+res://.godot/imported/building-type-s.obj-d6c73298748726710a8c77de137f8f2c.mesh
+res://.godot/imported/building-type-s.png-a2d3c9b427e194347115042ebb43eaf1.ctex
+res://.godot/imported/building-type-t.fbx-b4323314e164cef85a21f2046545f308.scn
+res://.godot/imported/building-type-t.glb-fb63959d26745a4796c340695d86ea39.scn
+res://.godot/imported/building-type-t.obj-3331c56e2389f285c1d2b81863dfead1.mesh
+res://.godot/imported/building-type-t.png-81059b41da19861dad110c10fcd20c55.ctex
+res://.godot/imported/building-type-u.fbx-d0bdb6f5061f3d68b5873cd95cb62ca0.scn
+res://.godot/imported/building-type-u.glb-ca229a3d2e5f386840faa918fa29858d.scn
+res://.godot/imported/building-type-u.obj-ca6d89d3638ba0440f9f85e2e5818a86.mesh
+res://.godot/imported/building-type-u.png-923a5ca2df33c64d6339a1d07d5d16a7.ctex
+res://.godot/imported/bullet-foam-thick.fbx-c1d3ab42159d852ce350dde862bab215.scn
+res://.godot/imported/bullet-foam-thick.glb-05cb97a925726423cf225fd7b53913be.scn
+res://.godot/imported/bullet-foam-thick.obj-02d1ea318c66ef3bcaa8f55b552424d7.mesh
+res://.godot/imported/bullet-foam-thick.png-27e15344148c07a2490dc165bb2ec81b.ctex
+res://.godot/imported/bullet-foam-tip-thick.fbx-1321a3be23f2b4c0faf84512e81031d6.scn
+res://.godot/imported/bullet-foam-tip-thick.glb-3c0d4d354cac2911b9672e79c5ae1f9b.scn
+res://.godot/imported/bullet-foam-tip-thick.obj-c2f6d65cb29a8e5d5715cfe993a4acb0.mesh
+res://.godot/imported/bullet-foam-tip-thick.png-a2a488ac4a3455aa8d06415d10d81980.ctex
+res://.godot/imported/bullet-foam-tip.fbx-12edcfe996fd53eca831b413d6aea9ee.scn
+res://.godot/imported/bullet-foam-tip.glb-944d30cb12eeb67438be3b9c27927318.scn
+res://.godot/imported/bullet-foam-tip.obj-27a5297e7ac5cdb5909d0fa147bc91dd.mesh
+res://.godot/imported/bullet-foam-tip.png-2f1548603f07a57e1d99c852bfeb6c77.ctex
+res://.godot/imported/bullet-foam.fbx-464b9624061727e5099b3ed49a119ec5.scn
+res://.godot/imported/bullet-foam.glb-60da70755907d8fc5813b88b7a30892a.scn
+res://.godot/imported/bullet-foam.obj-c1eafd00dae89f36daccf75ff3fe40b4.mesh
+res://.godot/imported/bullet-foam.png-49836488bfd5bdf620f58f5d774d2b2b.ctex
+res://.godot/imported/burger-cheese-double.glb-773ff275724e9553389fad2696697948.scn
+res://.godot/imported/burger-cheese.glb-c9f893bb143a9e2ec4772c903ec9d4c5.scn
+res://.godot/imported/burger-double.glb-fd5e36d14411406cfe2e021a35359035.scn
+res://.godot/imported/burger.glb-cd4aa0fad6401c9a314484514695f158.scn
+res://.godot/imported/button-floor-round-small.glb-5b9e078ff310885cf0b390b7c284627d.scn
+res://.godot/imported/button-floor-round.glb-8ff1c22b81703c488ffed01951746520.scn
+res://.godot/imported/button-floor-square-small.glb-9275ab145907f2a7cf5a6880db3627a4.scn
+res://.godot/imported/button-floor-square.glb-fe121504ba032ef3a93a6df16c6acd8b.scn
+res://.godot/imported/cabbage.glb-dc722caabe26dd646d291631196145f6.scn
+res://.godot/imported/cake-birthday.glb-aa064e84935a9d4d1212b010f42e6dcc.scn
+res://.godot/imported/cake-slicer.glb-603ace140cbc818917ab78d923c95f0e.scn
+res://.godot/imported/cake.glb-5852acd97528c4c530f571e927367435.scn
+res://.godot/imported/can-open.glb-21a56420cb2d03b195d050b6624716a5.scn
+res://.godot/imported/can-small.glb-2a8cedb0771199e029c6e07b9219a906.scn
+res://.godot/imported/can.glb-6a1b8638acd8c5ce086676f911e68e98.scn
+res://.godot/imported/candy-bar-wrapper.glb-4cb3ae4625c9d05bdd7916e387fa3765.scn
+res://.godot/imported/candy-bar.glb-f93be029efc455fc973fd8a5e0bf36e6.scn
+res://.godot/imported/carrot.glb-a6613a460e010af639927e4e67b7b62d.scn
+res://.godot/imported/carton-small.glb-b4f56b38cf511dbb86fb82e551ec67c5.scn
+res://.godot/imported/carton.glb-33ae5829a8cc00dc3297771521338668.scn
+res://.godot/imported/cauliflower.glb-c3bb0a19c6ac099c4f26692178a3fa5d.scn
+res://.godot/imported/celery-stick.glb-a73d772c9017654416771550074f26f6.scn
+res://.godot/imported/character-a.glb-066f834ce76611415d03ec16f86cc688.scn
+res://.godot/imported/character-b.glb-a0791cb1132b9f2835c280255b539e4e.scn
+res://.godot/imported/character-c.glb-83cd4b34863f963d8116b5ea206eebd2.scn
+res://.godot/imported/character-d.glb-84d5153d57432c0c2cce5027320289eb.scn
+res://.godot/imported/character-e.glb-f24c879362732133f4a534bae3a042cb.scn
+res://.godot/imported/character-f.glb-ee48f01ed1b7209a97890e58687ffcd4.scn
+res://.godot/imported/character-g.glb-afa3d00627357b81a19d0819ac87cac5.scn
+res://.godot/imported/character-h.glb-4c7e18a4885a08ba48b8b472cc6d19c2.scn
+res://.godot/imported/character-i.glb-038f6bfb9a9e8335467690363863f486.scn
+res://.godot/imported/character-j.glb-4c95114ec3276f46af8ff29bfd99e270.scn
+res://.godot/imported/character-k.glb-2ebb9a5788a2814ffae4d34ef0afdf3d.scn
+res://.godot/imported/character-k.png-0ca973ab146e86bf371aba78aa807f30.ctex
+res://.godot/imported/character-m.glb-aca48fbdd76557c06c70bb2817529a4e.scn
+res://.godot/imported/character-n.glb-a14e7d297a9982cd0801f8295064a6e9.scn
+res://.godot/imported/character-o.glb-139bbb31f07e5b5fc848fb838fa011e2.scn
+res://.godot/imported/character-o.png-f8f60c2a51a5a91ca335f00f5f8b01ff.ctex
+res://.godot/imported/character-p.glb-eecb7df7dcbd64437344cc7a7f27db07.scn
+res://.godot/imported/character-p.png-e5ce12b8516640b5d8d1c4d289ced6b2.ctex
+res://.godot/imported/character-q.glb-28e157405d6c6a7b69006ed1d057aa4d.scn
+res://.godot/imported/character-r.glb-85fdfc2b8b89bebd91d6a44b66a8d132.scn
+res://.godot/imported/character-r.png-974009c1dad2feb5197b9d1e039d4a38.ctex
+res://.godot/imported/character-select-menu.png-3d51c589e5c08e8511fe4b9d99f41859.ctex
+res://.godot/imported/cheese-cut.glb-70619daa2eafaf7bbf6a223702d686d1.scn
+res://.godot/imported/cheese-slicer.glb-4adbb3c89a69188801b9ca94dea749ee.scn
+res://.godot/imported/cheese.glb-4c8a26fe0ee7da6bdba7cedd40ede310.scn
+res://.godot/imported/cherries.glb-567039ed0f61b345e5584bd39dd05f28.scn
+res://.godot/imported/chinese.glb-ba58ce31a843dfb72738f12791e8126b.scn
+res://.godot/imported/chocolate-wrapper.glb-5cf9bd74657851a2466f86cb9a8a1ee3.scn
+res://.godot/imported/chocolate.glb-0efb853b5d2f009aaefb64c634c5c7a6.scn
+res://.godot/imported/chopstic-decorative.glb-f559cdd66bfaa2c0b946c36a57291345.scn
+res://.godot/imported/chopstick.glb-9e9c610eeafc39696f6353adacebebcc.scn
+res://.godot/imported/click-mouse-left.png-47b5c6fa5a9323e86fa83157a7c61434.ctex
+res://.godot/imported/clip-large.fbx-4607b1e8ee4b9da21e8ce66d3a563992.scn
+res://.godot/imported/clip-large.glb-22e476525fffa7467665bd2234ac5716.scn
+res://.godot/imported/clip-large.obj-1a046c81f2e47e7a614c00f6d077f693.mesh
+res://.godot/imported/clip-large.png-c1c40ae89fe9b8b5e29297cc0823f9a4.ctex
+res://.godot/imported/clip-small.fbx-311b5b9c1958b6a97513b9c591dc3a72.scn
+res://.godot/imported/clip-small.glb-29dc69199d550316e3accef23e728c75.scn
+res://.godot/imported/clip-small.obj-cbd6bb7661d9eb0ad172789945001dfb.mesh
+res://.godot/imported/clip-small.png-f54d21b8f174e13dc47b613019e68fba.ctex
+res://.godot/imported/cocktail.glb-014eab37d0e21bbc732d1672a4e3cd76.scn
+res://.godot/imported/coconut-half.glb-ade20f4ab0a23dfa2a4760954dce7ad4.scn
+res://.godot/imported/coconut.glb-ff9c7686ccc452caf0d02b985f36a0ea.scn
+res://.godot/imported/coin.glb-0035dd8c6385e9eb97b614c3b19c58d5.scn
+res://.godot/imported/collect-points-190037.mp3-f7df3e0fd1cbe1794ebad8c04bf46c70.mp3str
+res://.godot/imported/colormap.png-18116d160cb60e4ccb08b665c5140131.s3tc.ctex
+res://.godot/imported/colormap.png-47456c43d84d9e0212dc9bc008d5a541.s3tc.ctex
+res://.godot/imported/colormap.png-4e16ab8b8e09b04282805c4ca9192b17.s3tc.ctex
+res://.godot/imported/colormap.png-6b83af6cc33a269bcf86b04c23c045e5.s3tc.ctex
+res://.godot/imported/colormap.png-7a06bccede6f8de8475ccea20283cc37.s3tc.ctex
+res://.godot/imported/colormap.png-a8cacc8266907d14d0c1227763daf8ad.s3tc.ctex
+res://.godot/imported/colormap.png-b9f80c547a3e88e4ef131a065db405e8.s3tc.ctex
+res://.godot/imported/colormap.png-e6e03f7632a1c217094971ee46afbe54.s3tc.ctex
+res://.godot/imported/column-low.glb-0c20ede7403a6be2d82a208e75be7d41.scn
+res://.godot/imported/column-rounded-low.glb-4b93d2ff026efc13fa8be81b2c499d74.scn
+res://.godot/imported/column-rounded.glb-e7e2603b1b3948a59147c32781409189.scn
+res://.godot/imported/column-triangle-low.glb-de15703a6bf29967a5c5e4494f09be40.scn
+res://.godot/imported/column-triangle.glb-2bc92f29a6c5ab0e2032c396018f36b0.scn
+res://.godot/imported/column.glb-7069fb660fa853e8d14030e468ba9aed.scn
+res://.godot/imported/control-key.png-29dfa97a0aad51e74a5e820df6a064e6.ctex
+res://.godot/imported/cookie-chocolate.glb-46b93fc9489b9af9286ca8eb0c29ecde.scn
+res://.godot/imported/cookie.glb-f519f7876fb1fc90108071e2777ff0df.scn
+res://.godot/imported/cooking-fork.glb-4114d5df11667cc7a61d1c57e2966924.scn
+res://.godot/imported/cooking-knife-chopping.glb-961f243dfb6068201dcedd297c6745f4.scn
+res://.godot/imported/cooking-knife.glb-95054dcadd25947dc485b501c84cf7ef.scn
+res://.godot/imported/cooking-spatula.glb-a537f0a75a7a86dc306c0df4572b3cc7.scn
+res://.godot/imported/cooking-spoon.glb-fff28c7d9e7db3707460b5acd72c3b48.scn
+res://.godot/imported/corn-dog.glb-f01a81294c1794a8424bc2607a0d9152.scn
+res://.godot/imported/corn.glb-a9d81b6911b9436850abda4b24c60531.scn
+res://.godot/imported/crate-color.glb-8f2a324b4f65084699dd0c53e40e2b14.scn
+res://.godot/imported/crate-medium.fbx-11959a7ed0b98356c136316074f110bf.scn
+res://.godot/imported/crate-medium.glb-156cb93cd4939001e25a2a42db99c3c2.scn
+res://.godot/imported/crate-medium.obj-fbc0b78e96f90dca1b4e2773a0897e74.mesh
+res://.godot/imported/crate-medium.png-0aef2bedcbfe421fee539c1505070cbe.ctex
+res://.godot/imported/crate-small.fbx-c586a6d25de02c9423f67e77d0097888.scn
+res://.godot/imported/crate-small.glb-324951ccbdcf2c337622a6fd556ab0ac.scn
+res://.godot/imported/crate-small.obj-86af1dddde3d23bbd5a572ed0a099a48.mesh
+res://.godot/imported/crate-small.png-6f018a4f8ce0c68057ee0940f4158d95.ctex
+res://.godot/imported/crate-wide.fbx-ce6dc2fcd921d50b686bd938f297b827.scn
+res://.godot/imported/crate-wide.glb-1c6cdb22d7e8e40bb2634c4b343457f5.scn
+res://.godot/imported/crate-wide.obj-9932c47ba7fc231f3a2e35a5d8eb0eb4.mesh
+res://.godot/imported/crate-wide.png-1a1862a106dcca3187db2992006ffdc7.ctex
+res://.godot/imported/crate.glb-9aebb206bdc659386e7110e6cc0f7914.scn
+res://.godot/imported/croissant.glb-00a0de3e1dfd6b535e8204c560347952.scn
+res://.godot/imported/cup-coffee.glb-a6ef25aef054f8fcf4b8ec52619435c7.scn
+res://.godot/imported/cup-saucer.glb-5dfcf0a117a4283e675ff45934eb09ce.scn
+res://.godot/imported/cup-tea.glb-0c86d4b89d1ae26bd92dce4c0be43f2b.scn
+res://.godot/imported/cup.glb-154011efa207d3843ae64e2a456edcd4.scn
+res://.godot/imported/cupcake.glb-3f6035bb9e203b9d7a74ccf7a902db55.scn
+res://.godot/imported/cutting-board-japanese.glb-3621c81cf795727358c87f451d687ef2.scn
+res://.godot/imported/cutting-board-round.glb-1d1af236e2f4a0e10ebaab0b04357c8e.scn
+res://.godot/imported/cutting-board.glb-e00280318d6c8cdbb0446276dea8033f.scn
+res://.godot/imported/dead-player.mp3-1bffadc60e983b03e0dc4e16c5baaa86.mp3str
+res://.godot/imported/description-powers.png-a9888576e51982a7098368eef1f14906.ctex
+res://.godot/imported/devoted_guard.mp3-adf7eb42e117ad36ba6ab85394f46128.mp3str
+res://.godot/imported/dim-sum.glb-086f68e119ac74b14a17f5cf57408a5f.scn
+res://.godot/imported/donut-chocolate.glb-303d18ed9b4287045acf047bcaa2ea19.scn
+res://.godot/imported/donut-sprinkles.glb-c686d72e8f3dfeab421c2b65e268b1e9.scn
+res://.godot/imported/donut.glb-89419c21478280af2fe5b59389d8f870.scn
+res://.godot/imported/door-garage.glb-9c4223f7cf0eb99111a557d9d09064f3.scn
+res://.godot/imported/door-rotate.glb-314053b1a9492d36ba21871c7e437545.scn
+res://.godot/imported/door-sliding-double-round.glb-0cd47e556827204b64f2476d81b68dda.scn
+res://.godot/imported/door-sliding-double-wide.glb-a9333b3a6e7802f8310b180355d02255.scn
+res://.godot/imported/door-sliding-double.glb-45622ed50c079a4e21044563a03aa570.scn
+res://.godot/imported/door-sliding.glb-f24f2942eae7d76afe4eef8c84861576.scn
+res://.godot/imported/driveway-long.fbx-dc861254ad7745ab1d92aa05bc93c8e7.scn
+res://.godot/imported/driveway-long.glb-1dcde2b2a7f32e540c8066959d381032.scn
+res://.godot/imported/driveway-long.obj-ad9b0e1142231e7ca40281d959a34ca9.mesh
+res://.godot/imported/driveway-long.png-7010bd6997eb0ba516347a927d10a2bb.ctex
+res://.godot/imported/driveway-short.fbx-c0c928402c997c147529d4d4b5341d4a.scn
+res://.godot/imported/driveway-short.glb-ada4835e5713aa70de218ad4d7394fe5.scn
+res://.godot/imported/driveway-short.obj-5c890e71051254ea047c7405515b560f.mesh
+res://.godot/imported/driveway-short.png-c9a314f0b13eb936ff43eab4f6bf2573.ctex
+res://.godot/imported/egg-cooked.glb-e5de8fe1f477903cd2e35bf7e70b1772.scn
+res://.godot/imported/egg-cup.glb-ef4035e15dda88c5fd17afd223a1aca9.scn
+res://.godot/imported/egg-half.glb-31f6cd94f4b64e5421af0185df02f3ae.scn
+res://.godot/imported/egg.glb-f41681be6cb3e69a79000a6590b4c4f3.scn
+res://.godot/imported/eggplant.glb-d150d542638da890ef19f8c38caff9ed.scn
+res://.godot/imported/fence-1x2.fbx-a9d56c1c60433640a14dd09e98e00c75.scn
+res://.godot/imported/fence-1x2.glb-0e2881cb9497a25b6846e3d49e00966f.scn
+res://.godot/imported/fence-1x2.obj-f2e99bfd77c164d7734d2d28db9f05f0.mesh
+res://.godot/imported/fence-1x2.png-93dafdd1fe255ce0c1907f2e865a7742.ctex
+res://.godot/imported/fence-1x3.fbx-ad4b394203316d7198316b86ce2d958a.scn
+res://.godot/imported/fence-1x3.glb-c2e09a84c9d89ef461f279776c44bc95.scn
+res://.godot/imported/fence-1x3.obj-554aba341639e2484b46ab643edb687f.mesh
+res://.godot/imported/fence-1x3.png-b2c4ca0005a3debddcf975bd03d8e3f9.ctex
+res://.godot/imported/fence-1x4.fbx-56dcebe0423d15b2513561f5646cc188.scn
+res://.godot/imported/fence-1x4.glb-f18b8faf9999dca68afafe756e7c6f68.scn
+res://.godot/imported/fence-1x4.obj-a3900514c58f933b5785c5f565f7d114.mesh
+res://.godot/imported/fence-1x4.png-0f6d73329f138bb32fb270ad3e98835e.ctex
+res://.godot/imported/fence-2x2.fbx-c840adc1da488d414e54032252a6f7f2.scn
+res://.godot/imported/fence-2x2.glb-1bfacfd60c584b46c7afc3b17d6fcce6.scn
+res://.godot/imported/fence-2x2.obj-fe1863e8df742249f79925d9bc4efb24.mesh
+res://.godot/imported/fence-2x2.png-bacfd135241c124ff82fb85d420d3260.ctex
+res://.godot/imported/fence-2x3.fbx-563749f0e7372db1e076da838eb03e2c.scn
+res://.godot/imported/fence-2x3.glb-5692a1d86ff646bbe4f93cbe65f3e68e.scn
+res://.godot/imported/fence-2x3.obj-2407ed95b8ee1af95594d4e521cfc590.mesh
+res://.godot/imported/fence-2x3.png-2fdaa30181f2128e38e3c6e3bfdc505f.ctex
+res://.godot/imported/fence-3x2.fbx-06c1444d95dd2699d2a91846448cd5e1.scn
+res://.godot/imported/fence-3x2.glb-039159d4c23d9b0b733a5c02bfe9b048.scn
+res://.godot/imported/fence-3x2.obj-9f8812a218dac2d2251e460a5daabe1d.mesh
+res://.godot/imported/fence-3x2.png-822cf6724bcf67c1fc67369546042417.ctex
+res://.godot/imported/fence-3x3.fbx-265fc91fe62278b93ca01b0cfb76811c.scn
+res://.godot/imported/fence-3x3.glb-652493897b25b9d3ae236f405fafdb0b.scn
+res://.godot/imported/fence-3x3.obj-b389b2d7444ac56fe9fa6d210e86d02d.mesh
+res://.godot/imported/fence-3x3.png-6db9f8d5caaef1db6703a4156ca293db.ctex
+res://.godot/imported/fence-low.fbx-4bde396f76054ec6e856d940ec9a6af8.scn
+res://.godot/imported/fence-low.glb-7fa0b5da0a255e57640285a43c988628.scn
+res://.godot/imported/fence-low.obj-1c53db5f6b12aaf9c4842fe9e37d2a4a.mesh
+res://.godot/imported/fence-low.png-b30e640537fe3fe824316eba52494424.ctex
+res://.godot/imported/fence.fbx-5239446a6a65f721c89c4081b0bdebfb.scn
+res://.godot/imported/fence.glb-577ec1e60e1a4548cf3079c9c882fcc1.scn
+res://.godot/imported/fence.obj-631f7027581d1960780b98be9cb72d0a.mesh
+res://.godot/imported/fence.png-38c9b14439a1f60e56e573152e473d36.ctex
+res://.godot/imported/figurine-cube-detailed.glb-7c4c92cabdae3eaa581ba5160f4562ad.scn
+res://.godot/imported/figurine-cube.glb-8c63d83064a4e02b25c1f8c5bfa6c0f3.scn
+res://.godot/imported/figurine-large.glb-4812d209367dd8a55949f8cb6daf8dc6.scn
+res://.godot/imported/figurine.glb-aae3516c38c6a6f5745555efbcf1f651.scn
+res://.godot/imported/fish-bones.glb-5f04963284ccb173d976187789e0dae6.scn
+res://.godot/imported/fish.glb-2d805ab3e8425ac39c5c65e291ea30ef.scn
+res://.godot/imported/flag.glb-9931b56acbc0f09281356257ae1484d2.scn
+res://.godot/imported/floor-diagonal.glb-f93b4b6df8376715622b6d8ac3c0b255.scn
+res://.godot/imported/floor-small-diagonal.glb-124a1ee5e60bba10f5b0806068af041f.scn
+res://.godot/imported/floor-small-square.glb-6cf86e43941618b9e141f28331497f07.scn
+res://.godot/imported/floor-square.glb-7141ef532e6f94cbc3471ce0f79973a2.scn
+res://.godot/imported/floor-thick-corner-diagonal.glb-8c5ed86661d25ecca802cb41d6885d19.scn
+res://.godot/imported/floor-thick-corner-round.glb-51760f3acdd4753adf9cfe8c3724f330.scn
+res://.godot/imported/floor-thick-corner-rounded.glb-12942fdf594acedc4e1231bbdf003ded.scn
+res://.godot/imported/floor-thick.glb-0cb5b70c69ae0b3d6d0fe3b7d7ca9d97.scn
+res://.godot/imported/found_main.png-45e0f2d510b03390145704149f062437.ctex
+res://.godot/imported/frappe.glb-893eaf05b40e57a24a331496a357058f.scn
+res://.godot/imported/fries-empty.glb-bc802be882c5b6dda9c4c626d9631b67.scn
+res://.godot/imported/fries.glb-a9416762218aaae43426041a9620a84d.scn
+res://.godot/imported/frikandel-speciaal.glb-4f1cd6f7583a8a51f6e8b7383f9def80.scn
+res://.godot/imported/frying-pan-lid.glb-7f130fc25a733491d5d895c8d6f43732.scn
+res://.godot/imported/frying-pan.glb-95294829adab29cd66333854c68150f6.scn
+res://.godot/imported/game-over.mp3-20598a7395fac44388283207194f2874.mp3str
+res://.godot/imported/game-screen-scene.png-a1a2f1a6467bdd0b4054126d1b9e1e3b.ctex
+res://.godot/imported/game_easy.mp3-b3b1d183cd0ceb19af2d886380cc2ee5.mp3str
+res://.godot/imported/game_easy2.mp3-8988d4c822da7e639a21617064f85c64.mp3str
+res://.godot/imported/game_hard.mp3-f6f37448777a9b3c16602d28acdb0417.mp3str
+res://.godot/imported/game_hard2.mp3-9cbd25dd98834145d52e5e3c0e0a61ce.mp3str
+res://.godot/imported/game_mediun.mp3-72e08c53ffbdcc6a2e10393c9c13f7c5.mp3str
+res://.godot/imported/game_mediun_intro.mp3-3a1093e7ee5348d245dd646b5a3e7a3f.mp3str
+res://.godot/imported/game_over_screen.png-152ba983b2e0f67c6dc08a2ddd91d95a.ctex
+res://.godot/imported/ginger-bread-cutter.glb-dfe7934d461146b079d316f905452e62.scn
+res://.godot/imported/ginger-bread.glb-de4df178f51f694397dcb0dad8d5b704.scn
+res://.godot/imported/glass-wine.glb-d8695bde0126d629115d55a17d6a275d.scn
+res://.godot/imported/glass.glb-ccfbfbcba666c7f0afd8d700d66031df.scn
+res://.godot/imported/grapes.glb-926764285bc929e8214eaa37d89d9640.scn
+res://.godot/imported/grenade-a.fbx-ccf8394060cd790c24ad8fdca6e7a7bc.scn
+res://.godot/imported/grenade-a.glb-cc338bc6fea71c77fb3fc2e1d62fcb61.scn
+res://.godot/imported/grenade-a.obj-1d72f7ce5f108a330c647ba21a87115c.mesh
+res://.godot/imported/grenade-a.png-7ae6e011f8960f35ee8b9feaac1e7e34.ctex
+res://.godot/imported/grenade-b.fbx-a866fd3e6fba51472fed3a1e6cfc2b2c.scn
+res://.godot/imported/grenade-b.glb-e56b28ede94bbd9699c3b377fbeb4061.scn
+res://.godot/imported/grenade-b.obj-588c7161495284b374a1956496b1b0f5.mesh
+res://.godot/imported/grenade-b.png-2db5ff5ea00c6e2bad91a69823132a87.ctex
+res://.godot/imported/hat-cap.glb-34c89155be87befc3f18555291d4a466.scn
+res://.godot/imported/hat-hard.glb-b9cf5074fe8016e5c6234cd74d68b130.scn
+res://.godot/imported/honey.glb-1bf7d79c9a2af2d2797d3c55f233fb55.scn
+res://.godot/imported/hot-dog-raw.glb-6f898dd4de3fdffbacd858ba447c182c.scn
+res://.godot/imported/hot-dog.glb-63c6b2ec087fb305947d3b646c07bc73.scn
+res://.godot/imported/ice-cream-cne.glb-2798946849cb72269b91b51d5e92b693.scn
+res://.godot/imported/ice-cream-cup.glb-bd5d3807b3183024afd29394f3daa6b2.scn
+res://.godot/imported/ice-cream-scoop-chocolate.glb-7f9930a015301ad9edcf9b1249d31a80.scn
+res://.godot/imported/ice-cream-scoop-mint.glb-d5c17669dec69585e6199cd1e87b3cee.scn
+res://.godot/imported/ice-cream.glb-6dac86b36f07263af945fbe429d39be3.scn
+res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex
+res://.godot/imported/indicator-doorway.glb-e4c78cbf0b99ffc6cbc65d2c3f9cd348.scn
+res://.godot/imported/indicator-round-a.glb-29478d96a45f24f4947581eeb5b09e89.scn
+res://.godot/imported/indicator-round-b.glb-53e419afdfc285e2424e429ab37461d6.scn
+res://.godot/imported/indicator-round-c.glb-2332ead3c7d35dd0f18ef912a27971f4.scn
+res://.godot/imported/indicator-round-d.glb-51f1b7f0d088d3d11643266da7de8ecd.scn
+res://.godot/imported/indicator-round-e.glb-734ac5f2148c0e2074097acc599c75b9.scn
+res://.godot/imported/indicator-round-f.glb-a93284b224113ff0d7f0872bda469227.scn
+res://.godot/imported/indicator-special-area.glb-049b8f9f8adb13ab18f08adca4682a8e.scn
+res://.godot/imported/indicator-special-arrow.glb-d61aea16061c19caa1b30282b95c6615.scn
+res://.godot/imported/indicator-special-cross.glb-3b4cca4a4f6854d053ee48137169cd5c.scn
+res://.godot/imported/indicator-special-lines.glb-91e3e7ff002e3e03b2998fea839418d2.scn
+res://.godot/imported/indicator-square-a.glb-f0a6197e1c8311f4655c4d2df150f042.scn
+res://.godot/imported/indicator-square-b.glb-2bc90689412f4ebb10eb70be1feecad2.scn
+res://.godot/imported/indicator-square-c.glb-e9351ee094eaf322c5d14bf09f38b7b4.scn
+res://.godot/imported/indicator-square-d.glb-53e530d9c97e1d1f9c80cb69e3daa9d0.scn
+res://.godot/imported/indicator-square-e.glb-4d19c9e756fa1330c80d2e84ff981b03.scn
+res://.godot/imported/indicator-square-f.glb-0bbf051e721f6f977e6d13204e2587d1.scn
+res://.godot/imported/knife-block.glb-53997309513662280f1ae87042490a86.scn
+res://.godot/imported/ladder-color.glb-ba6b909f131dbce64f9206d90398ea1b.scn
+res://.godot/imported/ladder-top.glb-3fc08a8df6d762864efaf877cad3246e.scn
+res://.godot/imported/ladder.glb-5e8c3b4715d4e4794860fbd31f3458ec.scn
+res://.godot/imported/leek.glb-48d03f64b7a02b3c5ec33527a209e7f5.scn
+res://.godot/imported/lemon-half.glb-03505fc94813a1192f8cf7daefc849c8.scn
+res://.godot/imported/lemon.glb-c2c6f648bf825091bf24ea058fb99749.scn
+res://.godot/imported/level-select.png-5096d180a4198e5a2941cad953f448fa.ctex
+res://.godot/imported/lever-double.glb-99f824f878a60c5d32e8f6c8ee9a1f1e.scn
+res://.godot/imported/lever-single.glb-bc76be8540d21d4cefb2a7f890f50876.scn
+res://.godot/imported/loaf-baguette.glb-b8698ac81484ca26628e8ea84932c832.scn
+res://.godot/imported/loaf-round.glb-9aed1d3dc267caf82cc6f88ab4d3c716.scn
+res://.godot/imported/loaf.glb-6305774b679870f2fd0fa05b6bade138.scn
+res://.godot/imported/lollypop.glb-65b008e55203ceaf2c26efb91017e694.scn
+res://.godot/imported/main-menu.png-9a6b95351dd7e3023236908dc71c1146.ctex
+res://.godot/imported/main_music.mp3-d267028a76e801f51aaf6ea62fc7e2a6.mp3str
+res://.godot/imported/maki-roe.glb-f73d0be232f33aee7352971e3a3c3760.scn
+res://.godot/imported/maki-salmon.glb-d2083acc4b7a0f2a66c6d20c77670585.scn
+res://.godot/imported/maki-vegetable.glb-3655c06faeabebcac242519817c4d2c4.scn
+res://.godot/imported/meat-cooked.glb-92ae0c02a7bb1ad2250ca854497f5efe.scn
+res://.godot/imported/meat-patty.glb-060d9baf531acea2e2d375cf22a95afe.scn
+res://.godot/imported/meat-raw.glb-3e4d38ba28269797f84fd6968a5d26c6.scn
+res://.godot/imported/meat-ribs.glb-d0e6621fbabb897099527e88b2d5b6aa.scn
+res://.godot/imported/meat-sausage.glb-6f788ee1f2cf46c647d2ba8597223d47.scn
+res://.godot/imported/meat-tenderizer.glb-6452750131ac66f535998c7363031329.scn
+res://.godot/imported/mincemeat-pie.glb-d635f689156a1d65f63996ba12803689.scn
+res://.godot/imported/miss-life.mp3-3a99cd08b88fb791a26fe88766f31258.mp3str
+res://.godot/imported/mortar-pestle.glb-60820bbcf89a399de38d77d0d1d59cb7.scn
+res://.godot/imported/mortar.glb-b4f5cf0d8b1778a2ce16b3e2db723f1c.scn
+res://.godot/imported/muffin.glb-a7d3a8c8b9197e48a7d018c50c166b82.scn
+res://.godot/imported/mug.glb-a296223486b749f9d38b2209891e23e9.scn
+res://.godot/imported/mushroom-half.glb-a0a222f15232393a54f16a19612ac310.scn
+res://.godot/imported/mushroom.glb-a93fb19cbff160d92babe69d31d38a6e.scn
+res://.godot/imported/mussel-open.glb-828755ec2ba729da239c6d1a8206346a.scn
+res://.godot/imported/mussel.glb-f19ec3d916f552a9f1897adc058c236a.scn
+res://.godot/imported/number-0.glb-3ffee264963675190a4d5284ba80907b.scn
+res://.godot/imported/number-1.glb-e003f11f3c3ec61111de84aa18b37222.scn
+res://.godot/imported/number-2.glb-a244c68a3071a4bcee6059f5e92375fc.scn
+res://.godot/imported/number-3.glb-5623d11ca417e3986dc5936af752751d.scn
+res://.godot/imported/number-4.glb-c8c15b379a0f76c4deebe3a4b59c687d.scn
+res://.godot/imported/number-5.glb-356c2edca6d76694594aaa887e8fbd1d.scn
+res://.godot/imported/number-6.glb-1f935ca0a5a1d4ab3674c92836f53b4d.scn
+res://.godot/imported/number-7.glb-7abb92ac79c27be9c42ef69395c1e393.scn
+res://.godot/imported/number-8.glb-84174a8618df7e623b02115c1c0860f2.scn
+res://.godot/imported/number-9.glb-7d96678048ff93fe877eac1c7690b4f0.scn
+res://.godot/imported/number-double-0.glb-1e714e15b57a9113fae329042458b3f2.scn
+res://.godot/imported/number-double-1.glb-353964f52c2a96274a06c178c7e77346.scn
+res://.godot/imported/number-double-2.glb-2f3996db51b16769f76588a9c2a0a251.scn
+res://.godot/imported/number-double-3.glb-4019eb9d4f824ac69ace8e30c729375c.scn
+res://.godot/imported/number-double-4.glb-5a3da00a0d294c6567bfdb1dd4dfd370.scn
+res://.godot/imported/number-double-5.glb-b1ca8d4d32a3e8f432d6a69a0b8f5a04.scn
+res://.godot/imported/number-double-6.glb-f32f15d33043d914fab56bca0fa5b92d.scn
+res://.godot/imported/number-double-7.glb-21eb74f6f30dd185531ac4ee6d0022e8.scn
+res://.godot/imported/number-double-8.glb-ee66ca9f76acfb6551101b6b4f66a746.scn
+res://.godot/imported/number-double-9.glb-18bfcbf48db3f329878b9c75558f5d41.scn
+res://.godot/imported/onion-half.glb-ea3745dfed2bf5d8e5c7cbc7336bd618.scn
+res://.godot/imported/onion.glb-f0efe9294719b4d05f3d4c920002eaee.scn
+res://.godot/imported/orange.glb-e02220307141a3a9a03bf0904ac5599d.scn
+res://.godot/imported/pan-stew.glb-e0063dce348a208f0bdc7e11eca8d0a6.scn
+res://.godot/imported/pan.glb-6350ac3ce776db106828e358306e5b92.scn
+res://.godot/imported/pancakes.glb-cd9d354d4d7d1db147edf317d3987507.scn
+res://.godot/imported/paprika-slice.glb-0ea810be59d2dac5a565d2d5753630bf.scn
+res://.godot/imported/paprika.glb-1af12d6254a03fc3be100e3e578b3329.scn
+res://.godot/imported/path-long.fbx-733e8b9fd4f01ce0bb7718a4121cee39.scn
+res://.godot/imported/path-long.glb-6cb23e70687cc43fd1b9c9d560b47195.scn
+res://.godot/imported/path-long.obj-c4ade013406b89f5716dad8a318799af.mesh
+res://.godot/imported/path-long.png-507921e507fc3713d4f064f9e45d9460.ctex
+res://.godot/imported/path-short.fbx-e114f83b922a69c0d2e17ee27648c840.scn
+res://.godot/imported/path-short.glb-ec52a9351597d1a12da4e67735cb0425.scn
+res://.godot/imported/path-short.obj-90f7e2f0ae0acffeb45c71000bc99074.mesh
+res://.godot/imported/path-short.png-d7e0a2c8d9f4303d0f5f67daca632399.ctex
+res://.godot/imported/path-stones-long.fbx-26df29bf9ad4b5f1d1647997d74ce017.scn
+res://.godot/imported/path-stones-long.glb-f678f9e01e4658f861c3c54ed6a10aec.scn
+res://.godot/imported/path-stones-long.obj-5b0f920e712c03a4cf4e8caacc4bccef.mesh
+res://.godot/imported/path-stones-long.png-fb05dff4d03c98448a35ba7bf6f4f0c6.ctex
+res://.godot/imported/path-stones-messy.fbx-fa34f479d892d6a8a561d07bc18d7ead.scn
+res://.godot/imported/path-stones-messy.glb-44453e29bbbbcb8ea5be8f9dc80fd6a5.scn
+res://.godot/imported/path-stones-messy.obj-73d53f2eb98b0c70d8d1dd80358d999e.mesh
+res://.godot/imported/path-stones-messy.png-aaf6a4da6f85571b00b42df0ebc52904.ctex
+res://.godot/imported/path-stones-short.fbx-3ed98c042f2a616abbdc49c5028e1530.scn
+res://.godot/imported/path-stones-short.glb-86daff06c35325094658742b0c8806ee.scn
+res://.godot/imported/path-stones-short.obj-577881e9020356ab261711e5fb266912.mesh
+res://.godot/imported/path-stones-short.png-1ad6cb9f83a15f106d07401c20fa187e.ctex
+res://.godot/imported/pause-menu-screen.png-9b5c7045c66b2c7dcc2e8fcc901344a9.ctex
+res://.godot/imported/peanut-butter.glb-04cea020d09e53cb618e43d6a2fefe48.scn
+res://.godot/imported/pear-half.glb-239d6d68c411d7f23cb82cda0d557d50.scn
+res://.godot/imported/pear.glb-b7514b8328a3ca51b018569119c99390.scn
+res://.godot/imported/pepper-mill.glb-a954e4086882e5ee2dfc9a21b7e5626a.scn
+res://.godot/imported/pepper.glb-2cc02b82d06618087eacb3450e450b83.scn
+res://.godot/imported/pie.glb-bc3ff4aff22f76f3ec24e4dd61676c0a.scn
+res://.godot/imported/pineapple.glb-0c34ca802f68bb0f78d5097fb77803b3.scn
+res://.godot/imported/pipe-corner.glb-3e417122cc9a8d72e122e0324864c52d.scn
+res://.godot/imported/pipe-half-section.glb-dfe3141c20e7f56a932873a632c1429b.scn
+res://.godot/imported/pipe-half.glb-d6c3a216b9a2da6b06b872cec0d91b87.scn
+res://.godot/imported/pipe-section.glb-4be406d57ae87c7a861f2e6618fbe57d.scn
+res://.godot/imported/pipe-split.glb-eb3f4d47cdce920c13843d659c30d4b6.scn
+res://.godot/imported/pipe.glb-1f30fc478440adfe8899e272a76f83bc.scn
+res://.godot/imported/pixel game font 1.jpg-94a965e7988942812b211656359bc7fe.ctex
+res://.godot/imported/pixel game font 10.jpg-b458fba6b01084d51f762eff0516fcc9.ctex
+res://.godot/imported/pixel game font 2.jpg-5ffcb13dee8b4874fc23c23442aaace3.ctex
+res://.godot/imported/pixel game font 3.jpg-c9f7fae28dc07eb5b98cf7d534cc21de.ctex
+res://.godot/imported/pixel game font 4.jpg-1020b71a2e197a478dc12ba70653b137.ctex
+res://.godot/imported/pixel game font 5.jpg-32cde24e9d4c2cd7cf2c7fac7c777d6e.ctex
+res://.godot/imported/pixel game font 6.jpg-be45d5f3afc4b3180e5641999996d3ba.ctex
+res://.godot/imported/pixel game font 7.jpg-1f540f14b8ef4fbae4b59e0d22ffce1d.ctex
+res://.godot/imported/pixel game font 8.jpg-21488bedffed18bb8ad17f9455417649.ctex
+res://.godot/imported/pixel game font 9.jpg-7d27ae5993d305120a58bd76505bc13d.ctex
+res://.godot/imported/pixil-frame-0.png-75e20ac2f8aff7c99bcd48c9140ec61f.ctex
+res://.godot/imported/pizza-box.glb-bedab6e7a08c91d625d0229b7d103d10.scn
+res://.godot/imported/pizza-cutter.glb-d74467bf1a5eecb59950d6742b533140.scn
+res://.godot/imported/pizza.glb-9fa0f83bc7af35b9415daff959595e59.scn
+res://.godot/imported/planter.fbx-6752ffb7732d53c41962a1afe5f30b2e.scn
+res://.godot/imported/planter.glb-149c93c082d2c309ca68adff36eb8d67.scn
+res://.godot/imported/planter.obj-d877d31c35fbeacdcafe202773c4f8cc.mesh
+res://.godot/imported/planter.png-ebc1962091de234f19fe1adc69d92105.ctex
+res://.godot/imported/plate-broken.glb-7df9a3a4726ac948ec8aaddfe584fe9a.scn
+res://.godot/imported/plate-deep.glb-c145ee241ee3ed6f0e5c63d4b8502e90.scn
+res://.godot/imported/plate-dinner.glb-136967be717f4a3f5e5dcdb62798f82e.scn
+res://.godot/imported/plate-rectangle.glb-d736b7092acdedf98f787e4b90a90a1b.scn
+res://.godot/imported/plate-sauerkraut.glb-a758012dc70011a2013a8527dba3a3c5.scn
+res://.godot/imported/plate.glb-0f3b5d119e4b8e6a5afafdec86d9656d.scn
+res://.godot/imported/popsicle-chocolate.glb-ed83e81f8f7329e0ffb08169e0257596.scn
+res://.godot/imported/popsicle-stick.glb-dca230cf3d09b9c5d1368ae280d3142f.scn
+res://.godot/imported/popsicle.glb-b342907a5f4973d9613beb08e5884318.scn
+res://.godot/imported/pot-lid.glb-25de78818a30d05ef2d05b608b51a107.scn
+res://.godot/imported/pot-stew-lid.glb-d693af7e626d90b731a4c25c7ca0db4b.scn
+res://.godot/imported/pot-stew.glb-581a3ce6973602bd6f577d60a8e0e1a8.scn
+res://.godot/imported/pot.glb-1766b7ae8214a6e3ca938b8a87eeecb8.scn
+res://.godot/imported/pudding.glb-3c817be7cd4993b43bc001962f3062d6.scn
+res://.godot/imported/pumpkin-basic.glb-aa46bf7c5a152a5c19a3ac954ca94fee.scn
+res://.godot/imported/pumpkin.glb-89e5c6eb2c629751cd99bd14ba68d1e9.scn
+res://.godot/imported/q-key.png-bec9d8e0fc6868daa42ce71a744ca081.ctex
+res://.godot/imported/radish.glb-cdf80e73ad6c49edae3bb96b0b235c49.scn
+res://.godot/imported/rice-ball.glb-39dd304bcc5e5765a8c8e6cb7e2e64fc.scn
+res://.godot/imported/rollingPin.glb-70da6e59389d8231ad5b1a05fe6a4fe9.scn
+res://.godot/imported/salad.glb-a2546023ab45d646fc3f711f4c370a23.scn
+res://.godot/imported/sandwich.glb-4d68276e484e77013b9a154579332e8f.scn
+res://.godot/imported/sausage-half.glb-c3edf510e0da7c8c8f3406f2b640bd2a.scn
+res://.godot/imported/sausage.glb-0d0e27d64ef5d44439f177e93731d991.scn
+res://.godot/imported/scope-large-a.fbx-a84babfc4182ec530a68c1a5cb955ef9.scn
+res://.godot/imported/scope-large-a.glb-ddb6c62f3013e60387c6e117e7ccbfc9.scn
+res://.godot/imported/scope-large-a.obj-c308d5382823e83a36ea751fc34c9416.mesh
+res://.godot/imported/scope-large-a.png-fbeaf03438e37c31480d152f834dfda8.ctex
+res://.godot/imported/scope-large-b.fbx-39fb7e65f3048dc7d3f90b0e72d38ee0.scn
+res://.godot/imported/scope-large-b.glb-8fe583b63650da10acb3ee65d80ec687.scn
+res://.godot/imported/scope-large-b.obj-cf609d256cfccd7e8f8395c46ca57893.mesh
+res://.godot/imported/scope-large-b.png-52cbf1502795b95f5b53a08ddae4ae60.ctex
+res://.godot/imported/scope-small.fbx-beeb2ed89774f17c8b1673edf0827de2.scn
+res://.godot/imported/scope-small.glb-0349e57d4d2c153302abae496777d7c9.scn
+res://.godot/imported/scope-small.obj-e423cd60e988ce46bfa2a9818266cbcf.mesh
+res://.godot/imported/scope-small.png-5f3d46b1716234e7b74dd3d139c675b2.ctex
+res://.godot/imported/shaker-pepper.glb-abd9aac60d46fb1e8c28e777c44b64e3.scn
+res://.godot/imported/shaker-salt.glb-39f90799dd4181ba6db88f2e2e482316.scn
+res://.godot/imported/shape-cube-half.glb-0237a19fcb41c2db09622c7a59379afe.scn
+res://.godot/imported/shape-cube-rounded.glb-af3e58fb4645227a5e011414b8c3f667.scn
+res://.godot/imported/shape-cube.glb-dd63f82e94c82d38771470e6abc0f983.scn
+res://.godot/imported/shape-cylinder-detailed.glb-27c820bda12d8bffef1ff47a6a9f2ca9.scn
+res://.godot/imported/shape-cylinder-half-detailed.glb-c9f9c5b584a2759769bc8ff46b200256.scn
+res://.godot/imported/shape-cylinder-half.glb-11dbdcf050188e67b77698d8377751a3.scn
+res://.godot/imported/shape-cylinder.glb-cd4a2a9ebb7bb09a4a05934c32521c9e.scn
+res://.godot/imported/shape-hexagon-half.glb-8a2c44346676b216f1c1d3afcef571c7.scn
+res://.godot/imported/shape-hexagon.glb-f955dc5c242d8bd3cb0d0cac92027258.scn
+res://.godot/imported/shape-hollow-cylinder-detailed.glb-2f6c784e66ec0b747b5a0aca6d52874d.scn
+res://.godot/imported/shape-hollow-cylinder-half-detailed.glb-1976b710fee618334a854c57df0b5d8f.scn
+res://.godot/imported/shape-hollow-cylinder-half.glb-463fc4cddd7017c1ec13b26fd164aa9f.scn
+res://.godot/imported/shape-hollow-cylinder.glb-89192428aab8958a1e2400e84c48ed66.scn
+res://.godot/imported/shape-hollow-hexagon-half.glb-ed096533900121a8b99f2d51d34d1998.scn
+res://.godot/imported/shape-hollow-hexagon.glb-a1d23d6686b8f20904e91dd21a4d9c57.scn
+res://.godot/imported/shape-slope.glb-a596bbc2f3f4edebccac53858f312aa7.scn
+res://.godot/imported/shape-triangular-prism-low.glb-6bcbb24fa4da563b23d2d68d5bdf3284.scn
+res://.godot/imported/shape-triangular-prism.glb-80c9e01324a52da86318aa4a0febf250.scn
+res://.godot/imported/shoot-arma-blaster-a.mp3-5ff01cf8372a6d69eee7906afb24018d.mp3str
+res://.godot/imported/shoot-blaster-b.mp3-c8063df89c50594ad95dd3230b5da42a.mp3str
+res://.godot/imported/shoot-blaster-d.mp3-17d627eccfb1b449451e9511910d1b15.mp3str
+res://.godot/imported/shoot-blaster-i.mp3-c31b834ef3beda6e339b640ba7ccf5b6.mp3str
+res://.godot/imported/silencer-larger.fbx-499b827e7b59ce74ff7e4800b18a2902.scn
+res://.godot/imported/silencer-larger.glb-f2c7b1c74373a42e48b16aeedc1b56c0.scn
+res://.godot/imported/silencer-larger.obj-85af2a48068bc326bf0c650bcbc80163.mesh
+res://.godot/imported/silencer-larger.png-3f6f046047e768f7903928e8127a99a1.ctex
+res://.godot/imported/silencer-small.fbx-29b7e585507d8c83c5c2d5456021f879.scn
+res://.godot/imported/silencer-small.glb-d65ae54087012be23ed02ca0976e811e.scn
+res://.godot/imported/silencer-small.obj-9965b2fdcd851e9b8d1e467a9f51ca0a.mesh
+res://.godot/imported/silencer-small.png-5eb5ef95c749c7b3bd89eaf66562ac85.ctex
+res://.godot/imported/skewer-vegetables.glb-ccb1782f00211d0f7759509756b62bf3.scn
+res://.godot/imported/skewer.glb-107718af339cc80ccf698266d7c65dae.scn
+res://.godot/imported/smoke.fbx-8e451a5fddea4466eaf22849bc1d117e.scn
+res://.godot/imported/smoke.glb-7c3303f64d6611230d3b8577e050e5fc.scn
+res://.godot/imported/smoke.obj-c3ddb07f962b008d9d92d6576016bde2.mesh
+res://.godot/imported/smoke.png-1a9215ebb803ac8c75b0ebae7732d273.ctex
+res://.godot/imported/soda-bottle.glb-bbaf3e82a9646356a19e99518163b829.scn
+res://.godot/imported/soda-can-crushed.glb-f071968ffb49a98b3434165225c72621.scn
+res://.godot/imported/soda-can.glb-aea4024c6f135a63c26497d0aa26d6fb.scn
+res://.godot/imported/soda-glass.glb-e0cb2432a7f571575b0a60cc0e64789c.scn
+res://.godot/imported/soda.glb-dd18610c58de0ee880905661ccaa352f.scn
+res://.godot/imported/soy.glb-faa653235fb222c1b144cdc40788f8e4.scn
+res://.godot/imported/stairs-diagonal-narrow.glb-446c8b199248756b8d172b55352cc21c.scn
+res://.godot/imported/stairs-diagonal-small-narrow.glb-26c04dd025943990fba9edf958ec465b.scn
+res://.godot/imported/stairs-diagonal-small.glb-ad65d6b603420f0fa491a2f64092de37.scn
+res://.godot/imported/stairs-diagonal.glb-efa6fd1ec24fcecf5bd7c0b4e329a1eb.scn
+res://.godot/imported/stairs-narrow.glb-a3f9ae7c4ab5b3cdd96426e07b721049.scn
+res://.godot/imported/stairs-small-narrow.glb-472919e813b2c8d1f22bc8329b96d5a6.scn
+res://.godot/imported/stairs-small.glb-38a01e34fb5f7990913d4ce9683e8e5a.scn
+res://.godot/imported/stairs.glb-2b953f842c573a475598ad57648e3d91.scn
+res://.godot/imported/steamer.glb-00dc760f3bb6328688cfdbf07cbd18f7.scn
+res://.godot/imported/strawberry.glb-6bf2fdf4dcfad0e5e8757be940c6d7d3.scn
+res://.godot/imported/styrofoam-dinner.glb-40374bc452421ff681861a9bc0401d66.scn
+res://.godot/imported/styrofoam.glb-99be9d82464a270023a1163b3363c52d.scn
+res://.godot/imported/sub.glb-5c7ead59dad972bfe28e6caf67106f05.scn
+res://.godot/imported/sundae.glb-bf923c00097e55c7d7644864f014eb4a.scn
+res://.godot/imported/sushi-egg.glb-f5c18fd4e0dc2058d910a7299d470a0f.scn
+res://.godot/imported/sushi-salmon.glb-14f86cfe0a74cbeafc84ed855d488c64.scn
+res://.godot/imported/taco.glb-c4b5f3641f2125b1ccbba496e5c0020d.scn
+res://.godot/imported/tajine-lid.glb-6facd9c223f2f803743f561c65d1943c.scn
+res://.godot/imported/tajine.glb-cd0ad206b660e5ae8d640c10e82cfa28.scn
+res://.godot/imported/target-a-round.glb-4dc69c2266b67631e5b4f378046769ea.scn
+res://.godot/imported/target-a-square.glb-7f3e70b34990f5ee797c723afaf9e92d.scn
+res://.godot/imported/target-b-round.glb-d11d2874cdda12a61bfe084a37bd3db6.scn
+res://.godot/imported/target-b-square.glb-bb46585b61a73eba65981ac3cf51632d.scn
+res://.godot/imported/target-detail.fbx-bf9f263fdfd9dd54e858d7f6643fb7b5.scn
+res://.godot/imported/target-detail.glb-cc6f125da6a5b6e834ab64d9002a1d1f.scn
+res://.godot/imported/target-detail.obj-0077324df7e0ba3a6840fb5d130ed4ae.mesh
+res://.godot/imported/target-detail.png-343267e02b985660c67a4a508ea48bb3.ctex
+res://.godot/imported/target-fragment-large.fbx-3414da361fc71004121cadd43f69927c.scn
+res://.godot/imported/target-fragment-large.glb-48f86bf66621a500dba00c16cfa2ee65.scn
+res://.godot/imported/target-fragment-large.obj-9a8225b840cc5f0c4b051e040c87cb37.mesh
+res://.godot/imported/target-fragment-large.png-4f8a7c2525d9258bfd289a6a8c96f9bf.ctex
+res://.godot/imported/target-fragment-small.fbx-0417ef2049654f97be065508b4ba3c45.scn
+res://.godot/imported/target-fragment-small.glb-4e5f1d9c71369312fd18d7026dc07fba.scn
+res://.godot/imported/target-fragment-small.obj-b8acb6f1148888c9cc8b6b2532a08a7a.mesh
+res://.godot/imported/target-fragment-small.png-3b003b4827b436f2cb8147a1263dc913.ctex
+res://.godot/imported/target-large.fbx-da170361319b326455c6db1bd43c9ddd.scn
+res://.godot/imported/target-large.glb-75df9d5dc7f251dee2ebf0ae032e548d.scn
+res://.godot/imported/target-large.obj-b4fe0e581bd0b6133c867204ace23f56.mesh
+res://.godot/imported/target-large.png-c473a67b42df88db8144fc8a3efd47ea.ctex
+res://.godot/imported/target-small.fbx-e38a36a88c6b369fddeafa5f94ef73a4.scn
+res://.godot/imported/target-small.glb-eeddc5b1d87870ea5b1831ffc2aef9ab.scn
+res://.godot/imported/target-small.obj-4c8a9bd5c957ac6c99498b89902a15ec.mesh
+res://.godot/imported/target-small.png-575c3c67230ec62f00a0384d651a2706.ctex
+res://.godot/imported/texture-a.png-eb7733e53074b5547460402962a9280f.s3tc.ctex
+res://.godot/imported/texture-b.png-73da0f29bf33f70c8a9fbe0f8f1360d6.s3tc.ctex
+res://.godot/imported/texture-c.png-02fbcca4956ca1a1214b866111207cd5.s3tc.ctex
+res://.godot/imported/texture-d.png-e8c3310480ff583e24945ea4dd548c99.s3tc.ctex
+res://.godot/imported/texture-e.png-d309628ad8e12e6f9aa2e7db83a26a5c.s3tc.ctex
+res://.godot/imported/texture-f.png-9e03ff0e0cd1520689b1469f05659898.s3tc.ctex
+res://.godot/imported/texture-g.png-2ff5e2e57efdc6089b8510a4fa336c8b.s3tc.ctex
+res://.godot/imported/texture-h.png-77984fd5b4feadae2d9f35f6c7aa4499.s3tc.ctex
+res://.godot/imported/texture-i.png-fb9f7d7d800d01d36160488be983ad31.s3tc.ctex
+res://.godot/imported/texture-j.png-71f026ae31f35f9c774d8bb9b1f9e207.s3tc.ctex
+res://.godot/imported/texture-k.png-948764aa6f8b163be5a33e7e8f20304a.s3tc.ctex
+res://.godot/imported/texture-l.png-231ab6948a8a534cba6216e9354e8a7a.s3tc.ctex
+res://.godot/imported/texture-m.png-689adac7b1b9a7228ec128a5d0153d27.s3tc.ctex
+res://.godot/imported/texture-n.png-0afe245fd380897154bc3557c24e02b2.s3tc.ctex
+res://.godot/imported/texture-o.png-da6aa157c857073f2385094e4dbdc44a.s3tc.ctex
+res://.godot/imported/texture-p.png-fd1ce4518ad5e7927ef712140395601d.s3tc.ctex
+res://.godot/imported/texture-q.png-4c611890501595c4d8e1ae977ecce455.s3tc.ctex
+res://.godot/imported/texture-r.png-9766d16c053816cb43347b67855ebd69.s3tc.ctex
+res://.godot/imported/title_main.png-b2fb37e5e228f1e7c1514ee77ac1103b.ctex
+res://.godot/imported/tomato-slice.glb-2997dac83ed60a008cba681fffd90fdc.scn
+res://.godot/imported/tomato.glb-4a6ea727bf9de17138943ecf058965bf.scn
+res://.godot/imported/tree-large.fbx-2ded880ccc4e63eafc5ed2eeba28a5d2.scn
+res://.godot/imported/tree-large.glb-3cd84d960ae5a5af2e2a8a3781ccf013.scn
+res://.godot/imported/tree-large.obj-3d0d9227510d0df7c79d00485197e646.mesh
+res://.godot/imported/tree-large.png-7c61c9a0685d29d53e2c0fda1ba1e977.ctex
+res://.godot/imported/tree-small.fbx-19adceec748e83942ca0774a78b67a2e.scn
+res://.godot/imported/tree-small.glb-4440e44d5450c36536cb9d28056c9c2e.scn
+res://.godot/imported/tree-small.obj-e8ab642f90ad73e97de5c9f4ae768660.mesh
+res://.godot/imported/tree-small.png-4ed5ab9010ccce0bbc19b89779cc28cb.ctex
+res://.godot/imported/turkey.glb-703845fabd855c7b0b2def5b7ddfd288.scn
+res://.godot/imported/utensil-fork.glb-83a6d5f1eed3154b43930c339bf78076.scn
+res://.godot/imported/utensil-knife.glb-27e66ec0da9aa03eb5b41cc9ef51706c.scn
+res://.godot/imported/utensil-spoon.glb-138c58e11a02f236e0def7a4c1e8f9b5.scn
+res://.godot/imported/variation-a.png-9f6251786f8ad5385cdb00bca931d74c.ctex
+res://.godot/imported/variation-a.png-c4fc020bf522baa1d33738654463d009.ctex
+res://.godot/imported/variation-b.png-8e4c5a67fe13ee1796f89f11471a2f46.ctex
+res://.godot/imported/variation-c.png-a7c89c3c25e492dbcfb9c5038fa0b886.ctex
+res://.godot/imported/vehicle-convertible.glb-88730dbc3a45639ea1a245a4c0dbb720.scn
+res://.godot/imported/vehicle.glb-86d295f3e072d8791a5dfe36f4f2e5fa.scn
+res://.godot/imported/waffle.glb-6e763a720e7e0a6f687e290690643103.scn
+res://.godot/imported/wall-corner-low.glb-987e3d0206c8b7dc8f09f100d27c6a39.scn
+res://.godot/imported/wall-corner-rounded-low.glb-2de2f6db410a9867b0c5dcb3a4b4d11d.scn
+res://.godot/imported/wall-corner-rounded.glb-b647cfc1fc78a229cc047306bd9d4446.scn
+res://.godot/imported/wall-corner.glb-13b76fb2ee25999e6ca69cb6d350ae09.scn
+res://.godot/imported/wall-diagonal-low.glb-2623f10a1b337867c58f28c2150ed988.scn
+res://.godot/imported/wall-diagonal.glb-cd07713072a7b8b69c75e0d1ab535f2f.scn
+res://.godot/imported/wall-doorway-garage.glb-b7eacde6370f08bf8f9573a050dd2417.scn
+res://.godot/imported/wall-doorway-round.glb-696c4767ae534a83ad5ab48c4e933d12.scn
+res://.godot/imported/wall-doorway-sliding.glb-93860426f0729f4d698c87d737252cd3.scn
+res://.godot/imported/wall-doorway-wide-sliding.glb-ab9e2e7daccf17fc80288e2b02f2ef18.scn
+res://.godot/imported/wall-doorway-wide.glb-23d9cb683d4d00d0c79d036e36fdd922.scn
+res://.godot/imported/wall-doorway.glb-7d5c510e81af5aed5fe637895c53d4b0.scn
+res://.godot/imported/wall-low.glb-6780b72cd614a7983fffbe7ec96cc087.scn
+res://.godot/imported/wall-round-low.glb-195fa8c0bb221e3c6ea442319f83728e.scn
+res://.godot/imported/wall-round.glb-4841f75b623fad78a8af4cdab0b1b5fa.scn
+res://.godot/imported/wall-window-barred-large.glb-0d40a68684e82085b5abc91bba37d103.scn
+res://.godot/imported/wall-window-barred-medium.glb-d68a8974fb08573e3259602bdd0c3b5b.scn
+res://.godot/imported/wall-window-barred-small.glb-4891e7319196ece779d4161f9baa8cd1.scn
+res://.godot/imported/wall-window-cutout-large.glb-72c47c097b81c5c473613b6344eb8f23.scn
+res://.godot/imported/wall-window-cutout-medium.glb-4344745a92612d073cc89fa978f11fd3.scn
+res://.godot/imported/wall-window-cutout-small.glb-0571a849e2c9691f3bd66e75611ce8b8.scn
+res://.godot/imported/wall-window-large.glb-aa93038eecad7b2c62f0d15d92b5c4db.scn
+res://.godot/imported/wall-window-medium.glb-a8d588f8bcb19de9f4564a6bbd4a580f.scn
+res://.godot/imported/wall-window-small.glb-d59c1a39138558c7c2b6c8d7ed4f700a.scn
+res://.godot/imported/wall.glb-2d84728aa4b269601a0c2b3d81feb6b0.scn
+res://.godot/imported/watermelon.glb-6583d00a1416f107becc722c8bdd7c84.scn
+res://.godot/imported/weapon-menu-and-amplifier-damage.png-eb54ffad0951b752bbdaa9df6195894b.ctex
+res://.godot/imported/weapon-shield.glb-cfbca9a5c200ec3aef3f11dd7051d551.scn
+res://.godot/imported/weapon-sword.glb-447c7e8a9b9a288d63d44a5c3ec1213b.scn
+res://.godot/imported/wheelchair.glb-55b183cdbb7bfb9a66bb98160cf81dd2.scn
+res://.godot/imported/whipped-cream.glb-45bf666a331d57c730b52e6e8d902fcb.scn
+res://.godot/imported/whisk.glb-8c1bf759a08da3322e919d8e9ee69201.scn
+res://.godot/imported/whole-ham.glb-d15166733d14dac8bc56e2d3d390a472.scn
+res://.godot/imported/wholer-ham.glb-6728639a5a0c48bc483fbf5dfd8ee5bd.scn
+res://.godot/imported/wine-red.glb-f81d120a56017994822b25f0ec18ff84.scn
+res://.godot/imported/wine-white.glb-040a1087ce621fe1e253fa784f902f24.scn
+res://.godot/global_script_class_cache.cfg
+res://.godot/uid_cache.bin
+res://assets/-mobs-obstacles/Textures/colormap.png.import
+res://assets/-mobs-obstacles/Preview.png.import
+res://assets/-mobs-obstacles/animal-bison.glb.import
+res://assets/-mobs-obstacles/animal-dog.glb.import
+res://assets/-mobs-obstacles/animal-horse.glb.import
+res://assets/-mobs-obstacles/button-floor-round-small.glb.import
+res://assets/-mobs-obstacles/button-floor-round.glb.import
+res://assets/-mobs-obstacles/button-floor-square-small.glb.import
+res://assets/-mobs-obstacles/button-floor-square.glb.import
+res://assets/-mobs-obstacles/coin.glb.import
+res://assets/-mobs-obstacles/column-low.glb.import
+res://assets/-mobs-obstacles/column-rounded-low.glb.import
+res://assets/-mobs-obstacles/column-rounded.glb.import
+res://assets/-mobs-obstacles/column-triangle-low.glb.import
+res://assets/-mobs-obstacles/column-triangle.glb.import
+res://assets/-mobs-obstacles/column.glb.import
+res://assets/-mobs-obstacles/crate-color.glb.import
+res://assets/-mobs-obstacles/crate.glb.import
+res://assets/-mobs-obstacles/door-garage.glb.import
+res://assets/-mobs-obstacles/door-rotate.glb.import
+res://assets/-mobs-obstacles/door-sliding-double-round.glb.import
+res://assets/-mobs-obstacles/door-sliding-double-wide.glb.import
+res://assets/-mobs-obstacles/door-sliding-double.glb.import
+res://assets/-mobs-obstacles/door-sliding.glb.import
+res://assets/-mobs-obstacles/figurine-cube-detailed.glb.import
+res://assets/-mobs-obstacles/figurine-cube.glb.import
+res://assets/-mobs-obstacles/figurine-large.glb.import
+res://assets/-mobs-obstacles/figurine.glb.import
+res://assets/-mobs-obstacles/flag.glb.import
+res://assets/-mobs-obstacles/floor-diagonal.glb.import
+res://assets/-mobs-obstacles/floor-small-diagonal.glb.import
+res://assets/-mobs-obstacles/floor-small-square.glb.import
+res://assets/-mobs-obstacles/floor-square.glb.import
+res://assets/-mobs-obstacles/floor-thick-corner-diagonal.glb.import
+res://assets/-mobs-obstacles/floor-thick-corner-round.glb.import
+res://assets/-mobs-obstacles/floor-thick-corner-rounded.glb.import
+res://assets/-mobs-obstacles/floor-thick.glb.import
+res://assets/-mobs-obstacles/hat-cap.glb.import
+res://assets/-mobs-obstacles/hat-hard.glb.import
+res://assets/-mobs-obstacles/indicator-doorway.glb.import
+res://assets/-mobs-obstacles/indicator-round-a.glb.import
+res://assets/-mobs-obstacles/indicator-round-b.glb.import
+res://assets/-mobs-obstacles/indicator-round-c.glb.import
+res://assets/-mobs-obstacles/indicator-round-d.glb.import
+res://assets/-mobs-obstacles/indicator-round-e.glb.import
+res://assets/-mobs-obstacles/indicator-round-f.glb.import
+res://assets/-mobs-obstacles/indicator-special-area.glb.import
+res://assets/-mobs-obstacles/indicator-special-arrow.glb.import
+res://assets/-mobs-obstacles/indicator-special-cross.glb.import
+res://assets/-mobs-obstacles/indicator-special-lines.glb.import
+res://assets/-mobs-obstacles/indicator-square-a.glb.import
+res://assets/-mobs-obstacles/indicator-square-b.glb.import
+res://assets/-mobs-obstacles/indicator-square-c.glb.import
+res://assets/-mobs-obstacles/indicator-square-d.glb.import
+res://assets/-mobs-obstacles/indicator-square-e.glb.import
+res://assets/-mobs-obstacles/indicator-square-f.glb.import
+res://assets/-mobs-obstacles/ladder-color.glb.import
+res://assets/-mobs-obstacles/ladder-top.glb.import
+res://assets/-mobs-obstacles/ladder.glb.import
+res://assets/-mobs-obstacles/lever-double.glb.import
+res://assets/-mobs-obstacles/lever-single.glb.import
+res://assets/-mobs-obstacles/number-0.glb.import
+res://assets/-mobs-obstacles/number-1.glb.import
+res://assets/-mobs-obstacles/number-2.glb.import
+res://assets/-mobs-obstacles/number-3.glb.import
+res://assets/-mobs-obstacles/number-4.glb.import
+res://assets/-mobs-obstacles/number-5.glb.import
+res://assets/-mobs-obstacles/number-6.glb.import
+res://assets/-mobs-obstacles/number-7.glb.import
+res://assets/-mobs-obstacles/number-8.glb.import
+res://assets/-mobs-obstacles/number-9.glb.import
+res://assets/-mobs-obstacles/number-double-0.glb.import
+res://assets/-mobs-obstacles/number-double-1.glb.import
+res://assets/-mobs-obstacles/number-double-2.glb.import
+res://assets/-mobs-obstacles/number-double-3.glb.import
+res://assets/-mobs-obstacles/number-double-4.glb.import
+res://assets/-mobs-obstacles/number-double-5.glb.import
+res://assets/-mobs-obstacles/number-double-6.glb.import
+res://assets/-mobs-obstacles/number-double-7.glb.import
+res://assets/-mobs-obstacles/number-double-8.glb.import
+res://assets/-mobs-obstacles/number-double-9.glb.import
+res://assets/-mobs-obstacles/pipe-corner.glb.import
+res://assets/-mobs-obstacles/pipe-half-section.glb.import
+res://assets/-mobs-obstacles/pipe-half.glb.import
+res://assets/-mobs-obstacles/pipe-section.glb.import
+res://assets/-mobs-obstacles/pipe-split.glb.import
+res://assets/-mobs-obstacles/pipe.glb.import
+res://assets/-mobs-obstacles/shape-cube-half.glb.import
+res://assets/-mobs-obstacles/shape-cube-rounded.glb.import
+res://assets/-mobs-obstacles/shape-cube.glb.import
+res://assets/-mobs-obstacles/shape-cylinder-detailed.glb.import
+res://assets/-mobs-obstacles/shape-cylinder-half-detailed.glb.import
+res://assets/-mobs-obstacles/shape-cylinder-half.glb.import
+res://assets/-mobs-obstacles/shape-cylinder.glb.import
+res://assets/-mobs-obstacles/shape-hexagon-half.glb.import
+res://assets/-mobs-obstacles/shape-hexagon.glb.import
+res://assets/-mobs-obstacles/shape-hollow-cylinder-detailed.glb.import
+res://assets/-mobs-obstacles/shape-hollow-cylinder-half-detailed.glb.import
+res://assets/-mobs-obstacles/shape-hollow-cylinder-half.glb.import
+res://assets/-mobs-obstacles/shape-hollow-cylinder.glb.import
+res://assets/-mobs-obstacles/shape-hollow-hexagon-half.glb.import
+res://assets/-mobs-obstacles/shape-hollow-hexagon.glb.import
+res://assets/-mobs-obstacles/shape-slope.glb.import
+res://assets/-mobs-obstacles/shape-triangular-prism-low.glb.import
+res://assets/-mobs-obstacles/shape-triangular-prism.glb.import
+res://assets/-mobs-obstacles/stairs-diagonal-narrow.glb.import
+res://assets/-mobs-obstacles/stairs-diagonal-small-narrow.glb.import
+res://assets/-mobs-obstacles/stairs-diagonal-small.glb.import
+res://assets/-mobs-obstacles/stairs-diagonal.glb.import
+res://assets/-mobs-obstacles/stairs-narrow.glb.import
+res://assets/-mobs-obstacles/stairs-small-narrow.glb.import
+res://assets/-mobs-obstacles/stairs-small.glb.import
+res://assets/-mobs-obstacles/stairs.glb.import
+res://assets/-mobs-obstacles/target-a-round.glb.import
+res://assets/-mobs-obstacles/target-a-square.glb.import
+res://assets/-mobs-obstacles/target-b-round.glb.import
+res://assets/-mobs-obstacles/target-b-square.glb.import
+res://assets/-mobs-obstacles/vehicle-convertible.glb.import
+res://assets/-mobs-obstacles/vehicle.glb.import
+res://assets/-mobs-obstacles/wall-corner-low.glb.import
+res://assets/-mobs-obstacles/wall-corner-rounded-low.glb.import
+res://assets/-mobs-obstacles/wall-corner-rounded.glb.import
+res://assets/-mobs-obstacles/wall-corner.glb.import
+res://assets/-mobs-obstacles/wall-diagonal-low.glb.import
+res://assets/-mobs-obstacles/wall-diagonal.glb.import
+res://assets/-mobs-obstacles/wall-doorway-garage.glb.import
+res://assets/-mobs-obstacles/wall-doorway-round.glb.import
+res://assets/-mobs-obstacles/wall-doorway-sliding.glb.import
+res://assets/-mobs-obstacles/wall-doorway-wide-sliding.glb.import
+res://assets/-mobs-obstacles/wall-doorway-wide.glb.import
+res://assets/-mobs-obstacles/wall-doorway.glb.import
+res://assets/-mobs-obstacles/wall-low.glb.import
+res://assets/-mobs-obstacles/wall-round-low.glb.import
+res://assets/-mobs-obstacles/wall-round.glb.import
+res://assets/-mobs-obstacles/wall-window-barred-large.glb.import
+res://assets/-mobs-obstacles/wall-window-barred-medium.glb.import
+res://assets/-mobs-obstacles/wall-window-barred-small.glb.import
+res://assets/-mobs-obstacles/wall-window-cutout-large.glb.import
+res://assets/-mobs-obstacles/wall-window-cutout-medium.glb.import
+res://assets/-mobs-obstacles/wall-window-cutout-small.glb.import
+res://assets/-mobs-obstacles/wall-window-large.glb.import
+res://assets/-mobs-obstacles/wall-window-medium.glb.import
+res://assets/-mobs-obstacles/wall-window-small.glb.import
+res://assets/-mobs-obstacles/wall.glb.import
+res://assets/-mobs-obstacles/weapon-shield.glb.import
+res://assets/-mobs-obstacles/weapon-sword.glb.import
+res://assets/-mobs-obstacles/wheelchair.glb.import
+res://assets/art/2d/key/click-mouse-left.png.import
+res://assets/art/2d/key/control-key.png.import
+res://assets/art/2d/key/q-key.png.import
+res://assets/art/2d/Background-red-white.png.import
+res://assets/art/2d/BackgroundCharacterMenu.png.import
+res://assets/art/2d/background_any2.png.import
+res://assets/art/2d/background_cold.png.import
+res://assets/art/2d/background_color_beige.png.import
+res://assets/art/2d/found_main.png.import
+res://assets/art/2d/title_main.png.import
+res://assets/art/pixel/pixil-frame-0.png.import
+res://assets/audio/weapons/shoots/shoot-arma-blaster-a.mp3.import
+res://assets/audio/weapons/shoots/shoot-blaster-b.mp3.import
+res://assets/audio/weapons/shoots/shoot-blaster-d.mp3.import
+res://assets/audio/weapons/shoots/shoot-blaster-i.mp3.import
+res://assets/audio/collect-points-190037.mp3.import
+res://assets/audio/dead-player.mp3.import
+res://assets/audio/devoted_guard.mp3.import
+res://assets/audio/game-over.mp3.import
+res://assets/audio/game_easy.mp3.import
+res://assets/audio/game_easy2.mp3.import
+res://assets/audio/game_hard.mp3.import
+res://assets/audio/game_hard2.mp3.import
+res://assets/audio/game_mediun.mp3.import
+res://assets/audio/game_mediun_intro.mp3.import
+res://assets/audio/main_music.mp3.import
+res://assets/audio/miss-life.mp3.import
+res://assets/fonts/game-paused-demo/Game Paused DEMO.otf.import
+res://assets/fonts/halo3/Halo3.ttf.import
+res://assets/fonts/pixel-game/Pixel Game Extrude.otf.import
+res://assets/fonts/pixel-game/Pixel Game.otf.import
+res://assets/fonts/pixel-game/pixel game font 1.jpg.import
+res://assets/fonts/pixel-game/pixel game font 10.jpg.import
+res://assets/fonts/pixel-game/pixel game font 2.jpg.import
+res://assets/fonts/pixel-game/pixel game font 3.jpg.import
+res://assets/fonts/pixel-game/pixel game font 4.jpg.import
+res://assets/fonts/pixel-game/pixel game font 5.jpg.import
+res://assets/fonts/pixel-game/pixel game font 6.jpg.import
+res://assets/fonts/pixel-game/pixel game font 7.jpg.import
+res://assets/fonts/pixel-game/pixel game font 8.jpg.import
+res://assets/fonts/pixel-game/pixel game font 9.jpg.import
+res://assets/keney_blocky-character_20/Textures/texture-a.png.import
+res://assets/keney_blocky-character_20/Textures/texture-b.png.import
+res://assets/keney_blocky-character_20/Textures/texture-c.png.import
+res://assets/keney_blocky-character_20/Textures/texture-d.png.import
+res://assets/keney_blocky-character_20/Textures/texture-e.png.import
+res://assets/keney_blocky-character_20/Textures/texture-f.png.import
+res://assets/keney_blocky-character_20/Textures/texture-g.png.import
+res://assets/keney_blocky-character_20/Textures/texture-h.png.import
+res://assets/keney_blocky-character_20/Textures/texture-i.png.import
+res://assets/keney_blocky-character_20/Textures/texture-j.png.import
+res://assets/keney_blocky-character_20/Textures/texture-k.png.import
+res://assets/keney_blocky-character_20/Textures/texture-l.png.import
+res://assets/keney_blocky-character_20/Textures/texture-m.png.import
+res://assets/keney_blocky-character_20/Textures/texture-n.png.import
+res://assets/keney_blocky-character_20/Textures/texture-o.png.import
+res://assets/keney_blocky-character_20/Textures/texture-p.png.import
+res://assets/keney_blocky-character_20/Textures/texture-q.png.import
+res://assets/keney_blocky-character_20/Textures/texture-r.png.import
+res://assets/keney_blocky-character_20/Preview-characters.png.import
+res://assets/keney_blocky-character_20/character-a.glb.import
+res://assets/keney_blocky-character_20/character-b.glb.import
+res://assets/keney_blocky-character_20/character-c.glb.import
+res://assets/keney_blocky-character_20/character-d.glb.import
+res://assets/keney_blocky-character_20/character-e.glb.import
+res://assets/keney_blocky-character_20/character-f.glb.import
+res://assets/keney_blocky-character_20/character-g.glb.import
+res://assets/keney_blocky-character_20/character-h.glb.import
+res://assets/keney_blocky-character_20/character-i.glb.import
+res://assets/keney_blocky-character_20/character-j.glb.import
+res://assets/keney_blocky-character_20/character-k.glb.import
+res://assets/keney_blocky-character_20/character-m.glb.import
+res://assets/keney_blocky-character_20/character-n.glb.import
+res://assets/keney_blocky-character_20/character-o.glb.import
+res://assets/keney_blocky-character_20/character-p.glb.import
+res://assets/keney_blocky-character_20/character-q.glb.import
+res://assets/keney_blocky-character_20/character-r.glb.import
+res://assets/kenney_city-kit-suburban_20/Models/FBX format/Textures/colormap.png.import
+res://assets/kenney_city-kit-suburban_20/Models/FBX format/building-type-a.fbx.import
+res://assets/kenney_city-kit-suburban_20/Models/FBX format/building-type-b.fbx.import
+res://assets/kenney_city-kit-suburban_20/Models/FBX format/building-type-c.fbx.import
+res://assets/kenney_city-kit-suburban_20/Models/FBX format/building-type-d.fbx.import
+res://assets/kenney_city-kit-suburban_20/Models/FBX format/building-type-e.fbx.import
+res://assets/kenney_city-kit-suburban_20/Models/FBX format/building-type-f.fbx.import
+res://assets/kenney_city-kit-suburban_20/Models/FBX format/building-type-g.fbx.import
+res://assets/kenney_city-kit-suburban_20/Models/FBX format/building-type-h.fbx.import
+res://assets/kenney_city-kit-suburban_20/Models/FBX format/building-type-i.fbx.import
+res://assets/kenney_city-kit-suburban_20/Models/FBX format/building-type-j.fbx.import
+res://assets/kenney_city-kit-suburban_20/Models/FBX format/building-type-k.fbx.import
+res://assets/kenney_city-kit-suburban_20/Models/FBX format/building-type-l.fbx.import
+res://assets/kenney_city-kit-suburban_20/Models/FBX format/building-type-m.fbx.import
+res://assets/kenney_city-kit-suburban_20/Models/FBX format/building-type-n.fbx.import
+res://assets/kenney_city-kit-suburban_20/Models/FBX format/building-type-o.fbx.import
+res://assets/kenney_city-kit-suburban_20/Models/FBX format/building-type-p.fbx.import
+res://assets/kenney_city-kit-suburban_20/Models/FBX format/building-type-q.fbx.import
+res://assets/kenney_city-kit-suburban_20/Models/FBX format/building-type-r.fbx.import
+res://assets/kenney_city-kit-suburban_20/Models/FBX format/building-type-s.fbx.import
+res://assets/kenney_city-kit-suburban_20/Models/FBX format/building-type-t.fbx.import
+res://assets/kenney_city-kit-suburban_20/Models/FBX format/building-type-u.fbx.import
+res://assets/kenney_city-kit-suburban_20/Models/FBX format/driveway-long.fbx.import
+res://assets/kenney_city-kit-suburban_20/Models/FBX format/driveway-short.fbx.import
+res://assets/kenney_city-kit-suburban_20/Models/FBX format/fence-1x2.fbx.import
+res://assets/kenney_city-kit-suburban_20/Models/FBX format/fence-1x3.fbx.import
+res://assets/kenney_city-kit-suburban_20/Models/FBX format/fence-1x4.fbx.import
+res://assets/kenney_city-kit-suburban_20/Models/FBX format/fence-2x2.fbx.import
+res://assets/kenney_city-kit-suburban_20/Models/FBX format/fence-2x3.fbx.import
+res://assets/kenney_city-kit-suburban_20/Models/FBX format/fence-3x2.fbx.import
+res://assets/kenney_city-kit-suburban_20/Models/FBX format/fence-3x3.fbx.import
+res://assets/kenney_city-kit-suburban_20/Models/FBX format/fence-low.fbx.import
+res://assets/kenney_city-kit-suburban_20/Models/FBX format/fence.fbx.import
+res://assets/kenney_city-kit-suburban_20/Models/FBX format/path-long.fbx.import
+res://assets/kenney_city-kit-suburban_20/Models/FBX format/path-short.fbx.import
+res://assets/kenney_city-kit-suburban_20/Models/FBX format/path-stones-long.fbx.import
+res://assets/kenney_city-kit-suburban_20/Models/FBX format/path-stones-messy.fbx.import
+res://assets/kenney_city-kit-suburban_20/Models/FBX format/path-stones-short.fbx.import
+res://assets/kenney_city-kit-suburban_20/Models/FBX format/planter.fbx.import
+res://assets/kenney_city-kit-suburban_20/Models/FBX format/tree-large.fbx.import
+res://assets/kenney_city-kit-suburban_20/Models/FBX format/tree-small.fbx.import
+res://assets/kenney_city-kit-suburban_20/Models/GLB format/Textures/colormap.png.import
+res://assets/kenney_city-kit-suburban_20/Models/GLB format/building-type-a.glb.import
+res://assets/kenney_city-kit-suburban_20/Models/GLB format/building-type-b.glb.import
+res://assets/kenney_city-kit-suburban_20/Models/GLB format/building-type-c.glb.import
+res://assets/kenney_city-kit-suburban_20/Models/GLB format/building-type-d.glb.import
+res://assets/kenney_city-kit-suburban_20/Models/GLB format/building-type-e.glb.import
+res://assets/kenney_city-kit-suburban_20/Models/GLB format/building-type-f.glb.import
+res://assets/kenney_city-kit-suburban_20/Models/GLB format/building-type-g.glb.import
+res://assets/kenney_city-kit-suburban_20/Models/GLB format/building-type-h.glb.import
+res://assets/kenney_city-kit-suburban_20/Models/GLB format/building-type-i.glb.import
+res://assets/kenney_city-kit-suburban_20/Models/GLB format/building-type-j.glb.import
+res://assets/kenney_city-kit-suburban_20/Models/GLB format/building-type-k.glb.import
+res://assets/kenney_city-kit-suburban_20/Models/GLB format/building-type-l.glb.import
+res://assets/kenney_city-kit-suburban_20/Models/GLB format/building-type-m.glb.import
+res://assets/kenney_city-kit-suburban_20/Models/GLB format/building-type-n.glb.import
+res://assets/kenney_city-kit-suburban_20/Models/GLB format/building-type-o.glb.import
+res://assets/kenney_city-kit-suburban_20/Models/GLB format/building-type-p.glb.import
+res://assets/kenney_city-kit-suburban_20/Models/GLB format/building-type-q.glb.import
+res://assets/kenney_city-kit-suburban_20/Models/GLB format/building-type-r.glb.import
+res://assets/kenney_city-kit-suburban_20/Models/GLB format/building-type-s.glb.import
+res://assets/kenney_city-kit-suburban_20/Models/GLB format/building-type-t.glb.import
+res://assets/kenney_city-kit-suburban_20/Models/GLB format/building-type-u.glb.import
+res://assets/kenney_city-kit-suburban_20/Models/GLB format/driveway-long.glb.import
+res://assets/kenney_city-kit-suburban_20/Models/GLB format/driveway-short.glb.import
+res://assets/kenney_city-kit-suburban_20/Models/GLB format/fence-1x2.glb.import
+res://assets/kenney_city-kit-suburban_20/Models/GLB format/fence-1x3.glb.import
+res://assets/kenney_city-kit-suburban_20/Models/GLB format/fence-1x4.glb.import
+res://assets/kenney_city-kit-suburban_20/Models/GLB format/fence-2x2.glb.import
+res://assets/kenney_city-kit-suburban_20/Models/GLB format/fence-2x3.glb.import
+res://assets/kenney_city-kit-suburban_20/Models/GLB format/fence-3x2.glb.import
+res://assets/kenney_city-kit-suburban_20/Models/GLB format/fence-3x3.glb.import
+res://assets/kenney_city-kit-suburban_20/Models/GLB format/fence-low.glb.import
+res://assets/kenney_city-kit-suburban_20/Models/GLB format/fence.glb.import
+res://assets/kenney_city-kit-suburban_20/Models/GLB format/path-long.glb.import
+res://assets/kenney_city-kit-suburban_20/Models/GLB format/path-short.glb.import
+res://assets/kenney_city-kit-suburban_20/Models/GLB format/path-stones-long.glb.import
+res://assets/kenney_city-kit-suburban_20/Models/GLB format/path-stones-messy.glb.import
+res://assets/kenney_city-kit-suburban_20/Models/GLB format/path-stones-short.glb.import
+res://assets/kenney_city-kit-suburban_20/Models/GLB format/planter.glb.import
+res://assets/kenney_city-kit-suburban_20/Models/GLB format/tree-large.glb.import
+res://assets/kenney_city-kit-suburban_20/Models/GLB format/tree-small.glb.import
+res://assets/kenney_city-kit-suburban_20/Models/OBJ format/Textures/colormap.png.import
+res://assets/kenney_city-kit-suburban_20/Models/OBJ format/building-type-a.obj.import
+res://assets/kenney_city-kit-suburban_20/Models/OBJ format/building-type-b.obj.import
+res://assets/kenney_city-kit-suburban_20/Models/OBJ format/building-type-c.obj.import
+res://assets/kenney_city-kit-suburban_20/Models/OBJ format/building-type-d.obj.import
+res://assets/kenney_city-kit-suburban_20/Models/OBJ format/building-type-e.obj.import
+res://assets/kenney_city-kit-suburban_20/Models/OBJ format/building-type-f.obj.import
+res://assets/kenney_city-kit-suburban_20/Models/OBJ format/building-type-g.obj.import
+res://assets/kenney_city-kit-suburban_20/Models/OBJ format/building-type-h.obj.import
+res://assets/kenney_city-kit-suburban_20/Models/OBJ format/building-type-i.obj.import
+res://assets/kenney_city-kit-suburban_20/Models/OBJ format/building-type-j.obj.import
+res://assets/kenney_city-kit-suburban_20/Models/OBJ format/building-type-k.obj.import
+res://assets/kenney_city-kit-suburban_20/Models/OBJ format/building-type-l.obj.import
+res://assets/kenney_city-kit-suburban_20/Models/OBJ format/building-type-m.obj.import
+res://assets/kenney_city-kit-suburban_20/Models/OBJ format/building-type-n.obj.import
+res://assets/kenney_city-kit-suburban_20/Models/OBJ format/building-type-o.obj.import
+res://assets/kenney_city-kit-suburban_20/Models/OBJ format/building-type-p.obj.import
+res://assets/kenney_city-kit-suburban_20/Models/OBJ format/building-type-q.obj.import
+res://assets/kenney_city-kit-suburban_20/Models/OBJ format/building-type-r.obj.import
+res://assets/kenney_city-kit-suburban_20/Models/OBJ format/building-type-s.obj.import
+res://assets/kenney_city-kit-suburban_20/Models/OBJ format/building-type-t.obj.import
+res://assets/kenney_city-kit-suburban_20/Models/OBJ format/building-type-u.obj.import
+res://assets/kenney_city-kit-suburban_20/Models/OBJ format/driveway-long.obj.import
+res://assets/kenney_city-kit-suburban_20/Models/OBJ format/driveway-short.obj.import
+res://assets/kenney_city-kit-suburban_20/Models/OBJ format/fence-1x2.obj.import
+res://assets/kenney_city-kit-suburban_20/Models/OBJ format/fence-1x3.obj.import
+res://assets/kenney_city-kit-suburban_20/Models/OBJ format/fence-1x4.obj.import
+res://assets/kenney_city-kit-suburban_20/Models/OBJ format/fence-2x2.obj.import
+res://assets/kenney_city-kit-suburban_20/Models/OBJ format/fence-2x3.obj.import
+res://assets/kenney_city-kit-suburban_20/Models/OBJ format/fence-3x2.obj.import
+res://assets/kenney_city-kit-suburban_20/Models/OBJ format/fence-3x3.obj.import
+res://assets/kenney_city-kit-suburban_20/Models/OBJ format/fence-low.obj.import
+res://assets/kenney_city-kit-suburban_20/Models/OBJ format/fence.obj.import
+res://assets/kenney_city-kit-suburban_20/Models/OBJ format/path-long.obj.import
+res://assets/kenney_city-kit-suburban_20/Models/OBJ format/path-short.obj.import
+res://assets/kenney_city-kit-suburban_20/Models/OBJ format/path-stones-long.obj.import
+res://assets/kenney_city-kit-suburban_20/Models/OBJ format/path-stones-messy.obj.import
+res://assets/kenney_city-kit-suburban_20/Models/OBJ format/path-stones-short.obj.import
+res://assets/kenney_city-kit-suburban_20/Models/OBJ format/planter.obj.import
+res://assets/kenney_city-kit-suburban_20/Models/OBJ format/tree-large.obj.import
+res://assets/kenney_city-kit-suburban_20/Models/OBJ format/tree-small.obj.import
+res://assets/kenney_city-kit-suburban_20/Models/Textures/variation-a.png.import
+res://assets/kenney_city-kit-suburban_20/Models/Textures/variation-b.png.import
+res://assets/kenney_city-kit-suburban_20/Models/Textures/variation-c.png.import
+res://assets/kenney_city-kit-suburban_20/Previews/building-type-a.png.import
+res://assets/kenney_city-kit-suburban_20/Previews/building-type-b.png.import
+res://assets/kenney_city-kit-suburban_20/Previews/building-type-c.png.import
+res://assets/kenney_city-kit-suburban_20/Previews/building-type-d.png.import
+res://assets/kenney_city-kit-suburban_20/Previews/building-type-e.png.import
+res://assets/kenney_city-kit-suburban_20/Previews/building-type-f.png.import
+res://assets/kenney_city-kit-suburban_20/Previews/building-type-g.png.import
+res://assets/kenney_city-kit-suburban_20/Previews/building-type-h.png.import
+res://assets/kenney_city-kit-suburban_20/Previews/building-type-i.png.import
+res://assets/kenney_city-kit-suburban_20/Previews/building-type-j.png.import
+res://assets/kenney_city-kit-suburban_20/Previews/building-type-k.png.import
+res://assets/kenney_city-kit-suburban_20/Previews/building-type-l.png.import
+res://assets/kenney_city-kit-suburban_20/Previews/building-type-m.png.import
+res://assets/kenney_city-kit-suburban_20/Previews/building-type-n.png.import
+res://assets/kenney_city-kit-suburban_20/Previews/building-type-o.png.import
+res://assets/kenney_city-kit-suburban_20/Previews/building-type-p.png.import
+res://assets/kenney_city-kit-suburban_20/Previews/building-type-q.png.import
+res://assets/kenney_city-kit-suburban_20/Previews/building-type-r.png.import
+res://assets/kenney_city-kit-suburban_20/Previews/building-type-s.png.import
+res://assets/kenney_city-kit-suburban_20/Previews/building-type-t.png.import
+res://assets/kenney_city-kit-suburban_20/Previews/building-type-u.png.import
+res://assets/kenney_city-kit-suburban_20/Previews/driveway-long.png.import
+res://assets/kenney_city-kit-suburban_20/Previews/driveway-short.png.import
+res://assets/kenney_city-kit-suburban_20/Previews/fence-1x2.png.import
+res://assets/kenney_city-kit-suburban_20/Previews/fence-1x3.png.import
+res://assets/kenney_city-kit-suburban_20/Previews/fence-1x4.png.import
+res://assets/kenney_city-kit-suburban_20/Previews/fence-2x2.png.import
+res://assets/kenney_city-kit-suburban_20/Previews/fence-2x3.png.import
+res://assets/kenney_city-kit-suburban_20/Previews/fence-3x2.png.import
+res://assets/kenney_city-kit-suburban_20/Previews/fence-3x3.png.import
+res://assets/kenney_city-kit-suburban_20/Previews/fence-low.png.import
+res://assets/kenney_city-kit-suburban_20/Previews/fence.png.import
+res://assets/kenney_city-kit-suburban_20/Previews/path-long.png.import
+res://assets/kenney_city-kit-suburban_20/Previews/path-short.png.import
+res://assets/kenney_city-kit-suburban_20/Previews/path-stones-long.png.import
+res://assets/kenney_city-kit-suburban_20/Previews/path-stones-messy.png.import
+res://assets/kenney_city-kit-suburban_20/Previews/path-stones-short.png.import
+res://assets/kenney_city-kit-suburban_20/Previews/planter.png.import
+res://assets/kenney_city-kit-suburban_20/Previews/tree-large.png.import
+res://assets/kenney_city-kit-suburban_20/Previews/tree-small.png.import
+res://assets/kenney_city-kit-suburban_20/Preview (Variation A).png.import
+res://assets/kenney_city-kit-suburban_20/Preview (Variation B).png.import
+res://assets/kenney_city-kit-suburban_20/Preview (Variation C).png.import
+res://assets/kenney_city-kit-suburban_20/Preview.png.import
+res://assets/kenney_city-kit-suburban_20/Sample.png.import
+res://assets/kenney_food/Textures/colormap.png.import
+res://assets/kenney_food/Preview.png.import
+res://assets/kenney_food/advocado-half.glb.import
+res://assets/kenney_food/apple-half.glb.import
+res://assets/kenney_food/apple.glb.import
+res://assets/kenney_food/avocado.glb.import
+res://assets/kenney_food/bacon-raw.glb.import
+res://assets/kenney_food/bacon.glb.import
+res://assets/kenney_food/bag-flat.glb.import
+res://assets/kenney_food/bag.glb.import
+res://assets/kenney_food/banana.glb.import
+res://assets/kenney_food/barrel.glb.import
+res://assets/kenney_food/beet.glb.import
+res://assets/kenney_food/bottle-ketchup.glb.import
+res://assets/kenney_food/bottle-musterd.glb.import
+res://assets/kenney_food/bottle-oil.glb.import
+res://assets/kenney_food/bowl-broth.glb.import
+res://assets/kenney_food/bowl-cereal.glb.import
+res://assets/kenney_food/bowl-soup.glb.import
+res://assets/kenney_food/bowl.glb.import
+res://assets/kenney_food/bread.glb.import
+res://assets/kenney_food/broccoli.glb.import
+res://assets/kenney_food/burger-cheese-double.glb.import
+res://assets/kenney_food/burger-cheese.glb.import
+res://assets/kenney_food/burger-double.glb.import
+res://assets/kenney_food/burger.glb.import
+res://assets/kenney_food/cabbage.glb.import
+res://assets/kenney_food/cake-birthday.glb.import
+res://assets/kenney_food/cake-slicer.glb.import
+res://assets/kenney_food/cake.glb.import
+res://assets/kenney_food/can-open.glb.import
+res://assets/kenney_food/can-small.glb.import
+res://assets/kenney_food/can.glb.import
+res://assets/kenney_food/candy-bar-wrapper.glb.import
+res://assets/kenney_food/candy-bar.glb.import
+res://assets/kenney_food/carrot.glb.import
+res://assets/kenney_food/carton-small.glb.import
+res://assets/kenney_food/carton.glb.import
+res://assets/kenney_food/cauliflower.glb.import
+res://assets/kenney_food/celery-stick.glb.import
+res://assets/kenney_food/cheese-cut.glb.import
+res://assets/kenney_food/cheese-slicer.glb.import
+res://assets/kenney_food/cheese.glb.import
+res://assets/kenney_food/cherries.glb.import
+res://assets/kenney_food/chinese.glb.import
+res://assets/kenney_food/chocolate-wrapper.glb.import
+res://assets/kenney_food/chocolate.glb.import
+res://assets/kenney_food/chopstic-decorative.glb.import
+res://assets/kenney_food/chopstick.glb.import
+res://assets/kenney_food/cocktail.glb.import
+res://assets/kenney_food/coconut-half.glb.import
+res://assets/kenney_food/coconut.glb.import
+res://assets/kenney_food/cookie-chocolate.glb.import
+res://assets/kenney_food/cookie.glb.import
+res://assets/kenney_food/cooking-fork.glb.import
+res://assets/kenney_food/cooking-knife-chopping.glb.import
+res://assets/kenney_food/cooking-knife.glb.import
+res://assets/kenney_food/cooking-spatula.glb.import
+res://assets/kenney_food/cooking-spoon.glb.import
+res://assets/kenney_food/corn-dog.glb.import
+res://assets/kenney_food/corn.glb.import
+res://assets/kenney_food/croissant.glb.import
+res://assets/kenney_food/cup-coffee.glb.import
+res://assets/kenney_food/cup-saucer.glb.import
+res://assets/kenney_food/cup-tea.glb.import
+res://assets/kenney_food/cup.glb.import
+res://assets/kenney_food/cupcake.glb.import
+res://assets/kenney_food/cutting-board-japanese.glb.import
+res://assets/kenney_food/cutting-board-round.glb.import
+res://assets/kenney_food/cutting-board.glb.import
+res://assets/kenney_food/dim-sum.glb.import
+res://assets/kenney_food/donut-chocolate.glb.import
+res://assets/kenney_food/donut-sprinkles.glb.import
+res://assets/kenney_food/donut.glb.import
+res://assets/kenney_food/egg-cooked.glb.import
+res://assets/kenney_food/egg-cup.glb.import
+res://assets/kenney_food/egg-half.glb.import
+res://assets/kenney_food/egg.glb.import
+res://assets/kenney_food/eggplant.glb.import
+res://assets/kenney_food/fish-bones.glb.import
+res://assets/kenney_food/fish.glb.import
+res://assets/kenney_food/frappe.glb.import
+res://assets/kenney_food/fries-empty.glb.import
+res://assets/kenney_food/fries.glb.import
+res://assets/kenney_food/frikandel-speciaal.glb.import
+res://assets/kenney_food/frying-pan-lid.glb.import
+res://assets/kenney_food/frying-pan.glb.import
+res://assets/kenney_food/ginger-bread-cutter.glb.import
+res://assets/kenney_food/ginger-bread.glb.import
+res://assets/kenney_food/glass-wine.glb.import
+res://assets/kenney_food/glass.glb.import
+res://assets/kenney_food/grapes.glb.import
+res://assets/kenney_food/honey.glb.import
+res://assets/kenney_food/hot-dog-raw.glb.import
+res://assets/kenney_food/hot-dog.glb.import
+res://assets/kenney_food/ice-cream-cne.glb.import
+res://assets/kenney_food/ice-cream-cup.glb.import
+res://assets/kenney_food/ice-cream-scoop-chocolate.glb.import
+res://assets/kenney_food/ice-cream-scoop-mint.glb.import
+res://assets/kenney_food/ice-cream.glb.import
+res://assets/kenney_food/knife-block.glb.import
+res://assets/kenney_food/leek.glb.import
+res://assets/kenney_food/lemon-half.glb.import
+res://assets/kenney_food/lemon.glb.import
+res://assets/kenney_food/loaf-baguette.glb.import
+res://assets/kenney_food/loaf-round.glb.import
+res://assets/kenney_food/loaf.glb.import
+res://assets/kenney_food/lollypop.glb.import
+res://assets/kenney_food/maki-roe.glb.import
+res://assets/kenney_food/maki-salmon.glb.import
+res://assets/kenney_food/maki-vegetable.glb.import
+res://assets/kenney_food/meat-cooked.glb.import
+res://assets/kenney_food/meat-patty.glb.import
+res://assets/kenney_food/meat-raw.glb.import
+res://assets/kenney_food/meat-ribs.glb.import
+res://assets/kenney_food/meat-sausage.glb.import
+res://assets/kenney_food/meat-tenderizer.glb.import
+res://assets/kenney_food/mincemeat-pie.glb.import
+res://assets/kenney_food/mortar-pestle.glb.import
+res://assets/kenney_food/mortar.glb.import
+res://assets/kenney_food/muffin.glb.import
+res://assets/kenney_food/mug.glb.import
+res://assets/kenney_food/mushroom-half.glb.import
+res://assets/kenney_food/mushroom.glb.import
+res://assets/kenney_food/mussel-open.glb.import
+res://assets/kenney_food/mussel.glb.import
+res://assets/kenney_food/onion-half.glb.import
+res://assets/kenney_food/onion.glb.import
+res://assets/kenney_food/orange.glb.import
+res://assets/kenney_food/pan-stew.glb.import
+res://assets/kenney_food/pan.glb.import
+res://assets/kenney_food/pancakes.glb.import
+res://assets/kenney_food/paprika-slice.glb.import
+res://assets/kenney_food/paprika.glb.import
+res://assets/kenney_food/peanut-butter.glb.import
+res://assets/kenney_food/pear-half.glb.import
+res://assets/kenney_food/pear.glb.import
+res://assets/kenney_food/pepper-mill.glb.import
+res://assets/kenney_food/pepper.glb.import
+res://assets/kenney_food/pie.glb.import
+res://assets/kenney_food/pineapple.glb.import
+res://assets/kenney_food/pizza-box.glb.import
+res://assets/kenney_food/pizza-cutter.glb.import
+res://assets/kenney_food/pizza.glb.import
+res://assets/kenney_food/plate-broken.glb.import
+res://assets/kenney_food/plate-deep.glb.import
+res://assets/kenney_food/plate-dinner.glb.import
+res://assets/kenney_food/plate-rectangle.glb.import
+res://assets/kenney_food/plate-sauerkraut.glb.import
+res://assets/kenney_food/plate.glb.import
+res://assets/kenney_food/popsicle-chocolate.glb.import
+res://assets/kenney_food/popsicle-stick.glb.import
+res://assets/kenney_food/popsicle.glb.import
+res://assets/kenney_food/pot-lid.glb.import
+res://assets/kenney_food/pot-stew-lid.glb.import
+res://assets/kenney_food/pot-stew.glb.import
+res://assets/kenney_food/pot.glb.import
+res://assets/kenney_food/pudding.glb.import
+res://assets/kenney_food/pumpkin-basic.glb.import
+res://assets/kenney_food/pumpkin.glb.import
+res://assets/kenney_food/radish.glb.import
+res://assets/kenney_food/rice-ball.glb.import
+res://assets/kenney_food/rollingPin.glb.import
+res://assets/kenney_food/salad.glb.import
+res://assets/kenney_food/sandwich.glb.import
+res://assets/kenney_food/sausage-half.glb.import
+res://assets/kenney_food/sausage.glb.import
+res://assets/kenney_food/shaker-pepper.glb.import
+res://assets/kenney_food/shaker-salt.glb.import
+res://assets/kenney_food/skewer-vegetables.glb.import
+res://assets/kenney_food/skewer.glb.import
+res://assets/kenney_food/soda-bottle.glb.import
+res://assets/kenney_food/soda-can-crushed.glb.import
+res://assets/kenney_food/soda-can.glb.import
+res://assets/kenney_food/soda-glass.glb.import
+res://assets/kenney_food/soda.glb.import
+res://assets/kenney_food/soy.glb.import
+res://assets/kenney_food/steamer.glb.import
+res://assets/kenney_food/strawberry.glb.import
+res://assets/kenney_food/styrofoam-dinner.glb.import
+res://assets/kenney_food/styrofoam.glb.import
+res://assets/kenney_food/sub.glb.import
+res://assets/kenney_food/sundae.glb.import
+res://assets/kenney_food/sushi-egg.glb.import
+res://assets/kenney_food/sushi-salmon.glb.import
+res://assets/kenney_food/taco.glb.import
+res://assets/kenney_food/tajine-lid.glb.import
+res://assets/kenney_food/tajine.glb.import
+res://assets/kenney_food/tomato-slice.glb.import
+res://assets/kenney_food/tomato.glb.import
+res://assets/kenney_food/turkey.glb.import
+res://assets/kenney_food/utensil-fork.glb.import
+res://assets/kenney_food/utensil-knife.glb.import
+res://assets/kenney_food/utensil-spoon.glb.import
+res://assets/kenney_food/waffle.glb.import
+res://assets/kenney_food/watermelon.glb.import
+res://assets/kenney_food/whipped-cream.glb.import
+res://assets/kenney_food/whisk.glb.import
+res://assets/kenney_food/whole-ham.glb.import
+res://assets/kenney_food/wholer-ham.glb.import
+res://assets/kenney_food/wine-red.glb.import
+res://assets/kenney_food/wine-white.glb.import
+res://assets/shader/curved_text.gdshader
+res://assets/textures_character/character-k.png.import
+res://assets/textures_character/character-o.png.import
+res://assets/textures_character/character-p.png.import
+res://assets/textures_character/character-r.png.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/FBX format/Textures/colormap.png.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/FBX format/blaster-a.fbx.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/FBX format/blaster-b.fbx.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/FBX format/blaster-c.fbx.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/FBX format/blaster-d.fbx.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/FBX format/blaster-e.fbx.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/FBX format/blaster-f.fbx.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/FBX format/blaster-g.fbx.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/FBX format/blaster-h.fbx.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/FBX format/blaster-i.fbx.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/FBX format/blaster-j.fbx.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/FBX format/blaster-k.fbx.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/FBX format/blaster-l.fbx.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/FBX format/blaster-m.fbx.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/FBX format/blaster-n.fbx.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/FBX format/blaster-o.fbx.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/FBX format/blaster-p.fbx.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/FBX format/blaster-q.fbx.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/FBX format/blaster-r.fbx.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/FBX format/bullet-foam-thick.fbx.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/FBX format/bullet-foam-tip-thick.fbx.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/FBX format/bullet-foam-tip.fbx.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/FBX format/bullet-foam.fbx.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/FBX format/clip-large.fbx.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/FBX format/clip-small.fbx.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/FBX format/crate-medium.fbx.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/FBX format/crate-small.fbx.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/FBX format/crate-wide.fbx.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/FBX format/grenade-a.fbx.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/FBX format/grenade-b.fbx.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/FBX format/scope-large-a.fbx.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/FBX format/scope-large-b.fbx.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/FBX format/scope-small.fbx.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/FBX format/silencer-larger.fbx.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/FBX format/silencer-small.fbx.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/FBX format/smoke.fbx.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/FBX format/target-detail.fbx.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/FBX format/target-fragment-large.fbx.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/FBX format/target-fragment-small.fbx.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/FBX format/target-large.fbx.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/FBX format/target-small.fbx.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/GLB format/Textures/colormap.png.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/GLB format/blaster-a.glb.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/GLB format/blaster-b.glb.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/GLB format/blaster-c.glb.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/GLB format/blaster-d.glb.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/GLB format/blaster-e.glb.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/GLB format/blaster-f.glb.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/GLB format/blaster-g.glb.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/GLB format/blaster-h.glb.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/GLB format/blaster-i.glb.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/GLB format/blaster-j.glb.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/GLB format/blaster-k.glb.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/GLB format/blaster-l.glb.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/GLB format/blaster-m.glb.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/GLB format/blaster-n.glb.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/GLB format/blaster-o.glb.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/GLB format/blaster-p.glb.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/GLB format/blaster-q.glb.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/GLB format/blaster-r.glb.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/GLB format/bullet-foam-thick.glb.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/GLB format/bullet-foam-tip-thick.glb.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/GLB format/bullet-foam-tip.glb.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/GLB format/bullet-foam.glb.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/GLB format/clip-large.glb.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/GLB format/clip-small.glb.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/GLB format/crate-medium.glb.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/GLB format/crate-small.glb.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/GLB format/crate-wide.glb.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/GLB format/grenade-a.glb.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/GLB format/grenade-b.glb.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/GLB format/scope-large-a.glb.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/GLB format/scope-large-b.glb.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/GLB format/scope-small.glb.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/GLB format/silencer-larger.glb.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/GLB format/silencer-small.glb.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/GLB format/smoke.glb.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/GLB format/target-detail.glb.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/GLB format/target-fragment-large.glb.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/GLB format/target-fragment-small.glb.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/GLB format/target-large.glb.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/GLB format/target-small.glb.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/OBJ format/Textures/colormap.png.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/OBJ format/blaster-a.obj.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/OBJ format/blaster-b.obj.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/OBJ format/blaster-c.obj.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/OBJ format/blaster-d.obj.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/OBJ format/blaster-e.obj.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/OBJ format/blaster-f.obj.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/OBJ format/blaster-g.obj.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/OBJ format/blaster-h.obj.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/OBJ format/blaster-i.obj.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/OBJ format/blaster-j.obj.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/OBJ format/blaster-k.obj.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/OBJ format/blaster-l.obj.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/OBJ format/blaster-m.obj.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/OBJ format/blaster-n.obj.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/OBJ format/blaster-o.obj.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/OBJ format/blaster-p.obj.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/OBJ format/blaster-q.obj.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/OBJ format/blaster-r.obj.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/OBJ format/bullet-foam-thick.obj.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/OBJ format/bullet-foam-tip-thick.obj.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/OBJ format/bullet-foam-tip.obj.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/OBJ format/bullet-foam.obj.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/OBJ format/clip-large.obj.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/OBJ format/clip-small.obj.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/OBJ format/crate-medium.obj.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/OBJ format/crate-small.obj.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/OBJ format/crate-wide.obj.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/OBJ format/grenade-a.obj.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/OBJ format/grenade-b.obj.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/OBJ format/scope-large-a.obj.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/OBJ format/scope-large-b.obj.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/OBJ format/scope-small.obj.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/OBJ format/silencer-larger.obj.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/OBJ format/silencer-small.obj.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/OBJ format/smoke.obj.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/OBJ format/target-detail.obj.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/OBJ format/target-fragment-large.obj.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/OBJ format/target-fragment-small.obj.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/OBJ format/target-large.obj.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/OBJ format/target-small.obj.import
+res://assets/weapons/kenney_blaster-kit_2.1/Models/Textures/variation-a.png.import
+res://assets/weapons/kenney_blaster-kit_2.1/Previews/blaster-a.png.import
+res://assets/weapons/kenney_blaster-kit_2.1/Previews/blaster-b.png.import
+res://assets/weapons/kenney_blaster-kit_2.1/Previews/blaster-c.png.import
+res://assets/weapons/kenney_blaster-kit_2.1/Previews/blaster-d.png.import
+res://assets/weapons/kenney_blaster-kit_2.1/Previews/blaster-e.png.import
+res://assets/weapons/kenney_blaster-kit_2.1/Previews/blaster-f.png.import
+res://assets/weapons/kenney_blaster-kit_2.1/Previews/blaster-g.png.import
+res://assets/weapons/kenney_blaster-kit_2.1/Previews/blaster-h.png.import
+res://assets/weapons/kenney_blaster-kit_2.1/Previews/blaster-i.png.import
+res://assets/weapons/kenney_blaster-kit_2.1/Previews/blaster-j.png.import
+res://assets/weapons/kenney_blaster-kit_2.1/Previews/blaster-k.png.import
+res://assets/weapons/kenney_blaster-kit_2.1/Previews/blaster-l.png.import
+res://assets/weapons/kenney_blaster-kit_2.1/Previews/blaster-m.png.import
+res://assets/weapons/kenney_blaster-kit_2.1/Previews/blaster-n.png.import
+res://assets/weapons/kenney_blaster-kit_2.1/Previews/blaster-o.png.import
+res://assets/weapons/kenney_blaster-kit_2.1/Previews/blaster-p.png.import
+res://assets/weapons/kenney_blaster-kit_2.1/Previews/blaster-q.png.import
+res://assets/weapons/kenney_blaster-kit_2.1/Previews/blaster-r.png.import
+res://assets/weapons/kenney_blaster-kit_2.1/Previews/bullet-foam-thick.png.import
+res://assets/weapons/kenney_blaster-kit_2.1/Previews/bullet-foam-tip-thick.png.import
+res://assets/weapons/kenney_blaster-kit_2.1/Previews/bullet-foam-tip.png.import
+res://assets/weapons/kenney_blaster-kit_2.1/Previews/bullet-foam.png.import
+res://assets/weapons/kenney_blaster-kit_2.1/Previews/clip-large.png.import
+res://assets/weapons/kenney_blaster-kit_2.1/Previews/clip-small.png.import
+res://assets/weapons/kenney_blaster-kit_2.1/Previews/crate-medium.png.import
+res://assets/weapons/kenney_blaster-kit_2.1/Previews/crate-small.png.import
+res://assets/weapons/kenney_blaster-kit_2.1/Previews/crate-wide.png.import
+res://assets/weapons/kenney_blaster-kit_2.1/Previews/grenade-a.png.import
+res://assets/weapons/kenney_blaster-kit_2.1/Previews/grenade-b.png.import
+res://assets/weapons/kenney_blaster-kit_2.1/Previews/scope-large-a.png.import
+res://assets/weapons/kenney_blaster-kit_2.1/Previews/scope-large-b.png.import
+res://assets/weapons/kenney_blaster-kit_2.1/Previews/scope-small.png.import
+res://assets/weapons/kenney_blaster-kit_2.1/Previews/silencer-larger.png.import
+res://assets/weapons/kenney_blaster-kit_2.1/Previews/silencer-small.png.import
+res://assets/weapons/kenney_blaster-kit_2.1/Previews/smoke.png.import
+res://assets/weapons/kenney_blaster-kit_2.1/Previews/target-detail.png.import
+res://assets/weapons/kenney_blaster-kit_2.1/Previews/target-fragment-large.png.import
+res://assets/weapons/kenney_blaster-kit_2.1/Previews/target-fragment-small.png.import
+res://assets/weapons/kenney_blaster-kit_2.1/Previews/target-large.png.import
+res://assets/weapons/kenney_blaster-kit_2.1/Previews/target-small.png.import
+res://assets/weapons/kenney_blaster-kit_2.1/Preview (Variation A).png.import
+res://assets/weapons/kenney_blaster-kit_2.1/Preview.png.import
+res://assets/favicon.ico
+res://scenes/characters/character_k_2.tscn.remap
+res://scenes/characters/character_o_2.tscn.remap
+res://scenes/characters/character_p_2.tscn.remap
+res://scenes/characters/character_r_2.tscn.remap
+res://scenes/world/map/arbol_grande.tscn.remap
+res://scenes/world/map/carreter_larga.tscn.remap
+res://scenes/world/map/casa-tipo-a.tscn.remap
+res://scenes/world/map/casa-tipoq2.tscn.remap
+res://scenes/world/map/plantas-1.tscn.remap
+res://scenes/world/Enemy.gd.remap
+res://scenes/world/Enemy.gdc
+res://scenes/world/Enemy.tscn.remap
+res://scenes/world/Mob.gd.remap
+res://scenes/world/Mob.gdc
+res://scenes/world/Obstacle.gd.remap
+res://scenes/world/Obstacle.gdc
+res://scenes/world/Obstacle.tscn.remap
+res://scenes/world/chicaZombieMob.tscn.remap
+res://scenes/world/chunk_template.tscn.remap
+res://scenes/world/mobs.tscn.remap
+res://scenes/AttackArea.tscn.remap
+res://scenes/Game.gd.remap
+res://scenes/Game.gdc
+res://scenes/LevelSpawner.gd.remap
+res://scenes/LevelSpawner.gdc
+res://scenes/Player.tscn.remap
+res://scenes/game_scene.tscn.remap
+res://screens/character-select-menu.png.import
+res://screens/description-powers.png.import
+res://screens/game-screen-scene.png.import
+res://screens/game_over_screen.png.import
+res://screens/level-select.png.import
+res://screens/main-menu.png.import
+res://screens/pause-menu-screen.png.import
+res://screens/weapon-menu-and-amplifier-damage.png.import
+res://scripts/FileWalker.gd.remap
+res://scripts/FileWalker.gdc
+res://scripts/GlobalData.gd.remap
+res://scripts/GlobalData.gdc
+res://src/BoostCoins/coin.tscn.remap
+res://src/Enemies/mobs/comtaminado-doctor.tscn.remap
+res://src/Enemies/mobs/mob-zombie-chica.tscn.remap
+res://src/Enemies/CarRed.tscn.remap
+res://src/Enemies/Cube.tscn.remap
+res://src/Enemies/barril.tscn.remap
+res://src/UI/display/CharacterDisplay3D.gd.remap
+res://src/UI/display/CharacterDisplay3D.gdc
+res://src/UI/display/CharacterDisplay3D.tscn.remap
+res://src/UI/display/WeaponView.gd.remap
+res://src/UI/display/WeaponView.gdc
+res://src/UI/display/WeaponView.tscn.remap
+res://src/UI/CharacterSelectMenu.gd.remap
+res://src/UI/CharacterSelectMenu.gdc
+res://src/UI/CharacterSelectMenu.tscn.remap
+res://src/UI/GameOver.gd.remap
+res://src/UI/GameOver.gdc
+res://src/UI/GameOverMenu.tscn.remap
+res://src/UI/GlobalMusic.tscn.remap
+res://src/UI/HUD.gd.remap
+res://src/UI/HUD.gdc
+res://src/UI/HUD.tscn.remap
+res://src/UI/Health.gd.remap
+res://src/UI/Health.gdc
+res://src/UI/LevelMenu.gd.remap
+res://src/UI/LevelMenu.gdc
+res://src/UI/LevelMenu.tscn.remap
+res://src/UI/MainMenu.gd.remap
+res://src/UI/MainMenu.gdc
+res://src/UI/MainMenu.tscn.remap
+res://src/UI/PauseMenu.gd.remap
+res://src/UI/PauseMenu.gdc
+res://src/UI/PauseMenu.tscn.remap
+res://src/UI/ScoreDisplay.gd.remap
+res://src/UI/ScoreDisplay.gdc
+res://src/UI/SelectWeapon.gd.remap
+res://src/UI/SelectWeapon.gdc
+res://src/UI/WeaponMain.tscn.remap
+res://src/weapons/ammo/clip_small.tscn.remap
+res://src/weapons/bullets/bullet_foam_thick.gd.remap
+res://src/weapons/bullets/bullet_foam_thick.gdc
+res://src/weapons/bullets/bullet_foam_thick.tscn.remap
+res://src/weapons/bullets/bullet_foam_tip_thick.gd.remap
+res://src/weapons/bullets/bullet_foam_tip_thick.gdc
+res://src/weapons/bullets/bullet_foam_tip_thick.tscn.remap
+res://src/weapons/blaster_a.tscn.remap
+res://src/weapons/blaster_b.tscn.remap
+res://src/weapons/blaster_d_2.tscn.remap
+res://src/weapons/blaster_i.tscn.remap
+res://AttackArea.gd.remap
+res://AttackArea.gdc
+res://Player.gd.remap
+res://Player.gdc
+res://icon.svg
+res://icon.svg.import
+res://project.binary
+res://test_escene.tscn.remap
+Cargando datos guardados en el menú principal...
+personaje seleccionado: res://scenes/characters/character_o_2.tscn
+reanudando musica global desde main menu
+HUD: No hay poder 3 asignado o es saqueo
+HUD: comandos visibles
+HUD: Señal pause_game_signal  existe en PauseMenu
+HUD: Conectando señales con PauseMenu
+Advertencia no se encontro la animacion 'static-weapon' para el personaje o el AnimationPlayer es nulo.
+Advertencia: La ruta del arma no existe: res://src/weapons/blaster_i.tscn
+ERROR: ERROR: No se encontró el archivo de sonido para ShootSoundPlayer en: res://assets/audio/weapons/shoots/shoot-blaster-i.mp3
+   at: push_error (core/variant/variant_utility.cpp:1024)
+   GDScript backtrace (most recent call first):
+       [0] _load_audio_stream (res://Player.gd:129)
+       [1] _ready (res://Player.gd:122)
+ERROR: ERROR: No se encontró el archivo de sonido para DeathSoundPlayer en: res://assets/audio/dead-player.mp3
+   at: push_error (core/variant/variant_utility.cpp:1024)
+   GDScript backtrace (most recent call first):
+       [0] _load_audio_stream (res://Player.gd:129)
+       [1] _ready (res://Player.gd:123)
+LevelSpawner listo.
+PauseMenu listo desde PauseMenu.gd
+PauseMenu listo desde PauseMenu.gd
+HUD: No hay poder 3 asignado o es saqueo
+HUD: comandos visibles
+HUD: Señal pause_game_signal  existe en PauseMenu
+HUD: Conectando señales con PauseMenu
+jugando con nivel:1
+pausando musicca global
+Mob creado. Nivel: 1 | Vida: 7
+Mob creado. Nivel: 1 | Vida: 7
+Mob creado. Nivel: 1 | Vida: 7
+Mob creado. Nivel: 1 | Vida: 7
+Mob creado. Nivel: 1 | Vida: 7
+Mob creado. Nivel: 1 | Vida: 7
+Mob creado. Nivel: 1 | Vida: 7
+Intentando disparar. Cooldown activado:true
+Advertencia: No se pudo disparar, el punto de salida (Muzzle) no fue encontrado.
+Intentando disparar. Cooldown activado:true
+Advertencia: No se pudo disparar, el punto de salida (Muzzle) no fue encontrado.
+Player: AutoJumpRay colisionó con: driveway-long5
+Player: Verificando si el collider es un obstáculo válido: driveway-long5
+Intentando disparar. Cooldown activado:true
+Advertencia: No se pudo disparar, el punto de salida (Muzzle) no fue encontrado.
+Intentando disparar. Cooldown activado:true
+Advertencia: No se pudo disparar, el punto de salida (Muzzle) no fue encontrado.
+Intentando disparar. Cooldown activado:true
+Advertencia: No se pudo disparar, el punto de salida (Muzzle) no fue encontrado.
+HUD: comandos ocultos
+HUD: comandos ocultos
+Mob creado. Nivel: 1 | Vida: 7
+Mob creado. Nivel: 1 | Vida: 7
+Mouse liberado (Modo Pausa/Menú).
+PAUSEMENU - Pausando juego- function
+reanudando musica global desde pause menu
+PAUSEMENU - Señal pause_game_signal emitida

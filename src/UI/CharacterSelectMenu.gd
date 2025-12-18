@@ -20,8 +20,8 @@ const CHARACTER_HEALTH = {
 const CHARACTER_COSTS={
 	"K":0,
 	"O":20,
-	"P":100,
-	"R":500,
+	"P":10000,
+	"R":1000000,
 }
 const CHARACTER_POWERS_1={
 	"K":"ShootOne",

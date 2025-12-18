@@ -12,8 +12,8 @@ const WEAPON_PATHS = {
 const WEAPON_COSTS = {
 	"blaster_a": 0,
 	"blaster_i": 10,
-	"blaster_b": 50,
-	"blaster_a_2": 100
+	"blaster_b": 5000,
+	"blaster_a_2": 1000000
 }
 
 @onready var blaster_a_button: Button = $blaster_a
