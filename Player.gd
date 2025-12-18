@@ -174,6 +174,7 @@ func _load_visual_character(character_scene: Resource):
 		animation_player.animation_finished.connect(_on_animation_finished)
 		if current_weapon == null:
 			play_animation(IDLE_UNARMED_ANIMATION)
+			
 		else:
 			pass
 	else:
