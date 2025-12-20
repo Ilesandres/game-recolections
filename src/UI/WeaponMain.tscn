@@ -13,164 +13,186 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_33ghn")
+metadata/_edit_use_anchors_ = true
 
 [node name="TextureRect" type="TextureRect" parent="."]
-layout_mode = 0
-offset_left = -382.0
-offset_top = -47.0
-offset_right = 1154.0
-offset_bottom = 977.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.041666668
+anchor_top = -0.14197531
+anchor_right = 1.0416666
+anchor_bottom = 1.1419753
+offset_left = 48.0
+offset_top = 92.0
+offset_right = -48.0
+offset_bottom = -92.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("2_tjd0n")
+metadata/_edit_use_anchors_ = true
 
 [node name="title" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.30400002
-anchor_top = 0.096
-anchor_right = 0.697
-anchor_bottom = 0.15900001
-offset_left = -0.20800781
-offset_top = -0.20800018
-offset_right = 0.05596924
-offset_bottom = -0.03200531
+anchor_left = 0.30381945
+anchor_top = 0.095679015
+anchor_right = 0.6970486
+anchor_bottom = 0.15895061
 grow_horizontal = 2
 theme_override_fonts/font = ExtResource("1_ogjf6")
 theme_override_font_sizes/font_size = 40
 text = "select your weapon and ammo"
+metadata/_edit_use_anchors_ = true
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="."]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -256.0
-offset_top = -205.0
-offset_right = 256.0
-offset_bottom = 307.0
+anchors_preset = -1
+anchor_left = 0.20052083
+anchor_top = 0.14506173
+anchor_right = 0.8949653
+anchor_bottom = 0.9351852
 grow_horizontal = 2
 grow_vertical = 2
+metadata/_edit_use_anchors_ = true
 
 [node name="weapon-a" type="SubViewport" parent="SubViewportContainer"]
 transparent_bg = true
 handle_input_locally = false
+size = Vector2i(700, 512)
 render_target_update_mode = 4
 
 [node name="WeaponView" parent="SubViewportContainer/weapon-a" instance=ExtResource("2_v5pcj")]
 
 [node name="blaster_a" type="Button" parent="."]
 layout_mode = 0
-offset_left = 358.0
-offset_top = 264.0
-offset_right = 499.0
-offset_bottom = 295.0
+anchor_left = 0.23871528
+anchor_top = 0.4074074
+anchor_right = 0.46180555
+anchor_bottom = 0.47530866
 theme_override_fonts/font = ExtResource("1_ogjf6")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 35
 text = "seleccionar arma a"
+metadata/_edit_use_anchors_ = true
 
 [node name="blaster_i" type="Button" parent="."]
 layout_mode = 0
-offset_left = 660.0
-offset_top = 263.0
-offset_right = 801.0
-offset_bottom = 294.0
+anchor_left = 0.5364583
+anchor_top = 0.4058642
+anchor_right = 0.7534722
+anchor_bottom = 0.47376543
 theme_override_fonts/font = ExtResource("1_ogjf6")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 35
 text = "seleccionar arma i"
+metadata/_edit_use_anchors_ = true
 
 [node name="blaster_b" type="Button" parent="."]
 layout_mode = 0
-offset_left = 364.0
-offset_top = 436.0
-offset_right = 505.0
-offset_bottom = 467.0
+anchor_left = 0.2421875
+anchor_top = 0.6728395
+anchor_right = 0.4652778
+anchor_bottom = 0.7407407
+offset_bottom = 3.0517578e-05
 theme_override_fonts/font = ExtResource("1_ogjf6")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 35
 text = "seleccionar arma b"
+metadata/_edit_use_anchors_ = true
 
 [node name="blaster_a_2" type="Button" parent="."]
 layout_mode = 0
-offset_left = 658.0
-offset_top = 436.0
-offset_right = 799.0
-offset_bottom = 467.0
+anchor_left = 0.5407986
+anchor_top = 0.6728395
+anchor_right = 0.7899306
+anchor_bottom = 0.7407407
+offset_bottom = 3.0517578e-05
 theme_override_fonts/font = ExtResource("1_ogjf6")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 35
 text = "seleccionar arma a-2"
+metadata/_edit_use_anchors_ = true
 
 [node name="BackButton" type="Button" parent="."]
 layout_mode = 0
-offset_left = 60.0
-offset_top = 58.0
-offset_right = 195.0
-offset_bottom = 108.0
+anchor_left = 0.052083332
+anchor_top = 0.08950617
+anchor_right = 0.2404514
+anchor_bottom = 0.16666667
+offset_right = -82.0
 theme_override_fonts/font = ExtResource("1_ogjf6")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 40
 text = "BACK AND SAVE"
+metadata/_edit_use_anchors_ = true
 
 [node name="MessageError" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_right = 0.10700001
-anchor_bottom = 0.117000006
-offset_left = 566.0
-offset_top = 346.0
-offset_right = 482.736
-offset_bottom = 293.184
+anchor_left = 0.49131945
+anchor_top = 0.5339506
+anchor_right = 0.5260417
+anchor_bottom = 0.5694444
+offset_bottom = 3.0517578e-05
+metadata/_edit_use_anchors_ = true
 
 [node name="required-score-a" type="Label" parent="."]
 layout_mode = 0
-offset_left = 402.0
-offset_top = 134.0
-offset_right = 457.0
-offset_bottom = 157.0
+anchor_left = 0.32725695
+anchor_top = 0.20679012
+anchor_right = 0.3967014
+anchor_bottom = 0.25462964
+offset_bottom = -1.5258789e-05
 theme_override_fonts/font = ExtResource("1_ogjf6")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 30
 text = "score 0"
+metadata/_edit_use_anchors_ = true
 
 [node name="required-score-i" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_right = 0.017
-offset_left = 704.0
-offset_top = 131.0
-offset_right = 749.416
-offset_bottom = 180.0
+anchor_left = 0.6111111
+anchor_top = 0.20216049
+anchor_right = 0.6892361
+anchor_bottom = 0.30246913
+offset_right = -25.0
+offset_bottom = -16.0
 theme_override_fonts/font = ExtResource("1_ogjf6")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 30
 text = "score 10
 "
+metadata/_edit_use_anchors_ = true
 
 [node name="required-score-b" type="Label" parent="."]
 layout_mode = 0
-offset_left = 400.0
-offset_top = 597.0
-offset_right = 465.0
-offset_bottom = 620.0
+anchor_left = 0.3107639
+anchor_top = 0.9212963
+anchor_right = 0.3923611
+anchor_bottom = 0.9691358
 theme_override_fonts/font = ExtResource("1_ogjf6")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 30
 text = "score 50"
+metadata/_edit_use_anchors_ = true
 
 [node name="required-score-a-2" type="Label" parent="."]
 layout_mode = 0
-offset_left = 691.0
-offset_top = 592.0
-offset_right = 765.0
-offset_bottom = 615.0
+anchor_left = 0.5998264
+anchor_top = 0.91358024
+anchor_right = 0.6883681
+anchor_bottom = 0.96141976
+offset_right = -28.0
+offset_bottom = -8.0
 theme_override_fonts/font = ExtResource("1_ogjf6")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 30
 text = "score 100"
+metadata/_edit_use_anchors_ = true
 
 [node name="GlobalScore" type="Label" parent="."]
 layout_mode = 0
-offset_left = 865.0
-offset_top = 114.0
-offset_right = 905.0
-offset_bottom = 142.0
+anchor_left = 0.7508681
+anchor_top = 0.17592593
+anchor_right = 0.7855903
+anchor_bottom = 0.23148148
+offset_bottom = -8.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("1_ogjf6")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 35
+metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="blaster_a" to="." method="_on_blaster_a_pressed"]
 [connection signal="pressed" from="blaster_i" to="." method="_on_blaster_i_pressed"]
