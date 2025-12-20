@@ -21,30 +21,32 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_en4mt")
+metadata/_edit_use_anchors_ = true
 
 [node name="TextureRect2" type="TextureRect" parent="."]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
+anchors_preset = -1
+anchor_left = -0.3888889
+anchor_right = 1.3888888
 anchor_bottom = 1.0
+offset_left = 448.0
+offset_right = -448.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_w38c1")
+metadata/_edit_use_anchors_ = true
 
 [node name="ButtonContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.5
-anchor_top = 0.656
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -150.0
-offset_top = -15.088013
-offset_right = 150.0
-offset_bottom = -15.0
+anchor_left = 0.36979166
+anchor_top = 0.63271606
+anchor_right = 0.6302083
+anchor_bottom = 0.9768519
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 7
+metadata/_edit_use_anchors_ = true
 
 [node name="PlayButton" type="Button" parent="ButtonContainer"]
 layout_mode = 2
@@ -117,10 +119,12 @@ texture = ExtResource("4_fapdh")
 
 [node name="DisplayContainer" type="SubViewportContainer" parent="."]
 layout_mode = 0
-offset_left = 900.0
-offset_top = 329.0
-offset_right = 1174.0
-offset_bottom = 652.0
+anchor_left = 0.78125
+anchor_top = 0.50771606
+anchor_right = 1.0190972
+anchor_bottom = 1.0061729
+offset_bottom = -6.1035156e-05
+metadata/_edit_use_anchors_ = true
 
 [node name="CharacterViewport" type="SubViewport" parent="DisplayContainer"]
 transparent_bg = true
@@ -133,26 +137,29 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 
 [node name="SelectCharacterButton" type="Button" parent="."]
 layout_mode = 0
-offset_left = 924.0
-offset_top = 313.0
-offset_right = 1126.0
-offset_bottom = 541.0
+anchor_left = 0.8020833
+anchor_top = 0.4830247
+anchor_right = 0.9774306
+anchor_bottom = 0.83487654
 theme_override_fonts/font = ExtResource("2_yq4l5")
 theme_override_font_sizes/font_size = 25
 theme_override_styles/normal = SubResource("StyleBoxEmpty_1xg02")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_ms2jq")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_condu")
+metadata/_edit_use_anchors_ = true
 
 [node name="SelectCharacterButton2" type="Button" parent="."]
-layout_mode = 0
-offset_left = 938.0
-offset_top = 525.0
-offset_right = 1133.0
-offset_bottom = 615.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.8090278
+anchor_top = 0.8101852
+anchor_right = 0.9782986
+anchor_bottom = 0.9490741
 theme_override_fonts/font = ExtResource("2_yq4l5")
 theme_override_font_sizes/font_size = 40
 text = "Seleccionar 
 Personaje"
+metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="ButtonContainer/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="ButtonContainer/SelectWeapon" to="." method="_on_select_weapon_pressed"]
