@@ -62,9 +62,13 @@ const CHARACTER_POWERS_3_DESCRIPTION={
 @onready var name_character_display=$GridContainer/NameContainer/NameCharacter
 
 @onready var character_k_button=$SelectCharacterK
+@onready var score_character_k=$ScoreK
 @onready var character_o_button=$SelectCharacterO
+@onready var score_character_o=$ScoreO
 @onready var character_p_button=$SelectCharacterP
+@onready var score_character_p=$ScoreP
 @onready var character_r_button=$SelectCharacterR
+@onready var score_character_r=$ScoreR
 
 @onready var power_3=$GridContainer/Power1/PowersDescriptions/Power3
 @onready var power_1=$GridContainer/Power1/PowersDescriptions/Power1
@@ -79,7 +83,13 @@ func _ready():
 	description_label.hide()
 	update_details_character()
 	check_and_lock_characters()
+	loadScores()
 
+func loadScores():
+	score_character_k.text='score : '+str(CHARACTER_COSTS["K"])	
+	score_character_o.text='score : '+str(CHARACTER_COSTS["O"])
+	score_character_p.text='score : '+str(CHARACTER_COSTS["P"])
+	score_character_r.text='score : '+str(CHARACTER_COSTS["R"])
 
 func select_character(key: String):
 	current_selection_key = key
@@ -161,9 +171,9 @@ func check_and_lock_characters():
 	var player_score= GlobalData.total_global_trash
 	character_k_button.disabled=false
 	if player_score<CHARACTER_COSTS["O"]:
-		character_o_button=true
+		character_o_button.disabled=true
 	else:
-		character_o_button=false
+		character_o_button.disabled=false
 	
 	if player_score<CHARACTER_COSTS["P"]:
 		character_p_button.disabled=true

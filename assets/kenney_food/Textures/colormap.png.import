@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://do746b3c5l11x"
 path.s3tc="res://.godot/imported/colormap.png-b9f80c547a3e88e4ef131a065db405e8.s3tc.ctex"
+path.etc2="res://.godot/imported/colormap.png-b9f80c547a3e88e4ef131a065db405e8.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/kenney_food/Textures/colormap.png"
-dest_files=["res://.godot/imported/colormap.png-b9f80c547a3e88e4ef131a065db405e8.s3tc.ctex"]
+dest_files=["res://.godot/imported/colormap.png-b9f80c547a3e88e4ef131a065db405e8.s3tc.ctex", "res://.godot/imported/colormap.png-b9f80c547a3e88e4ef131a065db405e8.etc2.ctex"]
 
 [params]
 

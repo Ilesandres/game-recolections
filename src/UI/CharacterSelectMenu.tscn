@@ -18,23 +18,31 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_1g0rx")
+metadata/_edit_use_anchors_ = true
 
 [node name="TextureRect" type="TextureRect" parent="."]
-layout_mode = 0
-offset_left = -72.0
-offset_top = -131.0
-offset_right = 1464.0
-offset_bottom = 893.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.06336805
+anchor_top = -0.19598766
+anchor_right = 1.2699653
+anchor_bottom = 1.3842592
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("2_hw68i")
+metadata/_edit_use_anchors_ = true
 
 [node name="GridContainer" type="GridContainer" parent="."]
 layout_mode = 0
-offset_left = 468.0
-offset_top = 163.0
-offset_right = 737.0
-offset_bottom = 436.0
+anchor_left = 0.41666666
+anchor_top = 0.25154322
+anchor_right = 0.6935764
+anchor_bottom = 0.6728395
+offset_top = -1.5258789e-05
+offset_right = -50.0
 theme_override_constants/h_separation = 10
 theme_override_constants/v_separation = 5
+metadata/_edit_use_anchors_ = true
 
 [node name="HealthCharacterContainer" type="HBoxContainer" parent="GridContainer"]
 layout_mode = 2
@@ -50,7 +58,7 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.8039216)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_bo2je")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 25
 
 [node name="NameContainer" type="HBoxContainer" parent="GridContainer"]
 layout_mode = 2
@@ -61,7 +69,7 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.8862745)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_bo2je")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 25
 text = "name:   "
 
 [node name="NameCharacter" type="Label" parent="GridContainer/NameContainer"]
@@ -70,7 +78,7 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.8666667)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_bo2je")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 25
 text = "a"
 
 [node name="Power1" type="HBoxContainer" parent="GridContainer"]
@@ -80,7 +88,7 @@ theme_override_constants/separation = 10
 [node name="PowersLabel" type="Label" parent="GridContainer/Power1"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("4_bo2je")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 25
 text = "powers : "
 
 [node name="PowersDescriptions" type="VBoxContainer" parent="GridContainer/Power1"]
@@ -90,138 +98,128 @@ theme_override_constants/separation = 10
 [node name="Power1" type="Button" parent="GridContainer/Power1/PowersDescriptions"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("4_bo2je")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 25
 text = "power1"
 
 [node name="Power2" type="Button" parent="GridContainer/Power1/PowersDescriptions"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("4_bo2je")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 25
 text = "power2"
 
 [node name="Power3" type="Button" parent="GridContainer/Power1/PowersDescriptions"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("4_bo2je")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 25
 text = "power3"
 
 [node name="DesccriptionLabel" type="Label" parent="GridContainer/Power1"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("4_bo2je")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 25
 text = "description : "
 
 [node name="DescritpionDysplay" type="Label" parent="GridContainer/Power1"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("4_bo2je")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 25
 
 [node name="PlayButton" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.49600002
-anchor_top = 0.74700004
-anchor_right = 0.565
-anchor_bottom = 0.93100005
-offset_left = -10.392029
-offset_top = 27.94397
-offset_right = 34.119995
-offset_bottom = -19.288025
+anchor_left = 0.48697916
+anchor_top = 0.79012346
+anchor_right = 0.5946181
+anchor_bottom = 0.90123457
 theme_override_fonts/font = ExtResource("4_bo2je")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 30
 text = "play"
+metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.5
-anchor_top = 0.09
-anchor_right = 0.5
-anchor_bottom = 0.125
-offset_left = -117.0
-offset_top = -0.3200035
-offset_right = 102.0
+anchor_left = 0.38194445
+anchor_top = 0.08950617
+anchor_right = 0.6050347
+anchor_bottom = 0.13734567
+offset_left = 19.0
+offset_right = -19.0
+offset_bottom = -7.9999924
 grow_horizontal = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.8392157)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_bo2je")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 30
 text = "SELECT YOUR CHARACTER"
+metadata/_edit_use_anchors_ = true
 
 [node name="BackButton" type="Button" parent="."]
 layout_mode = 0
-offset_left = 25.0
-offset_top = 27.0
-offset_right = 172.0
-offset_bottom = 92.0
+anchor_left = 0.021701388
+anchor_top = 0.041666668
+anchor_right = 0.14930555
+anchor_bottom = 0.14969136
+offset_bottom = -5.0
 theme_override_fonts/font = ExtResource("4_bo2je")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 30
 text = "SAVE AND
 BACK"
+metadata/_edit_use_anchors_ = true
 
 [node name="SelectCharacterK" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.12100001
-anchor_top = 0.34
-anchor_right = 0.18800001
-anchor_bottom = 0.49400002
-offset_left = -0.39201355
-offset_top = -0.32000732
-offset_right = 0.42399597
-offset_bottom = -0.11199951
+anchor_left = 0.120659724
+anchor_top = 0.33950618
+anchor_right = 0.18836805
+anchor_bottom = 0.49382716
 icon = ExtResource("2_iki4e")
+metadata/_edit_use_anchors_ = true
 
 [node name="SelectCharacterO" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.293
-anchor_top = 0.35500002
-anchor_right = 0.363
-anchor_bottom = 0.497
-offset_left = -0.53601074
-offset_top = -6.0400085
-offset_right = 2.8240051
-offset_bottom = -2.0559998
+anchor_left = 0.2925347
+anchor_top = 0.34567901
+anchor_right = 0.3654514
+anchor_bottom = 0.49382716
 icon = ExtResource("3_1g0rx")
+metadata/_edit_use_anchors_ = true
 
 [node name="SelectCharacterR" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.29000002
-anchor_top = 0.596
-anchor_right = 0.36800003
-anchor_bottom = 0.73600006
-offset_left = 5.919983
-offset_top = -0.20800781
-offset_right = 0.063964844
-offset_bottom = 0.07196045
+anchor_left = 0.2951389
+anchor_top = 0.595679
+anchor_right = 0.36805555
+anchor_bottom = 0.7361111
+offset_top = 3.0517578e-05
 grow_horizontal = 0
 grow_vertical = 2
 icon = ExtResource("1_jhi54")
+metadata/_edit_use_anchors_ = true
 
 [node name="SelectCharacterP" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.120000005
-anchor_top = 0.588
-anchor_right = 0.19000001
-anchor_bottom = 0.73
-offset_left = -0.2400055
-offset_top = -0.023986816
-offset_right = 0.11997986
-offset_bottom = -0.040008545
+anchor_left = 0.119791664
+anchor_top = 0.587963
+anchor_right = 0.19010417
+anchor_bottom = 0.72993827
 grow_horizontal = 2
 grow_vertical = 2
 icon = ExtResource("4_46evt")
+metadata/_edit_use_anchors_ = true
 
 [node name="DisplayContainer" type="SubViewportContainer" parent="."]
 layout_mode = 0
-offset_left = 817.0
-offset_top = 338.0
-offset_right = 1117.0
-offset_bottom = 638.0
+anchor_left = 0.7092014
+anchor_top = 0.52160496
+anchor_right = 0.9696181
+anchor_bottom = 0.9845679
+metadata/_edit_use_anchors_ = true
 
 [node name="CharacterViewport" type="SubViewport" parent="DisplayContainer"]
 transparent_bg = true
@@ -234,81 +232,73 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 
 [node name="DetailsCharacter" type="Label" parent="."]
 layout_mode = 0
-offset_left = 491.0
-offset_top = 448.0
-offset_right = 531.0
-offset_bottom = 471.0
+anchor_left = 0.4262153
+anchor_top = 0.69135803
+anchor_right = 0.4609375
+anchor_bottom = 0.7268519
+offset_bottom = -3.0517578e-05
 theme_override_fonts/font = ExtResource("4_bo2je")
 theme_override_font_sizes/font_size = 20
+metadata/_edit_use_anchors_ = true
 
 [node name="ScoreGlobal" type="Label" parent="."]
 layout_mode = 0
-offset_left = 861.0
-offset_top = 93.0
-offset_right = 901.0
-offset_bottom = 116.0
+anchor_left = 0.7473958
+anchor_top = 0.14351852
+anchor_right = 0.7821181
+anchor_bottom = 0.18364197
+offset_bottom = -3.0
 theme_override_fonts/font = ExtResource("4_bo2je")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 25
+metadata/_edit_use_anchors_ = true
 
 [node name="ScoreK" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.127
-anchor_top = 0.512
-anchor_right = 0.17400001
-anchor_bottom = 0.54800004
-offset_left = -0.30400085
-offset_top = 0.22399902
-offset_right = 0.5519867
-offset_bottom = -0.104034424
+anchor_left = 0.12326389
+anchor_top = 0.5123457
+anchor_right = 0.18229167
+anchor_bottom = 0.55246913
 theme_override_fonts/font = ExtResource("4_bo2je")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 25
 text = "score 0"
+metadata/_edit_use_anchors_ = true
 
 [node name="ScoreO" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.3
-anchor_top = 0.50600004
-anchor_right = 0.35700002
-anchor_bottom = 0.54200006
-offset_left = 0.3999939
-offset_top = 0.111968994
-offset_right = -0.2640381
-offset_bottom = -0.21603394
+anchor_left = 0.29427084
+anchor_top = 0.50617284
+anchor_right = 0.36197916
+anchor_bottom = 0.5462963
 theme_override_fonts/font = ExtResource("4_bo2je")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 25
 text = "score 20"
+metadata/_edit_use_anchors_ = true
 
 [node name="ScoreP" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.112
-anchor_top = 0.77900004
-anchor_right = 0.17600001
-anchor_bottom = 0.81500006
-offset_left = -0.024002075
-offset_top = -5.7920227
-offset_right = 0.24798584
-offset_bottom = -6.120056
+anchor_left = 0.106770836
+anchor_top = 0.77006173
+anchor_right = 0.18055555
+anchor_bottom = 0.8101852
 theme_override_fonts/font = ExtResource("4_bo2je")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 25
 text = "score 100"
+metadata/_edit_use_anchors_ = true
 
 [node name="ScoreR" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.29500002
-anchor_top = 0.76100004
-anchor_right = 0.35900003
-anchor_bottom = 0.79600006
-offset_left = 0.15997314
-offset_top = -0.12802124
-offset_right = 0.43197632
-offset_bottom = 0.19195557
+anchor_left = 0.28993055
+anchor_top = 0.76080245
+anchor_right = 0.3671875
+anchor_bottom = 0.8009259
 theme_override_fonts/font = ExtResource("4_bo2je")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 25
 text = "score 500"
+metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="GridContainer/Power1/PowersDescriptions/Power1" to="." method="_on_power_1_pressed"]
 [connection signal="pressed" from="GridContainer/Power1/PowersDescriptions/Power2" to="." method="_on_power_2_pressed"]

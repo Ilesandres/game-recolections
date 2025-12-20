@@ -26,9 +26,9 @@ func load_all_weapon_scenes():
 	loaded_weapons.clear() 
 
 	var positions = [
-		Vector3(SPACING, 0, SPACING), 
+		Vector3(SPACING+1, 0, SPACING), 
 		Vector3(-SPACING, 0, SPACING), 
-		Vector3(SPACING, 0, -SPACING), 
+		Vector3(SPACING+1, 0, -SPACING), 
 		Vector3(-SPACING, 0, -SPACING) 
 	]
 	
