@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://0m4adu0ptjt7"]
+[gd_scene load_steps=4 format=3 uid="uid://0m4adu0ptjt7"]
 
 [ext_resource type="Script" uid="uid://gm5yk7b5ija0" path="res://src/UI/PauseMenu.gd" id="1_dt3c7"]
 [ext_resource type="Texture2D" uid="uid://x8govpnk04xs" path="res://assets/art/2d/Background-red-white.png" id="2_vr7o6"]
+[ext_resource type="FontFile" uid="uid://cx566jpavurob" path="res://assets/fonts/pixel-game/Pixel Game.otf" id="3_ghaat"]
 
 [node name="PauseMenuLayer" type="CanvasLayer"]
 process_mode = 1
@@ -42,19 +43,22 @@ theme_override_constants/separation = 18
 [node name="ResumeButton" type="Button" parent="PauseMenu/PauseButtonContainer"]
 process_mode = 2
 layout_mode = 2
-theme_override_font_sizes/font_size = 30
+theme_override_fonts/font = ExtResource("3_ghaat")
+theme_override_font_sizes/font_size = 35
 text = "Continuar"
 
 [node name="RestartButton" type="Button" parent="PauseMenu/PauseButtonContainer"]
 process_mode = 2
 layout_mode = 2
-theme_override_font_sizes/font_size = 30
+theme_override_fonts/font = ExtResource("3_ghaat")
+theme_override_font_sizes/font_size = 35
 text = "Reiniciar Nivel"
 
 [node name="MainMenuButton" type="Button" parent="PauseMenu/PauseButtonContainer"]
 process_mode = 2
 layout_mode = 2
-theme_override_font_sizes/font_size = 30
+theme_override_fonts/font = ExtResource("3_ghaat")
+theme_override_font_sizes/font_size = 35
 text = "Menú Principal"
 
 [connection signal="pressed" from="PauseMenu/PauseButtonContainer/ResumeButton" to="PauseMenu" method="_on_resume_button_pressed"]
