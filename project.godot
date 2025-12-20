@@ -20,6 +20,11 @@ config/icon="res://icon.svg"
 GlobalData="*res://scripts/GlobalData.gd"
 GlobalMusicPlayer="*res://src/UI/GlobalMusic.tscn"
 
+[display]
+
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+
 [input]
 
 ui_accept={
@@ -95,3 +100,7 @@ power1={
 3d_physics/layer_4="enemies"
 3d_physics/layer_5="SolidObstacles"
 3d_physics/layer_6="Bullets"
+
+[rendering]
+
+textures/vram_compression/import_etc2_astc=true

@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://m4at6qbjakr0"
 path.s3tc="res://.godot/imported/texture-p.png-fd1ce4518ad5e7927ef712140395601d.s3tc.ctex"
+path.etc2="res://.godot/imported/texture-p.png-fd1ce4518ad5e7927ef712140395601d.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/keney_blocky-character_20/Textures/texture-p.png"
-dest_files=["res://.godot/imported/texture-p.png-fd1ce4518ad5e7927ef712140395601d.s3tc.ctex"]
+dest_files=["res://.godot/imported/texture-p.png-fd1ce4518ad5e7927ef712140395601d.s3tc.ctex", "res://.godot/imported/texture-p.png-fd1ce4518ad5e7927ef712140395601d.etc2.ctex"]
 
 [params]
 

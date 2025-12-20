@@ -17,9 +17,12 @@ grow_vertical = 2
 script = ExtResource("1_dt3c7")
 
 [node name="Background" type="TextureRect" parent="PauseMenu"]
-layout_mode = 0
-offset_right = 1248.0
-offset_bottom = 832.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("2_vr7o6")
 
 [node name="PauseButtonContainer" type="VBoxContainer" parent="PauseMenu"]
@@ -34,20 +37,24 @@ offset_top = 0.055999756
 offset_right = 91.46393
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/separation = 18
 
 [node name="ResumeButton" type="Button" parent="PauseMenu/PauseButtonContainer"]
 process_mode = 2
 layout_mode = 2
+theme_override_font_sizes/font_size = 30
 text = "Continuar"
 
 [node name="RestartButton" type="Button" parent="PauseMenu/PauseButtonContainer"]
 process_mode = 2
 layout_mode = 2
+theme_override_font_sizes/font_size = 30
 text = "Reiniciar Nivel"
 
 [node name="MainMenuButton" type="Button" parent="PauseMenu/PauseButtonContainer"]
 process_mode = 2
 layout_mode = 2
+theme_override_font_sizes/font_size = 30
 text = "Menú Principal"
 
 [connection signal="pressed" from="PauseMenu/PauseButtonContainer/ResumeButton" to="PauseMenu" method="_on_resume_button_pressed"]

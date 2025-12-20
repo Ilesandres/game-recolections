@@ -171,9 +171,9 @@ func check_and_lock_characters():
 	var player_score= GlobalData.total_global_trash
 	character_k_button.disabled=false
 	if player_score<CHARACTER_COSTS["O"]:
-		character_o_button=true
+		character_o_button.disabled=true
 	else:
-		character_o_button=false
+		character_o_button.disabled=false
 	
 	if player_score<CHARACTER_COSTS["P"]:
 		character_p_button.disabled=true

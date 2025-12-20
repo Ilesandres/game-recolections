@@ -54,6 +54,8 @@ var character_power_3: String = ""
 var power_3_timer: float = 0.0
 var current_base_speed: float = SPEED_NORMAL
 
+var touch_sensitivity:=0.005
+
 @onready var collision_shape: CollisionShape3D = $CollisionShape3D
 @onready var visuals_node: Node3D = $Visuals
 @onready var animation_timer: Timer = $AnimationTimer
@@ -131,6 +133,12 @@ func _load_audio_stream(player: AudioStreamPlayer3D, path: String):
 func _input(event):
 	if event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
 		mouse_rotation_delta_x += -event.relative.x * mouse_sensitivity
+	
+	elif event is InputEventScreenDrag:
+		var screen_size= get_viewport().get_visible_rect().size
+		
+		if event.position.x> screen_size.x/2:
+			mouse_rotation_delta_x -=event.relative.x*touch_sensitivity
 
 	elif event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT:

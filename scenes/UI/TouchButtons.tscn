@@ -1,0 +1,84 @@
+[gd_scene load_steps=12 format=3 uid="uid://di3nl0lufdb30"]
+
+[ext_resource type="Script" uid="uid://4fayqcnwbj3t" path="res://scenes/UI/touch_buttons.gd" id="1_cow47"]
+[ext_resource type="Texture2D" uid="uid://klyxog6jfd3r" path="res://assets/botones-piedra/arrow flecha-right.png" id="1_lkevw"]
+[ext_resource type="Texture2D" uid="uid://t3gv50bxnow4" path="res://assets/botones-piedra/button-pause.png" id="2_2cil5"]
+[ext_resource type="Texture2D" uid="uid://qmbvji8njlwd" path="res://assets/botones-piedra/sprint-button.png" id="2_ipdni"]
+[ext_resource type="Texture2D" uid="uid://e68e7d56j55b" path="res://assets/botones-piedra/sprint-button-pressed.png" id="3_ucpq6"]
+[ext_resource type="Texture2D" uid="uid://dmf48c7upw4bl" path="res://assets/botones-piedra/arrow flecha-right-pressed.png" id="3_vawig"]
+[ext_resource type="Texture2D" uid="uid://cnqffvt56qdi8" path="res://assets/botones-piedra/arrow flecha-up.png" id="4_e3t8w"]
+[ext_resource type="Texture2D" uid="uid://dwf7yvb66sjkt" path="res://assets/botones-piedra/button-pause-pressed.png" id="5_2cil5"]
+[ext_resource type="Texture2D" uid="uid://b5gticbjbx76w" path="res://assets/botones-piedra/3931886-200.png" id="7_qaj35"]
+[ext_resource type="Texture2D" uid="uid://l70voehlv6mi" path="res://assets/botones-piedra/button-pressed -power-shunpo.png" id="8_gij10"]
+[ext_resource type="Texture2D" uid="uid://plbo55pgwjlp" path="res://assets/botones-piedra/button-pause-pressed -power-shunpo.png" id="9_mgxrl"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_cow47")
+
+[node name="pause" type="TouchScreenButton" parent="."]
+position = Vector2(555, 23.000002)
+scale = Vector2(0.23614459, 0.21739131)
+texture_normal = ExtResource("2_2cil5")
+texture_pressed = ExtResource("5_2cil5")
+action = "ui_cancel"
+
+[node name="ui-left" type="TouchScreenButton" parent="."]
+position = Vector2(246, 445.00003)
+scale = Vector2(0.25324672, 0.23913042)
+texture_normal = ExtResource("1_lkevw")
+texture_pressed = ExtResource("3_vawig")
+action = "ui_right"
+
+[node name="ui-right" type="TouchScreenButton" parent="."]
+position = Vector2(190.99998, 546)
+rotation = 3.1415927
+scale = Vector2(0.229, 0.239)
+texture_normal = ExtResource("1_lkevw")
+texture_pressed = ExtResource("3_vawig")
+action = "ui_left"
+
+[node name="ui-front" type="TouchScreenButton" parent="."]
+position = Vector2(167.00002, 469.99997)
+rotation = -1.5707964
+scale = Vector2(0.232, 0.239)
+texture_normal = ExtResource("1_lkevw")
+texture_pressed = ExtResource("3_vawig")
+action = "ui_front"
+
+[node name="ui-back" type="TouchScreenButton" parent="."]
+position = Vector2(270, 515)
+rotation = 1.5707964
+scale = Vector2(0.226, 0.239)
+texture_normal = ExtResource("1_lkevw")
+texture_pressed = ExtResource("3_vawig")
+action = "ui_back"
+
+[node name="ui-up" type="TouchScreenButton" parent="."]
+position = Vector2(1090.0001, 436)
+rotation = 1.5707964
+scale = Vector2(0.27751198, 0.27228907)
+texture_normal = ExtResource("4_e3t8w")
+texture_pressed = ExtResource("5_2cil5")
+action = "ui_up"
+
+[node name="shoot" type="TouchScreenButton" parent="."]
+position = Vector2(816, 504.99997)
+rotation = -0.6981317
+scale = Vector2(0.55631876, 0.5316333)
+texture_normal = ExtResource("7_qaj35")
+texture_pressed = ExtResource("7_qaj35")
+action = "shoot"
+
+[node name="power-1-3" type="TouchScreenButton" parent="."]
+position = Vector2(934, 154)
+scale = Vector2(0.06782679, 0.07161464)
+texture_normal = ExtResource("8_gij10")
+texture_pressed = ExtResource("9_mgxrl")
+action = "power1"
+
+[node name="sprint" type="TouchScreenButton" parent="."]
+position = Vector2(8, 248)
+scale = Vector2(0.28212696, 0.35501352)
+texture_normal = ExtResource("2_ipdni")
+texture_pressed = ExtResource("3_ucpq6")
+action = "sprint"

@@ -15,11 +15,12 @@ grow_vertical = 2
 script = ExtResource("1_33ghn")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-layout_mode = 0
-offset_left = -382.0
-offset_top = -47.0
-offset_right = 1154.0
-offset_bottom = 977.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("2_tjd0n")
 
 [node name="title" type="Label" parent="."]
@@ -61,42 +62,42 @@ render_target_update_mode = 4
 
 [node name="blaster_a" type="Button" parent="."]
 layout_mode = 0
-offset_left = 358.0
+offset_left = 275.0
 offset_top = 264.0
-offset_right = 499.0
-offset_bottom = 295.0
+offset_right = 532.0
+offset_bottom = 308.0
 theme_override_fonts/font = ExtResource("1_ogjf6")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 35
 text = "seleccionar arma a"
 
 [node name="blaster_i" type="Button" parent="."]
 layout_mode = 0
-offset_left = 660.0
+offset_left = 618.0
 offset_top = 263.0
-offset_right = 801.0
-offset_bottom = 294.0
+offset_right = 868.0
+offset_bottom = 307.0
 theme_override_fonts/font = ExtResource("1_ogjf6")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 35
 text = "seleccionar arma i"
 
 [node name="blaster_b" type="Button" parent="."]
 layout_mode = 0
-offset_left = 364.0
+offset_left = 279.0
 offset_top = 436.0
-offset_right = 505.0
-offset_bottom = 467.0
+offset_right = 536.0
+offset_bottom = 480.0
 theme_override_fonts/font = ExtResource("1_ogjf6")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 35
 text = "seleccionar arma b"
 
 [node name="blaster_a_2" type="Button" parent="."]
 layout_mode = 0
-offset_left = 658.0
+offset_left = 623.0
 offset_top = 436.0
-offset_right = 799.0
-offset_bottom = 467.0
+offset_right = 910.0
+offset_bottom = 480.0
 theme_override_fonts/font = ExtResource("1_ogjf6")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 35
 text = "seleccionar arma a-2"
 
 [node name="BackButton" type="Button" parent="."]
@@ -106,7 +107,7 @@ offset_top = 58.0
 offset_right = 195.0
 offset_bottom = 108.0
 theme_override_fonts/font = ExtResource("1_ogjf6")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 40
 text = "BACK AND SAVE"
 
 [node name="MessageError" type="Label" parent="."]
@@ -170,7 +171,7 @@ offset_right = 905.0
 offset_bottom = 142.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("1_ogjf6")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 35
 
 [connection signal="pressed" from="blaster_a" to="." method="_on_blaster_a_pressed"]
 [connection signal="pressed" from="blaster_i" to="." method="_on_blaster_i_pressed"]

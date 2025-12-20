@@ -23,11 +23,12 @@ grow_vertical = 2
 script = ExtResource("1_en4mt")
 
 [node name="TextureRect2" type="TextureRect" parent="."]
-layout_mode = 0
-offset_left = -666.0
-offset_top = -2.0
-offset_right = 1382.0
-offset_bottom = 669.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("2_w38c1")
 
 [node name="ButtonContainer" type="VBoxContainer" parent="."]
@@ -37,9 +38,10 @@ anchor_left = 0.5
 anchor_top = 0.656
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -110.5
-offset_top = -0.088012695
-offset_right = 110.5
+offset_left = -150.0
+offset_top = -15.088013
+offset_right = 150.0
+offset_bottom = -15.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 7
@@ -47,46 +49,47 @@ theme_override_constants/separation = 7
 [node name="PlayButton" type="Button" parent="ButtonContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_yq4l5")
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 40
 text = "Jugar"
 
 [node name="SelectWeapon" type="Button" parent="ButtonContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_yq4l5")
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 40
 text = "SELECCIONA ARMA"
 
 [node name="LevelButton" type="Button" parent="ButtonContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_yq4l5")
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 40
 text = "selecciona un nivel"
 
 [node name="ExitButton" type="Button" parent="ButtonContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_yq4l5")
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 40
 text = "Salir"
 
 [node name="GridContainer" type="GridContainer" parent="."]
 layout_mode = 1
-anchors_preset = -1
+anchors_preset = 8
 anchor_left = 0.5
-anchor_top = 0.24100001
+anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 0.46800002
-offset_left = -246.0
-offset_top = 22.831985
-offset_right = 246.0
-offset_bottom = 22.735992
+anchor_bottom = 0.5
+offset_left = -328.5
+offset_top = -136.0
+offset_right = 328.5
+offset_bottom = 66.0
 grow_horizontal = 2
+grow_vertical = 2
 
 [node name="WelcomeLabel" type="Label" parent="GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 6
 theme_override_fonts/font = ExtResource("2_yq4l5")
-theme_override_font_sizes/font_size = 100
+theme_override_font_sizes/font_size = 140
 text = "BIENVENIDO "
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -95,7 +98,7 @@ uppercase = true
 [node name="OptionLabel" type="Label" parent="GridContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_pe8e0")
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 40
 text = "¿Listo para comenzar tu recorrido?"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -105,18 +108,18 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -534.5
-offset_top = -32.0
-offset_right = 596.5
-offset_bottom = 282.0
+offset_left = -556.0
+offset_top = -62.0
+offset_right = 661.5
+offset_bottom = 283.0
 grow_horizontal = 2
 texture = ExtResource("4_fapdh")
 
 [node name="DisplayContainer" type="SubViewportContainer" parent="."]
 layout_mode = 0
-offset_left = 859.0
-offset_top = 352.0
-offset_right = 1159.0
+offset_left = 900.0
+offset_top = 329.0
+offset_right = 1174.0
 offset_bottom = 652.0
 
 [node name="CharacterViewport" type="SubViewport" parent="DisplayContainer"]
@@ -130,10 +133,10 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 
 [node name="SelectCharacterButton" type="Button" parent="."]
 layout_mode = 0
-offset_left = 883.0
-offset_top = 296.0
-offset_right = 1085.0
-offset_bottom = 524.0
+offset_left = 924.0
+offset_top = 313.0
+offset_right = 1126.0
+offset_bottom = 541.0
 theme_override_fonts/font = ExtResource("2_yq4l5")
 theme_override_font_sizes/font_size = 25
 theme_override_styles/normal = SubResource("StyleBoxEmpty_1xg02")
@@ -142,13 +145,13 @@ theme_override_styles/hover = SubResource("StyleBoxEmpty_condu")
 
 [node name="SelectCharacterButton2" type="Button" parent="."]
 layout_mode = 0
-offset_left = 893.0
-offset_top = 540.0
-offset_right = 1088.0
-offset_bottom = 592.0
+offset_left = 938.0
+offset_top = 525.0
+offset_right = 1133.0
+offset_bottom = 615.0
 theme_override_fonts/font = ExtResource("2_yq4l5")
-theme_override_font_sizes/font_size = 25
-text = "ASeleccionar 
+theme_override_font_sizes/font_size = 40
+text = "Seleccionar 
 Personaje"
 
 [connection signal="pressed" from="ButtonContainer/PlayButton" to="." method="_on_play_button_pressed"]
